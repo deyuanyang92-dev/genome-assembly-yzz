@@ -1,0 +1,20 @@
+# 下面这些内容体积大、属于第三方、或可以重新生成，不纳入 git。还原方法见 README §8。
+
+# 第三方流程源码 → bash pipelines/fetch_pipelines.sh
+pipelines/*/
+
+# Singularity 镜像（约 8.4 GB）→ containers/prefetch_singularity_images.sh
+containers/singularity/
+
+# BUSCO 谱系库等数据库 → README §8 中的下载命令
+databases/
+
+# 测试运行产生的数据、结果和日志
+tests/*/work/
+tests/*/results*/
+tests/*/test_data/
+tests/*/.nextflow/
+tests/*/.nextflow.log*
+tests/*/*.log
+# 由 fetch_test_data.sh 生成（含本机绝对路径）
+tests/*/*.local.yaml
