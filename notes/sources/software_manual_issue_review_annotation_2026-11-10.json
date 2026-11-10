@@ -1,0 +1,56 @@
+{
+  "recorded_utc": "2026-11-10T08:26:00Z",
+  "recorded_local": "2026-11-10T16:26:00+08:00",
+  "execution": {"installed": false, "software_run": false, "tests_run": false},
+  "scope": "Read official documentation and selected high-value issue bodies. Not a full history review. Versions shown inside issue reports are reporter environments unless explicitly identified as project-pinned.",
+  "reviews": [
+    {
+      "tool": "MAKER",
+      "project_version": "unknown",
+      "docs": ["https://github.com/Yandell-Lab/maker", "https://github.com/Yandell-Lab/maker/blob/master/INSTALL"],
+      "issues": [{"id": 26, "url": "https://github.com/Yandell-Lab/maker/issues/26", "state": "open/no reply: MAKER 3.01.04 Perl wrapper reports POSIX::_exit undefined when using GeneMark; direct gmhmme3 commands returned 0; root cause unresolved"}]
+    },
+    {
+      "tool": "EvidenceModeler",
+      "project_version": "unknown; project wiki says no longer maintained/supported",
+      "docs": "https://github-wiki-see.page/m/EVidenceModeler/EVidenceModeler/wiki",
+      "issues": [{"id": 91, "url": "https://github.com/EVidenceModeler/EVidenceModeler/issues/91", "state": "body read: author confirms lack of time/resources to maintain/support"}, {"id": 104, "url": "https://github.com/EVidenceModeler/EVidenceModeler/issues/104", "state": "page cache miss; title only, not counted as body read"}]
+    },
+    {
+      "tool": "funannotate",
+      "project_version": "unknown",
+      "docs": ["https://funannotate.readthedocs.io/en/latest/commands.html", "https://github.com/nextgenusfs/funannotate/blob/master/docs/predict.rst"],
+      "issues": [{"id": 810, "url": "https://github.com/nextgenusfs/funannotate/issues/810", "state": "body read: reporter's v1.8.13 predict/test tasks hang soon after start; no replies/diagnosis; reporter version is not local version"}]
+    },
+    {
+      "tool": "GALBA",
+      "project_version": "unknown",
+      "docs": "https://github.com/Gaius-Augustus/GALBA/blob/main/README.md",
+      "issues": [{"id": 59, "url": "https://github.com/Gaius-Augustus/GALBA/issues/59", "state": "body read: Biopython Seq type error in postprocessing under Singularity, plus protein header warnings; no reply/root cause unconfirmed"}]
+    },
+    {
+      "tool": "GeneMark-ETP",
+      "project_version": "unknown; license/external dependencies required",
+      "docs": ["https://github.com/gatech-genemark/GeneMark-ETP", "https://github.com/gatech-genemark/GeneMark-ETP/blob/main/INSTALL"],
+      "issues": [{"id": 23, "url": "https://github.com/gatech-genemark/GeneMark-ETP/issues/23", "state": "body read: missing sort temp directory and zero intron hints reported together; no reply, single root cause not established"}]
+    },
+    {
+      "tool": "RepeatModeler",
+      "project_version": "unknown; website lists 2.0.9",
+      "docs": "https://github.com/Dfam-consortium/RepeatModeler",
+      "issues": [{"id": 316, "url": "https://github.com/Dfam-consortium/RepeatModeler/issues/316", "state": "body read; maintainer confirmed edge case where fewer than threshold family copies left empty result uncaught; fix/temporary patch discussed"}, {"id": 318, "url": "https://github.com/Dfam-consortium/RepeatModeler/issues/318", "state": "body read: small-genome refinement OOM report, no diagnosis"}]
+    },
+    {
+      "tool": "RepeatMasker",
+      "project_version": "unknown; website lists 4.2.4",
+      "docs": "https://repeatmasker.org/RepeatMasker/",
+      "issues": [{"id": 70, "url": "https://github.com/Dfam-consortium/RepeatMasker/issues/70", "state": "body read: .out versus .tbl summary percentage difference; closed with no answer, not a confirmed fix"}]
+    },
+    {
+      "tool": "BRAKER",
+      "project_version": "unknown; current repository says deprecated and recommends BRAKER4",
+      "docs": "https://github.com/Gaius-Augustus/BRAKER/blob/master/README.md",
+      "issues": [{"id": 958, "url": "https://github.com/Gaius-Augustus/BRAKER/issues/958", "state": "body read: GeneMark gmetp.pl path/PATH issue; closed; community shebang comment is not proof of full root-cause reproduction"}]
+    }
+  ]
+}

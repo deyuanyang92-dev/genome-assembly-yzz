@@ -1,0 +1,78 @@
+{
+  "recorded_local": "2026-11-10 Asia/Shanghai",
+  "execution": {"installed": false, "software_run": false, "tests_run": false},
+  "scope": "Read-only official documentation/repository/release and selected issue review. Selected issue review is not exhaustive. Upstream/repository metadata does not establish local installation or runtime.",
+  "reviews": [
+    {
+      "tool": "Unicycler",
+      "local_version": "unknown",
+      "docs": ["https://github.com/rrwick/Unicycler", "https://github.com/rrwick/Unicycler/blob/main/unicycler/unicycler.py", "https://github.com/rrwick/Unicycler/releases"],
+      "upstream_release_observed": "0.5.1",
+      "debug_notes": "Bacterial short/long/hybrid assembly; retain assembly.gfa, assembly.fasta, unicycler.log; --keep 3 preserves intermediates; --spades_path should point to spades.py executable.",
+      "issues": [
+        {"id": 39, "url": "https://github.com/rrwick/Unicycler/issues/39", "state": "body read: SPAdes path supplied as a directory prevented dependency discovery"},
+        {"id": 313, "url": "https://github.com/rrwick/Unicycler/issues/313", "state": "body read: ZeroDivisionError with depth=0 during graph cleanup"},
+        {"id": 348, "url": "https://github.com/rrwick/Unicycler/issues/348", "state": "index title/state only; body unavailable"}
+      ]
+    },
+    {
+      "tool": "GPhase",
+      "local_version": "unknown; source snapshot commit a9221035274e7397fc05dc5be693270c2758528c is not an installed-version claim",
+      "docs": ["https://github.com/panlab-bioinfo/GPhase"],
+      "debug_notes": "Requires original matching hifiasm p_utg.fa and p_utg.gfa; do not rename/filter/polish/scaffold before use. HiFi copy-number estimation and supported Hi-C-family inputs are version/path-specific; validate FASTA, AGP and mappings.",
+      "issues": [
+        {"id": 26, "url": "https://github.com/panlab-bioinfo/GPhase/issues/26", "state": "body read: 30.7 Gb/249650-unitig case SIGSEGV in partig minimizer; maintainer had not tested this scale"},
+        {"id": 25, "url": "https://github.com/panlab-bioinfo/GPhase/issues/25", "state": "body read: absolute output_prefix caused broken BAM/BAI symlink path"},
+        {"id": 23, "url": "https://github.com/panlab-bioinfo/GPhase/issues/23", "state": "body read: current popcnv HiFi copy-number estimation support boundary"},
+        {"id": 1, "url": "https://github.com/panlab-bioinfo/GPhase/issues/1", "state": "body read: subprocess reports success while remaining stalled; unresolved"},
+        {"id": 3, "url": "https://github.com/panlab-bioinfo/GPhase/issues/3", "state": "body unavailable"},
+        {"id": 5, "url": "https://github.com/panlab-bioinfo/GPhase/issues/5", "state": "body unavailable"}
+      ]
+    },
+    {
+      "tool": "ALLMAPS / JCVI assembly module",
+      "local_version": "unknown",
+      "docs": ["https://github.com/tanghaibao/jcvi/wiki/ALLMAPS", "https://github.com/tanghaibao/jcvi/tree/main/src/jcvi/assembly/allmaps.py"],
+      "debug_notes": "ALLMAPS is part of JCVI, not a separate repository. Validate marker IDs/coordinates, input FASTA correspondence, map weights/pivot, and anchored/oriented/unplaced summaries. Legacy Biopython pin in older wiki is not assumed current.",
+      "issues": [
+        {"id": 179, "url": "https://github.com/tanghaibao/jcvi/issues/179", "state": "body read: jcvi.assembly import-path/environment mismatch"},
+        {"id": 160, "url": "https://github.com/tanghaibao/jcvi/issues/160", "state": "body read: Concorde failure fell back to default ordering and workflow continued; distinguish optional solver fallback from overall failure"},
+        {"id": 604, "url": "https://github.com/tanghaibao/jcvi/issues/604", "state": "body read: question about using genetic maps to scaffold haplotype assemblies"}
+      ],
+      "tracker_note": "No independent ALLMAPS issue tracker; relevant reports are in JCVI."
+    },
+    {
+      "tool": "JuicerTools",
+      "local_version": "matrix records v3.0.0 from release API metadata only; JAR/source/runtime not checked",
+      "docs": ["https://github.com/aidenlab/Juicebox/blob/master/Juicer.README", "https://github.com/aidenlab/welcome/blob/working_site/FAQ.md"],
+      "debug_notes": "Use matching JAR generations for pre and addnorm; KR normalization may be absent for non-convergent regions.",
+      "issues": [
+        {"id": 1031, "url": "https://github.com/aidenlab/Juicebox/issues/1031", "state": "body read: v2.20.00 NumberFormatException at assembly size 2147483648 while 2147483647 succeeded; closed status alone does not prove fix"},
+        {"id": 198, "url": "https://github.com/aidenlab/juicer/issues/198", "state": "configuration issue reviewed; verify resolution flags and JAR version"}
+      ]
+    },
+    {
+      "tool": "Juicebox / JBAT",
+      "local_version": "unknown; no local runtime evidence",
+      "docs": ["https://aidenlab.org/assembly/manual_180322.pdf", "https://github.com/aidenlab/Juicebox"],
+      "debug_notes": "Review/edit paired .hic and .assembly; validate exports back to AGP/FASTA.",
+      "issues": [
+        {"id": 991, "url": "https://github.com/aidenlab/Juicebox/issues/991", "state": "body read: 3D-DNA files load but JBAT editing interactions fail"},
+        {"id": 972, "url": "https://github.com/aidenlab/Juicebox/issues/972", "state": "body read: scissors cursor missing"},
+        {"id": 337, "url": "https://github.com/aidenlab/juicer/issues/337", "state": "body read: NullPointerException during hic pre/normalization; inspect input and PRE_C_SIZE logs"}
+      ]
+    },
+    {
+      "tool": "PretextView",
+      "local_version": "unknown; upstream release v1.0.7 observed",
+      "docs": ["https://github.com/sanger-tol/PretextView", "https://github.com/sanger-tol/PretextView/releases"],
+      "debug_notes": "GUI review/editor for .pretext; texel resolution can omit sub-texel sequences from exported AGP; AGPCorrect can reconcile with FASTA. Record map type, progress, OS, GPU/driver and logs.",
+      "issues": [
+        {"id": 61, "url": "https://github.com/sanger-tol/PretextView/issues/61", "state": "body read: large chromosome editing segfault in specific reported environments"},
+        {"id": 79, "url": "https://github.com/sanger-tol/PretextView/issues/79", "state": "body read: ultra-map load SIGSEGV near texture loading in reported environments"}
+      ],
+      "tracker_note": "Issue page indicates restrictions on creating new issues."
+    }
+  ],
+  "evidence_boundary": "Specific issue threads are examples, not universal causes. No software or tests were run; no local installation status is inferred."
+}

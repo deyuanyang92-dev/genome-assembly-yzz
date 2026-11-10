@@ -1,0 +1,144 @@
+{
+  "recorded_utc": "2026-11-10T08:06:38Z",
+  "recorded_local": "2026-11-10T16:06:38+08:00",
+  "purpose": "Read-only review of the user-provided Colora paper, its corresponding source and usage, plus selected high-value manuals and GitHub issues for core genome assembly and Hi-C software.",
+  "execution_policy": {
+    "software_installed": false,
+    "bioinformatics_software_run": false,
+    "tests_run": false,
+    "workflow_run": false,
+    "issue_review_scope": "Targeted issues relevant to debugging; not an exhaustive reading of all issues in each repository."
+  },
+  "paper": {
+    "path": "/mnt/n/xwechat_files/wxid_muc4swuq755321_e4bf/msg/file/2026-11/2024.09.10.612003.full.pdf",
+    "title": "Colora: A Snakemake Workflow for Complete Chromosome-scale De Novo Genome Assembly",
+    "version": "bioRxiv preprint, DOI 10.1101/2024.09.10.612003; 25 pages",
+    "sha256": "1ed915e8060998f2d1226b52e13555e0098905c4e794b31eb40711656d336970",
+    "published_version": "Bioinformatics 2025, DOI 10.1093/bioinformatics/btaf175; distinct from the supplied preprint and current repository state",
+    "repository": "https://github.com/LiaOb21/colora",
+    "local_commit": "d6569edaff8da51739688b246dda2dfb2da13d7a",
+    "source_paths_reviewed": [
+      "workflow/Snakefile",
+      "config/config.yaml",
+      "workflow/rules/*.smk",
+      "workflow/envs/",
+      "workflow/frozen_envs/"
+    ],
+    "documentation": [
+      "https://github.com/LiaOb21/colora",
+      "https://github.com/LiaOb21/colora/issues"
+    ],
+    "issues_visible": 0,
+    "reading_scope": "Full preprint text; repository README/usage, configuration, Snakefile and representative rules/environments; issue page checked.",
+    "debug_relevance": [
+      "Hi-C sample discovery depends on configured file naming/globs.",
+      "DAG branch depends on phased_assembly and optional module flags.",
+      "Database paths, per-rule environments, resource settings, and tool logs need to be checked independently.",
+      "Paper reports erroneous Hi-C joins despite continuity metrics and requires visual curation; workflow success is not structural validation."
+    ],
+    "evidence_boundary": "Prior fixed-commit functional workflow test exists in tests/colora_functional_2026-11-01; this review did not run anything."
+  },
+  "software_reviews": [
+    {
+      "tool": "hifiasm",
+      "version": "0.25.0-r726",
+      "documentation": ["https://github.com/chhylp123/hifiasm", "https://github.com/chhylp123/hifiasm/blob/master/docs/source/faq.rst", "https://github.com/chhylp123/hifiasm/releases"],
+      "source_paths": ["CommandLines.cpp", "Assembly.cpp"],
+      "issues": [
+        {"id": 933, "url": "https://github.com/chhylp123/hifiasm/issues/933", "topic": "large genome stopped at purge_dups with large intermediate bins", "status": "closed; rerun outcome not shown publicly; cause unconfirmed"},
+        {"id": 798, "url": "https://github.com/chhylp123/hifiasm/issues/798", "topic": "segfault after HiFi+Hi-C indexing", "status": "multiple changes accompanied reported recovery; cause not isolated"},
+        {"id": 756, "url": "https://github.com/chhylp123/hifiasm/issues/756", "topic": "proposed per-batch error correction", "status": "no confirmed equivalence/recommendation"}
+      ],
+      "evidence_boundary": "Rolling README/FAQ; not guaranteed to be exactly the pinned release. Selected source entry points only."
+    },
+    {
+      "tool": "Verkko",
+      "version": "2.3.2",
+      "documentation": ["https://github.com/marbl/verkko", "https://github.com/marbl/verkko/releases/tag/v2.3.2"],
+      "issues": [
+        {"id": 224, "url": "https://github.com/marbl/verkko/issues/224", "topic": "Snakemake 8 removed --reason", "status": "consistent with pinned release requirement Snakemake >=7,<8"},
+        {"id": 308, "url": "https://github.com/marbl/verkko/issues/308", "topic": "resume DAG affected by timestamps", "status": "maintainer recommends dry-run; do not infer contents from timestamps alone"},
+        {"id": 348, "url": "https://github.com/marbl/verkko/issues/348", "topic": "layoutContigs apparent stall", "status": "maintainer described I/O-bound behavior; case later completed"}
+      ],
+      "evidence_boundary": "Workflow issue cases, not local reproductions."
+    },
+    {
+      "tool": "Flye",
+      "version": "2.9.6",
+      "documentation": ["https://github.com/mikolmogorov/Flye/blob/flye/docs/USAGE.md", "https://github.com/mikolmogorov/Flye/blob/flye/docs/FAQ.md", "https://github.com/mikolmogorov/Flye/releases/tag/2.9.6"],
+      "issues": [
+        {"id": 687, "url": "https://github.com/mikolmogorov/Flye/issues/687", "topic": "high resource use with manually raised min-overlap", "status": "maintainer diagnosed OOM; user reported success after using automatic selection; case-specific"}
+      ],
+      "evidence_boundary": "Manual and FAQ are rolling branch pages; pinned release boundaries retained."
+    },
+    {
+      "tool": "SPAdes",
+      "version": "4.3.0",
+      "documentation": ["https://ablab.github.io/spades/running.html", "https://github.com/ablab/spades/releases/tag/v4.3.0", "https://github.com/ablab/spades"],
+      "issues": [
+        {"id": 1444, "url": "https://github.com/ablab/spades/issues/1444", "topic": "mmap Error 12, parameter/resource mismatch and possible I/O", "status": "v4.0.0 case; actual memory limit in log did not match user assumption"},
+        {"id": 1433, "url": "https://github.com/ablab/spades/discussions/1433", "topic": "temporary disk space and allocation errors", "status": "case reports include small /tmp and external quota/I/O; not a universal diagnosis"}
+      ],
+      "evidence_boundary": "4.3 docs/release read; existing runtime evidence is SPAdes 4.0.0 only."
+    },
+    {
+      "tool": "MaSuRCA",
+      "version": "4.1.4",
+      "documentation": ["https://github.com/alekseyzimin/masurca/releases/tag/v4.1.4", "https://github.com/alekseyzimin/masurca"],
+      "issues": [
+        {"id": 357, "url": "https://github.com/alekseyzimin/masurca/issues/357", "topic": "scheduler wall-time interruption", "status": "user report, no confirmed cause"},
+        {"id": 362, "url": "https://github.com/alekseyzimin/masurca/issues/362", "topic": "overlap/unitig failure", "status": "diagnostic artifacts requested; exact resolution not established in review"},
+        {"id": 369, "url": "https://github.com/alekseyzimin/masurca/issues/369", "topic": "bogart segfault and wrapper false success", "status": "reported on 4.1.1; not confirmed for 4.1.4"}
+      ],
+      "evidence_boundary": "Release recommends its attached archive rather than GitHub generated source archives."
+    },
+    {
+      "tool": "ABySS",
+      "version": "2.3.10",
+      "documentation": ["https://github.com/BirolLab/abyss", "https://github.com/BirolLab/abyss/releases/tag/2.3.10"],
+      "issues": [
+        {"id": 499, "url": "https://github.com/BirolLab/abyss/issues/499", "topic": "Error 137", "status": "no confirmed diagnosis; inspect scheduler, cgroup/resource limits, TMPDIR and parameters"}
+      ],
+      "evidence_boundary": "Issue information sparse; Error 137 alone does not identify a cause."
+    },
+    {
+      "tool": "YaHS",
+      "version": "1.2.2",
+      "documentation": ["https://github.com/c-zhou/yahs", "https://github.com/c-zhou/yahs/releases"],
+      "issues": [
+        {"id": 119, "url": "https://github.com/c-zhou/yahs/issues/119", "topic": "container version label but missing option", "status": "unconfirmed"},
+        {"id": 120, "url": "https://github.com/c-zhou/yahs/issues/120", "topic": "QV decline after scaffolding", "status": "no established root cause"}
+      ],
+      "evidence_boundary": "Release and local reviewed source commits differ; record both."
+    },
+    {
+      "tool": "HapHiC",
+      "version": "1.0.7",
+      "documentation": ["https://github.com/zengxiaofei/HapHiC", "https://github.com/zengxiaofei/HapHiC/releases/tag/v1.0.7"],
+      "issues": [
+        {"id": 87, "url": "https://github.com/zengxiaofei/HapHiC/issues/87", "topic": "refsort behavior", "status": "maintainer says changes whole-scaffold order/orientation, not internal structure"},
+        {"id": 174, "url": "https://github.com/zengxiaofei/HapHiC/issues/174", "topic": "lower MAPQ increases anchoring but yields large chimeric pseudo-group", "status": "no maintainer-confirmed cause/fix in reviewed discussion"}
+      ],
+      "evidence_boundary": "Reviewed local SHA differs from release commit; issue observations are not local reproductions."
+    },
+    {
+      "tool": "Juicer",
+      "version": "stable 1.6 (project pinned source commit f866383d66f780d98de2c1267703b4d3473f6250)",
+      "documentation": ["https://github.com/aidenlab/juicer"],
+      "issues": [
+        {"id": 350, "url": "https://github.com/aidenlab/juicer/issues/350", "topic": "pre stage unexpected column count", "status": "inspect pairs schema/header/column count"},
+        {"id": 198, "url": "https://github.com/aidenlab/juicer/issues/198", "topic": "HiCCUPS custom resolution flags", "status": "custom resolution requires matching flag set; single -r is insufficient"}
+      ],
+      "evidence_boundary": "Targeted workflow/interface review; no end-to-end execution this turn."
+    },
+    {
+      "tool": "3D-DNA",
+      "version": "project pinned source commit cb63403c329dd45d0fdc4851746b5a8587528132",
+      "documentation": ["https://github.com/aidenlab/3d-dna"],
+      "issues": [
+        {"id": 179, "url": "https://github.com/aidenlab/3d-dna/issues/179", "topic": "post-review assembly length collapsed", "status": "root cause unconfirmed; memory explanation was user speculation"}
+      ],
+      "evidence_boundary": "Selected post-review source paths only; no GUI or workflow execution."
+    }
+  ]
+}

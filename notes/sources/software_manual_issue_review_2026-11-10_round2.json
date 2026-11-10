@@ -1,0 +1,268 @@
+{
+  "recorded_utc": "2026-11-10T08:20:54Z",
+  "recorded_local": "2026-11-10T16:20:54+08:00",
+  "purpose": "Second-round read-only manual and targeted issue review across the project software coverage matrix.",
+  "execution": {"installed": false, "software_run": false, "tests_run": false, "workflow_run": false},
+  "scope_note": "Issue-body-read means the specific linked issue discussion was opened and read. List/search snippets are not counted as body review. This is targeted selection, not exhaustive reading of all repository issues.",
+  "local_versions_from_prior_ledgers": {
+    "BUSCO": "6.0.0",
+    "Oatk": "1.0",
+    "QUAST": "5.3.0",
+    "NanoPlot": "1.46.2",
+    "gfastats": "1.3.11",
+    "minimap2": "2.31-r1302",
+    "FCS-GX": "disabled in prior Colora functional configuration; no runtime version",
+    "Merqury": "no runtime version recorded",
+    "SeqKit": "no runtime version recorded",
+    "chopper": "no runtime version recorded",
+    "compleasm": "no runtime version recorded"
+  },
+  "reviews": [
+    {
+      "tool": "fastp",
+      "docs": "https://github.com/OpenGene/fastp",
+      "issues": [
+        {"id": 711, "url": "https://github.com/OpenGene/fastp/issues/711", "state": "user report: concatenated gzip inputs allegedly missed reads; keep version/data distinction"},
+        {"id": 721, "url": "https://github.com/OpenGene/fastp/issues/721", "state": "hang issue marked fixed in release history"}
+      ],
+      "status": "docs and selected issue pages reviewed; project prior runtime 1.3.1; upstream release page now includes 1.4.0"
+    },
+    {
+      "tool": "SeqKit",
+      "docs": "https://github.com/shenwei356/seqkit/blob/master/doc/docs/usage.md",
+      "issues": [
+        {"id": 610, "url": "https://github.com/shenwei356/seqkit/issues/610", "state": "body read: truncated compressed input could return success in older version; fix commit c716eff closed; version boundary matters"},
+        {"id": 593, "url": "https://github.com/shenwei356/seqkit/issues/593", "state": "body read: one-pass approximate sample2 -p versus exact two-pass -2 behavior; docs/help updated, closed"}
+      ],
+      "status": "docs and issue 610 read; upstream v2.14.0; project runtime unknown"
+    },
+    {
+      "tool": "NanoPlot",
+      "docs": "https://github.com/wdecoster/NanoPlot",
+      "issues": [
+        {"id": 266, "url": "https://github.com/wdecoster/NanoPlot/issues/266", "state": "body read: old v1.38.0 Kaleido static export serialization failure; root cause unresolved, output-format specific"},
+        {"id": 437, "url": "https://github.com/wdecoster/NanoPlot/issues/437", "state": "official issue index title/author/date/status only; body endpoints returned cache miss"},
+        {"id": 411, "url": "https://github.com/wdecoster/NanoPlot/issues/411", "state": "body read: HTML normal but PNG blank; later report saw recovery without identified dependency fix"},
+        {"id": 406, "url": "https://github.com/wdecoster/NanoPlot/issues/406", "state": "body read: expected TSV output name question, no follow-up/diagnosis"}
+      ],
+      "status": "docs/readme/release reviewed; current upstream 1.48.0; project prior runtime 1.46.2"
+    },
+    {
+      "tool": "chopper",
+      "docs": "https://github.com/wdecoster/chopper",
+      "issues": [{"id": 79, "url": "https://github.com/wdecoster/chopper/issues/79", "state": "body read: feature request re tag preservation/modification with trimming and BAM input; request is not proof of implemented feature"}],
+      "status": "README and issue body read; project runtime unknown"
+    },
+    {
+      "tool": "KMC",
+      "docs": "https://github.com/refresh-bio/KMC",
+      "issues": [{"id": 140, "url": "https://github.com/refresh-bio/KMC/issues/140", "state": "body read: macOS file creation failure attributed by maintainer and reporter to file-descriptor limit; case-specific"}],
+      "status": "manual/README initial read; project runtime not recorded in this review"
+    },
+    {
+      "tool": "FastK",
+      "docs": "https://github.com/thegenemyers/FASTK/blob/master/README.md",
+      "issues": [{"id": 20, "url": "https://github.com/thegenemyers/FASTK/issues/20", "state": "body read: gzip content named .fasta caused segfault; reporter confirmed wrong extension/format, not evidence of OOM"}],
+      "status": "README read; project runtime not recorded in this review"
+    },
+    {
+      "tool": "GenomeScope2",
+      "docs": "https://github.com/jgrg/genomescope2.0",
+      "issues": [
+        {"id": 93, "url": "https://github.com/schatzlab/genomescope/issues/93", "state": "body reviewed: histogram cutoff/-m usage"},
+        {"id": 144, "url": "https://github.com/schatzlab/genomescope/issues/144", "state": "body reviewed: poor heterozygous peak fit case; not universal root cause"}
+      ],
+      "status": "README and selected issues read; keep coverage, histogram limits, k/p and contamination as alternative explanations"
+    },
+    {
+      "tool": "Smudgeplot",
+      "docs": "https://github.com/KamilSJaron/smudgeplot",
+      "issues": [
+        {"id": 21, "url": "https://github.com/KamilSJaron/smudgeplot/issues/21", "state": "body reviewed: interpretation under low coverage"},
+        {"id": 133, "url": "https://github.com/KamilSJaron/smudgeplot/issues/133", "state": "body reviewed; consultation/request, not a confirmed software defect"}
+      ],
+      "status": "README/issues reviewed; upstream 0.5.4 uses FastK database; old KMC command examples must not be reused blindly"
+    },
+    {
+      "tool": "LRGE",
+      "docs": "https://github.com/mbhall88/lrge",
+      "issues": [{"state": "specific body review pending"}],
+      "status": "README read; v1.0 behavior differs from paper-era v0.3.x; defaults calibrated for bacterial genomes"
+    },
+    {
+      "tool": "BUSCO",
+      "docs": "https://busco.ezlab.org/busco_userguide",
+      "issues": [{"id": 560, "url": "https://gitlab.com/ezlab/busco/-/issues/560", "state": "body read: AutoLineage with shared read-only lineage directory; inspect permissions and metadata by version"}],
+      "status": "v6.1.0 docs reviewed; local prior runtime v6.0.0"
+    },
+    {
+      "tool": "compleasm",
+      "docs": "https://github.com/huangnengCSU/compleasm",
+      "issues": [{"id": 6, "url": "https://github.com/huangnengCSU/compleasm/issues/6", "state": "body read: interrupted download leaves .tmp; maintainer suggests separate download then run -L; confirm release before applying"}],
+      "status": "README v0.2.9 reviewed; local runtime unknown"
+    },
+    {
+      "tool": "Merqury",
+      "docs": "https://github.com/marbl/merqury",
+      "issues": [{"id": 178, "url": "https://github.com/marbl/merqury/issues/178", "state": "body read: k-mer completeness and BUSCO measure different evidence; sample/haplotype matching affects completeness"}],
+      "status": "README/release and selected issue reviewed; no local runtime version"
+    },
+    {
+      "tool": "QUAST",
+      "docs": "https://quast.sourceforge.net/docs/manual.html",
+      "issues": [
+        {"id": 298, "url": "https://github.com/ablab/quast/issues/298", "state": "body reviewed; Python 3.12+ compatibility case, confirm affected release/environment"},
+        {"id": 289, "url": "https://github.com/ablab/quast/issues/289", "state": "title/index only"},
+        {"id": 280, "url": "https://github.com/ablab/quast/issues/280", "state": "title/index only"},
+        {"id": 285, "url": "https://github.com/ablab/quast/issues/285", "state": "title/index only"}
+      ],
+      "status": "README, 5.3.0 release and manual reviewed; prior local runtime 5.3.0"
+    },
+    {
+      "tool": "FCS-GX",
+      "docs": "https://github.com/ncbi/fcs-gx/blob/release/README.md",
+      "issues": [{"id": 14, "url": "https://github.com/ncbi/fcs-gx/issues/14", "state": "body read: intermittent pipeline/align errors; concurrency is reporter hypothesis only; root cause unconfirmed"}],
+      "status": "README/wiki/troubleshooting reviewed; prior workflow config disabled FCS-GX; no local runtime version"
+    },
+    {
+      "tool": "Oatk",
+      "docs": "https://github.com/c-zhou/oatk/blob/main/README.md",
+      "issues": [
+        {"id": 24, "url": "https://github.com/c-zhou/oatk/issues/24", "state": "title/date only; body endpoint cache miss"},
+        {"id": 23, "url": "https://github.com/c-zhou/oatk/issues/23", "state": "index only"}
+      ],
+      "status": "README/source entry reviewed; version 1.0 in prior workflow; issue body pending"
+    },
+    {
+      "tool": "gfastats",
+      "docs": "https://github.com/vgl-hub/gfastats",
+      "issues": [
+        {"id": 54, "url": "https://github.com/vgl-hub/gfastats/issues/54", "state": "body read: BGZF single-sequence extraction stalls while whole file works; root cause unconfirmed"},
+        {"id": 38, "url": "https://github.com/vgl-hub/gfastats/issues/38", "state": "title/index only"}
+      ],
+      "status": "README read; prior runtime 1.3.11; selected source files not reviewed"
+    },
+    {
+      "tool": "minimap2",
+      "docs": "https://lh3.github.io/minimap2/",
+      "source_paths": ["main.c", "index.c", "sketch.c"],
+      "issues": [
+        {"id": 1359, "url": "https://github.com/lh3/minimap2/issues/1359", "state": "body read; case-specific sequence/segfault report"},
+        {"id": 1353, "url": "https://github.com/lh3/minimap2/issues/1353", "state": "title/index only"},
+        {"id": 1354, "url": "https://github.com/lh3/minimap2/issues/1354", "state": "title/index only"}
+      ],
+      "status": "manpage/source entry points reviewed; prior local runtime 2.31-r1302"
+    },
+    {
+      "tool": "RepeatMasker",
+      "docs": "https://repeatmasker.org/RepeatMasker/",
+      "issues": [{"state": "tracker located; issue bodies pending"}],
+      "status": "current website lists 4.2.4; project version unknown"
+    },
+    {
+      "tool": "RepeatModeler",
+      "docs": "https://github.com/Dfam-consortium/RepeatModeler",
+      "issues": [{"state": "tracker located; issue bodies pending"}],
+      "status": "current website lists 2.0.9; project version unknown; do not simply merge libraries from partitioned runs of one genome"
+    },
+    {
+      "tool": "BRAKER",
+      "docs": "https://github.com/Gaius-Augustus/BRAKER",
+      "issues": [{"state": "tracker located; specific issue body pending"}],
+      "status": "README says deprecated/recommends BRAKER4; project version unknown"
+    },
+    {
+      "tool": "StringTie",
+      "docs": "https://github.com/gpertea/stringtie/wiki/Manual",
+      "issues": [{"state": "issue index reviewed; body pages pending"}],
+      "status": "manual read; coordinate-sorted input and splice strand/XS tags are important"
+    },
+    {
+      "tool": "HISAT2",
+      "docs": "https://github.com/DaehwanKimLab/hisat2/blob/master/MANUAL",
+      "issues": [{"state": "issue index reviewed; body pages pending"}],
+      "status": "manual read; paired input correspondence and performance metrics noted"
+    },
+    {
+      "tool": "IsoQuant",
+      "docs": "https://github.com/ablab/IsoQuant",
+      "issues": [{"state": "specific issue body pending"}],
+      "status": "upstream release 4.1.0 on 2026-10-20; project version unknown"
+    },
+    {
+      "tool": "InterProScan 6",
+      "docs": "https://github.com/ebi-pf-team/interproscan6/blob/main/docs/index.md",
+      "issues": [
+        {"id": 286, "url": "https://github.com/ebi-pf-team/interproscan6/issues/286", "state": "body read: local metadata caused Nextflow version null"},
+        {"id": 289, "url": "https://github.com/ebi-pf-team/interproscan6/issues/289", "state": "maintainer-confirmed completion/fix; --no-matches-api workaround applies to v6 case"}
+      ],
+      "status": "specific v6 issue body read; do not apply to v5 without checking"
+    },
+    {
+      "tool": "eggNOG-mapper 3",
+      "docs": "https://github.com/eggnogdb/eggnog-mapper/blob/main/USAGE.md",
+      "issues": [{"id": 613, "url": "https://github.com/eggnogdb/eggnog-mapper/issues/613", "state": "body read: unresolved user report involving beta/self-test format, DIAMOND stall and multiprocessing timeout; no confirmed root cause"}],
+      "status": "docs read; version 3 requires eggNOG DB v7; project version unknown"
+    },
+    {
+      "tool": "Pilon",
+      "docs": "https://github.com/broadinstitute/pilon/releases",
+      "issues": [
+        {"id": 174, "url": "https://github.com/broadinstitute/pilon/issues/174", "state": "open user report: Java heap OOM during genome region initialization; no confirmed general solution"},
+        {"id": 175, "url": "https://github.com/broadinstitute/pilon/issues/175", "state": "open user report: OOM in VCF/changes output; community workaround not generally confirmed"},
+        {"id": 176, "url": "https://github.com/broadinstitute/pilon/issues/176", "state": "open user report: OOM only when --vcf enabled; cause unresolved"},
+        {"id": 178, "url": "https://github.com/broadinstitute/pilon/issues/178", "state": "open user report: QV decline after Pilon; insufficient details/root cause unknown"}
+      ],
+      "status": "v1.24 release notes and issue bodies read; Java 11+, experimental --threads removed"
+    },
+    {
+      "tool": "NextPolish",
+      "docs": "https://github.com/Nextomics/NextPolish",
+      "issues": [
+        {"id": 130, "url": "https://github.com/Nextomics/NextPolish/issues/130", "state": "open: assembly length drop report, no diagnosis"},
+        {"id": 134, "url": "https://github.com/Nextomics/NextPolish/issues/134", "state": "open: telomere loss; maintainer suggestion about no reads is hypothesis, not validated"},
+        {"id": 144, "url": "https://github.com/Nextomics/NextPolish/issues/144", "state": "open: Stale file handle during temp sort; storage/permission plausible but unconfirmed"}
+      ],
+      "status": "v1.4.1; noisy raw TGS use NextDenovo, HiFi consensus refinement use NextPolish2 per current README"
+    },
+    {
+      "tool": "pbtk bam2fastq",
+      "docs": "https://github.com/PacificBiosciences/pbtk",
+      "issues": [
+        {"id": 779, "url": "https://github.com/PacificBiosciences/pbbioconda/issues/779", "state": "body read: BAM parser error despite MD5 match; cause unresolved"},
+        {"id": 681, "url": "https://github.com/PacificBiosciences/pbbioconda/issues/681", "state": "body read: Kinnex read-name suffix compatibility report"}
+      ],
+      "status": "pbtk changelog to 3.5.0; pbtk itself has no issue page, support issues in pbbioconda; project tool version unknown"
+    },
+    {
+      "tool": "purge_haplotigs",
+      "docs": "https://bitbucket.org/mroachawri/purge_haplotigs",
+      "issues": [{"state": "Bitbucket tracker identified but page unavailable for body review"}],
+      "status": "version unresolved; issue review pending"
+    },
+    {
+      "tool": "PASA",
+      "docs": "https://github.com/PASApipeline/PASApipeline/blob/master/docs/index.asciidoc",
+      "issues": [{"state": "GitHub tracker applicability not confirmed"}],
+      "status": "documentation read; version unresolved"
+    },
+    {
+      "tool": "miniprot",
+      "docs": "https://github.com/lh3/miniprot/blob/master/README.md",
+      "issues": [{"state": "tracker identified, body review pending"}],
+      "status": "README/manpage read; version unresolved"
+    },
+    {
+      "tool": "EVM / MAKER / funannotate / GALBA / GeneMark / STAR / tRNAscan-SE / Infernal",
+      "docs": "official documentation/repository entry points located to varying degrees; see notes/66_全软件说明书与Issues阅读进度.md",
+      "issues": [{"state": "mostly index-only or pending; do not claim body review complete"}],
+      "status": "documentation/issues coverage incomplete; project versions unresolved"
+    }
+  ],
+  "pending_summary": [
+    "Selected issue bodies still unavailable: NanoPlot #437, Oatk #24, Infernal #33, and tRNAscan-SE #48; GPhase #3/#5 and Unicycler #348 were also unavailable in the final review batch.",
+    "purge_haplotigs uses a Bitbucket tracker whose issue page was unavailable; do not mark issue-body review complete.",
+    "Review remains targeted, not exhaustive; re-open full discussions and attachments when a matching real failure occurs.",
+    "Do not run software, workflows or tests as part of this reading task."
+  ]
+}
