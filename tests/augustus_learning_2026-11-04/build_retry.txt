@@ -1,0 +1,4 @@
+make: Entering directory '/tmp/yzz-augustus-3.5.0/src'
+make: 'augustus' is up to date.
+make: 'etraining' is up to date.
+make: Leaving directory '/tmp/yzz-augustus-3.5.0/src'

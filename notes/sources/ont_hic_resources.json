@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-01",
+  "resources": [
+    {
+      "directory": "wdecoster_NanoPlot",
+      "url": "https://github.com/wdecoster/NanoPlot.git",
+      "commit": "71af721be406cdcfcb1b974fe1db8e96f9e93c9e",
+      "classification": "individual_tool",
+      "version_in_source": "1.48.0",
+      "reading_scope": "README usage/output and selected CLI/statistics/filter logic; not all lines",
+      "validation": "source_interface_review_only_not_installed_or_run",
+      "files": [
+        {
+          "path": "pipelines/wdecoster_NanoPlot/README.md",
+          "sha256": "5c8f5f6da5f1529d52e421f6c65afd9006c005045f0d10d5034401eef85a6ca5"
+        },
+        {
+          "path": "pipelines/wdecoster_NanoPlot/nanoplot/NanoPlot.py",
+          "sha256": "f38b11d0d422f3586bcca9b941f0b2faa54175617fed0dbdf24aad20af75eef6"
+        },
+        {
+          "path": "pipelines/wdecoster_NanoPlot/nanoplot/utils.py",
+          "sha256": "5105e71b58d1e24c6d27767555e3894489de713b2b940de3d2c21c9122a1e2b6"
+        },
+        {
+          "path": "pipelines/wdecoster_NanoPlot/nanoplot/filteroptions.py",
+          "sha256": "4cd49b4ee4eb996105d963f8dc3c98448259e276c28bf863201a9364c8ed2eaa"
+        },
+        {
+          "path": "pipelines/wdecoster_NanoPlot/nanoplot/version.py",
+          "sha256": "09cff3f042d398e85e81463b39e6ce1c689ae0f400d3518934dc33ed627d8f10"
+        }
+      ]
+    },
+    {
+      "directory": "wdecoster_chopper",
+      "url": "https://github.com/wdecoster/chopper.git",
+      "commit": "ed2b6941c1aee157b841528f9461fec66dd77984",
+      "classification": "individual_tool",
+      "version_in_source": "0.15.0",
+      "reading_scope": "README usage and selected argument/processing sections; not all lines",
+      "validation": "source_interface_review_only_not_installed_or_run",
+      "files": [
+        {
+          "path": "pipelines/wdecoster_chopper/README.md",
+          "sha256": "6adf47ccc283ee5f54ecea5ce51cba4b8f8058a9da3175c9bbe42e1b23539cab"
+        },
+        {
+          "path": "pipelines/wdecoster_chopper/src/main.rs",
+          "sha256": "9c38e06338d8d1d9d998576dd249cfc55bbd415512494911b0fd638b160d4f8d"
+        },
+        {
+          "path": "pipelines/wdecoster_chopper/Cargo.toml",
+          "sha256": "df6241fb08af1a140c93b8dee578f2921064668413b819bf4195490fa52688b8"
+        }
+      ]
+    },
+    {
+      "directory": "lh3_hifiasm",
+      "url": "https://github.com/chhylp123/hifiasm.git",
+      "commit": "ec9a8b222d149d25b7355e83765698640d59b189",
+      "classification": "individual_tool",
+      "reading_scope": "selected local input/output/mode/limitations sections; not full source re-audit",
+      "files": [
+        {
+          "path": "pipelines/lh3_hifiasm/README.md",
+          "sha256": "82bf387dbaa0ef19c32a6bca48e5c83b42324c76529fe0bee6d7d1056b05238e"
+        },
+        {
+          "path": "pipelines/lh3_hifiasm/CommandLines.cpp",
+          "sha256": "0d3d5c62642fe68209ed8e69dcd58f16d31c28c95cee15d5869f057914a9881d"
+        },
+        {
+          "path": "pipelines/lh3_hifiasm/hifiasm.1",
+          "sha256": "eaf923e432fb9d55bf33d41b04a177cfede0a3da587bd3f81952b2a8cd5f4c20"
+        }
+      ]
+    },
+    {
+      "directory": "marbl_verkko",
+      "url": "https://github.com/marbl/verkko.git",
+      "commit": "39e9fb22816da30b22426ad1914034bc3a2d0cfa",
+      "classification": "assembly_core_workflow",
+      "reading_scope": "selected local input/output/mode/limitations sections; not full source re-audit",
+      "files": [
+        {
+          "path": "pipelines/marbl_verkko/README.md",
+          "sha256": "d3b74b880e8c5cd90c650b3376f84fa7c22e5601d4828b66184e12eea98ca2b6"
+        },
+        {
+          "path": "pipelines/marbl_verkko/src/verkko.sh",
+          "sha256": "ac224ffc5917a8e7626a0b78f852d81ef74d41d64bef008303466540a1f87b8a"
+        }
+      ]
+    },
+    {
+      "directory": "zengxiaofei_HapHiC",
+      "url": "https://github.com/zengxiaofei/HapHiC.git",
+      "commit": "74f1cb27d7753ce061ee673c0d62fdd44187060e",
+      "classification": "individual_tool",
+      "reading_scope": "selected local input/output/mode/limitations sections; not full source re-audit",
+      "files": [
+        {
+          "path": "pipelines/zengxiaofei_HapHiC/README.md",
+          "sha256": "0c62a3ffad2cfe501f2af74085b4126e1252396f5265ce579e78773e7fed3136"
+        }
+      ]
+    }
+  ],
+  "new_repositories": 2,
+  "assembly_runs_this_review": 0,
+  "primary_urls": [
+    "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+    "https://software-docs.nanoporetech.com/dorado/latest/models/selection/",
+    "https://software-docs.nanoporetech.com/dorado/latest/basecaller/duplex/",
+    "https://software-docs.nanoporetech.com/dorado/1.0.0/basecaller/read_trimming/",
+    "https://lh3.github.io/minimap2/minimap2.html"
+  ],
+  "evidence_scope": "Dorado/minimap2 official docs inspected; their full source/model weights not downloaded. NanoPlot/chopper cloned but not installed. hifiasm help/version checked, no ONT or hybrid assembly run. Cross-individual experiment is project design, not completed validation."
+}

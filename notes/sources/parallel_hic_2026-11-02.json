@@ -1,0 +1,107 @@
+{
+  "reviewed_at": "2026-11-02T10:02:20.258644+00:00",
+  "local_sources": [
+    {
+      "path": "pipelines/c-zhou_yahs/juicer.c",
+      "sha256": "ca977508ba1d3d1168c4b15a3d253ad9d222a950e04fb868a2bb8777d57270e6",
+      "scope": "assembly_annotation 510-567; assembly_to_agp/main_post 805-1042"
+    },
+    {
+      "path": "pipelines/c-zhou_yahs/sdict.c",
+      "sha256": "151c8ee0db2be098155f0b24fa8e2b10c21aa19390024702a4c776c1e58a3700",
+      "scope": "AGP dictionary coordinates and FASTA writing, selected branches"
+    },
+    {
+      "path": "pipelines/aidenlab_3d-dna/run-asm-pipeline-post-review.sh",
+      "sha256": "18a6a375b060c1c081568062920d930d4facbf7fcedd6427a25562a0eb81a4f8",
+      "scope": "options plus finalize/seal execution"
+    },
+    {
+      "path": "pipelines/aidenlab_3d-dna/edit/edit-fasta-according-to-new-cprops.awk",
+      "sha256": "62df070751839d9077f804971c2547bf1fb10ea294e3046baa094e1ab8fca48d",
+      "scope": "compatibility assumptions and splitting"
+    }
+  ],
+  "remote_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/agp-tpf-utils/main/pyproject.toml",
+      "reading_scope": "package version, Python and dependency declaration; command entry points",
+      "version": "main reports1.4.1; commit unresolved",
+      "access": "web selected text/source read"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/agp-tpf-utils/main/src/tola/assembly/scripts/pretext_to_asm.py",
+      "reading_scope": "selected CLI, resolution guard, output naming and writing",
+      "version": "main; not fixed release",
+      "access": "web selected text/source read"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/agp-tpf-utils/main/src/tola/assembly/build_assembly.py",
+      "reading_scope": "remapping, duplicate overhang resolution, missing fragments, length-based gap splitting",
+      "version": "main; not executed",
+      "access": "web selected text/source read"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/agp-tpf-utils/main/src/tola/assembly/assembly_stats.py",
+      "reading_scope": "joins/breaks, denominators, warning-only sanity checks",
+      "version": "main; not executed",
+      "access": "web selected text/source read"
+    },
+    {
+      "url": "https://github.com/sanger-tol/agp-tpf-utils",
+      "reading_scope": "README current internal AGP tags/gaps and limited scope",
+      "version": "main; commit unresolved",
+      "access": "web selected text/source read"
+    },
+    {
+      "url": "https://github.com/sanger-tol/curation-resources",
+      "reading_scope": "README workflow revisited; not counted as new complete repository reading",
+      "version": "main; commit unresolved",
+      "access": "web selected text/source read"
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/genbank/genome_agp_specification/",
+      "reading_scope": "AGP2.1 coordinate and U gap requirements; selected spec sections",
+      "version": "AGP2.1",
+      "access": "web selected text/source read"
+    }
+  ],
+  "new_upstream_clones": 0,
+  "actual_executions": {
+    "yahs_juicer_post_conversions": 4,
+    "biological_scaffolding_runs": 0,
+    "gui_curation_runs": 0,
+    "production_validation": 0
+  },
+  "execution_evidence": "tests/parallel_hic_review/execution_manifest.json",
+  "not_completed": [
+    "Pretext GUI illustrated training",
+    "Sanger PDF figure reading",
+    "video viewing",
+    "fixed commit runtime for agp-tpf-utils",
+    "TreeVal/curationpretext test profiles",
+    "biological cross-individual comparison"
+  ],
+  "failed_access": [
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/PretextView-Tutorial.pdf",
+      "result": "cache miss"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/Interpreting_HiC_Maps_guide.pdf",
+      "result": "unsupported application/octet-stream"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/sanger-tol/agp-tpf-utils/main/src/tola/assembly/parser.py",
+      "result": "cache miss; not read"
+    },
+    {
+      "url": "https://api.github.com/repos/sanger-tol/agp-tpf-utils/commits/main",
+      "result": "web tool access failed; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/sanger-tol/curationpretext/releases/latest",
+      "result": "cache miss; latest version not verified"
+    }
+  ]
+}

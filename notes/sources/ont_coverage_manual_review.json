@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-01",
+  "biological_runs": 0,
+  "full_upstream_repositories_added": 0,
+  "scope": "5 assemblers, selected local documentation/source and official online manuals; not full repository comprehension",
+  "snapshots": [
+    {
+      "path": "notes/sources/ont_coverage_manuals/canu_Defaults.pm",
+      "sha256": "f285f477179612bfb58184bf18856e2922613ffd27d36431755821f85033a859",
+      "bytes": 74009
+    },
+    {
+      "path": "notes/sources/ont_coverage_manuals/canu_SequenceStore.pm",
+      "sha256": "21bb057ffc1493997a51efa36f2573c20ab67f8aec7581e66b8464dc2fc96a38",
+      "bytes": 17041
+    },
+    {
+      "path": "notes/sources/ont_coverage_manuals/flye_2.9.6_USAGE.md",
+      "sha256": "9da473a86948b69af15e2de527dcdf98e92c1c8413b0e636c9579f5dd193eb30",
+      "bytes": 20655
+    },
+    {
+      "path": "notes/sources/ont_coverage_manuals/nextdenovo_run.cfg",
+      "sha256": "4442f9f31685282cc1ea0e1f5eee537af844ad780bd9e0a5dd2cc0ed6dfb5651",
+      "bytes": 845
+    }
+  ],
+  "online_sources": [
+    "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+    "https://github.com/marbl/verkko/releases",
+    "https://github.com/mikolmogorov/Flye/blob/flye/docs/USAGE.md",
+    "https://canu.readthedocs.io/en/latest/parameter-reference.html",
+    "https://github.com/marbl/canu/blob/master/documentation/source/faq.rst",
+    "https://nextdenovo.readthedocs.io/en/latest/OPTION.html"
+  ],
+  "limitations": [
+    "Canu maxInputCoverage dynamic default assignment not fully traced; declaration undef and description 200 are not a verified mode-specific default",
+    "no ONT sufficiency classifier implemented",
+    "no coverage ladder executed"
+  ]
+}

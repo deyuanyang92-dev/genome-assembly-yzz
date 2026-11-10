@@ -1,0 +1,219 @@
+Product Support | Dovetail® Omni-C® Kit | User Guides, Protocols & Resources — Dovetail Genomics
+Skip to Content
+Open Menu
+Close Menu
+Company
+About
+Partners
+Events
+Blog
+Products
+LinkPrep
+Dovetail FFPE
+Micro-C
+Omni-C
+Pan Promoter
+HiChIP
+Genome Assembly Services
+Bioinformatics Portal
+Support
+Product Support
+Publication Database
+Applications
+Shop Kits
+🔎 Search
+Login
+Account
+(
+0
+)
+Cart
+(
+0
+)
+Contact Us
+Company
+About
+Partners
+Events
+Blog
+Products
+LinkPrep
+Dovetail FFPE
+Micro-C
+Omni-C
+Pan Promoter
+HiChIP
+Genome Assembly Services
+Bioinformatics Portal
+Support
+Product Support
+Publication Database
+Applications
+Shop Kits
+🔎 Search
+Login
+Account
+(
+0
+)
+Cart
+(
+0
+)
+Contact Us
+Open Menu
+Close Menu
+Folder:
+Company
+Back
+About
+Partners
+Events
+Blog
+Folder:
+Products
+Back
+LinkPrep
+Dovetail FFPE
+Micro-C
+Omni-C
+Pan Promoter
+HiChIP
+Genome Assembly Services
+Bioinformatics Portal
+Folder:
+Support
+Back
+Product Support
+Publication Database
+Applications
+Shop Kits
+🔎 Search
+Login
+Account
+Contact Us
+Dovetail® Omni-C® Kit Support Page
+Feb 2
+Written by
+megan johnston
+Omni-C® Kit |  Full Solution
+$4,764.00
+PN 20108G Dovetail® Genome Assembly Omni-C® Kit - Full Solution
+Includes:
+Dovetail® Omni-C Kit, 8Rxn
+Dovetail® Library Module for Illumina, 8Rx
+Dovetail® Dual Index Primer Set #1 for Illumina 8Rx
+If using tissue samples add
+Cell Isolation Module
+below.
+Add to cart
+Document Directory
+User Guides
+Dovetail® Omni-C® Kit User Guide v3: For mammals and non-mammals *For use only with Dovetail Library and Primer Modules received December 1, 2025 or later
+Dovetail® Omni-C® Kit User Guide v2.1: For mammals and non-mammals *For use only with Dovetail Library and Primer Modules received July 1, 2025 or later
+Dovetail® Omni-C® Kit User Guide v2.0: For mammals and non-mammals
+Data Processing
+Dovetail® Omni-C® Data Processing Guide
+QC Documentation
+How to Cite
+How to cite the Dovetail® Omni-C® Kit in your manuscript
+SDS
+US (English)
+China - 化学品安全技术说明书 (Chinese)
+Product FAQs
+General
+How does the Omni-C assay different from traditional Hi-C?
+Omni-C leverages DNase to digest chromatin as opposed to restriction enzymes. This approach provides superior coverage across the genome enabling more applications such as genotyping and haplotype phasing.
+Workflow Support
+How many reactions are in a kit?
+You will get 8 reactions with each Omni-C kit.
+How long does it take to complete the workflow?
+The workflow from sample to sequencing–ready library is split over two days.
+I have frozen cell pellets that are already cross-linked. Are these suitable as input to the Omni-C assay?
+Yes, frozen cells previously cross-linked with formaldehyde concentration ≥ 1% can be used as input to the assay. Simply skip the formaldehyde fixation step of our recommended two step fixation process.
+What library preparation kits are compatible with the Omni-C assay?
+Dovetail offers library preparation and index primers modules to streamline the library preparation workflow. Omni-C is compatible with third party library preparation kits as well, namely NEBNext® Ultra™ II DNA Library Prep Kit for Illumina®, Kapa® HyperPrep, and Swift Biosciences Accel-NGS® 2S Plus DNA Library Kit.
+What are the recommendations for sonication?
+The Omni-C workflow does not require sonication. The fragmentation is enzymatic and is carried out at Stage 1 of the protocol.
+What ancillary equipment is needed to prepare Omni-C libraries?
+Magnetic separation rack for 0.2 mL and 1.5 mL tubes, centrifuge, vortex mixer, thermal cycler, agitating thermal mixer, Qubit fluorometer, and TapeStation (Fragment Analyzer or Bioanalyzer can also be used).
+Workflow QC
+What QC steps are involved in ensuring a high-quality and high-complexity Omni-C library?
+The Omni-C workflow has three built-in quality control steps, including an early QC step used to assess the digestion reaction. Optional shallow Illumina sequencing is recommended as a final QC step prior to deep sequencing. An easy-to-use sequence QC analysis pipeline is available to assess final success.
+Analysis
+How should I sequence my library?
+Omni-C libraries are Illumina compatible. We recommend sequencing 2 x 150 bp. One library is typically sufficient for the generation of ~300M total read-pairs. Depending upon final sequencing depth desired, multiple libraries may need to be pooled prior to the sequencing run.
+Does Dovetail offer computational support?
+Dovetail has compiled a comprehensive best practices step-by-step workflow with full documentation that covers:
+Alignment, Pairs generation, and filtering for high-quality proximity-ligation reads
+Contact matrix generation for both .hic and .cool files
+Commonly used applications
+What file format do I need to begin my analysis?
+Dovetail tools for QC and Contact Matrix generation require the Omni-C raw sequence data (*.fq.gz) and a draft assembly (genome *.fa).
+How do I call valid reads without a restriction site?
+Due to the use of restriction enzymes and sonication, traditional Hi-C valid reads require the insert size (or physical coverage) of a read-pair to be greater than the library fragment and to be adjacent to a restriction site. Omni-C libraries do not use restriction enzymes or require sonication (a key source of noise in Hi-C libraries). Therefore, a valid Micro-C read only requires that the insert size (or physical coverage) of a read-pair be greater than the library fragment as defined by HiC-Pro. Check out this
+white paper
+to learn more.
+Is Omni-C data compatible with open-source tools used with conventional RE-based Hi-C data?
+HiC-Pro is also compatible with Omni-C libraries. Note that there are custom configuration files that are required. Please reach out to us at Dovetail for guidance on how to run HiC-Pro.
+What is the required sequencing depth and number of libraries needed?
+This largely depends on application. The following recommendations are good starting points:
+Genome Assembly – 30X coverage; 1 library for genomes < 3 Gbp • Genotyping and Haplotype Phasing – 40X coverage; 2 libraries • Topology Analysis – A/B compartments (3X coverage; 1 library), TADs (30X; 1-2 libraries), Loops (> 90X coverage; 3-4 libraries)
+For QC we recommend 1 – 2 million paired-end reads (2 x 150 bp)
+Sample Support
+What is the required cell input amount for the Omni-C assay?
+The standard input for Omni-C is one million cells. A low input protocol is also supported down to one thousand cells.
+What sample types are supported by the Omni-C kit?
+Cells, animal and plant tissues, and blood.
+Will Omni-C work on my genome of interest (AT-rich, repetitive, etc)?
+The Omni-C chemistry is robust and works across a variety of genome types.
+What are the preferred sample types and methods of sample preparation?
+See table below
+Sample Preparation Suggestions by Sample Type
+How to Videos
+How to grind mammalian tissue using a CryoGrinder™ Mortar and Pestle
+How to work with Paramagnetic Beads In Proximity Ligation Assays
+How to grind plant tissues
+Support
+Omni-C
+megan johnston
+Next
+Next
+Dovetail® Micro-C Kit Support Page
+Products
+LinkPrep™
+Dovetail FFPE
+Micro-C
+Omni-C®
+Pan Promoter
+HiChIP
+Genome Assembly Services
+Bioinformatics Portal
+Support
+Product  Support
+Bioinformatics Portal
+Publication Database
+Applications
+Find your solution
+Genetic Variation
+Genome Assembly
+3D Genomics
+Company
+Technology
+About
+Partners
+Events
+Blog
+Careers
+Office
+100 Enterprise Way
+Suite A-101
+Scotts Valley, CA 95066
+Contact Us
+Email: info@dovetail-genomics.com
+Phone: 831-713-4465
+Product Terms and Conditions
+Services Terms and Conditions
+Dovetail Genomics, Part of Cantata Bio LLC is a subsidiary of
+EdenRoc Sciences LLC

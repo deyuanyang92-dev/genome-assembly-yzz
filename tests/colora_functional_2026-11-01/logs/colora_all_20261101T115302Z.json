@@ -1,0 +1,33 @@
+{
+  "stage": "all",
+  "command": [
+    "/tmp/yzz-learning-snakemake-env/bin/snakemake",
+    "--configfile",
+    "config/local_test.yaml",
+    "--snakefile",
+    "workflow/Snakefile",
+    "--cores",
+    "4",
+    "--resources",
+    "mem_mb=48000",
+    "--software-deployment-method",
+    "conda",
+    "--conda-frontend",
+    "conda",
+    "--conda-prefix",
+    "/tmp/yzz-learning-colora-envs",
+    "--printshellcmds",
+    "--rerun-incomplete"
+  ],
+  "cwd": "/mnt/p/Travisia/13_\u5168\u57fa\u56e0\u7ec4\u81ea\u4e3b\u5b66\u4e60_2026-11-01/work/colora",
+  "log": "/mnt/p/Travisia/13_\u5168\u57fa\u56e0\u7ec4\u81ea\u4e3b\u5b66\u4e60_2026-11-01/logs/colora_all_20261101T115302Z.log",
+  "started_utc": "20261101T115302Z",
+  "returncode": 1,
+  "runtime_settings": {
+    "XDG_CACHE_HOME": "/tmp/yzz-learning-cache",
+    "CONDA_PKGS_DIRS": "/tmp/yzz-learning-conda-pkgs",
+    "QT_QPA_PLATFORM": "offscreen"
+  },
+  "configuration": "FCS-GX disabled for functional test; cross-strain Hi-C",
+  "finished_utc": "2026-11-01T11:53:34.459235+00:00"
+}

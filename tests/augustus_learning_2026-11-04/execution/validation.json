@@ -1,0 +1,133 @@
+{
+  "checks": {
+    "structure_and_phase_valid": true,
+    "range_equals_lifted_crop": true,
+    "rc_coordinate_structure_equivalent": true,
+    "hints_change_structure": true,
+    "train_test_locus_names_disjoint": true,
+    "crop": {
+      "original_id": "HS04636",
+      "start_1based": 501,
+      "end_1based": 8953,
+      "length": 8453
+    }
+  },
+  "predictions": {
+    "abinitio": {
+      "features": {
+        "gene": 2,
+        "transcript": 2,
+        "start_codon": 2,
+        "CDS": 16,
+        "stop_codon": 2
+      },
+      "translations": {
+        "g1.t1": {
+          "length_bp": 1815,
+          "length_aa_with_stop": 605,
+          "internal_stops": 0,
+          "starts_M": true,
+          "ends_stop": true
+        },
+        "g2.t1": {
+          "length_bp": 579,
+          "length_aa_with_stop": 193,
+          "internal_stops": 0,
+          "starts_M": true,
+          "ends_stop": true
+        }
+      }
+    },
+    "hints": {
+      "features": {
+        "gene": 2,
+        "transcript": 2,
+        "start_codon": 2,
+        "CDS": 16,
+        "stop_codon": 1
+      },
+      "translations": {
+        "g1.t1": {
+          "length_bp": 1473,
+          "length_aa_with_stop": 491,
+          "internal_stops": 0,
+          "starts_M": true,
+          "ends_stop": true
+        },
+        "g2.t1": {
+          "length_bp": 556,
+          "length_aa_with_stop": 185,
+          "internal_stops": 0,
+          "starts_M": true,
+          "ends_stop": false
+        }
+      }
+    },
+    "utr": {
+      "features": {
+        "gene": 2,
+        "transcript": 2,
+        "start_codon": 2,
+        "CDS": 16,
+        "stop_codon": 2
+      },
+      "translations": {
+        "g1.t1": {
+          "length_bp": 1815,
+          "length_aa_with_stop": 605,
+          "internal_stops": 0,
+          "starts_M": true,
+          "ends_stop": true
+        },
+        "g2.t1": {
+          "length_bp": 579,
+          "length_aa_with_stop": 193,
+          "internal_stops": 0,
+          "starts_M": true,
+          "ends_stop": true
+        }
+      },
+      "scope": "historical duplicate-option run; corrected UTR output in followup"
+    }
+  },
+  "training": {
+    "train_loci": 392,
+    "test_loci": 100,
+    "partition": "official examples/chr2L; no new homology-cluster leakage audit",
+    "optimization_run": false,
+    "target_species": false,
+    "accepted": false,
+    "reason": "wrong excluded-stop convention, corrected in followup/validation.json"
+  },
+  "input_provenance": {
+    "example.fa": {
+      "source_path": "examples/example.fa",
+      "sha256": "eb35f5dc8c7e33c87a6386e1f5e483ea0db8301837ae04dd7335ca80c790951d"
+    },
+    "HS04636.fa": {
+      "source_path": "examples/HS04636.fa",
+      "sha256": "dfbf77ea81423f604676e0d0767eb6c3d0fba8baf30e07ad7867e817a6b06d5a"
+    },
+    "hints.gff": {
+      "source_path": "examples/hints.gff",
+      "sha256": "b0e06d5bad81d5d63cf6d9d750e9dfcb4e9ec17adf7f4aa0098e2fa49d4258a9"
+    },
+    "hsackI10.gb": {
+      "source_path": "examples/hsackI10.gb",
+      "sha256": "3b52d58f6038c8736ed92005028c75294191363a93daf5e045a0364c42bcbc53"
+    },
+    "genes.gb.train": {
+      "source_path": "examples/chr2L/genes.gb.train",
+      "sha256": "5b1c5b1ca4d7d65a96522541f93dad2f0e54b0b7dd761212e2ee6f8c3f125f44"
+    },
+    "genes.gb.test": {
+      "source_path": "examples/chr2L/genes.gb.test",
+      "sha256": "3d7a5d4500f71406a88c3676ba1ab148e5e9e0b226011aa198fcc1d5e6ca5b7c"
+    }
+  },
+  "git_commit": "99e04771a7dc2feac4a62a60e88fd2f790c7bb3a",
+  "binary_sha256": {
+    "augustus": "8e95c6db1b39f7d10d8fdb4bfbdeed0cd4ff177baed9ef92452a0412d0ddf6c7",
+    "etraining": "482b5a0432d7012d126863f6c93d604d9da6dbef72e883bb08ab6f7c6f6f7083"
+  }
+}

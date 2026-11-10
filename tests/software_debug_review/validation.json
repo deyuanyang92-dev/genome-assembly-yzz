@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "validation_scope": "record_structure_local_links_and_fixed_source_fingerprints_only",
+  "projects": 6,
+  "issue_topics": 10,
+  "diagnostic_design_rules": 18,
+  "source_fingerprints_checked": 23,
+  "literature_records": 9,
+  "local_links_checked": 167,
+  "new_biological_runs": 0,
+  "diagnostic_engine_implemented": false,
+  "errors": []
+}

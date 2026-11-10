@@ -1,0 +1,6 @@
+[I::main_post] writing FASTA file for scaffolds
+[I::write_fasta_file_from_agp] Number sequences: 2
+[I::write_fasta_file_from_agp] Number bases: 140
+[I::main_post] Version: 1.2.2
+[I::main_post] CMD: juicer post --gap-size 100 -o /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/outputs/omitted /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/inputs/omitted.assembly /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/inputs/liftover.agp /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/inputs/original.fa
+[I::main_post] Real time: 0.017 sec; CPU: 0.003 sec; Peak RSS: 0.017 GB

@@ -1,0 +1,13 @@
+Splitting training file into 2 buckets...
+Reading in the meta parameters used for optimization from /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/optimization/one_parameter.cfg...
+Reading in the starting meta parameters from /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/species/yzz_fly_included/yzz_fly_included_parameters.cfg...
+bucket 1 2 
+starting accuracy: 0.9175, 0.6105, 0.7360, 0.4795, 0.4975, 0.3035, -1.00, -1.00, starting target: 0.6550
+improving parameter /Constant/dss_end curently set to 4
+/Constant/dss_end: checking values 2	3
+bucket 1 2 
+bucket 1 2 
+values  2	3
+targets 0.6251	0.6545
+Making final training with the optimized parameters.
+etraining --species=yzz_fly_included --AUGUSTUS_CONFIG_PATH=/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/ --/augustus/verbosity=0 --/ExonModel/verbosity=0 --/IGenicModel/verbosity=0 --/IntronModel/verbosity=0 --/UtrModel/verbosity=0 --/genbank/verbosity=0 tmp_opt_yzz_fly_included/curtrain  

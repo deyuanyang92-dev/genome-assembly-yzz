@@ -1,0 +1,232 @@
+Frequently Asked Questions - Phase Genomics
+Home
+Focus Areas & Applications
+Metagenomics & Microbiology
+Metagenome Deconvolution
+Viral Genome Reconstruction & Host Attribution
+Mobile Element Host Attribution
+Antibiotic Resistance & Surveillance
+Human Microbiome
+Fungal Genomics
+Discovery, Bioprospecting & Functional Metagenomics
+Plant & Animal Genomics
+High-Quality Reference Genomes
+Functional & Comparative Genomics
+Products
+ProxiMeta
+™
+Platform
+Proximo
+™
+Platform
+All Products & Services
+Technology
+Ultra-long-range Sequencing
+Computational Platforms
+Resources & Support
+Publications & News
+Protocols
+Analysis Tools
+Support
+Product Literature
+Video Library
+Blog
+Phasebook
+Distributors
+Company
+Team
+Events
+Careers
+My account
+Shop
+Contact
+Login
+ProxiMeta™ Explorer
+Shop
+Contact
+Login
+ProxiMeta™ Explorer
+Menu
+Home
+Focus Areas & Applications
+Metagenomics & Microbiology
+Metagenome Deconvolution
+Viral Genome Reconstruction & Host Attribution
+Mobile Element Host Attribution
+Antibiotic Resistance & Surveillance
+Human Microbiome
+Fungal Genomics
+Discovery, Bioprospecting & Functional Metagenomics
+Plant & Animal Genomics
+High-Quality Reference Genomes
+Functional & Comparative Genomics
+Products
+ProxiMeta
+™
+Platform
+Proximo
+™
+Platform
+All Products & Services
+Technology
+Ultra-long-range Sequencing
+Computational Platforms
+Resources & Support
+Publications & News
+Protocols
+Analysis Tools
+Support
+Product Literature
+Video Library
+Blog
+Phasebook
+Distributors
+Company
+Team
+Events
+Careers
+My account
+FAQs
+General
+What are your standard project guidelines?
+Sample and data requirements for success with our kits, ProxiMeta, Proximo or Proximo SV full service projects may be found
+here
+.
+ProxiMeta™ Metagenome Deconvolution Platform
+At what abundance can you detect and resolve novel genomes?
+The ProxiMeta Platform usually generates high-quality genomes for organisms at 0.1 – 1% abundance (1 in 100 to 1 in 1,000) in complex (e.g. fecal) samples. In some cases, high-quality genomes for organisms as rare as 0.02% (1 in 5,000) have been assembled, but such results cannot be guaranteed.
+Will gluteraldehyde-preserved samples work with your protocol?
+No, our protocol cannot generate a Hi-C library from a gluteraldehyde-preserved sample.
+Do you recommend using fresh cells? Is there a significant difference between frozen (snap freeze) and fresh cells in general?
+Fresh and frozen are both acceptable sample types. We do not strongly recommend one over another. However, note that slow freezing or multiple freeze-thaw cycles can impact the results and unequal lysis in frozen microbiome samples has been reported in the literature. We highly recommend freezing at -80ºC for long-term preservation.
+How much DNA do I need to supply?
+ProxiMeta begins with cells, not extracted DNA. Whether that’s a fecal sample, a bacterial pellet, soil, etc. our protocol must begin with unextracted sample material.
+How much sample material do I need? How many cells?
+Best results are seen with total microbial content of 1-20 million total cells (or more). For fecal samples, we recommend 50-100 µL volume as input. For information on other sample types, contact us at support@phasegenomics.com
+What is included with a ProxiMeta Hi-C kit?
+Each ProxiMeta Hi-C kit includes all of the specialized reagents needed to convert an intact biological sample to a dual-indexed, proximity-ligated library for Illumina sequencing. The only user-supplied materials required are ethanol (95%) and molecular biology grade water.
+Kits do not include the cost of sequencing.
+What Restriction Enzymes were used to process my sample? What Restriction Enzymes are present in my ProxiMeta Hi-C Kit?
+Projects and kits purchased or processed in 2021 or later use the following enzymes.
+Plant: DPNII
+Animal: DPNII
+Microbiome: Sau3AI, MluCI
+Human: DPNII
+Fungal: DPNII
+If your kit or project was processed pre-2021, please reach out to
+support@phasegenomics.com
+How many reads?
+You will need to sequence both a shotgun and Hi-C library for ProxiMeta.
+Shotgun read depth depends greatly on the complexity of the sample being sequenced. As an example, for fecal samples we recommend ~100M read pairs (2×150). Less diverse communities may allow for lower depth.
+Sequencing of the Hi-C library follows a similar trend, with lower depth needed for lower complexity samples. As an approximation, you can plan to sequence the Hi-C library to approximately half the depth of the shotgun library.
+Reach out to us if you would like more information.
+Can I use lyophilized material?
+Yes, if total cellular content is above ~1 million microbial cells in the pellet.
+What’s the best way to preserve my samples for later processing?
+The best choice is snap freezing at -80ºC. RNAlater® is also good choice if freezing is unavailable. We will also accept samples stored in ethanol or glycerol, but they are not ideal. Please contact us to determine suitability if you have another method in mind.
+Does my kit come with analysis?
+Yes, the ProxiMeta 8-sample kit comes with free analysis included on our web-based platform.
+How should I prepare a shotgun library? How many reads do I need?
+There are a number of shotgun library preparation methods/kits appropriate for metagenomic sequencing. We do not make specific recommendations.
+Proximo™ Genome Scaffolding Platform
+What is included with a Proximo Hi-C kit?
+Each Proximo Hi-C kit for Animals, Plants, Fungi or Microbes includes all of the reagents needed for
+two
+Hi-C library preps, whereas the Proximo Hi-C Kit  for Human samples provides for
+four
+library preps. This includes everything needed to convert an intact biological sample to a dual-indexed, proximity-ligated library for Illlumina sequencing.
+One Hi-C library prep per organism is typically adequate for metagenome deconvolution, genome scaffolding, structural analysis, and most other Hi-C applications.
+Kits do not include the cost of sequencing or analysis, which can be purchased separately.
+Which user-supplied reagents are required to execute a Proximo Hi-C kit protocol?
+Ethanol (95%) and molecular biology-grade water are needed to complete the protocol, and are not supplied in the kit.
+What Restriction Enzymes were used to process my sample? What Restriction Enzymes are present in my Proximo Hi-C Kit?
+Projects and kits purchased or processed in 2021 or later use the following enzymes.
+Plant: DpnII, DdeI, HinfI, MseI
+Animal: DPNII
+Microbiome: Sau3AI, MluCI
+Human: DPNII
+Fungal: DPNII
+If your kit or project was processed pre-2021, please reach out to
+support@phasegenomics.com
+What kind of animal tissue do you recommend using?
+For vertebrates, while most tissues are able to generate usable Hi-C libraries, brain, liver, muscle, or whole blood tend to yield the best results if available.
+For invertebrates, chitinous exoskeletons or pellicles can create problems in extracting good Hi-C data. We recommend using organisms during a softer tissue stage of their lifecycle, such as larvae or pupae for insects, if possible. Using a razor blade to chop most invertebrate samples (piled into a group if using multiple individuals) is also very helpful. After crosslinking, homogenizing the tissue with a dounce or other tissue grinder leads to best release of chromatin in the following lysis steps.
+Generally speaking, if you have challenges creating short-read sequencing libraries for your sample, you may experience similar challenges with Hi-C libraries as well. Any tricks you might have developed for creating short-read libraries for your sample may also be helpful; please
+contact us
+if you would like to discuss a potentially difficult sample.
+What portion of the plant do you recommend using?
+For plants, younger fresh leaves work better than old ones. Seedlings have also been validated. Do not use wood, bark or roots as sample input; flowers work well, but buds sometimes do not. Samples do not need to be pre-grown in the dark.
+What do I do for plants rich in polyphenols?
+Like many sequencing library preparations, a high degree of polyphenols in a plant sample may cause problems generating a Hi-C library too. Fortunately, some additional washing steps are usually sufficient to eliminate the problem. We can include an additional wash in our Proximo Hi-C (Plant) Kits at no charge if you expect this to be a problem. Please
+contact us
+to discuss how to best deal with polyphenols and/or if you think you might need extra wash with your kits.
+What does “chop tissue” in the protocol mean? Should we use a tissue lyser?
+Use a sterile knife or razor blade to chop your sample into 1 – 5 mm pieces. DO NOT use a tissue lyser or a blender. The goal is to expose more surface area to the crosslinking solution, not to break down the tissue.
+Can we customize our Proximo Hi-C kit with specific enzymes and/or indices?
+Typically yes. Please
+contact us
+so that we can learn more and help you to customize your project.
+What is the typical final library yield from a Proximo Hi-C kit?
+Final library yield varies greatly across sample types. You should obtain at least 15 ng of library, but yields typically range from 100 – 500 ng. We do not recommend proceeding with sequencing if your final library concentration is <0.5 ng/uL.
+Can I purchase a Proximo Hi-C kit without analysis?
+Yes, all Proximo Kits are available for sale without analysis services. All ProxiMeta kits (8-pack) include analysis.
+Sequencing
+How many different index sequences are included in each kit? Can I follow standard guidelines for multiplexed Illumina sequencing?
+Every Proximo or ProxiMeta kit contains two sets of indexed primers, which are used to generate unique dual-indexed Illumina-compatible libraries with different sequence combinations. Indices are identified in your kit, and sequences are provided in the kit protocol. If you plan to pool your Hi-C libraries with other libraries for sequencing, please follow standard guidelines for multiplexed sequencing on your specific Illumina instrument.
+Please
+contact us
+if additional indices are needed.
+Are the libraries produced by your Hi-C kits compatible with all Illumina sequencers?
+Yes, all of our kits yield dual-indexed libraries that may be sequenced on any Illumina sequencing platform.
+How much sequence data do you recommend generating?
+For human, animal, plant, fungal or microbial genome samples, we recommend the following amount of sequencing data (2 x 75 bp or longer):
+Genome size <400 Mb: 100 M read-pairs
+Genome size 400 Mb – 1.5 Gb: 150 M read-pairs
+Genome size 1.5 Gb – 3 Gb: 250 M read-pairs
+For larger sized genomes, scale roughly to 100 M read-pairs per Gb.
+If your assembly is low contiguity (e.g., N50 <100 kb, or #contigs > 5,000), add another 50 M read-pairs per Gb of genome size.
+For microbiome samples, we recommend 50 M – 100 M read-pairs for the Hi-C library and 100 M – 150 M reads for the shotgun library. If your sample is very diverse, doubling the number of both sets of reads can be useful. If your sample is of low complexity, reducing the read numbers by half is recommended.
+Analysis
+How do I access the ProxiMeta Metagenome Deconvolution software?
+Visit
+proximeta.phasegenomics.com
+to view example reports or perform your on-line analysis (included with ProxiMeta kits). A quick reference guide for getting started with ProxiMeta may be found
+here
+.
+How do I access the Proximo Genome Scaffolding software?
+Contact us
+to design or get started with a Proximo Genome Scaffolding project.
+What is FALCON-Phase?
+FALCON-Phase is an algorithm co-developed by PacBio and Phase Genomics. It examines contigs and haplotigs generated from long-read sequencing (e.g. the results of FALCON-Unzip or purge_haplotigs) in the context of Hi-C data, using a graph partionining algorithm that detects likely phase switch errors and corrects them. This results in >96% contig phasing accuracy in known-truth, pedigree based benchmarks. FALCON-Phase can be used in conjunction with the Proximo Platform to extend phase blocks to chromosome scale, delivering two complete, truly phased sets of chromosomes for diploid organisms (both the paternal and maternal genomes, from a single analysis).
+FALCON-Phase is an open-source tool, available on our
+Github page
+, and as an analysis service.
+Contact us
+to get started with a FALCON-Phase project.
+How should I align/QC my Hi-C library?
+Recommendations for aligning and performing QC on Hi-C data may be found
+here
+.
+How do I assemble a genome that I plan to scaffold with Hi-C data?
+Successful genome scaffolding with Hi-C data depends on the quality of the of the assembly with which you start. Read our
+recommendations
+for preparing a starting assembly for scaffolding a haploid genome.
+Do you offer any open-source analysis tools?
+Yes, we offer several open-source analysis tools for Hi-C data on our
+GitHub page
+.
+Didn't find what you needed?
+CONTACT US
+Blueprints for Biology
+Phase Genomics is a life science innovation company. Using our ultra-long-range genome sequencing technology, we unlock novel insights in genomics, cytogenetics, oncology, and microbiology to answer pivotal questions in research and medicine.
+1617 8th Ave N
+Seattle, WA 98109
+info@phasegenomics.com
++1 (833) 742-7436
+Applications
+Products
+Technology
+Resources & Support
+Company
+© Phase Genomics, Inc. 2026. All rights reserved. CytoTerra, ProxiMeta, Proximo, Genomic Proximity Mapping, and FALCON-Phase are trademarks of Phase Genomics, Inc. All other product names and trademarks are the property of their respective owners.
+For Research Use Only. Not for use in diagnostic procedures.

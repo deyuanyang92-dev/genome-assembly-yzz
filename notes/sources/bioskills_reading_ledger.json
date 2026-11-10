@@ -1,0 +1,164 @@
+{
+  "recorded": "2026-11-01",
+  "commit": "d91ed3d563019e649dc854c56ccd62551359488a",
+  "all_metadata_indexed": 561,
+  "body_read": [
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/assembly-polishing/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "97f562a6e3a5fbbc077584bcc98b7f2e1bb6cecf481118e554e511bdc568002d",
+      "lines": 193
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/assembly-qc/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "b0d047e97518de285a13efc73ffe6035739aa614cd1ac40aad3b47935628e178",
+      "lines": 178
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/contamination-detection/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "ab665b64eee97fa2d44d001979549bb94d12f5298d7a0a7904b6e5f12866237c",
+      "lines": 207
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/genome-profiling/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "800673ef936424c0269b62d95f7e080875c556e4843032bb78e06b08a90c2387",
+      "lines": 158
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/hifi-assembly/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "c24c4642a2c9f8669fe6273c617123ab9b7810c4c5e85fb35bafb0fffaa3d22e",
+      "lines": 187
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/long-read-assembly/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "5fae393fd8f62ceb26c97616bcd6b0515071e7a04db6dfc14f695e81f9b5c581",
+      "lines": 173
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/metagenome-assembly/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "a07b99fb96caf4f83d177e6e84747d99e60f66498a61aefe75fc3df972d4b958",
+      "lines": 222
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/scaffolding/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "47ee2881db13e1c38715fc15120542df81d7c8d5ce1cde9b1322e3f2e2542c10",
+      "lines": 212
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/short-read-assembly/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "c03994dccbf4b30ce80deeb2ec9f671a9c837b1b5471e3c5cc09aa0cdcdaa9df",
+      "lines": 172
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/workflows/genome-assembly-pipeline/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "447927e24a26705f06ff54b81ed5f7e9b81596403b5c77658d33abf394b56bf8",
+      "lines": 235
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/workflows/hic-pipeline/SKILL.md",
+      "scope": "SKILL.md 正文阅读，未验证全部命令/论文/示例",
+      "sha256": "9972c37b255862acfa65e63c545b1740ebd752bdb560ed1fa31f2892c467fd17",
+      "lines": 333
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/workflow-management/nextflow-pipelines/SKILL.md",
+      "scope": "本轮补全SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "a6034c911a57c17e42a05c28ee9ffc30ecbb62dc2b75ff872c75ac2432e6254c",
+      "lines": 242
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/workflow-management/nf-core-pipelines/SKILL.md",
+      "scope": "本轮补全SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "225ab475842a9a2550b0b3333d401ceb120c9deabece42365fa06efead76288b",
+      "lines": 194
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/workflow-management/snakemake-workflows/SKILL.md",
+      "scope": "本轮补全SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "b3d3685110cb509a8367e2d6412114d8cf334aa9c20ace7751e0eb2d71132eff",
+      "lines": 255
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/long-read-sequencing/long-read-qc/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "5f9e7747e3b8eabcb90bde03d7ea96166a9418a01104aae783a87c35bf3e9bf8",
+      "lines": 140
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/long-read-sequencing/long-read-alignment/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "305d0fd6de708c98c1577e937465c929886010e3efd4136e088d8552d32f22fa",
+      "lines": 174
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/long-read-sequencing/haplotype-phasing/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "536f8f4bf442724f8efd65ba31c936ebf46197a624847aabf83d418d94165182",
+      "lines": 156
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/alignment-files/alignment-validation/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "748b149783ead64bd122bd9fd4b716c77411ca64e4d8a9f450cc48c454d9d26e",
+      "lines": 397
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/alignment-files/alignment-filtering/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "e24ea6628923bf27c01d1510d7cf94cf98ea7253c1edca9b58a0cdf202eacc17",
+      "lines": 410
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/alignment-files/alignment-sorting/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "f425e08b38199481d6e8f80a3e1acf22ede794eb0671b3def468a3dca6fa4728",
+      "lines": 322
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/alignment-files/bam-statistics/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "fb86e671b6386f84ca090ce941b0f71d5baddc50b4dbb346a456b47595fd2301",
+      "lines": 425
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/alignment-files/duplicate-handling/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "2842b987292e33ddc94967d3ab672317ef6e723d5d037f443cec572fe28e8c18",
+      "lines": 370
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/hi-c-analysis/contact-pairs/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "4e679855e7cb8272351f4cf12d5e3c1f5944bafd8bb95a06c146c33ed07f3730",
+      "lines": 203
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/hi-c-analysis/hic-data-io/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "7e6e9ba76d404a9dfc4337eb937505713c986923649438c905fd783e7737b8d9",
+      "lines": 227
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/hi-c-analysis/hic-visualization/SKILL.md",
+      "scope": "本轮SKILL.md全文阅读；未验证全部命令/论文/示例",
+      "sha256": "4d781449f5633446df0ce904cccfe281d6898c49bbc756a9fc9cd9ee54f27bd6",
+      "lines": 259
+    }
+  ],
+  "section_read": [],
+  "examples_read": [
+    "genome-assembly/hifi-assembly/examples/hifi_assembly_workflow.sh",
+    "genome-assembly/scaffolding/examples/yahs_scaffolding.sh",
+    "workflows/genome-assembly-pipeline/examples/bacterial_assembly.sh"
+  ],
+  "biological_examples_executed": 0
+}

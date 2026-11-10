@@ -1,0 +1,451 @@
+PretextView - Paired REad TEXTure
+Viewer
+Basic Operation
+
+ 1) Introduction
+ 2) Opening up the PretextView interface
+ 3) Customising the PretextView interface
+ 4) The graphical view
+ 5) Map navigation
+ 6) PretextView Edit Mode
+ 7) PretextView Waypoint Edit Mode
+ 8) PretextView MetaData Tag Mode
+ 9) PretextView Scaffold Edit Mode
+ 10) PretextView Generate AGP function
+ 11) PretextView Save functions
+       11a) Directions for using Save State/Load State functions
+1) Introduction
+PretextView is a desktop application for viewing and editing HiC contact maps made using
+the PretextMap application - information for which can be found in the following location
+https://github.com/wtsi-hpag/PretextMap.
+
+
+The latest version of PretextView can be downloaded from the following location:
+https://github.com/wtsi-hpag/PretextView/releases
+This tutorial was written for PretextView version 0.2.5
+
+
+
+
+2) Opening up the PretextView interface
+In order to open the main application window navigate to where you have downloaded the
+PretextView application and double click on the PretextView icon.
+
+
+
+
+Alternatively the application can be launched via command line in linux:
+
+   ➢ Navigate to the PretextView application directory
+
+   ➢ Run:     ./PretextView
+
+Launching the PretextView application opens up two windows, the main PretextView
+screen (green) where the HiC map will be displayed, and the PretextView main menu.
+To display a HiC map that has been produced using PretextMap click on the Load Map
+button on the menu.
+
+
+
+
+After you click the Load Map button another window pops up that allows you to navigate to
+your pretext HiC contact map. Clicking on the map icon opens the map.
+
+
+
+
+When the map has opened in the viewer the Load Map screen can then be closed using the
+X.
+3) Customising the PretextView interface
+With the map open it is now possible to customise the PretextView interface using the
+options available from the menu. A number of these options will be turned on as default but
+others are selectable depending on your preference. All of these options can be switched off
+or on at any point and the map will update accordingly.
+
+Once the map is loaded up the main menu is opened by the middle mouse click
+anywhere on the map, or by left clicking and then pressing ‘u’ on the keyboard. In
+order to view the full PretextView menu drag out the window from the bottom right
+corner.
+
+
+
+
+As a starting point for curation the following set up is recommended:
+Highlighted in the red box on the above menu are the “Gamma’ Sliders’. These allow the
+user to adjust the Gamma signal on the map which can be useful when trying to determine
+relationships between scaffolds where for whatever reason the HiC signal strength is weak.
+Typically the Default Gamma setting is used.
+A full explanation of the function of all the selectable options is found in the table
+below:
+
+
+  Menu Option                           Function
+  Contig Names Labels                   Displays the contig names on both axis as taken from
+                                        the fasta file used to create the Pretext map
+
+  Edit Mode                             Allows the user to directly edit the map using the
+                                        mouse functions
+
+  Grid                                  Displays the map with a grid overlaid in order to see
+                                        contig separation
+
+  ID Bars                               Displays a uniquely coloured bar across the top of
+                                        each individual scaffold in order to help track edits
+
+  Invert Mouse Buttons                  Swaps the order of the mouse buttons used for Edit
+                                        Mode (This would revert the mouse to normal mouse
+                                        button assignment)
+
+  Scaffolds Always Visible              When used in conjunction with scaffold Edit mode.
+                                        Allows the user to temporarily remove scaffold painting
+
+  Scaffold Edit Mode                    Allows scaffold painting to facilitate the ‘Generate AGP’
+                                        option
+
+  Scale Bars                            Displays a scale auto adjusting scale bar across the
+                                        top of the map
+
+  Tool Tip                              Displays the mouse position with a menu showing
+                                        scaffold coordinates
+
+  Waypoints Always Visible              Displays waypoints that have been added to the map.
+                                        These are numbered chronologically.
+
+  Waypoint Edit Mode                    Allows users to add waypoints directly on to the map.
+
+  MetaData Tags                         This editor allows the user to define the Meta data tags
+                                        they require. Six tags are set as default when the
+                                        application is installed. These are Haplotigs,
+                                        Unloc(alised) and Sex Chromosome assignments.
+
+  MetaData Tag Mode                     Allows users to add selected Meta Data tags directly
+                                        onto the map.
+
+  MetaData Tags always visible          Displays Meta Data tags that have been added to the
+                                        map
+
+  Sort by MetaData tags                 Allows users to group scaffolds by Meta Data tag type.
+                                        All groups are then relocated to the right hand corner of
+                                        the map.
+The dropdown menus on the lower part of the menu provide further options for map
+customization.
+
+
+
+
+   ➢ Colour Maps
+       Clicking on the arrow reveals a dropdown menu with a number of different colour
+       options for visualising the mapped data.
+
+
+
+
+The preferred colour choices for curation are typically:
+
+           ●   Three Wave Blue-Green_Yellow
+           ●   Blue-Orange Divergent
+           ●   Orange 1
+
+Other colour schemes may be used but the 3 options listed above have been found to be
+most useful for HiC contact interpretation.
+
+Note: With the map open using ‘cmd up/down’ (mac) ‘ctrl up/down’ (windows) it is
+possible to cycle through the different colour schemes without going into the main menu.
+This is very useful as you can scroll through the colours easily when editing the map which
+can help in interpretation of ambiguous HiC signal.
+   ➢ Edits
+       The Edits menu bar lists the number of edits that have been in the assembly.
+       Clicking on the Edits arrow reveals a dropdown menu that provides information
+       about the edits that have been made in the map. From here this list can also be
+       copied to clipboard if required:
+
+
+
+
+Using the ‘Undo’ button it is possible to revert any edits that have been made in the map.
+These are undone in reverse order, there is no option to choose specific edits. When an edit
+is undone in the menu the map will automatically update accordingly.
+
+
+
+   ➢ Waypoints
+       Clicking on the arrow reveals a dropdown which lists the Waypoints that have been
+       placed on the map:
+
+
+
+
+       Selected Waypoints can be removed from the map using this menu.
+
+
+
+   ➢ Input Sequences
+       Clicking on the arrow reveals a dropdown which lists all of the scaffolds in order in
+       the assembly . The number in brackets indicates the number of pieces that the
+       scaffold is in. This will be (1) for all unedited scaffolds. Where breaking has occurred
+       this is represented in this number as is seen for scaffold 2 below:
+Selecting a scaffold allows the user to revert breaks they have made in particular scaffolds.
+
+
+
+   ➢ Extensions
+       Clicking on the arrow reveals a dropdown menu which lists all available data sets
+
+       that can be embedded into the pretext map. These extensions are only available
+       where the bedgraph formatted data has been converted using the PretextGraph
+       application, instructions on how to use this can be found here:
+
+       https://github.com/wtsi-hpag/PretextGraph
+Selected extensions appear as graphs on the pretext map.
+
+
+
+
+In the default setting the graphs are all displayed in the same colour on the map view. This
+can be changed by right clicking on the check box for each graph. A pop up menu will
+appear and a custom colour can be selected. Also in this menu there are sliders that allow
+the user to customise the height, scale and line width of the graphs as they are displayed on
+the map.
+
+
+
+
+The displayed graphs are not static, they adjust accordingly in order that they are still visible
+to the user as they navigate around the map, this includes when the zoom function is used.
+4) The Graphical view
+The Pretext graphical view represents each separate scaffold in an assembly as a distinct
+square on the contact map. Interactions between squares on the off diagonal indicate a
+relationship between scaffolds - i.e that they are part of the same chromosome. The stronger
+the relationship is between the scaffolds, the more intense the off diagonal signal is. The HiC
+map also indicates where there are scaffolds that have been incorrectly assembled - either
+intra - or inter chromosomally.
+
+
+
+
+5) Map Navigation
+A three button mouse is recommended
+
+Pan - Hold down right mouse button and drag from left to right
+Zoom - Use scroll to zoom in and out of map
+6) PretextView Edit Mode
+PretextView Edit mode is a feature that allows the user to to make edits directly within the
+pretext map. This includes moving scaffolds around the map, reorienting scaffolds and
+making breaks and joins within scaffolds.
+
+There are two ways to activate Edit mode in the map:
+
+   ➢ Left mouse click on map and then press the ‘e’ key on the keyboard
+
+   ➢ Middle click on the mouse or press ‘u’ and then select Edit Mode from the main
+     menu
+
+Once Edit mode is switched on crosshairs appear on the map as a green cross. The user
+can navigate around the map with the crosshairs, the expandable region between the
+crosshairs denotes the area to be edited which needs to be defined before editing occurs.
+
+
+Crosshair navigation:
+
+Pan - Move left and right with mouse over map
+Zoom - Move mouse up and down
+
+
+In addition to the crosshairs an Edit Mode menu also pops up on the bottom right hand side
+of the map. This lists all of the editing functions and their usage:
+
+Edit Mode menu:
+
+Mouse left click - selects the region defined by the crosshairs and also then places that
+region at the desired location.
+Mouse middle click/Spacebar - selects the whole scaffold.
+Mouse middle click/Spacebar (after selection with Edit mode) - inverts the selection
+region or whole scaffold.
+Keyboard ‘q’ - undoes the last edit
+Keyboard ‘w’ - redoes the last edit
+Keyboard ‘s’ - switches on ‘Snap Mode’, this mode prevents the user from joining the
+selected region/scaffold internally within another scaffold (unless that scaffold has been
+previously broken). With Snap Mode selected it is only possible to place selected regions
+adjacent to other scaffolds. When ‘Snap Mode’ is selected a banner pops up on the
+crosshairs to alert the user.
+Keyboard ‘e’ - Exits Edit Mode
+7) PretextView Waypoint Edit mode
+PretextView Waypoint Edit mode allows the user to place numbered waypoints on the
+map.
+
+
+There are two ways to activate Waypoint Edit Mode in the map:
+
+
+   ➢ Left mouse click on map and then press the ‘w’ key on the keyboard
+
+   ➢ Middle click on the mouse or press ‘u’ and then select Waypoint Edit Mode
+     from the main menu
+
+With Waypoint Edit Mode selected a menu appears in the bottom right hand side of the
+map, this lists all of the waypoint functions and their usage:
+
+Mouse left click - places a waypoint
+Mouse middle click/Spacebar - deletes a waypoint
+Keyboard ‘w’ - exits Waypoint Edit Mode
+8) PretextView MetaData Tag Mode
+PretextView MetaData Tag Mode allows the user to add predefined tags to the scaffolds in
+the map. This function can be used as a stand alone function in order for the user to mark up
+sections of the map for reference purposes. It is most powerful however when used in
+conjunction with the rapid curation pipeline (rapid_pretext2tpf/rapid_pretext2tpf_XL
+scripts) where the script will take the MetaData tag information and use it in production of
+the resulting tpf.
+
+
+For further explanation of how the MetaData Tag Mode function works as part of the rapid
+pipeline lease refer to:
+
+https://gitlab.com/wtsi-grit/rapid-curation/-/blob/main/README_curation.md
+Clicking the MetaData tags button brings up the Meta Data tag Editor Menu:
+
+
+
+
+There are two ways to activate Meta Data Tag mode in the map:
+
+   ➢ Left mouse click on map and then press the ‘M’ key on the keyboard
+
+   ➢ Middle click on the mouse or press ‘u’ and then select MetaData Tag Mode from
+     the main menu
+
+With MetaData Tag Mode selected a menu appears in the bottom right hand side of the
+map, this lists all of the editing functions and their usage:
+
+Keyboard ‘m’ - exits Meta Data Tag Mode
+Mouse left click - places a tag
+Mouse middle click - removes a tag (a tag can only be removed if the ‘active tag’ is set to
+the same type of tag as the tag to be removed).
+Shift-D - deletes all tags
+Keyboard up and down arrow keys - selects the active tag type
+Active tag - shows the selected tag type that will be placed
+9) PretextView Scaffold Edit mode
+PretextView Scaffold Edit Mode allows the user to ‘paint’ the scaffolds in the map. The
+map state with the ‘painted’ objects defined in scaffolding mode can then be outputted in
+AGP (Accessioned Golden Path - for an explanation of AGP files please refer to AGP
+Specification v2.1) format via the main menu using the Generate AGP function. Any
+unpainted sequences are output as singletons.
+
+For a full explanation of how the Scaffold Edit Mode and Generate AGP functions should
+be incorporated as part of the Rapid pipeline please refer to:
+
+https://gitlab.com/wtsi-grit/rapid-curation/-/blob/main/README_curation.md
+
+
+There are two ways to activate Scaffold Edit mode in the map:
+
+   ➢ Left mouse click on map and then press the ‘s’ key on the keyboard
+
+   ➢ Middle click on the mouse or press ‘u’ and then select Scaffold Edit Mode from
+     the main menu
+
+With Scaffold Edit mode selected a menu appears in the bottom right hand side of the map,
+this lists all of the editing functions and their usage:
+
+Mouse left click - paints a scaffold
+Mouse middle click/Spacebar - deletes the ‘painting’
+Mouse left click hold down and drag - paints adjacent scaffolds naming them as part of
+the same scaffold
+Mouse left click hold down and scroll - enables zoom while painting
+Keyboard ‘d’ - deletes all painting
+Keyboard ‘s’ - exits Scaffold Edit Mode
+
+
+
+
+After painting the map state is now ready to be output in AGP format. See section 10) for
+details of how to proceed.
+
+
+
+
+10) PretextView Generate AGP function
+The PretextView Generate AGP function allows the user to output an AGP directly from the
+pretext map. This function can be used to generate an AGP of the pre-curated map, or in
+conjunction with ‘Scaffold Edit Mode’ (see section 9) in order to create an AGP of the
+curated map. If used with ‘Scaffold Edit Mode’ all ‘painting’ should be carefully checked in
+the map before AGP generation in order that the output AGP is an accurate reflection of the
+curated assembly.
+
+To navigate to the Generate AGP function in the map:
+
+
+   ➢ Middle click on the mouse or press ‘u’ and then select Generate AGP from the
+     main menu
+Selecting the Generate AGP function from the main menu brings up a new window that
+allows the user to save the AGP file, or override a previous file.
+
+
+
+
+The AGP file can then be opened with the relevant text editing program e.g NEdit.
+
+Note that object/part sizes will only be accurate up to the size of an individual map
+texel, and that any input sequences smaller than an individual texel will not be output.
+
+
+
+AGP output examples
+
+Pre-curated:
+Curated:
+
+
+
+
+11) PretextView Save Functions
+The pretextView map is automatically saved ($XDG_CONFIG_DIR or ~/.config on Unix,
+and the %APPDATA% folder on Windows) while the application is open. If the application is
+exited correctly the edited map will be loaded up the next time the same map is opened in
+the viewer. If the application crashes it is likely that all edits may be lost.
+
+There is also an option within the PretextView main menu to manually save a map state.
+This provides additional security if the application were to unexpectedly close but is also
+useful for sharing an edited pretext map between users. Save State files are viewed in the
+map using the Load State Function.
+
+
+
+
+11a) Directions for using SaveState/Load State functions
+
+First make a copy of the original pretext file and rename it e.g. edited.pretext - this is
+because when you use the Save State function this overwrites the original map.
+
+Make edits in the copied version of the file and then navigate to the Save State function:
+   ➢ Middle click on the mouse or press ‘u’ and then select Save State from the
+     main menu
+
+Selecting the Save State function from the main menu brings up a new window that allows
+the user to save the edited map in a chosen location. There is also an override option which
+if selected overrides the previous iteration of the saved map.
+
+
+
+
+In order for the Load State function to work when the user wants to view the edited map the
+Save State file needs the same file name as the pretext map that has been edited plus
+.savestate.
+
+For example:
+
+For map - bHemCom1_1.edited.pretext
+
+Save State file should be - bHemCom1_1.edited.pretext.savestate_1
+
+
+To open the Save State version of the map the map of the same name must first be loaded
+into the PretextView application. When this has loaded, Load State needs to be selected
+from the main menu, this will bring up a new window from which the user can then navigate
+to the relevant Save State file. If the Save State file has loaded correctly the map will
+instantly update in the viewer to the saved version.
+
+Load state will only open on an unedited map
+
+Note: There is no forward or backward compatibility with save-states from previous
+PretextView release versions.
+

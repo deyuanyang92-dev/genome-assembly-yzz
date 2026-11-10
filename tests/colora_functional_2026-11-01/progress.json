@@ -1,0 +1,30 @@
+{
+  "goal_status": "active",
+  "last_updated": "2026-11-02T01:48:00+08:00",
+  "stages": {
+    "source_review": "ongoing; reuse original library records and add version/time ledger",
+    "input_preparation": "complete; official yeast test subset checksummed, gzip and FASTQ structure validated",
+    "dag": "Colora default DAG 24 targets; all outputs present; final Snakemake all exit 0; QUAST executed separately in ASCII output path due Unicode restriction",
+    "assembly": "passed hifiasm and GFA/FASTA consistency; four sequences per hap",
+    "scaffolding": "passed both hap AGP/FASTA exact; YaHS added no joins",
+    "quality_evaluation": "four BUSCO v6 offline runs, QUAST v5.3.0 and NanoPlot v1.46.2; interpret only as biased sparse functional test",
+    "annotation": "miniprot native example and protein projection validation; Oatk mitochondrial profile output is functional evidence only",
+    "comparison_genomics": "pending; target species data inventory and production assets needed",
+    "database_preparation": "BUSCO and Oatk databases pinned and checksummed; S288C reference MD5 verified",
+    "survey": "KMC/GenomeScope completed; model fit and input bias prevent reliable genome-size conclusion"
+  },
+  "complete_upstream_workflows_run": 1,
+  "workflow": "LiaOb21/colora",
+  "workflow_commit": "d6569edaff8da51739688b246dda2dfb2da13d7a",
+  "snakemake_version": "8.30.0",
+  "software_learning_ledger": "software_learning_ledger.tsv",
+  "environment_lock_manifest": "environment_locks/manifest.json",
+  "remaining": [
+    "Inventory target polychaete project assemblies/reads and verify sample identities",
+    "Estimate effective target-individual HiFi coverage and assess the established 50x requirement",
+    "Run production-relevant contamination and purging comparisons with retained sequence-loss evidence",
+    "Learn/run repeat, structural, RNA-supported and functional annotation on appropriate data",
+    "Complete independent k-mer/QV/completeness evaluation and comparative-genomics asset audit",
+    "Archive the complete dated experiment into the dedicated genome assembly learning library"
+  ]
+}

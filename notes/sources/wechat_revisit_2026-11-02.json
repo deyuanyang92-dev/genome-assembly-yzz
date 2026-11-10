@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-02",
+  "url": "https://mp.weixin.qq.com/s/QGKqelwis4CpgCpC5Ldekg?scene=1",
+  "command": "curl -fL --connect-timeout 10 --max-time 25 URL -o /tmp/wechat_revisit_2026-11-02.html",
+  "returncode": 0,
+  "bytes": 18172,
+  "sha256": "0af9088a31e5bf40365758b7f5abbc7630feb3fe0cc3a2183255db589cc7c5da",
+  "observed_title": "环境异常",
+  "observed_message": "当前环境异常，完成验证后即可继续访问。",
+  "media_acquired": false,
+  "transcript_acquired": false,
+  "note": "HTTP transfer success does not mean article/video acquired; no verification solved or login attempted."
+}

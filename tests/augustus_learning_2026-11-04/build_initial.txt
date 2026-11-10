@@ -1,0 +1,46 @@
+make: Entering directory '/tmp/yzz-augustus-3.5.0/src'
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o genbank.o genbank.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o properties.o properties.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o pp_profile.o pp_profile.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o pp_hitseq.o pp_hitseq.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o pp_scoring.o pp_scoring.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o statemodel.o statemodel.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o namgene.o namgene.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o types.o types.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o gene.o gene.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o evaluation.o evaluation.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o motif.o motif.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o geneticcode.o geneticcode.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o hints.o hints.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o extrinsicinfo.o extrinsicinfo.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o projectio.o projectio.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o intronmodel.o intronmodel.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o exonmodel.o exonmodel.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o igenicmodel.o igenicmodel.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o utrmodel.o utrmodel.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o merkmal.o merkmal.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o vitmatrix.o vitmatrix.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o lldouble.o lldouble.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o mea.o mea.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o graph.o graph.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o meaPath.o meaPath.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o exoncand.o exoncand.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o randseqaccess.o randseqaccess.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o fasta.o fasta.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o ncmodel.o ncmodel.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o dummy.o dummy.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o commontrain.o commontrain.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o igenictrain.o igenictrain.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o introntrain.o introntrain.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o exontrain.o exontrain.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11  -I../include -c -o utrtrain.o utrtrain.cc
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11   -I../include -o augustus augustus.cc genbank.o properties.o pp_profile.o pp_hitseq.o pp_scoring.o statemodel.o namgene.o types.o gene.o evaluation.o motif.o geneticcode.o hints.o extrinsicinfo.o projectio.o intronmodel.o exonmodel.o igenicmodel.o utrmodel.o merkmal.o vitmatrix.o lldouble.o mea.o graph.o meaPath.o exoncand.o randseqaccess.o fasta.o ncmodel.o dummy.o 
+g++  -Wall -Wno-sign-compare -pedantic -O3 -std=c++11   -I../include -o etraining etraining.cc commontrain.o igenictrain.o introntrain.o exontrain.o utrtrain.o genbank.o properties.o pp_profile.o pp_hitseq.o pp_scoring.o statemodel.o namgene.o types.o gene.o evaluation.o motif.o geneticcode.o hints.o extrinsicinfo.o projectio.o intronmodel.o exonmodel.o igenicmodel.o utrmodel.o merkmal.o vitmatrix.o lldouble.o mea.o graph.o meaPath.o exoncand.o randseqaccess.o fasta.o ncmodel.o 
+cp -f augustus ../bin/
+cp: cannot create regular file '../bin/': Not a directory
+make: *** [Makefile:89: augustus] Error 1
+make: *** Waiting for unfinished jobs....
+cp -f etraining ../bin/
+cp: cannot create regular file '../bin/': Not a directory
+make: *** [Makefile:93: etraining] Error 1
+make: Leaving directory '/tmp/yzz-augustus-3.5.0/src'

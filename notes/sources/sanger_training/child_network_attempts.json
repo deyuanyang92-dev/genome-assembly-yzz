@@ -1,0 +1,30 @@
+[
+  {
+    "utc": "2026-11-02T14:02:19.357509+00:00",
+    "command": [
+      "curl",
+      "-IL",
+      "--max-time",
+      "20",
+      "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/PretextView-Tutorial.pdf"
+    ],
+    "exit_code": 7,
+    "log": "notes/sources/sanger_training/child_network_attempt_1.log",
+    "context": "subagent default sandbox; not proof of universal network state"
+  },
+  {
+    "utc": "2026-11-02T14:02:19.368171+00:00",
+    "command": [
+      "curl",
+      "--noproxy",
+      "*",
+      "-IL",
+      "--max-time",
+      "20",
+      "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/PretextView-Tutorial.pdf"
+    ],
+    "exit_code": 6,
+    "log": "notes/sources/sanger_training/child_network_attempt_2.log",
+    "context": "subagent default sandbox; not proof of universal network state"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "goal_status": "active",
+  "last_updated": "2026-11-02T11:15:00+08:00",
+  "stages": {
+    "source_review": "ongoing; prior ledger reused; NHGRI Capitella July 2026 release and 2026 chromosome-level paper reviewed; exact versions/times/checksums logged; NHGRI functional XLSX ID/protein sequence compatibility compared",
+    "input_preparation": "complete; official yeast test subset checksummed, gzip and FASTQ structure validated",
+    "dag": "Colora default DAG 24 targets; all outputs present; final Snakemake all exit 0; QUAST executed separately in ASCII output path due Unicode restriction",
+    "assembly": "passed hifiasm and GFA/FASTA consistency; four sequences per hap",
+    "scaffolding": "passed both hap AGP/FASTA exact; YaHS added no joins",
+    "quality_evaluation": "four BUSCO v6 offline runs, QUAST v5.3.0 and NanoPlot v1.46.2; interpret only as biased sparse functional test; Capitella reference release structurally checked (not independent completeness validation)",
+    "annotation": "miniprot native example and protein projection validation; Oatk mitochondrial profile output is functional evidence only; Capitella GFF3/protein/repeat BED cross-file checks and same-release miniprot remapping executed",
+    "comparison_genomics": "pending; target species data inventory and production assets needed",
+    "database_preparation": "BUSCO and Oatk databases pinned and checksummed; S288C reference MD5 verified; functional table IDs, sparse rows and embedded peptide mismatches characterized; functional workbook release compatibility checked, with peptide mismatches and Panther orphan IDs logged",
+    "survey": "KMC/GenomeScope completed; model fit and input bias prevent reliable genome-size conclusion"
+  },
+  "complete_upstream_workflows_run": 1,
+  "workflow": "LiaOb21/colora",
+  "workflow_commit": "d6569edaff8da51739688b246dda2dfb2da13d7a",
+  "snakemake_version": "8.30.0",
+  "software_learning_ledger": "software_learning_ledger.tsv",
+  "environment_lock_manifest": "environment_locks/manifest.json",
+  "remaining": [
+    "Confirm provenance of 131 Trinotate peptide differences and 13 Panther orphan IDs if previous annotation release/author mapping becomes obtainable; NHGRI public portal states previous release is no longer hosted",
+    "Inventory target polychaete project assemblies/reads and verify sample identities",
+    "Estimate effective target-individual HiFi coverage and assess the established 50x requirement",
+    "Run production-relevant contamination and purging comparisons with retained sequence-loss evidence",
+    "Learn/run repeat, structural, RNA-supported and functional annotation on appropriate data",
+    "Complete independent k-mer/QV/completeness evaluation and comparative-genomics asset audit"
+  ]
+}

@@ -1,0 +1,320 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+host: yangdeyuan
+Building DAG of jobs...
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+bandage                      1
+busco                        1
+bwa_index                    2
+bwa_mem                      2
+fastp                        1
+fiter_five_end               2
+genomescope2                 1
+gfastats                     1
+hifi_prep                    1
+hifiasm_phased               1
+kmc                          1
+nanoplot                     1
+oatk                         1
+picard                       2
+quast                        1
+two_read_bam_combiner        2
+yahs                         2
+total                       24
+
+
+[Sun Nov  1 16:54:53 2026]
+rule fastp:
+    input: test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_1.fastq.gz, test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_2.fastq.gz
+    output: results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz, results/fastp/hic_report_fastp.HiC.json, results/fastp/hic_report_fastp.HiC.html
+    log: logs/fastp.log
+    jobid: 7
+    reason: Missing output files: results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule hifi_prep:
+    input: test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz
+    output: results/reads/hifi/hifi.fastq.gz
+    log: logs/hifi_prep.log
+    jobid: 2
+    reason: Missing output files: results/reads/hifi/hifi.fastq.gz
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule nanoplot:
+    input: results/reads/hifi/hifi.fastq.gz
+    output: results/nanoplot/NanoPlot-report.html
+    log: logs/nanoplot.log
+    jobid: 1
+    reason: Missing output files: results/nanoplot/NanoPlot-report.html; Input files updated by another job: results/reads/hifi/hifi.fastq.gz
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule kmc:
+    input: results/reads/hifi/hifi.fastq.gz
+    output: results/kmc/output.kmc_pre, results/kmc/output.kmc_suf, results/kmc/out.hist
+    log: logs/kmc.log
+    jobid: 3
+    reason: Missing output files: results/kmc/out.hist; Input files updated by another job: results/reads/hifi/hifi.fastq.gz
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule hifiasm_phased:
+    input: results/reads/hifi/hifi.fastq.gz, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    output: results/hifiasm/asm.hap1.gfa, results/hifiasm/asm.hap2.gfa, results/hifiasm/asm.hap1.fa, results/hifiasm/asm.hap2.fa, results/assemblies/asm_hap1.fa, results/assemblies/asm_hap2.fa
+    log: logs/hifiasm.log
+    jobid: 6
+    reason: Missing output files: results/hifiasm/asm.hap1.fa, results/hifiasm/asm.hap2.fa, results/assemblies/asm_hap2.fa, results/assemblies/asm_hap1.fa; Input files updated by another job: results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz, results/reads/hifi/hifi.fastq.gz
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule oatk:
+    input: results/reads/hifi/hifi.fastq.gz
+    output: results/oatk/oatk.asm.mito.gfa, results/oatk/oatk.asm.mito.ctg.fasta
+    log: logs/oatk.log
+    jobid: 22
+    reason: Missing output files: results/oatk/oatk.asm.mito.gfa, results/oatk/oatk.asm.mito.ctg.fasta; Input files updated by another job: results/reads/hifi/hifi.fastq.gz
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule bwa_index:
+    input: results/hifiasm/asm.hap2.fa
+    output: results/bwa_index_hap2, results/bwa_index_hap2/asm.fa
+    log: logs/bwa_index_hap2.log
+    jobid: 15
+    reason: Missing output files: results/bwa_index_hap2/asm.fa; Input files updated by another job: results/hifiasm/asm.hap2.fa
+    wildcards: hap=hap2
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule genomescope2:
+    input: results/kmc/out.hist
+    output: results/genomescope
+    log: logs/genomescope2.log
+    jobid: 4
+    reason: Missing output files: results/genomescope; Input files updated by another job: results/kmc/out.hist
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule bandage:
+    input: results/oatk/oatk.asm.mito.gfa
+    output: results/bandage/mito.jpg
+    log: logs/bandage.log
+    jobid: 21
+    reason: Missing output files: results/bandage/mito.jpg; Input files updated by another job: results/oatk/oatk.asm.mito.gfa
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule bwa_index:
+    input: results/hifiasm/asm.hap1.fa
+    output: results/bwa_index_hap1, results/bwa_index_hap1/asm.fa
+    log: logs/bwa_index_hap1.log
+    jobid: 9
+    reason: Missing output files: results/bwa_index_hap1/asm.fa; Input files updated by another job: results/hifiasm/asm.hap1.fa
+    wildcards: hap=hap1
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule gfastats:
+    input: results/oatk/oatk.asm.mito.ctg.fasta
+    output: results/gfastats/mito.stats
+    log: logs/gfastats.log
+    jobid: 23
+    reason: Missing output files: results/gfastats/mito.stats; Input files updated by another job: results/oatk/oatk.asm.mito.ctg.fasta
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule bwa_mem:
+    input: results/bwa_index_hap1/asm.fa, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    output: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam
+    log: logs/bwa_mem_hap1.log
+    jobid: 13
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam; Input files updated by another job: results/bwa_index_hap1/asm.fa, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    wildcards: hap=hap1
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule bwa_mem:
+    input: results/bwa_index_hap2/asm.fa, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    output: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam
+    log: logs/bwa_mem_hap2.log
+    jobid: 19
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam; Input files updated by another job: results/bwa_index_hap2/asm.fa, results/fastp/hic_trim_2.fastq.gz, results/fastp/hic_trim_1.fastq.gz
+    wildcards: hap=hap2
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule fiter_five_end:
+    input: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam
+    output: results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam
+    log: logs/fiter_five_end_hap2.log
+    jobid: 18
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam; Input files updated by another job: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam
+    wildcards: hap=hap2
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule fiter_five_end:
+    input: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam
+    output: results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam
+    log: logs/fiter_five_end_hap1.log
+    jobid: 12
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam; Input files updated by another job: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam
+    wildcards: hap=hap1
+    resources: tmpdir=<TBD>, mem_mb=1000, mem_mib=954
+
+
+[Sun Nov  1 16:54:53 2026]
+rule two_read_bam_combiner:
+    input: results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam, results/bwa_index_hap2/asm.fa
+    output: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    log: logs/two_read_bam_combiner_hap2.log
+    jobid: 17
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam; Input files updated by another job: results/bwa_index_hap2/asm.fa, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam
+    wildcards: hap=hap2
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule two_read_bam_combiner:
+    input: results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam, results/bwa_index_hap1/asm.fa
+    output: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    log: logs/two_read_bam_combiner_hap1.log
+    jobid: 11
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam; Input files updated by another job: results/bwa_index_hap1/asm.fa, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam
+    wildcards: hap=hap1
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule picard:
+    input: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    output: results/arima_mapping_pipeline_hap2/PAIR_DIR/paired_add_read_group.bam, results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam, results/arima_mapping_pipeline_hap2/REP_DIR/metrics.final.txt, results/arima_mapping_pipeline_hap2/REP_DIR/final.bam.stats
+    log: logs/picard_hap2.log
+    jobid: 16
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam; Input files updated by another job: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    wildcards: hap=hap2
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule picard:
+    input: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    output: results/arima_mapping_pipeline_hap1/PAIR_DIR/paired_add_read_group.bam, results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam, results/arima_mapping_pipeline_hap1/REP_DIR/metrics.final.txt, results/arima_mapping_pipeline_hap1/REP_DIR/final.bam.stats
+    log: logs/picard_hap1.log
+    jobid: 10
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam; Input files updated by another job: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    wildcards: hap=hap1
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule yahs:
+    input: results/bwa_index_hap1/asm.fa, results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam
+    output: results/yahs_hap1/asm_yahs_scaffolds_final.fa, results/assemblies/yahs_hap1.fa
+    log: logs/yahs_hap1.log
+    jobid: 8
+    reason: Missing output files: results/yahs_hap1/asm_yahs_scaffolds_final.fa, results/assemblies/yahs_hap1.fa; Input files updated by another job: results/bwa_index_hap1/asm.fa, results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam
+    wildcards: hap=hap1
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule yahs:
+    input: results/bwa_index_hap2/asm.fa, results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam
+    output: results/yahs_hap2/asm_yahs_scaffolds_final.fa, results/assemblies/yahs_hap2.fa
+    log: logs/yahs_hap2.log
+    jobid: 14
+    reason: Missing output files: results/assemblies/yahs_hap2.fa, results/yahs_hap2/asm_yahs_scaffolds_final.fa; Input files updated by another job: results/bwa_index_hap2/asm.fa, results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam
+    wildcards: hap=hap2
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule quast:
+    input: results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/asm_hap2.fa, results/assemblies/yahs_hap2.fa
+    output: results/quast
+    log: logs/quast.log
+    jobid: 5
+    reason: Missing output files: results/quast; Input files updated by another job: results/assemblies/asm_hap2.fa, results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/yahs_hap2.fa
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=8000, mem_mib=7630
+
+
+[Sun Nov  1 16:54:53 2026]
+rule busco:
+    input: results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/asm_hap2.fa, results/assemblies/yahs_hap2.fa
+    output: results/busco
+    log: logs/busco.log
+    jobid: 20
+    reason: Missing output files: results/busco; Input files updated by another job: results/assemblies/asm_hap2.fa, results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/yahs_hap2.fa
+    threads: 4
+    resources: tmpdir=<TBD>, mem_mb=32000, mem_mib=30518
+
+
+[Sun Nov  1 16:54:53 2026]
+rule all:
+    input: results/nanoplot/NanoPlot-report.html, results/kmc/out.hist, results/genomescope, results/quast, results/busco, results/yahs_hap1/asm_yahs_scaffolds_final.fa, results/yahs_hap2/asm_yahs_scaffolds_final.fa, results/bandage/mito.jpg, results/gfastats/mito.stats
+    jobid: 0
+    reason: Input files updated by another job: results/gfastats/mito.stats, results/yahs_hap1/asm_yahs_scaffolds_final.fa, results/nanoplot/NanoPlot-report.html, results/quast, results/kmc/out.hist, results/yahs_hap2/asm_yahs_scaffolds_final.fa, results/busco, results/bandage/mito.jpg, results/genomescope
+    resources: tmpdir=<TBD>
+
+Job stats:
+job                      count
+---------------------  -------
+all                          1
+bandage                      1
+busco                        1
+bwa_index                    2
+bwa_mem                      2
+fastp                        1
+fiter_five_end               2
+genomescope2                 1
+gfastats                     1
+hifi_prep                    1
+hifiasm_phased               1
+kmc                          1
+nanoplot                     1
+oatk                         1
+picard                       2
+quast                        1
+two_read_bam_combiner        2
+yahs                         2
+total                       24
+
+Reasons:
+    (check individual jobs above for details)
+    input files updated by another job:
+        all, bandage, busco, bwa_index, bwa_mem, fiter_five_end, genomescope2, gfastats, hifiasm_phased, kmc, nanoplot, oatk, picard, quast, two_read_bam_combiner, yahs
+    output files have to be generated:
+        bandage, busco, bwa_index, bwa_mem, fastp, fiter_five_end, genomescope2, gfastats, hifi_prep, hifiasm_phased, kmc, nanoplot, oatk, picard, quast, two_read_bam_combiner, yahs
+
+This was a dry-run (flag -n). The order of jobs does not reflect the order of execution.

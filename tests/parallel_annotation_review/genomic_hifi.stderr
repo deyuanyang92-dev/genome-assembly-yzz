@@ -1,0 +1,10 @@
+[M::mm_idx_gen::0.003*0.49] collected minimizers
+[M::mm_idx_gen::0.004*0.44] sorted minimizers
+[M::main::0.004*0.40] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.005*0.37] mid_occ = 50
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.006*0.35] distinct minimizers: 363 (100.00% are singletons); average occurrences: 1.000; average spacing: 9.917; total length: 3600
+[M::worker_pipeline::0.009*0.30] mapped 1 sequences
+[M::main] Version: 2.31-r1302
+[M::main] CMD: /tmp/yzz-learning-colora-envs/0eff1dd08048feedc658ebba6bc8c0c4_/bin/minimap2 -ax map-hifi --secondary=no /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_annotation_review/genome.fa /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_annotation_review/rna.fa
+[M::main] Real time: 0.013 sec; CPU: 0.003 sec; Peak RSS: 0.016 GB

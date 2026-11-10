@@ -1,0 +1,112 @@
+##gff-version 3
+# This output was generated with AUGUSTUS (version 3.5.0).
+# AUGUSTUS is a gene prediction tool written by M. Stanke (mario.stanke@uni-greifswald.de),
+# O. Keller, S. König, L. Gerischer, L. Romoth, Katharina Hoff, Henry Mehlan and Daniel Honsel.
+# Please cite: Mario Stanke, Mark Diekhans, Robert Baertsch, David Haussler (2008),
+# Using native and syntenically mapped cDNA alignments to improve de novo gene finding
+# Bioinformatics 24: 637-644, doi 10.1093/bioinformatics/btn013
+# No extrinsic information on sequences given.
+# Initializing the parameters using config directory /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/ ...
+# human version. Using default transition matrix.
+# Looks like /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/hsackI10.gb is in genbank format. Augustus uses the annotation for evaluation of accuracy.
+# Read in 1 genbank sequences.
+#
+# ----- sequence number 1 (length = 6483, name = HSACKI10) -----
+#
+
+# annotation: 
+# Sequence HSACKI10 length=6483
+HSACKI10	database	start_codon	1674	1676	.	+	0	Parent=HSACKI10-1.1
+HSACKI10	database	CDS	1674	2300	.	+	0	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	3142	3224	.	+	0	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	3592	3748	.	+	1	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	3836	3997	.	+	0	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	4085	4210	.	+	0	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	4525	4742	.	+	0	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	5098	5499	.	+	1	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	CDS	5805	5811	.	+	1	ID=HSACKI10-1.1.cds;Parent=HSACKI10-1.1
+HSACKI10	database	stop_codon	5809	5811	.	+	0	Parent=HSACKI10-1.1
+# Predicted genes for sequence number 1 on both strands
+# start gene g1
+HSACKI10	AUGUSTUS	gene	2121	6483	1	+	.	ID=g1
+HSACKI10	AUGUSTUS	transcript	2121	6483	.	+	.	ID=g1.t1;Parent=g1
+HSACKI10	AUGUSTUS	start_codon	2121	2123	.	+	0	Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	2121	2300	.	+	0	ID=g1.t1.cds;Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	3142	3224	.	+	0	ID=g1.t1.cds;Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	3592	3748	.	+	1	ID=g1.t1.cds;Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	3836	3997	.	+	0	ID=g1.t1.cds;Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	4085	4210	.	+	0	ID=g1.t1.cds;Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	4525	4742	.	+	0	ID=g1.t1.cds;Parent=g1.t1
+HSACKI10	AUGUSTUS	CDS	5098	5499	.	+	1	ID=g1.t1.cds;Parent=g1.t1
+# coding sequence = [atgcagaatctgaatgaccgcctggcttcctacttggacaaagttcgggctctggaagaatcaaactatgagctggaag
+# gcaaaatcaaggagtggtatgaaaagcatggcaactcacatcagggggagcctcgtgactacagcaaatactacaaaaccatcgatgaccttaaaaat
+# cagattctcaacctaacaactgataatgccaacatcctgcttcagatcgacaatgccaggctggcagctgatgacttcaggctgaagtatgagaatga
+# ggtagctctgcgccagagcgtggaggctgacatcaacggcctgcgtagggtgctggatgagctgaccctgaccaaggctgacctggagatgcaaattg
+# agagcctgactgaagagctggcctatctgaagaagaaccacgaggaggaaatgaaagaccttcgaaatgtgtccactggtgatgtgaatgtggaaatg
+# aatgctgccccgggtgttgatctgactcaacttctgaataacatgagaagccaatatgaacaacttgctgaacaaaaccgcaaagatgctgaagcctg
+# gttcaatgaaaagagcaaggaactgactacagaaattgataataacattgaacagatatccagctataaatctgagattactgaattgagacgtaatg
+# tacaagctctggagatagaactacagtcccaactggccttgaaacaatccctggaagcctccttggcagaaacagaaggtcgctactgtgtgcagctc
+# tcacagattcacgcccagatatccgctctggaagaacagttgcaacagattcgagctgaaaccgagtgccagaatactgaataccaacaactcctgga
+# tattaagatccgactggagaatgaaattcaaacctaccgcagcctgctagaaggagagggaagttccggaggcggcggacgcggcggcggaagtttcg
+# gcggcggctacggcggcggaagctccggcggcggaagctccggcggcggctacggcggcggccacggcggcagttccggcggcggctacggaggcgga
+# agctccggcggcggaagctccggcggcggctacgggggcggaagctccagcggcggccacggcggcggaagctccagcggcggccacggcggcagttc
+# cagcggcggctacggtggtggcagttccggcggcggcggcggcggctacgggggcggcagctccggcggcggcagcagctccggcggcggatacggcg
+# gcggcagctccagcggaggccacaagtcctcctcttccgggtccgtgggcgagtcttcatctaagggaccaag]
+# protein sequence = [MQNLNDRLASYLDKVRALEESNYELEGKIKEWYEKHGNSHQGEPRDYSKYYKTIDDLKNQILNLTTDNANILLQIDNA
+# RLAADDFRLKYENEVALRQSVEADINGLRRVLDELTLTKADLEMQIESLTEELAYLKKNHEEEMKDLRNVSTGDVNVEMNAAPGVDLTQLLNNMRSQY
+# EQLAEQNRKDAEAWFNEKSKELTTEIDNNIEQISSYKSEITELRRNVQALEIELQSQLALKQSLEASLAETEGRYCVQLSQIHAQISALEEQLQQIRA
+# ETECQNTEYQQLLDIKIRLENEIQTYRSLLEGEGSSGGGGRGGGSFGGGYGGGSSGGGSSGGGYGGGHGGSSGGGYGGGSSGGGSSGGGYGGGSSSGG
+# HGGGSSSGGHGGSSSGGYGGGSSGGGGGGYGGGSSGGGSSSGGGYGGGSSSGGHKSSSSGSVGESSSKGP]
+# end gene g1
+###
+a-posteriori probability of viterbi path
+----------------------------------------
+a-posteriori probability of correct path
+
+1 times were the paths equally likely (identical).
+sorted quotients of the rest:
+
+0 quotients were between 1 and 10
+
+
+*******      Evaluation of gene prediction     *******
+
+---------------------------------------------\
+                 | sensitivity | specificity |
+---------------------------------------------|
+nucleotide level |       0.745 |           1 |
+---------------------------------------------/
+
+----------------------------------------------------------------------------------------------------------\
+           |  #pred |  #anno |      |    FP = false pos. |    FN = false neg. |             |             |
+           | total/ | total/ |   TP |--------------------|--------------------| sensitivity | specificity |
+           | unique | unique |      | part | ovlp | wrng | part | ovlp | wrng |             |             |
+----------------------------------------------------------------------------------------------------------|
+           |        |        |      |                  1 |                  2 |             |             |
+exon level |      7 |      8 |    6 | ------------------ | ------------------ |        0.75 |       0.857 |
+           |      7 |      8 |      |    1 |    0 |    0 |    1 |    0 |    1 |             |             |
+----------------------------------------------------------------------------------------------------------/
+
+----------------------------------------------------------------------------\
+transcript | #pred | #anno |   TP |   FP |   FN | sensitivity | specificity |
+----------------------------------------------------------------------------|
+gene level |     1 |     1 |    0 |    1 |    1 |           0 |           0 |
+----------------------------------------------------------------------------/
+
+------------------------------------------------------------------------\
+            UTR | total pred | CDS bnd. corr. |   meanDiff | medianDiff |
+------------------------------------------------------------------------|
+            TSS |          0 |              0 |         -1 |         -1 |
+            TTS |          1 |              0 |         -1 |         -1 |
+------------------------------------------------------------------------|
+            UTR | uniq. pred |    unique anno |      sens. |      spec. |
+------------------------------------------------------------------------|
+                |  true positive = 1 bound. exact, 1 bound. <= 20bp off |
+ UTR exon level |          0 |              0 |       -nan |       -nan |
+------------------------------------------------------------------------|
+ UTR base level |          0 |              0 |       -nan |       -nan |
+------------------------------------------------------------------------/
+nucUTP= 0 nucUFP=0 nucUFPinside= 0 nucUFN=0
+# total time: 0.0546
+# command line:
+# /tmp/yzz-augustus-3.5.0/bin/augustus --species=human --gff3=on --UTR=off --softmasking=0 --sample=0 --codingseq=on --stopCodonExcludedFromCDS=false /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/hsackI10.gb

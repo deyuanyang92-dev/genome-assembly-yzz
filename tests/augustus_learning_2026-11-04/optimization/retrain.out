@@ -1,0 +1,45 @@
+# Read in 392 genbank sequences.
+Quantiles of the GC contents in the training set:
+0%	0.324
+5%	0.381	10%	0.399
+15%	0.406	20%	0.416
+25%	0.424	30%	0.428
+35%	0.433	40%	0.436
+45%	0.442	50%	0.448
+55%	0.453	60%	0.458
+65%	0.463	70%	0.471
+75%	0.478	80%	0.482
+85%	0.488	90%	0.497
+95%	0.51	100%	0.565
+HMM-training the parameters...
+i= 0 bc= (0.237, 0.263, 0.263, 0.237)
+ ** building model for exons *EXON*
+start codon frequencies: ATG(392)
+# admissible start codons and their probabilities: ATG(1), CTG(0), TTG(0)
+ number of bases in the reading frames: 184099 184490 184491
+--- frame = 0 ---    minPatSum = 233
+--- frame = 1 ---    minPatSum = 233
+--- frame = 2 ---    minPatSum = 233
+--- initial frame = 0 ---    minPatSum = 233
+--- initial frame = 1 ---    minPatSum = 233
+--- initial frame = 2 ---    minPatSum = 233
+--- internal exon terminal frame = 0 ---    minPatSum = 233
+--- internal exon terminal frame = 1 ---    minPatSum = 233
+--- internal exon terminal frame = 2 ---    minPatSum = 233
+single, initial, internal, terminal mean exon lengths :
+745	288	375	440
+single exon : 136
+initial exon 0 : 97
+initial exon 1 : 97
+initial exon 2 : 62
+internal exon 0 : 236
+internal exon 1 : 166
+internal exon 2 : 156
+terminal exon : 256
+Frequency of stop codons:
+tag:  133 (0.339)
+taa:  143 (0.365)
+tga:  116 (0.296)
+end *EXON*
+Storing parameters to file...
+Writing exon model parameters [1] to file /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/species/yzz_fly_included/yzz_fly_included_exon_probs.pbl.

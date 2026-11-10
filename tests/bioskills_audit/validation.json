@@ -1,0 +1,42 @@
+{
+  "validate": {
+    "exit_code": 0,
+    "command": [
+      "bash",
+      "install-codex.sh",
+      "--validate"
+    ],
+    "log": "tests/bioskills_audit/results/validate.log",
+    "tail": [
+      "Validating all skills...",
+      "",
+      "",
+      "Validation complete: 561/561 passed",
+      "",
+      "\u001b[0;32mAll skills passed validation.\u001b[0m"
+    ]
+  },
+  "dry_run": {
+    "exit_code": 0,
+    "command": [
+      "bash",
+      "install-codex.sh",
+      "--categories",
+      "genome-assembly,hi-c-analysis,workflows,workflow-management",
+      "--dry-run",
+      "--project",
+      "/tmp/bioskills-review-only"
+    ],
+    "log": "tests/bioskills_audit/results/dry_run.log",
+    "tail": [
+      "",
+      "",
+      "Would install: 64 skills",
+      "Estimated always-loaded overhead (descriptions): ~14376 tokens",
+      "Average per-skill body (loaded on activation): ~4856 tokens",
+      "",
+      "Skills are now available in Codex CLI.",
+      "They will be auto-invoked when relevant to your bioinformatics tasks."
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "reads": 8078,
+  "bases": 145099146,
+  "arithmetic_mean_base_phred": 78.94569540057803,
+  "median_read_mean_phred": 87.03817349034604,
+  "example_headers": [
+    "@SRR27947616.903",
+    "@SRR27947616.2173",
+    "@SRR27947616.14829"
+  ],
+  "interpretation": "FASTQ Phred summary only; read names/qualities alone do not prove instrument or HiFi processing."
+}

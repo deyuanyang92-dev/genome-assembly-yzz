@@ -1,0 +1,115 @@
+{
+  "recorded_date": "2026-11-02",
+  "window_inclusive": [
+    "2024-11-02",
+    "2026-11-02"
+  ],
+  "scope": "targeted eukaryotic/biodiversity standards and methods review, not exhaustive systematic review",
+  "new_biological_runs": 0,
+  "records": [
+    {
+      "title": "How to Write (and Review) a Genome Report",
+      "identifier": "10.1093/gbe/evag258",
+      "publication_date": "2026-10-12",
+      "status": "published",
+      "url": "https://academic.oup.com/gbe/advance-article/doi/10.1093/gbe/evag258/8907573",
+      "reading_scope": "publisher searchable abstract and selected reporting/review text; S1/S2 not downloaded",
+      "provenance": "new_targeted_reading"
+    },
+    {
+      "title": "Toward standardization in arthropod and biodiversity genome projects",
+      "identifier": "10.1093/genetics/iyag172",
+      "publication_date": "2026-07-23",
+      "status": "published",
+      "url": "https://academic.oup.com/genetics/article/234/1/iyag172/8740173",
+      "reading_scope": "abstract; standards/gaps tables; assembly/curation/reproducibility sections; not all cited works",
+      "provenance": "new_targeted_reading"
+    },
+    {
+      "title": "Best-practice guidance for Earth BioGenome Project sample collection and processing",
+      "identifier": "10.1093/gigascience/giaf041",
+      "publication_date": "2025-05-29",
+      "status": "published",
+      "url": "https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giaf041/8152780",
+      "reading_scope": "abstract and selected identity/voucher/preservation sections; not experimental execution",
+      "provenance": "new_targeted_reading"
+    },
+    {
+      "title": "Guidelines for gene and genome assembly nomenclature",
+      "identifier": "10.1093/genetics/iyaf006",
+      "publication_date": "2025-01-15",
+      "status": "published",
+      "url": "https://academic.oup.com/genetics/article/229/3/iyaf006/7954581",
+      "reading_scope": "abstract, assembly and gene/transcript identifier sections, code entry; no supplementary download",
+      "provenance": "new_targeted_reading"
+    },
+    {
+      "title": "Toward high-quality genomes: Standards, challenges, and strategies for assembly and annotation",
+      "identifier": "10.1111/jse.70118",
+      "publication_date": "2026-09-16",
+      "status": "published",
+      "url": "https://doi.org/10.1111/jse.70118",
+      "reading_scope": "reuse note25 selected sections2.2-2.4,3.2; not reread full article",
+      "provenance": "prior_record_reused"
+    },
+    {
+      "title": "The role of cytogenetics in the chromosome-level genomic era",
+      "identifier": "10.1038/s44573-026-00017-x",
+      "publication_date": "2026-10-27",
+      "status": "published",
+      "url": "https://doi.org/10.1038/s44573-026-00017-x",
+      "reading_scope": "reuse note25 selected cytogenetics/Hi-C limitation sections",
+      "provenance": "prior_record_reused"
+    },
+    {
+      "title": "Generating eukaryotic reference genome assemblies: Earth BioGenome Project quality standards and recommendations",
+      "identifier": "arXiv:2610.03075",
+      "publication_date": "2026-10-02",
+      "status": "preprint_as_previously_verified",
+      "url": "https://arxiv.org/abs/2610.03075",
+      "reading_scope": "prior note25; do not infer peer review from PubMed/PMC presence",
+      "provenance": "prior_record_reused"
+    },
+    {
+      "title": "k-mer approaches for biodiversity genomics",
+      "identifier": "10.1101/gr.279452.124",
+      "publication_date": "2025-01-31",
+      "status": "published_method_review_not_standard",
+      "url": "https://doi.org/10.1101/gr.279452.124",
+      "reading_scope": "abstract and selected searchable bias/profiling material; accompanying repo entry only",
+      "provenance": "new_targeted_reading"
+    },
+    {
+      "title": "A closed-loop method for precise genome size estimation using HiFi reads",
+      "identifier": "10.1186/s12864-025-12031-9",
+      "publication_date": "2025-09-29",
+      "status": "published_method_not_standard",
+      "url": "https://link.springer.com/article/10.1186/s12864-025-12031-9",
+      "reading_scope": "abstract and selected results/data/methods; LVgs README interface; no clone or run",
+      "provenance": "new_targeted_reading"
+    }
+  ],
+  "candidate_repositories": [
+    {
+      "url": "https://github.com/xingjianfeng100/LVgs",
+      "status": "README_interface_only_no_fixed_commit_no_clone_no_run"
+    },
+    {
+      "url": "https://github.com/KamilSJaron/k-mer-approaches-for-biodiversity-genomics",
+      "status": "entry_page_only_not_source_reviewed"
+    },
+    {
+      "url": "https://github.com/AgBioData/Genome-Assembly-and-Annotation-Nomenclature_WG",
+      "status": "identified_from_paper_not_source_reviewed"
+    }
+  ],
+  "official_standards_reused": [
+    "notes/23_EBP2026规范与本项目对标要求.md",
+    "config/assembly_quality_policy.json"
+  ],
+  "access_limits": [
+    "PMC pages returned recaptcha",
+    "GBE direct open redirected or failed; publisher indexed text available",
+    "Supplementary checklists not retrieved"
+  ]
+}

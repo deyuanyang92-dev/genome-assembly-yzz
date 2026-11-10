@@ -1,0 +1,443 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-05T13:19:16.454138+08:00",
+  "review_date": "2026-11-05",
+  "timezone": "Asia/Shanghai",
+  "prior_scope_check": {
+    "consulted": [
+      "AI_CONTEXT.md",
+      "CONTEXT.md",
+      "notes/00_学习进度清单.md",
+      "notes/10_论文与复现资源地图.md",
+      "notes/50_全基因组知识库导航与覆盖账本.md",
+      "config/knowledge_base_catalog.json"
+    ],
+    "matching_prior_doi_or_title_found": false,
+    "prior_related_scope": "assembly, annotation and public annelid resources; no dedicated Type Genomics review located"
+  },
+  "paper": {
+    "title": "Type Genomics: A Framework for Integrating Genomic Data into Biodiversity and Taxonomic Research",
+    "authors": [
+      {
+        "surname": "Letsch",
+        "given_names": "Harald"
+      },
+      {
+        "surname": "Greve",
+        "given_names": "Carola"
+      },
+      {
+        "surname": "Hundsdoerfer",
+        "given_names": "Anna K"
+      },
+      {
+        "surname": "Irisarri",
+        "given_names": "Iker"
+      },
+      {
+        "surname": "Moore",
+        "given_names": "Jenna M"
+      },
+      {
+        "surname": "Espeland",
+        "given_names": "Marianne"
+      },
+      {
+        "surname": "Wanke",
+        "given_names": "Stefan"
+      },
+      {
+        "surname": "Arifin",
+        "given_names": "Umilaela"
+      },
+      {
+        "surname": "Blom",
+        "given_names": "Mozes P K"
+      },
+      {
+        "surname": "Corrales",
+        "given_names": "Carolina"
+      },
+      {
+        "surname": "Donath",
+        "given_names": "Alexander"
+      },
+      {
+        "surname": "Fritz",
+        "given_names": "Uwe"
+      },
+      {
+        "surname": "Köhler",
+        "given_names": "Gunther"
+      },
+      {
+        "surname": "Kück",
+        "given_names": "Patrick"
+      },
+      {
+        "surname": "Lemer",
+        "given_names": "Sarah"
+      },
+      {
+        "surname": "Mengual",
+        "given_names": "Ximo"
+      },
+      {
+        "surname": "Salas",
+        "given_names": "Nancy Mercado"
+      },
+      {
+        "surname": "Meusemann",
+        "given_names": "Karen"
+      },
+      {
+        "surname": "Palandačić",
+        "given_names": "Anja"
+      },
+      {
+        "surname": "Printzen",
+        "given_names": "Christian"
+      },
+      {
+        "surname": "Sigwart",
+        "given_names": "Julia D"
+      },
+      {
+        "surname": "Silva-Brandão",
+        "given_names": "Karina L"
+      },
+      {
+        "surname": "Simões",
+        "given_names": "Marianna"
+      },
+      {
+        "surname": "Stange",
+        "given_names": "Madlen"
+      },
+      {
+        "surname": "Suh",
+        "given_names": "Alexander"
+      },
+      {
+        "surname": "Szucsich",
+        "given_names": "Nikolaus"
+      },
+      {
+        "surname": "Tilic",
+        "given_names": "Ekin"
+      },
+      {
+        "surname": "Töpfer",
+        "given_names": "Till"
+      },
+      {
+        "surname": "Böhne",
+        "given_names": "Astrid"
+      },
+      {
+        "surname": "Janke",
+        "given_names": "Axel"
+      },
+      {
+        "surname": "Pauls",
+        "given_names": "Steffen U"
+      },
+      {
+        "surname": "Antonelli",
+        "given_names": "Alexandre"
+      }
+    ],
+    "journal": "Systematic Biology",
+    "year": 2025,
+    "volume": "74",
+    "issue": "6",
+    "pages": "1029–1044",
+    "page_metadata_source": "PMC/PubMed web record; Europe PMC XML has fpage1029 but lacks lpage",
+    "doi": "10.1093/sysbio/syaf040",
+    "pmid": "40392669",
+    "pmcid": "PMC12712332",
+    "xml_publication_date": "2025-05-20",
+    "issue_collection_date": "2025-11",
+    "version": "published article in PMC/Europe PMC; no preprint read",
+    "license": "CC BY4.0; author/DOI attribution; original figures unmodified; Chinese synthesis and project inferences identified"
+  },
+  "read_scope": {
+    "main_text": "abstract; introduction; Extending the Specimen with Genomic Resources; Maximizing Genomic Information from Types and all six subsections; Unifying Taxonomy and Genomics to Unlock the Global Collection; Outlook",
+    "figures": {
+      "1": "original image viewed; priorities and mixed ICZN/ICN terminology",
+      "2": "original image viewed; evaluation, extraction/QC, first/second-pass decisions",
+      "3": "original image viewed; qualitative preservation/applications continuum"
+    },
+    "supplement": {
+      "filename": "syaf040_supplemental_file.pdf",
+      "total_pdf_pages": 13,
+      "table_body_pages": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "visually_reviewed_pdf_pages": [
+        2,
+        4
+      ],
+      "scope": "table protocol/advantages/disadvantages/example body read via layout-preserved text; selected columns visually checked; cited studies not individually read"
+    },
+    "not_done": [
+      "main article PDF not acquired/paginated-read",
+      "not all cited studies individually read",
+      "no systematic ICN review",
+      "no DNA extraction, sequencing, type identification/designation or biological workflow execution"
+    ]
+  },
+  "source_records": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12712332/",
+      "role": "article repository",
+      "access": "web full text readable; curl challenge archived separately"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40392669/",
+      "role": "bibliographic crosscheck",
+      "access": "web metadata; online date and issue date kept distinct"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12712332/fullTextXML",
+      "role": "article XML",
+      "access": "success",
+      "file": "article.xml"
+    },
+    {
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12712332/supplementaryFiles",
+      "role": "figures and supplement",
+      "access": "success",
+      "file": "supplementaryFiles.zip"
+    },
+    {
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.zs7h44jn5",
+      "role": "author supplement record",
+      "dataset_version_date": "2025-07-08",
+      "access": "landing page read; direct PDF403; no cross-host byte equality asserted"
+    },
+    {
+      "url": "https://academic.oup.com/sysbio/article/74/6/1029/8138649",
+      "role": "publisher",
+      "access": "web redirect failed; not recorded as read publisher page"
+    }
+  ],
+  "nomenclature_crosschecks": [
+    {
+      "url": "https://code.iczn.org/types-in-the-species-group/article-72-general-provisions/",
+      "scope": "72.1,72.4.5,72.5.6,72.10 and context; types vs other material, image vs depicted specimen"
+    },
+    {
+      "url": "https://code.iczn.org/types-in-the-species-group/article-73-name-bearing-types-fixed-in-the-original-publication-holotypes-and-syntypes/",
+      "scope": "73.1.4;73.2 and relevant search-returned official text"
+    },
+    {
+      "url": "https://code.iczn.org/types-in-the-species-group/article-75-neotypes/",
+      "scope": "75.1–75.3 and75.5–75.6 plus surrounding text; exceptional need and Commission routes"
+    },
+    {
+      "url": "https://www.iczn.org/the-code/declaration-45-addition-of-recommendations/",
+      "scope": "73G–73J recommendations and explanatory note; not automatic exemptions"
+    }
+  ],
+  "commands": [
+    {
+      "command": "curl -fL --retry 2 --connect-timeout 20 --max-time 60 https://pmc.ncbi.nlm.nih.gov/articles/PMC12712332/ -o notes/sources/type_genomics_2026-11-05/article.html",
+      "attempts": [
+        {
+          "mode": "sandbox",
+          "exit_code": 7,
+          "result": "proxy connection unavailable"
+        },
+        {
+          "mode": "approved escalated retry",
+          "exit_code": 0,
+          "result": "recaptcha challenge, not article; retained as pmc_browser_challenge.html"
+        }
+      ]
+    },
+    {
+      "command": "curl -fL --retry 2 --connect-timeout 20 --max-time 60 https://datadryad.org/downloads/file_stream/4157642 -o notes/sources/type_genomics_2026-11-05/Supplement_S1.pdf",
+      "exit_code": 22,
+      "result": "HTTP403; not used as evidence"
+    },
+    {
+      "command": "curl -fL --retry 1 --connect-timeout 20 --max-time 60 https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12712332/fullTextXML -o notes/sources/type_genomics_2026-11-05/article.xml",
+      "exit_code": 0,
+      "result": "XML title/DOI verified"
+    },
+    {
+      "command": "curl -fL --retry 1 --connect-timeout 20 --max-time 60 https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12712332/supplementaryFiles -o notes/sources/type_genomics_2026-11-05/supplementaryFiles.zip",
+      "exit_code": 0,
+      "result": "ZIP original retained; selected members extracted with Python zipfile"
+    },
+    {
+      "command": "python3 notes/sources/type_genomics_2026-11-05/extract_text.py",
+      "exit_code": 0,
+      "result": "abstract and scientific-body text"
+    },
+    {
+      "command": "pdftotext -layout notes/sources/type_genomics_2026-11-05/syaf040_supplemental_file.pdf notes/sources/type_genomics_2026-11-05/supplement_S1.txt",
+      "exit_code": 0,
+      "result": "layout-preserved text"
+    },
+    {
+      "command": "pdftoppm -f 1 -l 5 -scale-to 1500 -png notes/sources/type_genomics_2026-11-05/syaf040_supplemental_file.pdf /tmp/type-genomics-supplement",
+      "exit_code": 0,
+      "result": "first5 pages rendered;2/4 viewed and retained"
+    }
+  ],
+  "metadata_processing_note": "Initial ledger formatting expected an XML lpage tag and raised TypeError; source bytes unchanged. Final pages use independently read PMC/PubMed metadata.",
+  "findings": [
+    {
+      "id": "TG01",
+      "claim": "Integrate type-associated genomes, morphology and specimen metadata",
+      "source": "Introduction; Extending; Outlook",
+      "evidence": "paper_reviewed"
+    },
+    {
+      "id": "TG02",
+      "claim": "Historical type low-quality data can phylogenetically anchor separately vouchered high-quality genomes",
+      "source": "Extending",
+      "evidence": "paper_reviewed",
+      "limit": "link must be demonstrated; no automatic change of type status"
+    },
+    {
+      "id": "TG03",
+      "claim": "First-pass short reads can be a valid endpoint; second pass is conditional",
+      "source": "Fig2; First-Pass; Second-Pass",
+      "evidence": "paper_and_figures_reviewed"
+    },
+    {
+      "id": "TG04",
+      "claim": "10–20x examples are not a universal gene-recovery or acceptance guarantee",
+      "source": "Extending; critical scope assessment",
+      "evidence": "paper_plus_explicit_inference",
+      "limit": "no standardized cross-taxon coverage benchmark here"
+    },
+    {
+      "id": "TG05",
+      "claim": "Old ambient formalin-fixed small soft-bodied invertebrates explicitly identified as difficult",
+      "source": "DNA Extraction and Quality",
+      "evidence": "paper_reviewed",
+      "limit": "not an actual polychaete experiment"
+    },
+    {
+      "id": "TG06",
+      "claim": "S1 inventories material-dependent protocols/examples, including fragment recovery and WGA limitations",
+      "source": "S1 pp1–5",
+      "evidence": "supplement_reviewed",
+      "limit": "not common-data ranking; no wet-lab reproduction"
+    },
+    {
+      "id": "TG07",
+      "claim": "Topotypic new specimens and digital records do not automatically become animal name-bearing types",
+      "source": "Fig1;ICZN72/73/75;Declaration45",
+      "evidence": "paper_and_official_provisions_reviewed"
+    },
+    {
+      "id": "TG08",
+      "claim": "Record specimen/tissue/extraction/library/data identities and explicit historical-type to fresh-reference links",
+      "source": "project synthesis from paper and existing identity rules",
+      "evidence": "project_design_inference",
+      "limit": "no automatic determination or true specimen validation"
+    },
+    {
+      "id": "TG09",
+      "claim": "Low-coverage taxonomic resources have a different role from chosen high-quality HiFi reference route; existing effectiveHiFi≥50x rule retained",
+      "source": "project scope mapping",
+      "evidence": "project_scope_mapping",
+      "limit": "50x is project rule, not threshold from this article"
+    }
+  ],
+  "environment": {
+    "python": "3.13.11",
+    "document_tools": "pdftotext,pdftoppm,pdfinfo; document handling only"
+  },
+  "biological_runs_added": 0,
+  "production_validations_added": 0,
+  "files": [
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/README.md",
+      "bytes": 2832,
+      "sha256": "88ff05055a042bd6d95dea796da50da287baac7dbbabe9a275556f7b55f0545e",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/article.xml",
+      "bytes": 208245,
+      "sha256": "7693e5c7c1e342ba82d9ac82f7733235044bd7ac10d856b81534088280ae9b06",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/article_body.txt",
+      "bytes": 48848,
+      "sha256": "8e0eb50e43177d7e28ad1ce548309d7329b22a8ae8adb7aafb7f1ff0b17a27c3",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/extract_text.py",
+      "bytes": 1170,
+      "sha256": "968b316fbf73d98c7a546204fa573e19d74bcbfccf107d07a399f2f90333c65b",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/pmc_browser_challenge.html",
+      "bytes": 21380,
+      "sha256": "80b5efe0f0dbbbad22c017dd3c7cd2163f9ade94fcc01e1ef4618f02d78c3d6d",
+      "role": "failed_access_record_not_article"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/supplement_S1.txt",
+      "bytes": 46605,
+      "sha256": "a7b6f3d403e508498af1df46f23708f9abcccb13ad7465c38e60f272bb799b50",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/supplement_review_page02.png",
+      "bytes": 273625,
+      "sha256": "06700521ed102fc241b9f613c502671ed95641d9cb7d98d39b02398b0ef8a464",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/supplement_review_page04.png",
+      "bytes": 270271,
+      "sha256": "b28928ff7a54cf1ec57bc5fcf385acecd8a479011428516f5a8b74a998c6f5f4",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/supplementaryFiles.zip",
+      "bytes": 448280,
+      "sha256": "3b8a258669f6f3096691a653cd39dd32c754ab59b78cdfa062df6df2a686f9d9",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/syaf040_supplemental_file.pdf",
+      "bytes": 154490,
+      "sha256": "97243590562dd4e12431238187522672312fe47bebaa72d7d64697e444b40240",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/syaf040fig1.jpg",
+      "bytes": 165383,
+      "sha256": "7b857a5e879a204125d32aa9453aef44ccfcc78f5dbb84b072cf424bf0cabdab",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/syaf040fig2.jpg",
+      "bytes": 78892,
+      "sha256": "b145a37c1608a9d8b93d71327ea9646913dd5b2c619994bbc17626c77da84dc2",
+      "role": "source_or_derived_reading_artifact"
+    },
+    {
+      "path": "notes/sources/type_genomics_2026-11-05/syaf040fig3.jpg",
+      "bytes": 70070,
+      "sha256": "135a7f79d1510cc74f445b5ece88e40c7b2010cbbbdde70e4b82c8fc2312c276",
+      "role": "source_or_derived_reading_artifact"
+    }
+  ]
+}

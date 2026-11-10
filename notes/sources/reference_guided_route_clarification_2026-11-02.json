@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-02",
+  "scope": "Reference participation during short-read assembly; correction to post-assembly-only framing",
+  "evidence_status": "Selected paper methods, data availability and official documentation reviewed; no upstream execution",
+  "sources": [
+    {
+      "url": "https://link.springer.com/article/10.1186/s12859-017-1911-6",
+      "version": "2017 published method",
+      "scope": "Reference mapping, blockwise de novo assembly, recovery of unmapped reads; original code URL from paper; current code availability unverified"
+    },
+    {
+      "url": "https://github.com/baoe/AlignGraph",
+      "version": "Unpinned original README; not latest-version verified",
+      "scope": "PE reads + draft + reference inputs, reference-assisted reassembly mechanism"
+    },
+    {
+      "url": "https://github.com/malonge/RagTag/wiki/scaffold",
+      "version": "Wiki labeled v2.1.0",
+      "scope": "FASTA inputs; ordering/orientation and N gaps only"
+    }
+  ],
+  "runtime_tests": 0,
+  "production_validation": 0
+}

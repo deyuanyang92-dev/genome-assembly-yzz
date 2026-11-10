@@ -1,0 +1,1105 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-11-05",
+  "scope": "whole-genome assembly across data types; annotation and comparative genomics included; peripheral domains explicitly marked",
+  "evidence_policy": "document/source/component/workflow/biological_validation are separate, non-interchangeable evidence labels",
+  "topics": [
+    {
+      "id": "KB01",
+      "title": "基因组基础与产品定义",
+      "keywords": [
+        "倍性",
+        "单倍体",
+        "二倍体",
+        "多倍体",
+        "primary",
+        "alternate",
+        "hap",
+        "contig",
+        "scaffold",
+        "T2T"
+      ],
+      "question": "目标是一套代表序列还是完整多套相位？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "coverage": "已有原理整理；特殊倍性与非模式物种案例待补",
+      "complete": false
+    },
+    {
+      "id": "KB02",
+      "title": "样本身份和文库设计",
+      "keywords": [
+        "个体",
+        "混池",
+        "污染",
+        "性别",
+        "核型",
+        "DNA",
+        "RNA",
+        "WGS",
+        "mate-pair",
+        "linked-read"
+      ],
+      "question": "这些数据能否联合，来自同一个体吗？",
+      "notes": [
+        "notes/19_全基因组组装编程与验收规范.md",
+        "notes/31_非同个体HiC贡献与干扰评估.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/64_Type_Genomics模式标本基因组与分类溯源.md"
+      ],
+      "coverage": "已有规则；身份自动校验未实现",
+      "complete": false
+    },
+    {
+      "id": "KB03",
+      "title": "二代测序质控与组装",
+      "keywords": [
+        "Illumina",
+        "PE",
+        "SE",
+        "fastp",
+        "ABySS",
+        "MaSuRCA",
+        "Platanus",
+        "SPAdes"
+      ],
+      "question": "只有二代数据如何选择组装器？",
+      "notes": [
+        "notes/08_核心工具速查.md",
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/48_二代数据与参考辅助染色体组装路线.md",
+        "notes/53_二代与混合组装方法源码及实测.md",
+        "notes/54_bioSkills短读专题复核与纠错.md",
+        "notes/55_短读与混合流程深读补充.md",
+        "notes/59_参考辅助组装方法体系与工具选择.md",
+        "notes/60_组装格式转换与数据交接.md"
+      ],
+      "coverage": "手册及候选整理；二代组装端到端实测待补；追加二代/混合局部源码与SPAdes小例证据，未验证大型真核生产路线",
+      "complete": false
+    },
+    {
+      "id": "KB04",
+      "title": "HiFi调查和组装",
+      "keywords": [
+        "HiFi",
+        "hifiasm",
+        "50X",
+        "覆盖",
+        "GFA",
+        "samtools",
+        "gfatools",
+        "pbtk",
+        "FASTQ",
+        "noseq"
+      ],
+      "question": "HiFi够不够，组装结果应该保留什么？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/30_ONT质控与HiFi_HiC联合组装.md",
+        "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+        "notes/60_组装格式转换与数据交接.md"
+      ],
+      "coverage": "有小数据组件及Colora功能证据；生产未验证",
+      "complete": false
+    },
+    {
+      "id": "KB05",
+      "title": "ONT与CLR组装",
+      "keywords": [
+        "ONT",
+        "CLR",
+        "Flye",
+        "Dorado",
+        "HERRO",
+        "纠错",
+        "长尾"
+      ],
+      "question": "ONT读长和质量如何决定模式及充分性？",
+      "notes": [
+        "notes/30_ONT质控与HiFi_HiC联合组装.md",
+        "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md",
+        "notes/60_组装格式转换与数据交接.md"
+      ],
+      "coverage": "Flye2.9.6部分源码新增；ONT/CLR真实组装待补",
+      "complete": false
+    },
+    {
+      "id": "KB06",
+      "title": "混合组装",
+      "keywords": [
+        "hybrid",
+        "HiFi",
+        "ONT",
+        "Illumina",
+        "MaSuRCA",
+        "Verkko",
+        "WENGAN"
+      ],
+      "question": "哪些组合可直接输入，哪些需要分阶段？",
+      "notes": [
+        "notes/30_ONT质控与HiFi_HiC联合组装.md",
+        "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+        "notes/48_二代数据与参考辅助染色体组装路线.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md",
+        "notes/53_二代与混合组装方法源码及实测.md",
+        "notes/54_bioSkills短读专题复核与纠错.md",
+        "notes/55_短读与混合流程深读补充.md"
+      ],
+      "coverage": "已有部分接口；多种混合路线实测待补；追加二代/混合局部源码与SPAdes小例证据，未验证大型真核生产路线",
+      "complete": false
+    },
+    {
+      "id": "KB07",
+      "title": "基因组大小估计",
+      "keywords": [
+        "GenomeScope",
+        "FastK",
+        "KMC",
+        "LVgs",
+        "LRGE",
+        "G",
+        "k-mer"
+      ],
+      "question": "二代和HiFi估G如何交叉验证？",
+      "notes": [
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/28_基因组调查源码与脚本使用说明.md",
+        "notes/46_二代与HiFi估计基因组大小的比较.md"
+      ],
+      "coverage": "源码/文档及Colora调查组件证据；目标G未知",
+      "complete": false
+    },
+    {
+      "id": "KB08",
+      "title": "数据充分性与补测",
+      "keywords": [
+        "coverage",
+        "50X",
+        "100X",
+        "有效量",
+        "读长",
+        "饱和",
+        "下采样"
+      ],
+      "question": "数据不足还是跨度不足，缺多少有效量？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "coverage": "公式和验收设计；覆盖梯度实验待补",
+      "complete": false
+    },
+    {
+      "id": "KB09",
+      "title": "重复与组装难度",
+      "keywords": [
+        "重复",
+        "塌缩",
+        "图分支",
+        "repeat",
+        "kmer",
+        "GC"
+      ],
+      "question": "如何证明断裂与重复有关？",
+      "notes": [
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/53_二代与混合组装方法源码及实测.md",
+        "notes/54_bioSkills短读专题复核与纠错.md"
+      ],
+      "coverage": "已有判断机制；定位与分类自动化待补；追加二代/混合局部源码与SPAdes小例证据，未验证大型真核生产路线",
+      "complete": false
+    },
+    {
+      "id": "KB10",
+      "title": "杂合与多倍体分相",
+      "keywords": [
+        "heterozygosity",
+        "Smudgeplot",
+        "GPhase",
+        "trio",
+        "hap-mer"
+      ],
+      "question": "多套单倍型怎样表示和验证？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/24_论文配套源码核查_Galeolaria与GPhase.md",
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/32_跨个体HiC直接参与hifiasm分型的风险与对照.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/55_短读与混合流程深读补充.md"
+      ],
+      "coverage": "部分工具/图输入核查；多倍体生产实测待补",
+      "complete": false
+    },
+    {
+      "id": "KB11",
+      "title": "参考辅助与共识",
+      "keywords": [
+        "RagTag",
+        "Ragout",
+        "RACA",
+        "AlignGraph",
+        "参考偏差",
+        "consensus",
+        "RaGOO",
+        "MeDuSa",
+        "MeDuSa2",
+        "Chromosomer",
+        "ntJoin",
+        "IMAP",
+        "AMOScmp",
+        "reference-guided",
+        "参考引导",
+        "局部组装"
+      ],
+      "question": "已有二代WGS和参考时，参考参与哪个阶段、如何选择工具并验收？",
+      "notes": [
+        "notes/48_二代数据与参考辅助染色体组装路线.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/59_参考辅助组装方法体系与工具选择.md"
+      ],
+      "coverage": "综述指定章节、官方接口与机制比较，含早期引导/再组装/挂载/共识；未实测参考工具和历史流程",
+      "complete": false
+    },
+    {
+      "id": "KB12",
+      "title": "去冗余",
+      "keywords": [
+        "purge_dups",
+        "purgeHaplotigs",
+        "冗余",
+        "拷贝",
+        "丢失"
+      ],
+      "question": "该删的是等位冗余还是真实复制？",
+      "notes": [
+        "notes/36_去冗余软件说明书与参数核查.md",
+        "notes/37_去冗余文献与公开流程实际用法.md",
+        "notes/38_去冗余流程开发与验收需求.md"
+      ],
+      "coverage": "有提取语义合成检查；真实purge对照待补",
+      "complete": false
+    },
+    {
+      "id": "KB13",
+      "title": "碱基校正",
+      "keywords": [
+        "polish",
+        "POLCA",
+        "Pilon",
+        "Medaka",
+        "Dorado",
+        "Merfin"
+      ],
+      "question": "是否需要polish，如何防止抹平等位差异？",
+      "notes": [
+        "notes/03_nf-core_genomeassembler.md",
+        "notes/30_ONT质控与HiFi_HiC联合组装.md",
+        "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "coverage": "部分现成流程接口；逐工具新版本及纠错对照待补",
+      "complete": false
+    },
+    {
+      "id": "KB14",
+      "title": "Hi-C处理与统计",
+      "keywords": [
+        "Juicer",
+        "BWA",
+        "chromap",
+        "samtools",
+        "pairs",
+        "MND",
+        "去重",
+        "Hi-C测序量",
+        "测序采购",
+        "有效率",
+        "补测",
+        "预算",
+        "QS019"
+      ],
+      "question": "有效分子、字典、格式和阶段怎样检查？",
+      "notes": [
+        "notes/07_Juicer_3D-DNA.md",
+        "notes/31_非同个体HiC贡献与干扰评估.md",
+        "notes/35_EBP与Sanger_HiC挂载及人工校正指南.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md",
+        "notes/56_HiC挂载校正流程深读补充.md",
+        "notes/60_组装格式转换与数据交接.md",
+        "notes/62_HiC测序采购与挂载充分性规划_QS019.md"
+      ],
+      "coverage": "Juicer固定入口新增核查；整套Juicer未运行；QS019采购及充分性规格已记录，尚未实现",
+      "complete": false
+    },
+    {
+      "id": "KB15",
+      "title": "Hi-C挂载与评价",
+      "keywords": [
+        "YaHS",
+        "HapHiC",
+        "3D-DNA",
+        "GreenHill",
+        "scaffold",
+        "AGP",
+        "C-Phasing",
+        "ALLHiC",
+        "SALSA2",
+        "pin_hic",
+        "EndHiC",
+        "Hi-C测序量",
+        "测序采购",
+        "有效率",
+        "补测",
+        "预算",
+        "QS019"
+      ],
+      "question": "挂载是否提高结构正确性？",
+      "notes": [
+        "notes/07_Juicer_3D-DNA.md",
+        "notes/11_HiC_scaffolders_benchmark.md",
+        "notes/31_非同个体HiC贡献与干扰评估.md",
+        "notes/35_EBP与Sanger_HiC挂载及人工校正指南.md",
+        "notes/48_二代数据与参考辅助染色体组装路线.md",
+        "notes/56_HiC挂载校正流程深读补充.md",
+        "notes/60_组装格式转换与数据交接.md",
+        "notes/61_HiC挂载选型与HapHiC机制.md",
+        "notes/62_HiC测序采购与挂载充分性规划_QS019.md"
+      ],
+      "coverage": "10类挂载器机制/适用性定向比较，HapHiC选定源码及补充方法复核；未运行HapHiC或形成通用工具排名；QS019采购及充分性规格已记录，尚未实现",
+      "complete": false
+    },
+    {
+      "id": "KB16",
+      "title": "跨个体数据贡献",
+      "keywords": [
+        "非同个体",
+        "HiC",
+        "分型",
+        "对照",
+        "冲突",
+        "QS010"
+      ],
+      "question": "同种另一只个体的数据有益还是干扰？",
+      "notes": [
+        "notes/31_非同个体HiC贡献与干扰评估.md",
+        "notes/32_跨个体HiC直接参与hifiasm分型的风险与对照.md",
+        "notes/33_跨个体HiC自动评估功能需求_QS010.md",
+        "notes/56_HiC挂载校正流程深读补充.md"
+      ],
+      "coverage": "研究/规格已有；自动比较未实现",
+      "complete": false
+    },
+    {
+      "id": "KB17",
+      "title": "人工校正与坐标恢复",
+      "keywords": [
+        "Juicebox",
+        "JBAT",
+        "Pretext",
+        "TreeVal",
+        "curation",
+        "AGP",
+        "TPF",
+        "GFA"
+      ],
+      "question": "审图后如何恢复并重新验证组装？",
+      "notes": [
+        "notes/07_Juicer_3D-DNA.md",
+        "notes/14_本地源码与验证记录.md",
+        "notes/35_EBP与Sanger_HiC挂载及人工校正指南.md",
+        "notes/56_HiC挂载校正流程深读补充.md",
+        "notes/61_HiC挂载选型与HapHiC机制.md"
+      ],
+      "coverage": "YaHS人工编辑坐标恢复合成实测；Sanger两PDF文本及12个关键图文页审阅；未实操GUI或真实生物校正",
+      "complete": false
+    },
+    {
+      "id": "KB18",
+      "title": "遗传和光学图谱",
+      "keywords": [
+        "ALLMAPS",
+        "Bionano",
+        "linkage",
+        "optical",
+        "Strand-seq",
+        "linked-read"
+      ],
+      "question": "没有长读还能用什么长程证据？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/35_EBP与Sanger_HiC挂载及人工校正指南.md",
+        "notes/48_二代数据与参考辅助染色体组装路线.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md"
+      ],
+      "coverage": "范围/方法整理；专门软件版本与实操待补",
+      "complete": false
+    },
+    {
+      "id": "KB19",
+      "title": "基因完整度",
+      "keywords": [
+        "BUSCO",
+        "compleasm",
+        "lineage",
+        "odb12.2",
+        "Miniprot",
+        "C",
+        "S",
+        "D",
+        "F",
+        "M"
+      ],
+      "question": "BUSCO低是组装缺失还是预测/数据库问题？",
+      "notes": [
+        "notes/08_核心工具速查.md",
+        "notes/21_组装基础与质量判断.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md",
+        "notes/57_质量标准与证据验收深读补充.md"
+      ],
+      "coverage": "BUSCO6.0.0测试运行；6.1.0部分源码；compleasm深审待补",
+      "complete": false
+    },
+    {
+      "id": "KB20",
+      "title": "碱基质量和kmer拷贝",
+      "keywords": [
+        "Merqury",
+        "MerquryFK",
+        "yak",
+        "meryl",
+        "QV",
+        "spectra-cn"
+      ],
+      "question": "高QV能否证明完整或结构正确？",
+      "notes": [
+        "notes/13_质控与流程选择.md",
+        "notes/21_组装基础与质量判断.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/45_软件说明书Issues与源码诊断知识库.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/57_质量标准与证据验收深读补充.md"
+      ],
+      "coverage": "部分源码/手册；可靠评价集与完整QV运行待补",
+      "complete": false
+    },
+    {
+      "id": "KB21",
+      "title": "结构正确性与缺口",
+      "keywords": [
+        "QUAST",
+        "Inspector",
+        "gfastats",
+        "telomere",
+        "tidk",
+        "gap",
+        "T2T"
+      ],
+      "question": "哪里缺序列，哪里可能错连？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/23_EBP2026规范与本项目对标要求.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/57_质量标准与证据验收深读补充.md"
+      ],
+      "coverage": "QUAST/gfastats测试证据；真实缺口与T2T鉴定待补",
+      "complete": false
+    },
+    {
+      "id": "KB22",
+      "title": "污染和细胞器",
+      "keywords": [
+        "BlobToolKit",
+        "FCS-GX",
+        "Oatk",
+        "MitoHiFi",
+        "organelle"
+      ],
+      "question": "如何区分共生、污染、细胞器与核插入？",
+      "notes": [
+        "notes/05_EBP-Nor_GenomeAssembly.md",
+        "notes/16_Colora流程与复现入口.md",
+        "notes/21_组装基础与质量判断.md",
+        "notes/39_组装完整性判断与缺口定位.md"
+      ],
+      "coverage": "Oatk功能测试；生产污染筛查未执行",
+      "complete": false
+    },
+    {
+      "id": "KB23",
+      "title": "重复序列注释",
+      "keywords": [
+        "RepeatModeler",
+        "RepeatMasker",
+        "EDTA",
+        "TE",
+        "LAI"
+      ],
+      "question": "如何建立物种重复库并评价漏注/过屏蔽？",
+      "notes": [
+        "notes/40_基因组注释软件与文献调研.md",
+        "notes/43_现成自动注释流程核查与开发复用.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "coverage": "部分官方文档；生产重复建库与验收待补",
+      "complete": false
+    },
+    {
+      "id": "KB24",
+      "title": "RNA与基因结构注释",
+      "keywords": [
+        "BRAKER",
+        "EviAnn",
+        "Helixer",
+        "GETA",
+        "RAGNAROK",
+        "RNA",
+        "StringTie",
+        "PASA",
+        "AUGUSTUS",
+        "etraining",
+        "hints",
+        "GSAman",
+        "TBtools",
+        "基因结构人工矫正"
+      ],
+      "question": "二代/三代RNA和从头预测如何整合？",
+      "notes": [
+        "notes/40_基因组注释软件与文献调研.md",
+        "notes/41_二代三代RNA注释证据处理规范.md",
+        "notes/42_自动多方法注释流程开发与验收_QS015.md",
+        "notes/43_现成自动注释流程核查与开发复用.md",
+        "notes/58_自动注释输入路由与剪接比对核查.md",
+        "notes/63_AUGUSTUS原理训练证据与局部注释实测.md"
+      ],
+      "coverage": "文献/指定源码；miniprot小例；AUGUSTUS3.5.0预测/训练/有限优化/BAM转hints与局部坐标实测；无目标物种和GUI验证；完整自动注释未运行",
+      "complete": false
+    },
+    {
+      "id": "KB25",
+      "title": "非编码与功能注释",
+      "keywords": [
+        "ncRNA",
+        "tRNAscan-SE",
+        "Infernal",
+        "eggNOG",
+        "InterPro",
+        "GO",
+        "KEGG"
+      ],
+      "question": "非编码基因和功能怎样注释并保留来源？",
+      "notes": [
+        "notes/40_基因组注释软件与文献调研.md",
+        "notes/42_自动多方法注释流程开发与验收_QS015.md",
+        "notes/44_公开环节动物基因组核心基因与机器学习可行性.md"
+      ],
+      "coverage": "需进一步分专题深读和固定数据库版本",
+      "complete": false
+    },
+    {
+      "id": "KB26",
+      "title": "比较基因组与核心基因",
+      "keywords": [
+        "AnnelidaDB",
+        "OrthoFinder",
+        "核心基因",
+        "机器学习",
+        "共线",
+        "泛基因组"
+      ],
+      "question": "如何避免注释质量差异和训练数据泄漏？",
+      "notes": [
+        "notes/44_公开环节动物基因组核心基因与机器学习可行性.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "coverage": "资产和可行性研究；核心基因分析/训练未运行",
+      "complete": false
+    },
+    {
+      "id": "KB27",
+      "title": "流程引擎与可复现",
+      "keywords": [
+        "Sanger",
+        "Colora",
+        "VGP",
+        "Nextflow",
+        "Snakemake",
+        "container",
+        "checksum"
+      ],
+      "question": "如何锁定输入环境和阶段交接？",
+      "notes": [
+        "notes/15_完整组装工作流源码核查.md",
+        "notes/16_Colora流程与复现入口.md",
+        "notes/19_全基因组组装编程与验收规范.md",
+        "notes/20_源码追踪与能力验证.md",
+        "notes/26_追加学习与适用边界.md",
+        "notes/56_HiC挂载校正流程深读补充.md"
+      ],
+      "coverage": "Colora测试配置功能闭环；其他工作流未端到端运行",
+      "complete": false
+    },
+    {
+      "id": "KB28",
+      "title": "软件排错和恢复",
+      "keywords": [
+        "debug",
+        "issues",
+        "源码",
+        "OOM",
+        "segfault",
+        "cache",
+        "错误",
+        "samtools",
+        "gfatools",
+        "pbtk",
+        "GFA",
+        "FASTQ",
+        "noseq"
+      ],
+      "question": "如何区分版本/格式/资源/生物学问题？",
+      "notes": [
+        "notes/20_源码追踪与能力验证.md",
+        "notes/45_软件说明书Issues与源码诊断知识库.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md",
+        "notes/53_二代与混合组装方法源码及实测.md",
+        "notes/54_bioSkills短读专题复核与纠错.md",
+        "notes/55_短读与混合流程深读补充.md",
+        "notes/58_自动注释输入路由与剪接比对核查.md",
+        "notes/60_组装格式转换与数据交接.md"
+      ],
+      "coverage": "29条诊断设计记录；新增上游接口与失败传播核查，尚非自动诊断器",
+      "complete": false
+    },
+    {
+      "id": "KB29",
+      "title": "标准与论文对标",
+      "keywords": [
+        "EBP",
+        "ERGA",
+        "VGP",
+        "standards",
+        "QV",
+        "基线",
+        "高标准"
+      ],
+      "question": "最低标准、项目目标与运行起点如何区分？",
+      "notes": [
+        "notes/22_近期组装论文与对标地图.md",
+        "notes/23_EBP2026规范与本项目对标要求.md",
+        "notes/25_近期标准论文与项目高标准验收.md",
+        "notes/47_最近两年组装规范论文续读.md",
+        "notes/57_质量标准与证据验收深读补充.md"
+      ],
+      "coverage": "定向论文/标准已记录；不代表读完全部近期文献",
+      "complete": false
+    },
+    {
+      "id": "KB30",
+      "title": "提交与交付",
+      "keywords": [
+        "NCBI",
+        "ENA",
+        "accession",
+        "GFF",
+        "AGP",
+        "发布",
+        "数据管理",
+        "provenance"
+      ],
+      "question": "最终要交付哪些文件、元数据和证据？",
+      "notes": [
+        "notes/19_全基因组组装编程与验收规范.md",
+        "notes/23_EBP2026规范与本项目对标要求.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md",
+        "notes/57_质量标准与证据验收深读补充.md"
+      ],
+      "coverage": "文件交付设计已有；提交门户及当前规范专门审查待补",
+      "complete": false
+    },
+    {
+      "id": "KB31",
+      "title": "技能与知识复用",
+      "keywords": [
+        "bioSkills",
+        "skills",
+        "SKILL",
+        "学习",
+        "视频"
+      ],
+      "question": "怎样复用技能而不继承错误模板？",
+      "notes": [
+        "notes/09_视频与Skills学习.md",
+        "notes/17_bioSkills系统学习与使用.md",
+        "notes/18_bioSkills源码勘误与使用边界.md",
+        "notes/26_追加学习与适用边界.md",
+        "notes/53_二代与混合组装方法源码及实测.md",
+        "notes/54_bioSkills短读专题复核与纠错.md"
+      ],
+      "coverage": "561元数据索引、25篇正文；视频未取得音轨内容；追加二代/混合局部源码与SPAdes小例证据，未验证大型真核生产路线",
+      "complete": false
+    },
+    {
+      "id": "KB32",
+      "title": "微生物与特殊材料边界",
+      "keywords": [
+        "细菌",
+        "古菌",
+        "病毒",
+        "宏基因组",
+        "混池",
+        "单细胞",
+        "肿瘤"
+      ],
+      "question": "哪些真核规则不能套到其他样本？",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "coverage": "仅部分范围/例子；须按任务专门建模和补学",
+      "complete": false
+    },
+    {
+      "id": "KB33",
+      "title": "模式标本基因组与分类溯源",
+      "keywords": [
+        "Type Genomics",
+        "模式标本",
+        "载名模式",
+        "模式产地",
+        "历史DNA",
+        "馆藏",
+        "分类",
+        "标本溯源",
+        "voucher",
+        "topotype",
+        "holotype",
+        "syaf040"
+      ],
+      "question": "如何把模式标本低覆盖数据与独立凭证的高质量参考基因组建立可审查的身份联系？",
+      "notes": [
+        "notes/64_Type_Genomics模式标本基因组与分类溯源.md",
+        "notes/19_全基因组组装编程与验收规范.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md"
+      ],
+      "coverage": "Letsch等2025科学全文、图1–3、S1表体与ICZN相关条款已读；有本项目设计推演，无提取/测序或模式鉴定验证",
+      "complete": false
+    }
+  ],
+  "documents": [
+    {
+      "path": "notes/00_学习进度清单.md",
+      "title": "学习进度清单"
+    },
+    {
+      "path": "notes/01_sanger-tol_genomeassembly.md",
+      "title": "sanger-tol/genomeassembly"
+    },
+    {
+      "path": "notes/02_VGP_Galaxy.md",
+      "title": "VGP 基因组组装流程（Galaxy / IWC 版，VGP-assembly-v2）"
+    },
+    {
+      "path": "notes/03_nf-core_genomeassembler.md",
+      "title": "nf-core/genomeassembler"
+    },
+    {
+      "path": "notes/04_CNAG_CLAWS.md",
+      "title": "CNAG CLAWS（CNAG's Long-read Assembly Workflow in Snakemake）"
+    },
+    {
+      "path": "notes/05_EBP-Nor_GenomeAssembly.md",
+      "title": "EBP-Nor GenomeAssembly"
+    },
+    {
+      "path": "notes/06_Verkko.md",
+      "title": "Verkko"
+    },
+    {
+      "path": "notes/07_Juicer_3D-DNA.md",
+      "title": "Juicer + 3D-DNA（DNA Zoo 的 Hi-C 染色体级 scaffolding 流程）"
+    },
+    {
+      "path": "notes/08_核心工具速查.md",
+      "title": "基因组组装核心工具速查"
+    },
+    {
+      "path": "notes/09_视频与Skills学习.md",
+      "title": "视频访问证据与 Skills 学习"
+    },
+    {
+      "path": "notes/10_论文与复现资源地图.md",
+      "title": "论文与可复现资源地图"
+    },
+    {
+      "path": "notes/11_HiC_scaffolders_benchmark.md",
+      "title": "用户指定论文：Hi-C scaffolders benchmark"
+    },
+    {
+      "path": "notes/12_组装与HiC挂载使用说明.md",
+      "title": "hifiasm、YaHS 与 HapHiC 使用说明"
+    },
+    {
+      "path": "notes/13_质控与流程选择.md",
+      "title": "去冗余、质量评价和流程选择"
+    },
+    {
+      "path": "notes/14_本地源码与验证记录.md",
+      "title": "当前机器的源码与验证记录"
+    },
+    {
+      "path": "notes/15_完整组装工作流源码核查.md",
+      "title": "完整组装工作流：重新分类与源码核查"
+    },
+    {
+      "path": "notes/16_Colora流程与复现入口.md",
+      "title": "Colora：论文配套完整组装工作流"
+    },
+    {
+      "path": "notes/17_bioSkills系统学习与使用.md",
+      "title": "bioSkills 系统学习与使用"
+    },
+    {
+      "path": "notes/18_bioSkills源码勘误与使用边界.md",
+      "title": "bioSkills：已核实勘误与需限定的结论"
+    },
+    {
+      "path": "notes/19_全基因组组装编程与验收规范.md",
+      "title": "全基因组组装编程与验收规范"
+    },
+    {
+      "path": "notes/20_源码追踪与能力验证.md",
+      "title": "源码追踪与能力验证"
+    },
+    {
+      "path": "notes/21_组装基础与质量判断.md",
+      "title": "全基因组组装基础与质量判断"
+    },
+    {
+      "path": "notes/22_近期组装论文与对标地图.md",
+      "title": "近期全基因组组装论文与对标地图"
+    },
+    {
+      "path": "notes/23_EBP2026规范与本项目对标要求.md",
+      "title": "EBP 2026规范与本项目对标要求"
+    },
+    {
+      "path": "notes/24_论文配套源码核查_Galeolaria与GPhase.md",
+      "title": "论文配套源码核查：Galeolaria 与 GPhase"
+    },
+    {
+      "path": "notes/25_近期标准论文与项目高标准验收.md",
+      "title": "近期标准论文：证据如何进入流程"
+    },
+    {
+      "path": "notes/26_追加学习与适用边界.md",
+      "title": "追加学习与适用边界"
+    },
+    {
+      "path": "notes/27_测序数据预判组装难度与二代补充策略.md",
+      "title": "测序数据预判组装难度与补充二代的决策"
+    },
+    {
+      "path": "notes/28_基因组调查源码与脚本使用说明.md",
+      "title": "基因组调查：已收集源码、现成脚本与使用说明"
+    },
+    {
+      "path": "notes/29_基因组调查开发待办.md",
+      "title": "基因组调查：待开发/集成事项"
+    },
+    {
+      "path": "notes/30_ONT质控与HiFi_HiC联合组装.md",
+      "title": "ONT质控、单平台组装与HiFi/Hi-C联合组装"
+    },
+    {
+      "path": "notes/31_非同个体HiC贡献与干扰评估.md",
+      "title": "同种、非同个体Hi-C：贡献、干扰与证据评估"
+    },
+    {
+      "path": "notes/32_跨个体HiC直接参与hifiasm分型的风险与对照.md",
+      "title": "A的HiFi＋B的Hi-C直接进入hifiasm：风险与评估"
+    },
+    {
+      "path": "notes/33_跨个体HiC自动评估功能需求_QS010.md",
+      "title": "QS010：自动评估跨个体Hi-C对hifiasm组装的贡献与干扰"
+    },
+    {
+      "path": "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+      "title": "ONT数据量充分性与高覆盖：软件说明核查"
+    },
+    {
+      "path": "notes/35_EBP与Sanger_HiC挂载及人工校正指南.md",
+      "title": "EBP与Sanger：组装后Hi-C挂载及人工校正指南"
+    },
+    {
+      "path": "notes/36_去冗余软件说明书与参数核查.md",
+      "title": "去冗余软件说明书与参数核查"
+    },
+    {
+      "path": "notes/37_去冗余文献与公开流程实际用法.md",
+      "title": "去冗余文献与公开流程实际用法"
+    },
+    {
+      "path": "notes/38_去冗余流程开发与验收需求.md",
+      "title": "去冗余流程开发与验收需求：QS013"
+    },
+    {
+      "path": "notes/39_组装完整性判断与缺口定位.md",
+      "title": "组装完整性判断与缺口定位：QS014"
+    },
+    {
+      "path": "notes/40_基因组注释软件与文献调研.md",
+      "title": "真核基因组注释软件与文献调研"
+    },
+    {
+      "path": "notes/41_二代三代RNA注释证据处理规范.md",
+      "title": "二代/三代RNA作为基因组注释证据"
+    },
+    {
+      "path": "notes/42_自动多方法注释流程开发与验收_QS015.md",
+      "title": "QS015：自动配置、多方法注释与证据整合"
+    },
+    {
+      "path": "notes/43_现成自动注释流程核查与开发复用.md",
+      "title": "现成自动注释流程：补充核查与开发复用"
+    },
+    {
+      "path": "notes/44_公开环节动物基因组核心基因与机器学习可行性.md",
+      "title": "公开环节动物数据再利用：核心基因与机器学习可行性"
+    },
+    {
+      "path": "notes/45_软件说明书Issues与源码诊断知识库.md",
+      "title": "软件说明书、issues 与源码诊断知识库"
+    },
+    {
+      "path": "notes/46_二代与HiFi估计基因组大小的比较.md",
+      "title": "二代与HiFi估计核基因组大小的比较"
+    },
+    {
+      "path": "notes/47_最近两年组装规范论文续读.md",
+      "title": "最近两年组装规范论文续读"
+    },
+    {
+      "path": "notes/48_二代数据与参考辅助染色体组装路线.md",
+      "title": "二代数据与参考辅助染色体组装路线"
+    },
+    {
+      "path": "notes/49_全基因组组装任务范围与数据路由总纲.md",
+      "title": "全基因组组装：任务范围与数据路由总纲"
+    },
+    {
+      "path": "notes/50_全基因组知识库导航与覆盖账本.md",
+      "title": "全基因组知识库导航与覆盖账本"
+    },
+    {
+      "path": "notes/51_组装原理与证据驱动判断手册.md",
+      "title": "组装原理与证据驱动判断手册"
+    },
+    {
+      "path": "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md",
+      "title": "Juicer、BUSCO、Flye：接口、源码与排错补充"
+    },
+    {
+      "path": "notes/53_二代与混合组装方法源码及实测.md",
+      "title": "二代与混合组装：方法、接口源码及实测"
+    },
+    {
+      "path": "notes/54_bioSkills短读专题复核与纠错.md",
+      "title": "bioSkills短读专题复核与纠错"
+    },
+    {
+      "path": "notes/55_短读与混合流程深读补充.md",
+      "title": "短读与混合流程深读补充：Platanus-allee的阶段、产品与失败传播"
+    },
+    {
+      "path": "notes/56_HiC挂载校正流程深读补充.md",
+      "title": "Hi-C挂载与人工校正：坐标恢复源码及实测补充"
+    },
+    {
+      "path": "notes/57_质量标准与证据验收深读补充.md",
+      "title": "质量标准、近期论文与可编程验收：深读补充"
+    },
+    {
+      "path": "notes/58_自动注释输入路由与剪接比对核查.md",
+      "title": "自动注释输入路由与剪接比对核查"
+    },
+    {
+      "path": "notes/59_参考辅助组装方法体系与工具选择.md",
+      "title": "参考辅助组装：方法体系、工具选择与验收"
+    },
+    {
+      "path": "notes/60_组装格式转换与数据交接.md",
+      "title": "组装格式转换与数据交接：SAM/BAM、FASTQ和GFA/FASTA"
+    },
+    {
+      "path": "notes/61_HiC挂载选型与HapHiC机制.md",
+      "title": "Hi-C挂载选型与HapHiC机制"
+    },
+    {
+      "path": "notes/62_HiC测序采购与挂载充分性规划_QS019.md",
+      "title": "Hi-C测序采购与挂载充分性规划（QS019，功能规格，尚未实现）"
+    },
+    {
+      "path": "notes/63_AUGUSTUS原理训练证据与局部注释实测.md",
+      "title": "AUGUSTUS：原理、训练、证据与局部注释"
+    },
+    {
+      "path": "notes/64_Type_Genomics模式标本基因组与分类溯源.md",
+      "title": "Type Genomics：模式标本基因组与分类溯源"
+    }
+  ],
+  "current_execution_summary": {
+    "functional_workflow_configurations_completed": 1,
+    "workflow": "Colora pinned test configuration; QUAST separately executed/staged; FCS-GX disabled",
+    "production_target_species_validated": 0,
+    "evidence": "tests/colora_functional_2026-11-01/logs/colora_all_20261101T174700Z.json"
+  },
+  "reading_entry": "notes/50_全基因组知识库导航与覆盖账本.md",
+  "component_learning_summary": {
+    "evidence": "tests/shortread_hybrid_learning_2026-11-02/README.md",
+    "runtime": "SPAdes4.0.0",
+    "review": "SPAdes4.3.0",
+    "official_toy_runs": 1,
+    "synthetic_runs": 4,
+    "negative_checks": 3,
+    "production_runs": 0
+  },
+  "latest_parallel_learning_batch": "tests/multi_agent_learning_2026-11-02/README.md",
+  "latest_reference_hic_review": {
+    "notes": [
+      "notes/59_参考辅助组装方法体系与工具选择.md",
+      "notes/60_组装格式转换与数据交接.md",
+      "notes/61_HiC挂载选型与HapHiC机制.md"
+    ],
+    "request_audit": "notes/sources/full_request_gap_audit_2026-11-02.md",
+    "conversion_execution": "tests/format_conversion_2026-11-02/results.json",
+    "scope": "selected reviews, official interfaces and source; synthetic format conversion; no new biological assembly/scaffolding validation"
+  },
+  "latest_augustus_learning": {
+    "note": "notes/63_AUGUSTUS原理训练证据与局部注释实测.md",
+    "evidence": "tests/augustus_learning_2026-11-04/README.md",
+    "version": "3.5.0",
+    "scope": "official component examples; training392/test100; bounded one-parameter optimization; no target-species or GUI validation"
+  },
+  "latest_type_genomics_review": {
+    "note": "notes/64_Type_Genomics模式标本基因组与分类溯源.md",
+    "evidence": "notes/sources/type_genomics_2026-11-05/review_ledger.json",
+    "doi": "10.1093/sysbio/syaf040",
+    "scope": "scientific full text; figures1–3; S1 table body; selected ICZN; no biological execution"
+  }
+}

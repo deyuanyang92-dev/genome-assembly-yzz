@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-01",
+  "scope": "systematic first-pass annotation survey with unequal reading depth; software design, not executed workflow",
+  "new_upstream_clones": 0,
+  "new_installs": 0,
+  "biological_runs": 0,
+  "native_configuration_dry_runs": 0,
+  "local_sources": [
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/README.md",
+      "sha256": "0999234b0387c580f106dc85b6c3cc5a6110f0f9063c2b7afb4c4b17968f330d",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/1_RepeatMasker/runrepeatmaskerH1.sh",
+      "sha256": "d20d368fa43ab679284eaaae566a21bfb8c54c6ca9b644faac7d3de7b8cacd2c",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/2_RNAProcessing/1_runIsoSeqPreProcessing.sh",
+      "sha256": "6036635472e07cfb652f426fc4affef049c4bcc241b9ee24a1d73609391d7637",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/2_RNAProcessing/2_runIsoSeqProcessingH1.sh",
+      "sha256": "4ccf4f041c5e38a59683fd19eff10e174a58c0a64d7353285e1bd6447531127f",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/2_RNAProcessing/2_runstar_short_read.sh",
+      "sha256": "4ac5a494866c5a6d25a962dfad22844a323c0e1cef9d735d5c5e1f118f06ac0a",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/1_runB1annotation.sh",
+      "sha256": "f694aad85118f3b6ad8f041f705fd945dcbf4a317e317f63ac981534824e5c82",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/2_runB2annotation.sh",
+      "sha256": "fce54c9dd3e1d459f1212450c6c8055d801de72eb01ab08c60e72b29e1693887",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/3_runGeneMark.sh",
+      "sha256": "7e098d384f270e131482496605c194ce34499ab203813f6ca03d23a10d2b66cc",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/4_runTsebra.sh",
+      "sha256": "09147f5a1f28ee45c45764d8e3284fc6baf67de53a5c557a2fe824d7e1875408",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/4_FunctionnalAnnotation/1_runInterproscan.sh",
+      "sha256": "909949b0a911949c146cac289ebb3d9c73943931e78259322a4ed8ee0f83cd25",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    },
+    {
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/4_FunctionnalAnnotation/2_runEggnog.sh",
+      "sha256": "644f166af7805d9a9205e836cc52204e31f7d338bdaad8611e23db6d738708cd",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "scope": "read selected pipeline scripts; static review only"
+    }
+  ],
+  "web_sources": [
+    {
+      "name": "BRAKER4",
+      "url": "https://github.com/Gaius-Augustus/BRAKER4",
+      "scope": "README modes/input; online branch not pinned locally",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "BRAKER4 migration",
+      "url": "https://github.com/Gaius-Augustus/BRAKER4/blob/cleanup/filter-stop-codons-leftovers/MIGRATING_FROM_BRAKER3.md",
+      "scope": "migration descriptions",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "BRAKER4 config",
+      "url": "https://github.com/Gaius-Augustus/BRAKER4/blob/cleanup/filter-stop-codons-leftovers/config.ini.example",
+      "scope": "selected options",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "BRAKER4 Snakefile",
+      "url": "https://github.com/Gaius-Augustus/BRAKER4/blob/cleanup/filter-stop-codons-leftovers/Snakefile",
+      "scope": "selected mode/include/postprocess passages; not all rules",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "BRAKER legacy",
+      "url": "https://github.com/Gaius-Augustus/BRAKER",
+      "scope": "deprecation and selected manual",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "BRAKER long read legacy",
+      "url": "https://github.com/Gaius-Augustus/BRAKER/blob/master/docs/long_reads/long_read_protocol.md",
+      "scope": "preliminary protocol status",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "Helixer",
+      "url": "https://github.com/usadellab/Helixer",
+      "scope": "README model/usage scope",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "EviAnn release",
+      "url": "https://github.com/alekseyzimin/EviAnn_release",
+      "scope": "input tags/installation/usage sections",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "GALBA",
+      "url": "https://github.com/Gaius-Augustus/GALBA",
+      "scope": "README purpose",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "funannotate v1",
+      "url": "https://github.com/nextgenusfs/funannotate/blob/master/docs/predict.rst",
+      "scope": "prediction overview",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "funannotate2",
+      "url": "https://github.com/nextgenusfs/funannotate2",
+      "scope": "README and version distinctions",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "funannotate2 predict",
+      "url": "https://github.com/nextgenusfs/funannotate2/blob/main/funannotate2/predict.py",
+      "scope": "generate_consensus invocation only; not full audit",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "TSEBRA",
+      "url": "https://github.com/Gaius-Augustus/TSEBRA",
+      "scope": "inputs/hints and selection purpose",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "EVM",
+      "url": "https://github.com/EVidenceModeler/EVidenceModeler",
+      "scope": "maintenance status",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "EVM wiki",
+      "url": "https://github.com/EVidenceModeler/EVidenceModeler/wiki",
+      "scope": "overview; not complete parameter audit",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "Mikado",
+      "url": "https://github.com/EI-CoreBioinformatics/mikado",
+      "scope": "model selection and inputs",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "PASA manual",
+      "url": "https://github.com/PASApipeline/PASApipeline/blob/master/docs/index.asciidoc",
+      "scope": "indexed alignment/update passages",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "IsoSeq",
+      "url": "https://github.com/PacificBiosciences/IsoSeq/blob/master/docs/clustering/cli-workflow.md",
+      "scope": "input/refine/cluster2",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "IsoQuant",
+      "url": "https://github.com/ablab/IsoQuant",
+      "scope": "input/polyA/short read capability",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "StringTie manual",
+      "url": "https://github.com/gpertea/stringtie/wiki/Manual",
+      "scope": "long/mix modes",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "minimap2",
+      "url": "https://github.com/lh3/minimap2",
+      "scope": "RNA presets/orientation/max intron",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "SQANTI3",
+      "url": "https://github.com/ConesaLab/SQANTI3",
+      "scope": "version and QC scope",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "SQANTI3 QC",
+      "url": "https://conesalab.github.io/SQANTI3/v6.0.2/Running-SQANTI3-Quality-Control/",
+      "scope": "reference/input dependency",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "OMArk",
+      "url": "https://github.com/DessimozLab/OMArk",
+      "scope": "quality measures/database scope",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "Earl Grey",
+      "url": "https://github.com/TobyBaril/EarlGrey",
+      "scope": "README/database compatibility",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "EDTA",
+      "url": "https://github.com/oushujun/EDTA",
+      "scope": "TE annotation scope",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "eggNOG",
+      "url": "https://github.com/eggnogdb/eggnog-mapper",
+      "scope": "functional purpose",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "InterProScan v5",
+      "url": "https://interproscan-docs.readthedocs.io/en/v5/HowToRun.html",
+      "scope": "input/GO/pathways options",
+      "local_commit_pinned": false
+    },
+    {
+      "name": "long RNA study code",
+      "url": "https://github.com/alexpan00/lr_evidence_driven",
+      "scope": "repository purpose and access only; scripts not audited",
+      "local_commit_pinned": false
+    }
+  ],
+  "papers": [
+    {
+      "doi": "10.1101/gr.278090.123",
+      "year": 2024,
+      "scope": "publisher abstract/method search passages, official software manuals"
+    },
+    {
+      "doi": "10.1038/s41592-025-02939-1",
+      "online_date": "2025-11-24",
+      "volume_year": 2026,
+      "scope": "publisher abstract/selected passages and official README"
+    },
+    {
+      "doi": "10.1038/s41592-026-03156-0",
+      "year": 2026,
+      "scope": "formal PubMed metadata/abstract; Nature full text access failed; do not conflate with 2025 preprint"
+    },
+    {
+      "doi": "10.1101/gr.279864.124",
+      "year": 2025,
+      "scope": "indexed publisher abstract/discussion/method passages and code landing page; direct full page 403"
+    },
+    {
+      "doi": "10.1038/s41592-024-02229-2",
+      "year": 2024,
+      "scope": "indexed paper methods plus official manual; not full supplementary materials"
+    },
+    {
+      "doi": "10.1038/s41587-024-02147-w",
+      "volume_year": 2025,
+      "scope": "official project citation and measures; paper not fully read"
+    }
+  ],
+  "access_limits": [
+    "terminal curl failed connecting to configured proxy 172.24.64.1:7892; no source archives/clones downloaded",
+    "EviAnn formal Nature full text redirected to inaccessible login",
+    "long RNA comparison direct publisher page returned 403",
+    "guessed earlgrey org and IsoSeq bulk path did not resolve; corrected to author repo and clustering manual"
+  ],
+  "not_completed": [
+    "full source audit",
+    "upstream test installation/run",
+    "target species pilot",
+    "integration benchmarks",
+    "automatic annotation implementation"
+  ]
+}

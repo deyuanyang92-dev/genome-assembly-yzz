@@ -1,0 +1,5502 @@
+{
+  "date": "2026-11-01",
+  "scope": "Programmatically extracted all 14 .ga input/tool/output/connection interfaces; does not claim execution or complete parameter/algorithm audit",
+  "workflows": [
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Assembly-Hifi-HiC-phasing-VGP4/Assembly-Hifi-HiC-phasing-VGP4.ga",
+      "name": "Genome Assembly from Hifi reads with HiC phasing - VGP4",
+      "steps": 75,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Pacbio Reads"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "Trim Hi-C reads?"
+        },
+        {
+          "id": "4",
+          "type": "data_collection_input",
+          "label": "Hi-C reads"
+        },
+        {
+          "id": "5",
+          "type": "data_input",
+          "label": "Genomescope Summary"
+        },
+        {
+          "id": "6",
+          "type": "data_input",
+          "label": "Meryl Database"
+        },
+        {
+          "id": "7",
+          "type": "parameter_input",
+          "label": "Database for Busco Lineage"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Lineage"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "Name for Haplotype 1"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "Name for Haplotype 2"
+        },
+        {
+          "id": "11",
+          "type": "parameter_input",
+          "label": "Bits for bloom filter"
+        },
+        {
+          "id": "12",
+          "type": "parameter_input",
+          "label": "Homozygous Read Coverage"
+        },
+        {
+          "id": "13",
+          "type": "data_input",
+          "label": "Genomescope Model Parameters"
+        }
+      ],
+      "tools": [
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "16",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "17",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "18",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "19",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "20",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.35+galaxy4",
+          "version": "1.35+galaxy4"
+        },
+        {
+          "id": "22",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "23",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "24",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "26",
+          "tool": "__UNZIP_COLLECTION__",
+          "version": "1.0.0"
+        },
+        {
+          "id": "27",
+          "tool": "Convert characters1",
+          "version": "1.0.1"
+        },
+        {
+          "id": "28",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "29",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "30",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "31",
+          "tool": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
+          "version": "5.1.0"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
+          "version": "5.1.0"
+        },
+        {
+          "id": "33",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "35",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "37",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.25.0+galaxy3",
+          "version": "0.25.0+galaxy3"
+        },
+        {
+          "id": "39",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "40",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "41",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/2022.09+galaxy4",
+          "version": "2022.09+galaxy4"
+        },
+        {
+          "id": "42",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "44",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "45",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "46",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "47",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "48",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "50",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "51",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "54",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "55",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "56",
+          "tool": "join1",
+          "version": "2.1.3"
+        },
+        {
+          "id": "58",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "59",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "60",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy4",
+          "version": "1.3+galaxy4"
+        },
+        {
+          "id": "61",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "62",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "63",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "64",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "65",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "66",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "67",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "68",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "69",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_uniq_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "70",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "71",
+          "tool": "Show beginning1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "72",
+          "tool": "Show beginning1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "73",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "74",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "14",
+          "label": "Species Name for workflow report",
+          "output_name": "out1",
+          "uuid": "713241bf-91df-48bb-9894-6fa131c37f07"
+        },
+        {
+          "step_id": "15",
+          "label": "Assembly Name for workflow report",
+          "output_name": "out1",
+          "uuid": "1bef5e02-00bd-49a7-b80f-0650aaf8baa9"
+        },
+        {
+          "step_id": "16",
+          "label": "HiFi reads without adapters",
+          "output_name": "out1",
+          "uuid": "fa4cf558-880e-4f19-8d74-4453f65fea5d"
+        },
+        {
+          "step_id": "19",
+          "label": "Lineage for workflow report",
+          "output_name": "out1",
+          "uuid": "05afe910-330a-4233-b608-f082849d7911"
+        },
+        {
+          "step_id": "22",
+          "label": "Trimmed Hi-C reads",
+          "output_name": "data_param",
+          "uuid": "d8eb57d9-f88e-4a96-a75d-81ec16d1e3ea"
+        },
+        {
+          "step_id": "35",
+          "label": "Hi-C Forward reads",
+          "output_name": "data_param",
+          "uuid": "52cf7124-ec50-46db-8554-62d3c22d33d2"
+        },
+        {
+          "step_id": "36",
+          "label": "Hi-C Reverse reads",
+          "output_name": "data_param",
+          "uuid": "ff33ef55-bd66-4b2c-8648-1425b850be8a"
+        },
+        {
+          "step_id": "37",
+          "label": "Estimated Genome size",
+          "output_name": "integer_param",
+          "uuid": "a6854349-56a1-4ebd-845b-237f3600a0a6"
+        },
+        {
+          "step_id": "41",
+          "label": "raw unitig graph image",
+          "output_name": "outfile",
+          "uuid": "973f1ee3-d67f-4126-b9c0-301c9b0be6e7"
+        },
+        {
+          "step_id": "43",
+          "label": "No Sequences hap2 gfa",
+          "output_name": "output",
+          "uuid": "0bba8e16-b835-40db-a15c-f4d045ec704b"
+        },
+        {
+          "step_id": "45",
+          "label": "usable hap1 gfa",
+          "output_name": "output",
+          "uuid": "853d982b-69e8-436f-a791-4f7875034109"
+        },
+        {
+          "step_id": "46",
+          "label": "usable hap2 gfa",
+          "output_name": "output",
+          "uuid": "03228d5f-a300-4321-b715-ffc466c21246"
+        },
+        {
+          "step_id": "48",
+          "label": "No sequences hap1 gfa",
+          "output_name": "output",
+          "uuid": "b13512c3-caf2-4c4b-abf1-b57749b6b00c"
+        },
+        {
+          "step_id": "54",
+          "label": "Hifiasm Hi-C hap2",
+          "output_name": "output",
+          "uuid": "dd375833-aa34-4529-af99-c8be93fb013a"
+        },
+        {
+          "step_id": "55",
+          "label": "Hifiasm Hi-C hap1",
+          "output_name": "output",
+          "uuid": "86addfe0-5939-45d0-bb10-8e9bff0bd220"
+        },
+        {
+          "step_id": "57",
+          "label": "Size Plot",
+          "output_name": "Size Plot",
+          "uuid": "03a0d2a8-c2d5-4ca7-80fe-7d04d1c4894a"
+        },
+        {
+          "step_id": "57",
+          "label": "Nx Plot",
+          "output_name": "Nx Plot",
+          "uuid": "781f8511-c3fe-4954-afa8-d21c94c996a4"
+        },
+        {
+          "step_id": "58",
+          "label": "Compleasm on Contigs hap2 Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "484f8887-14a2-4eae-8b41-0bf52491cf5d"
+        },
+        {
+          "step_id": "58",
+          "label": "Compleasm on Contigs hap2 Miniprot",
+          "output_name": "miniprot",
+          "uuid": "5bae72bd-9ba3-429a-9352-ffed843c85ab"
+        },
+        {
+          "step_id": "58",
+          "label": "Compleasm on Contigs hap2 Full Table",
+          "output_name": "full_table",
+          "uuid": "1d6fbe87-d899-4a8a-91c0-75d0d758ac2b"
+        },
+        {
+          "step_id": "58",
+          "label": "Compleasm on Contigs hap2 Summary",
+          "output_name": "summary",
+          "uuid": "2070618b-56ed-4a6f-850b-6c4ab6a3303c"
+        },
+        {
+          "step_id": "58",
+          "label": "Compleasm hap2 Full Table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "0eff5217-577f-483d-8d4a-ca3d04a98f8d"
+        },
+        {
+          "step_id": "59",
+          "label": "Compleasm on Contigs hap1 Full Table",
+          "output_name": "full_table",
+          "uuid": "65eb263e-d723-4992-8899-d032f07463b6"
+        },
+        {
+          "step_id": "59",
+          "label": "Compleasm on Contigs hap1 Summary",
+          "output_name": "summary",
+          "uuid": "1b7d0fe4-bc45-426f-a059-c88ac752e59d"
+        },
+        {
+          "step_id": "59",
+          "label": "Compleasm on Contigs hap1 Full Table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "4503b22b-d2fe-4315-8086-732692a8ebe8"
+        },
+        {
+          "step_id": "59",
+          "label": "Compleasm on Contigs hap1 Miniprot",
+          "output_name": "miniprot",
+          "uuid": "6e760b6b-66c1-4123-a6bd-e8be378cccf4"
+        },
+        {
+          "step_id": "59",
+          "label": "Compleasm on Contigs hap1 Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "f44cfaed-7a06-4a50-abb1-9ef469372b92"
+        },
+        {
+          "step_id": "60",
+          "label": "Merqury Histograms",
+          "output_name": "hist_files",
+          "uuid": "67d9d45d-989d-43c0-9ebd-0da9cc35763a"
+        },
+        {
+          "step_id": "60",
+          "label": "Merqury images",
+          "output_name": "png_files",
+          "uuid": "4983a97f-9dd1-44d2-a4be-d13e9a651f41"
+        },
+        {
+          "step_id": "60",
+          "label": "Merqury Stats",
+          "output_name": "stats_files",
+          "uuid": "22a82fae-74cf-4024-9815-ba6a9892aac3"
+        },
+        {
+          "step_id": "60",
+          "label": "Merqury QV",
+          "output_name": "qv_files",
+          "uuid": "5ba07c29-6ca5-42bd-a1e8-f4f6a35c3814"
+        },
+        {
+          "step_id": "62",
+          "label": "Montage Nx and size plots",
+          "output_name": "output",
+          "uuid": "add235d3-5b1c-43a7-b43d-b97cb6a2e216"
+        },
+        {
+          "step_id": "69",
+          "label": "Assembly statistics for Hap1 and Hap2",
+          "output_name": "outfile",
+          "uuid": "d044add7-faf7-4324-afef-ae83f351db18"
+        },
+        {
+          "step_id": "70",
+          "label": "Merqury plot both haplotypes",
+          "output_name": "output",
+          "uuid": "94828f0d-3054-4e3e-ac53-f4ab352238af"
+        },
+        {
+          "step_id": "71",
+          "label": "merqury_qv",
+          "output_name": "out_file1",
+          "uuid": "243199e7-abdd-498e-9562-053d0a4d3bf4"
+        },
+        {
+          "step_id": "72",
+          "label": "merqury_stats",
+          "output_name": "out_file1",
+          "uuid": "0b43af76-e841-4e87-b5ac-05af55dd403e"
+        },
+        {
+          "step_id": "73",
+          "label": "Merqury CN plots",
+          "output_name": "output",
+          "uuid": "2a01e9ac-1bc0-4c06-91b3-f7407c99069d"
+        },
+        {
+          "step_id": "74",
+          "label": "clean_stats",
+          "output_name": "outfile",
+          "uuid": "0d69a8ab-29c1-4fef-97d9-af243ca8eb83"
+        }
+      ],
+      "connection_count": 89
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Assembly-Hifi-Trio-phasing-VGP5/Assembly-Hifi-Trio-phasing-VGP5.ga",
+      "name": "Genome Assembly with Pacbio Hifi reads and Trio data for phasing - VGP5",
+      "steps": 64,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Pacbio Reads Collection: child"
+        },
+        {
+          "id": "3",
+          "type": "data_collection_input",
+          "label": "Paternal Illumina reads (hap1)"
+        },
+        {
+          "id": "4",
+          "type": "data_collection_input",
+          "label": "Maternal Illumina reads (hap2)"
+        },
+        {
+          "id": "5",
+          "type": "data_input",
+          "label": "Meryl Database: Child"
+        },
+        {
+          "id": "6",
+          "type": "data_input",
+          "label": "Hapmer Database: Paternal"
+        },
+        {
+          "id": "7",
+          "type": "data_input",
+          "label": "Hapmer Database: Maternal"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Bits for bloom filter"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "Database for Busco Lineage"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "Lineage"
+        },
+        {
+          "id": "11",
+          "type": "parameter_input",
+          "label": "Homozygous Read Coverage"
+        },
+        {
+          "id": "12",
+          "type": "data_input",
+          "label": "Genomescope Model Parameters"
+        },
+        {
+          "id": "13",
+          "type": "data_input",
+          "label": "Genomescope Summary"
+        },
+        {
+          "id": "14",
+          "type": "parameter_input",
+          "label": "Utilize homology information to correct trio-phasing errors"
+        },
+        {
+          "id": "15",
+          "type": "parameter_input",
+          "label": "Name for Haplotype 1"
+        },
+        {
+          "id": "16",
+          "type": "parameter_input",
+          "label": "Name for Haplotype 2"
+        }
+      ],
+      "tools": [
+        {
+          "id": "17",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "18",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "19",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "20",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "22",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "23",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "24",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "25",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.35+galaxy4",
+          "version": "1.35+galaxy4"
+        },
+        {
+          "id": "26",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "27",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "28",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "29",
+          "tool": "Convert characters1",
+          "version": "1.0.1"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "31",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.25.0+galaxy3",
+          "version": "0.25.0+galaxy3"
+        },
+        {
+          "id": "33",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "35",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/2022.09+galaxy4",
+          "version": "2022.09+galaxy4"
+        },
+        {
+          "id": "37",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "39",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "40",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "41",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "42",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "44",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "45",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/6.1.0+galaxy0",
+          "version": "6.1.0+galaxy0"
+        },
+        {
+          "id": "46",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "47",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/6.1.0+galaxy0",
+          "version": "6.1.0+galaxy0"
+        },
+        {
+          "id": "48",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy4",
+          "version": "1.3+galaxy4"
+        },
+        {
+          "id": "52",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "53",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "54",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "55",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "56",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "57",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "58",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "59",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "61",
+          "tool": "join1",
+          "version": "2.1.3"
+        },
+        {
+          "id": "62",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "63",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "17",
+          "label": "Species for report",
+          "output_name": "out1",
+          "uuid": "1a514772-279b-4624-a21c-93836da7a773"
+        },
+        {
+          "step_id": "18",
+          "label": "Assembly for report",
+          "output_name": "out1",
+          "uuid": "9eec335f-c9ca-4dc9-8960-a75dfc1d5df2"
+        },
+        {
+          "step_id": "19",
+          "label": "json_stats",
+          "output_name": "json_stats",
+          "uuid": "96389258-09f1-4a1a-8e17-0bbae8e999f5"
+        },
+        {
+          "step_id": "21",
+          "label": "Lineage for report",
+          "output_name": "out1",
+          "uuid": "991844ec-2500-4a09-88d4-576b97be3e65"
+        },
+        {
+          "step_id": "25",
+          "label": "cutadapt multiqc stats",
+          "output_name": "stats",
+          "uuid": "110b5141-3025-4ee6-8d4a-d4987fa6dfe5"
+        },
+        {
+          "step_id": "25",
+          "label": "multiqc html report",
+          "output_name": "html_report",
+          "uuid": "9bd9c4ff-97c3-4557-a550-a360207e08ab"
+        },
+        {
+          "step_id": "33",
+          "label": "Estimated Genome size",
+          "output_name": "integer_param",
+          "uuid": "5ae5a387-d898-4272-bc29-608e5fc33655"
+        },
+        {
+          "step_id": "34",
+          "label": "usable hap1 gfa",
+          "output_name": "output",
+          "uuid": "4fc29101-1e84-407c-8e97-4899fda4300c"
+        },
+        {
+          "step_id": "35",
+          "label": "No Sequence hap2 gfa",
+          "output_name": "output",
+          "uuid": "10b452af-b1fa-4dbe-b2ed-eeeab8dfb650"
+        },
+        {
+          "step_id": "36",
+          "label": "raw unitig graph image",
+          "output_name": "outfile",
+          "uuid": "c5d8c5b8-3d33-473d-96bc-cedd33d14786"
+        },
+        {
+          "step_id": "37",
+          "label": "No Sequence hap1 gfa",
+          "output_name": "output",
+          "uuid": "8abadd24-eb18-4a90-b628-6607b47c503f"
+        },
+        {
+          "step_id": "38",
+          "label": "usable hap2 gfa",
+          "output_name": "output",
+          "uuid": "ca9f8434-d7e9-4cf7-84b8-ce9cad5548f0"
+        },
+        {
+          "step_id": "39",
+          "label": "Hifiasm Trio hap1",
+          "output_name": "output",
+          "uuid": "711071f5-4b23-4a9f-af19-abcf4b731da9"
+        },
+        {
+          "step_id": "40",
+          "label": "Hifiasm Trio hap2",
+          "output_name": "output",
+          "uuid": "f4438ca6-d970-4263-ad68-f6a488b56bbb"
+        },
+        {
+          "step_id": "45",
+          "label": "Busco Gff Hap1",
+          "output_name": "busco_gff",
+          "uuid": "0946a7b1-b95e-425a-b039-eddb66d7f203"
+        },
+        {
+          "step_id": "45",
+          "label": "Busco Summary Image Hap1",
+          "output_name": "summary_image",
+          "uuid": "783cb816-dead-4035-911f-d4dd7590efbf"
+        },
+        {
+          "step_id": "45",
+          "label": "Busco Summary Hap1",
+          "output_name": "busco_sum",
+          "uuid": "bb3f3b2b-d455-4c53-a4b4-044bd4a90c7a"
+        },
+        {
+          "step_id": "46",
+          "label": "Compleasm on Hap1 (paternal) contigs: Full table",
+          "output_name": "full_table",
+          "uuid": "64b646af-46e0-4801-b62f-2e1177daeee8"
+        },
+        {
+          "step_id": "46",
+          "label": "Compleasm on Hap1 (paternal) contigs: Full table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "a3c7ea08-6a1c-4c6d-9e77-fcf7183a4aba"
+        },
+        {
+          "step_id": "46",
+          "label": "Compleasm on Hap1 (paternal) contigs: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "6e100a57-f5ea-4426-8f3a-f746ae0d888e"
+        },
+        {
+          "step_id": "46",
+          "label": "Compleasm on Hap1 (paternal) contigs: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "f5b195f4-c955-4390-913a-17c56280df02"
+        },
+        {
+          "step_id": "47",
+          "label": "Busco Summary Hap2",
+          "output_name": "busco_sum",
+          "uuid": "b1bae72f-2729-47d4-925c-ddbba82e2098"
+        },
+        {
+          "step_id": "47",
+          "label": "Busco Summary Image Hap2",
+          "output_name": "summary_image",
+          "uuid": "caf3c70a-11cf-468f-aab8-144a38880d07"
+        },
+        {
+          "step_id": "47",
+          "label": "Busco Gff Hap2",
+          "output_name": "busco_gff",
+          "uuid": "948be37c-7cde-4c13-805c-2d9806380939"
+        },
+        {
+          "step_id": "48",
+          "label": "Compleasm on Hap2 (maternal)  contigs: Full table",
+          "output_name": "full_table",
+          "uuid": "2775556f-fb02-4e74-9b1b-5236cb50fb0d"
+        },
+        {
+          "step_id": "48",
+          "label": "Compleasm on Hap2 (maternal)  contigs: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "a774d33b-442d-4f85-880c-9afae641d640"
+        },
+        {
+          "step_id": "48",
+          "label": "Compleasm on Hap2 (maternal)  contigs: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "50d7177c-d74e-4717-84e0-cf42d4af41d1"
+        },
+        {
+          "step_id": "48",
+          "label": "Compleasm on Hap2 (maternal) contigs: Full table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "688688df-89e2-4453-bead-f739baaf598f"
+        },
+        {
+          "step_id": "49",
+          "label": "Merqury Images",
+          "output_name": "png_files",
+          "uuid": "703f1b5c-9fd8-4f49-8dae-b5c3d0770738"
+        },
+        {
+          "step_id": "49",
+          "label": "Merqury QV",
+          "output_name": "qv_files",
+          "uuid": "947a9ca1-437f-4003-9871-ad38e76a19f6"
+        },
+        {
+          "step_id": "49",
+          "label": "Merqury Trio Histogram",
+          "output_name": "hist_files",
+          "uuid": "82446904-1649-4dbf-ba0d-48576419a32c"
+        },
+        {
+          "step_id": "54",
+          "label": "merqury_qv",
+          "output_name": "output",
+          "uuid": "cdbf5aec-670b-4da2-b6f2-f6608ae252f0"
+        },
+        {
+          "step_id": "55",
+          "label": "output_merqury.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "dbfe025a-b595-4f5e-80b6-1d94fb363f0c"
+        },
+        {
+          "step_id": "56",
+          "label": "output_merqury.spectra-asm.fl",
+          "output_name": "output",
+          "uuid": "c34a15dc-3af9-4bb2-b08e-6c0eae63178f"
+        },
+        {
+          "step_id": "57",
+          "label": "output_merqury.assembly_01.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "6241bc27-84fc-4694-aa64-7676ea130542"
+        },
+        {
+          "step_id": "58",
+          "label": "output_merqury.assembly_02.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "761c07e7-fc3b-415b-a91a-ee6841355d54"
+        },
+        {
+          "step_id": "59",
+          "label": "merqury_stats",
+          "output_name": "output",
+          "uuid": "9b4d468d-235c-4d4b-b687-ee59343549df"
+        },
+        {
+          "step_id": "60",
+          "label": "Nx Plot",
+          "output_name": "Nx Plot",
+          "uuid": "4235c91f-2071-483e-b905-bed50bc53b05"
+        },
+        {
+          "step_id": "60",
+          "label": "Size Plot",
+          "output_name": "Size Plot",
+          "uuid": "044f639b-f8f9-44b9-85b0-bbea417e4af7"
+        },
+        {
+          "step_id": "62",
+          "label": "Assembly statistics for Hap1 and Hap2",
+          "output_name": "output",
+          "uuid": "473ae324-f8d1-43ee-b57c-9b1a8a9705ec"
+        },
+        {
+          "step_id": "63",
+          "label": "clean_stats",
+          "output_name": "outfile",
+          "uuid": "fe375d8e-3e97-4373-b3ac-0d2e409d0145"
+        }
+      ],
+      "connection_count": 71
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Assembly-Hifi-only-VGP3/Assembly-Hifi-only-VGP3.ga",
+      "name": "Genome Assembly from Hifi reads - VGP3",
+      "steps": 57,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Pacbio Reads Collection"
+        },
+        {
+          "id": "3",
+          "type": "data_input",
+          "label": "Meryl Database"
+        },
+        {
+          "id": "4",
+          "type": "data_input",
+          "label": "Genomescope Summary"
+        },
+        {
+          "id": "5",
+          "type": "parameter_input",
+          "label": "Bits for Hifiasm bloom filter"
+        },
+        {
+          "id": "6",
+          "type": "parameter_input",
+          "label": "Homozygous Read Coverage"
+        },
+        {
+          "id": "7",
+          "type": "data_input",
+          "label": "Genomescope Model Parameters"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Database for Busco Lineage"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "Lineage"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "Name of primary assembly"
+        },
+        {
+          "id": "11",
+          "type": "parameter_input",
+          "label": "Name of alternate assembly"
+        }
+      ],
+      "tools": [
+        {
+          "id": "12",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "16",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "17",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "18",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "19",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.35+galaxy4",
+          "version": "1.35+galaxy4"
+        },
+        {
+          "id": "20",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_replace_in_line/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "21",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "22",
+          "tool": "Convert characters1",
+          "version": "1.0.1"
+        },
+        {
+          "id": "23",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "24",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "25",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "26",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "27",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/hifiasm/hifiasm/0.25.0+galaxy3",
+          "version": "0.25.0+galaxy3"
+        },
+        {
+          "id": "28",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/bandage/bandage_image/2022.09+galaxy4",
+          "version": "2022.09+galaxy4"
+        },
+        {
+          "id": "29",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "31",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "33",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "35",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "37",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "39",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "40",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy4",
+          "version": "1.3+galaxy4"
+        },
+        {
+          "id": "41",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "42",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "46",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "47",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "48",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "49",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "50",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "51",
+          "tool": "join1",
+          "version": "2.1.3"
+        },
+        {
+          "id": "53",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "54",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "55",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "56",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "12",
+          "label": "Species Name for report",
+          "output_name": "out1",
+          "uuid": "080cbb91-82a3-4725-9071-1c44f13a05b0"
+        },
+        {
+          "step_id": "13",
+          "label": "Assembly Name for report",
+          "output_name": "out1",
+          "uuid": "c8bb3453-7016-401f-9930-638917fcc20f"
+        },
+        {
+          "step_id": "18",
+          "label": "Lineage for report",
+          "output_name": "out1",
+          "uuid": "019e3800-fb79-4be6-8f8a-a75b4e9d8c5f"
+        },
+        {
+          "step_id": "19",
+          "label": "cutadapt multiqc stats",
+          "output_name": "stats",
+          "uuid": "c274f7aa-095e-4245-b6aa-cfadcf0d1736"
+        },
+        {
+          "step_id": "19",
+          "label": "multiqc html report",
+          "output_name": "html_report",
+          "uuid": "86a436db-4089-46e3-ad77-c6247302f4ce"
+        },
+        {
+          "step_id": "26",
+          "label": "Estimated Genome size",
+          "output_name": "integer_param",
+          "uuid": "28396392-6855-400b-a28c-6297d43b7e23"
+        },
+        {
+          "step_id": "27",
+          "label": "Hifiasm Primary gfa",
+          "output_name": "primary_contig_graph",
+          "uuid": "15537a4a-9d13-48c6-9a99-42edb5a5cad0"
+        },
+        {
+          "step_id": "27",
+          "label": "Hifiasm Alternate gfa",
+          "output_name": "alternate_contig_graph",
+          "uuid": "7a14aa59-72a2-4bb5-9d74-2d501577db87"
+        },
+        {
+          "step_id": "28",
+          "label": "raw unitig graph image",
+          "output_name": "outfile",
+          "uuid": "9a8feefa-ea89-402b-b2ab-336b417d5fa4"
+        },
+        {
+          "step_id": "29",
+          "label": "Usable GFA Primary",
+          "output_name": "output",
+          "uuid": "e1a82af3-c947-41f7-bb72-6c8c3842a9b8"
+        },
+        {
+          "step_id": "30",
+          "label": "Usable GFA Primary no sequences",
+          "output_name": "output",
+          "uuid": "206d792b-265c-4b4a-88dc-10150137005e"
+        },
+        {
+          "step_id": "31",
+          "label": "Usable GFA Alternate",
+          "output_name": "output",
+          "uuid": "23d72fbe-6df8-431d-a711-01f766f1b08c"
+        },
+        {
+          "step_id": "32",
+          "label": "Usable GFA Alternate no sequences",
+          "output_name": "output",
+          "uuid": "dbf53241-afbd-470f-b7b5-d2c75e937509"
+        },
+        {
+          "step_id": "33",
+          "label": "Hifiasm Primary assembly",
+          "output_name": "output",
+          "uuid": "f30af626-f47c-4967-a92b-f697b8e977d3"
+        },
+        {
+          "step_id": "34",
+          "label": "Hifiasm Alternate assembly",
+          "output_name": "output",
+          "uuid": "76bc77a2-fd89-494d-a646-091560aeb1a1"
+        },
+        {
+          "step_id": "35",
+          "label": "Assembly Stats on Primary assembly",
+          "output_name": "stats",
+          "uuid": "2acbea03-21b2-4bf6-b5dc-212dff771dc8"
+        },
+        {
+          "step_id": "36",
+          "label": "Assembly Stats on Alternate Assembly",
+          "output_name": "stats",
+          "uuid": "6362e546-0c71-47c9-8c78-939308613459"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm on Primary Assembly contigs: Full table ",
+          "output_name": "full_table",
+          "uuid": "a72844f6-9f27-4655-9129-9248fbc8749f"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm on Primary Assembly contigs: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "cbd233c0-e6a4-4c55-989b-7941ea5b1565"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm on Primary Assembly contigs: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "51ffeeaf-917b-461b-a066-d503a18df6e5"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm on Primary Assembly contigs: Summary",
+          "output_name": "summary",
+          "uuid": "94839774-21f4-4b81-bc8b-759b240f96e4"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm on Primary Assembly contigs: Full table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "66297635-732d-400b-8db0-45574480bb51"
+        },
+        {
+          "step_id": "40",
+          "label": "Merqury Histograms",
+          "output_name": "hist_files",
+          "uuid": "9bb427f1-2afd-4e63-b7a1-2c9b54c6bee0"
+        },
+        {
+          "step_id": "40",
+          "label": "Merqury png",
+          "output_name": "png_files",
+          "uuid": "1040586b-b0aa-41c3-98e4-00ead4e43a5c"
+        },
+        {
+          "step_id": "40",
+          "label": "Merqury completeness stats",
+          "output_name": "stats_files",
+          "uuid": "640107ca-7175-4624-9851-33911c197b18"
+        },
+        {
+          "step_id": "41",
+          "label": "Compleasm on Alternate Assembly contigs: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "c3c7939d-ed5d-45ac-ac9c-103f93edfbb8"
+        },
+        {
+          "step_id": "41",
+          "label": "Compleasm on Alternate Assembly contigs: Full table ",
+          "output_name": "full_table",
+          "uuid": "50d4c388-76b5-4f08-924b-603f9ecf1e83"
+        },
+        {
+          "step_id": "41",
+          "label": "Compleasm on Alternate Assembly contigs: Full table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "5f593566-a778-4eb3-a7da-be1b9e31a319"
+        },
+        {
+          "step_id": "41",
+          "label": "Compleasm on Alternate Assembly contigs: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "24bc911c-1b5a-4213-a352-b80722b5833c"
+        },
+        {
+          "step_id": "41",
+          "label": "Compleasm on Alternate Assembly contigs: Summary",
+          "output_name": "summary",
+          "uuid": "f8d8d664-6335-4907-b798-8e4ab36b4843"
+        },
+        {
+          "step_id": "46",
+          "label": "merqury_qv",
+          "output_name": "output",
+          "uuid": "392ff784-c7dc-4564-8f33-fd73b6cd4635"
+        },
+        {
+          "step_id": "49",
+          "label": "output_merqury.assembly_01.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "cc37b1d2-e371-47b4-9d66-837733c4c04b"
+        },
+        {
+          "step_id": "50",
+          "label": "merqury_stats",
+          "output_name": "output",
+          "uuid": "0dbd43e2-8b7a-47fb-aeb7-cb5abfccd98f"
+        },
+        {
+          "step_id": "53",
+          "label": "Merqury spectra plots",
+          "output_name": "output",
+          "uuid": "f9b10955-42d4-4df6-902c-419d2f78c20e"
+        },
+        {
+          "step_id": "54",
+          "label": "Assembly statistics",
+          "output_name": "output",
+          "uuid": "323d0ecc-1fec-4126-94de-1f0deb6b6880"
+        },
+        {
+          "step_id": "55",
+          "label": "Nx and Size plots",
+          "output_name": "output",
+          "uuid": "0dc3180f-d93d-4ab4-bf26-295a1608cfdd"
+        },
+        {
+          "step_id": "56",
+          "label": "clean_stats",
+          "output_name": "outfile",
+          "uuid": "365867c1-fec9-4c10-8b31-3f615992910a"
+        }
+      ],
+      "connection_count": 62
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Assembly-decontamination-VGP9/Assembly-decontamination-VGP9.ga",
+      "name": "Assembly decontamination VGP9 ",
+      "steps": 19,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "data_input",
+          "label": "Scaffolded assembly (fasta)"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Database for NCBI FCS GX"
+        },
+        {
+          "id": "2",
+          "type": "parameter_input",
+          "label": "Taxonomic Identifier"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "Species Binomial Name"
+        },
+        {
+          "id": "4",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "5",
+          "type": "parameter_input",
+          "label": "Haplotype"
+        },
+        {
+          "id": "6",
+          "type": "parameter_input",
+          "label": "Maximum length of sequence to consider for mitochondrial scaffolds"
+        }
+      ],
+      "tools": [
+        {
+          "id": "7",
+          "tool": "toolshed.g2.bx.psu.edu/repos/richard-burhans/ncbi_fcs_adaptor/ncbi_fcs_adaptor/0.5.0+galaxy0",
+          "version": "0.5.0+galaxy0"
+        },
+        {
+          "id": "8",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "10",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/0.5.5+galaxy2",
+          "version": "0.5.5+galaxy2"
+        },
+        {
+          "id": "11",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_dustmasker_wrapper/2.16.0+galaxy0",
+          "version": "2.16.0+galaxy0"
+        },
+        {
+          "id": "12",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_filter_by_length/fasta_filter_by_length/1.2",
+          "version": "1.2"
+        },
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/0.5.5+galaxy2",
+          "version": "0.5.5+galaxy2"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ncbi_fcs_gx/ncbi_fcs_gx/0.5.5+galaxy2",
+          "version": "0.5.5+galaxy2"
+        },
+        {
+          "id": "16",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/ncbi_blast_plus/ncbi_blastn_wrapper/2.16.0+galaxy0",
+          "version": "2.16.0+galaxy0"
+        },
+        {
+          "id": "17",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/parse_mito_blast/parse_mito_blast/1.0.2+galaxy0",
+          "version": "1.0.2+galaxy0"
+        },
+        {
+          "id": "18",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "7",
+          "label": "Adaptor Report",
+          "output_name": "adaptor_report",
+          "uuid": "fe19f712-9692-4eda-aa7c-0659db60b6de"
+        },
+        {
+          "step_id": "8",
+          "label": "Assembly Info",
+          "output_name": "out1",
+          "uuid": "b928ae01-aaf0-4159-b720-edcf7e0fe62e"
+        },
+        {
+          "step_id": "9",
+          "label": "Masking Action Report",
+          "output_name": "Masking Action Report",
+          "uuid": "78cdcd49-20c4-42d3-a1a3-b7a55cbd5172"
+        },
+        {
+          "step_id": "13",
+          "label": "Taxonomy Report",
+          "output_name": "taxonomy_report",
+          "uuid": "36ce3f94-48bc-49f9-a65e-8352f2a0c77f"
+        },
+        {
+          "step_id": "13",
+          "label": "Contaminants report",
+          "output_name": "action_report",
+          "uuid": "1b7d9451-cda3-42e4-b3c5-87527fc4e513"
+        },
+        {
+          "step_id": "15",
+          "label": "Contaminants sequences",
+          "output_name": "contam_fasta",
+          "uuid": "a650c7dc-0e27-47f9-8356-52b08b3e09ac"
+        },
+        {
+          "step_id": "17",
+          "label": "Mitochondrial Scaffolds",
+          "output_name": "mito_scaff_names",
+          "uuid": "e6f8b641-1df9-465d-9a84-b5adc6f02b6f"
+        },
+        {
+          "step_id": "18",
+          "label": "Final Decontaminated Assembly",
+          "output_name": "output",
+          "uuid": "fa28b6e9-d875-45d7-8acb-132bb10f0a11"
+        }
+      ],
+      "connection_count": 21
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Mitogenome-assembly-VGP0/Mitogenome-Assembly-VGP0.ga",
+      "name": "Mitogenome Assembly VGP0",
+      "steps": 10,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species name (latin name)"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Collection of Pacbio Data"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "Email adress"
+        },
+        {
+          "id": "4",
+          "type": "parameter_input",
+          "label": "Genetic Code"
+        }
+      ],
+      "tools": [
+        {
+          "id": "5",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "6",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "7",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/mitohifi/mitohifi/3.2.3+galaxy2",
+          "version": "3.2.3+galaxy2"
+        },
+        {
+          "id": "8",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/mitohifi/mitohifi/3.2.3+galaxy2",
+          "version": "3.2.3+galaxy2"
+        },
+        {
+          "id": "9",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compress_file/compress_file/0.1.0",
+          "version": "0.1.0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "0",
+          "label": null,
+          "output_name": "output",
+          "uuid": "c8b90efa-84ec-4c72-bda6-fc7e4731c48c"
+        },
+        {
+          "step_id": "1",
+          "label": null,
+          "output_name": "output",
+          "uuid": "d5ca0944-9913-4a3b-af9e-6f17101fccc5"
+        },
+        {
+          "step_id": "3",
+          "label": null,
+          "output_name": "output",
+          "uuid": "6bbe8abb-f6d5-49b3-bf3a-c040baa26e01"
+        },
+        {
+          "step_id": "4",
+          "label": null,
+          "output_name": "output",
+          "uuid": "287bb080-5a98-43f9-91bf-a7d7db09f105"
+        },
+        {
+          "step_id": "5",
+          "label": "Species Name for report",
+          "output_name": "out1",
+          "uuid": "5ac7f4cd-8059-4294-a9c4-9e6e1fcbaafa"
+        },
+        {
+          "step_id": "6",
+          "label": "Assembly Name for report",
+          "output_name": "out1",
+          "uuid": "5bb40bb2-dbdc-47f3-8683-0462d3b2bd41"
+        },
+        {
+          "step_id": "8",
+          "label": "Mitogenome coverage: Image",
+          "output_name": "mitogenome_coverage",
+          "uuid": "891c5e66-9a6d-411b-b1dc-324c19b74a39"
+        },
+        {
+          "step_id": "8",
+          "label": "Mitogenome annotation: Image",
+          "output_name": "mitogenome_annotation",
+          "uuid": "9ee09a4a-8785-447c-be84-e97c65f220ef"
+        },
+        {
+          "step_id": "8",
+          "label": "Mitogenome annotation: GenBank",
+          "output_name": "mitogenome_genbank",
+          "uuid": "95a81d01-e0d4-4200-b0ca-d8906796bf15"
+        },
+        {
+          "step_id": "8",
+          "label": "Mitogenome: Contigs Statistics",
+          "output_name": "contigs_stats",
+          "uuid": "d657a420-fa6c-422e-b46b-de8494a43a2f"
+        },
+        {
+          "step_id": "9",
+          "label": "Compressed Mitogenome",
+          "output_name": "output_file",
+          "uuid": "a43845b1-f417-4232-b1b9-bcb785ec4427"
+        }
+      ],
+      "connection_count": 9
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Plot-Nx-Size/Generate-Nx-and-Size-plots-for-multiple-assemblies.ga",
+      "name": "Generate Nx and Size plots for multiple assemblies",
+      "steps": 15,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "data_collection_input",
+          "label": "Collection of genomes to plot"
+        }
+      ],
+      "tools": [
+        {
+          "id": "1",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "2",
+          "tool": "sort1",
+          "version": "1.2.0"
+        },
+        {
+          "id": "3",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "4",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/datamash_ops/datamash_ops/1.9+galaxy0",
+          "version": "1.9+galaxy0"
+        },
+        {
+          "id": "5",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/add_value/addValue/1.0.1",
+          "version": "1.0.1"
+        },
+        {
+          "id": "6",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "7",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "8",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "9",
+          "tool": "toolshed.g2.bx.psu.edu/repos/mvdbeek/add_input_name_as_column/addName/0.3.0",
+          "version": "0.3.0"
+        },
+        {
+          "id": "10",
+          "tool": "toolshed.g2.bx.psu.edu/repos/nml/collapse_collections/collapse_dataset/5.1.0",
+          "version": "5.1.0"
+        },
+        {
+          "id": "11",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "12",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.5.1+galaxy2",
+          "version": "3.5.1+galaxy2"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.5.1+galaxy2",
+          "version": "3.5.1+galaxy2"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "8",
+          "label": "gfastats data for plotting",
+          "output_name": "out_file1",
+          "uuid": "68af2c3b-8f48-4bde-9dd1-a78151d6de1a"
+        },
+        {
+          "step_id": "13",
+          "label": "Nx Plot",
+          "output_name": "output1",
+          "uuid": "ea8d76de-4b96-42a5-bd99-b4846fc4f869"
+        },
+        {
+          "step_id": "14",
+          "label": "Size Plot",
+          "output_name": "output1",
+          "uuid": "7051d948-3249-4f85-b772-6bae20c99f4d"
+        }
+      ],
+      "connection_count": 15
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Purge-duplicate-contigs-VGP6/Purge-duplicate-contigs-VGP6.ga",
+      "name": "Purge duplicate contigs from a diploid assembly VGP6",
+      "steps": 62,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Pacbio Reads Collection - Trimmed"
+        },
+        {
+          "id": "3",
+          "type": "data_input",
+          "label": "Hifiasm Primary assembly"
+        },
+        {
+          "id": "4",
+          "type": "data_input",
+          "label": "Hifiasm Alternate assembly"
+        },
+        {
+          "id": "5",
+          "type": "data_input",
+          "label": "Meryl Database"
+        },
+        {
+          "id": "6",
+          "type": "data_input",
+          "label": "Genomescope model parameters"
+        },
+        {
+          "id": "7",
+          "type": "data_input",
+          "label": "Estimated genome size - Parameter File"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Database for Busco Lineage"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "Lineage"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "What sequences are you purging?"
+        },
+        {
+          "id": "11",
+          "type": "parameter_input",
+          "label": "Name of primary assembly"
+        },
+        {
+          "id": "12",
+          "type": "parameter_input",
+          "label": "Name of alternate assembly"
+        }
+      ],
+      "tools": [
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "16",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "17",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "18",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "19",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "20",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/map_param_value/map_param_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "22",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "23",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "24",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "25",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "26",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "27",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "28",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "29",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "31",
+          "tool": "cat1",
+          "version": "1.0.0"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "33",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "35",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "37",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "40",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "41",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "42",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "45",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "46",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "47",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy4",
+          "version": "1.3+galaxy4"
+        },
+        {
+          "id": "48",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "50",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "52",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "53",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "54",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "55",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "56",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "57",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "58",
+          "tool": "join1",
+          "version": "2.1.3"
+        },
+        {
+          "id": "60",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "61",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "13",
+          "label": "Species for report",
+          "output_name": "out1",
+          "uuid": "bfc84706-5900-4b6e-9c5e-f966da3d8c03"
+        },
+        {
+          "step_id": "14",
+          "label": "Assembly for report",
+          "output_name": "out1",
+          "uuid": "dad5b8c3-5ee2-43e1-8e36-e24dc34b98b0"
+        },
+        {
+          "step_id": "18",
+          "label": "Estimated Genome Size",
+          "output_name": "integer_param",
+          "uuid": "a6d1a01f-ee44-4faa-a8a1-0f20fde412e8"
+        },
+        {
+          "step_id": "19",
+          "label": "Lineage for report",
+          "output_name": "out1",
+          "uuid": "e75dfc01-0e38-4b90-819c-597d696617d3"
+        },
+        {
+          "step_id": "28",
+          "label": "Read Coverage and cutoffs calculation on primary assembly: Histogram plot",
+          "output_name": "hist",
+          "uuid": "2e045d9d-99e4-457f-9cee-691616ed6590"
+        },
+        {
+          "step_id": "28",
+          "label": "Cutoffs for primary assembly",
+          "output_name": "calcuts_cutoff",
+          "uuid": "d2c6d9bd-e28f-4ff1-ac7b-f9068e49a582"
+        },
+        {
+          "step_id": "30",
+          "label": "Purged Primary Assembly",
+          "output_name": "get_seqs_purged",
+          "uuid": "cba2e095-7c28-488c-ba6a-8fb2b1612bc1"
+        },
+        {
+          "step_id": "32",
+          "label": "Purged Primary Assembly (gfa)",
+          "output_name": "output",
+          "uuid": "e04e7950-3bcf-46e8-918c-781f71ef64c9"
+        },
+        {
+          "step_id": "33",
+          "label": "Compleasm on purged primary/hap1 assembly: Full Table",
+          "output_name": "full_table",
+          "uuid": "1c4bea46-e531-4e6e-9332-efc86e83e162"
+        },
+        {
+          "step_id": "33",
+          "label": "Compleasm on purged primary/hap1 assembly: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "a71378fd-d0cf-4b33-a3f3-806cfb327e58"
+        },
+        {
+          "step_id": "33",
+          "label": "Compleasm on purged primary/hap1 assembly: Full Table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "dfa9e71e-c62d-4315-8540-eab032f7ebbb"
+        },
+        {
+          "step_id": "33",
+          "label": "Compleasm on purged primary/hap1 assembly: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "9e217184-167b-4847-a426-f6c9564fffce"
+        },
+        {
+          "step_id": "33",
+          "label": "Compleasm on purged primary/hap1 assembly: Summary",
+          "output_name": "summary",
+          "uuid": "0eb232c6-7dbf-41e9-829b-4fca6e27194f"
+        },
+        {
+          "step_id": "40",
+          "label": "Read Coverage and cutoffs calculation on alternate assembly: Histogram Plot",
+          "output_name": "hist",
+          "uuid": "f12c1cc7-a12a-4314-ae16-2738b80afe70"
+        },
+        {
+          "step_id": "40",
+          "label": "Cutoffs for alternate assembly",
+          "output_name": "calcuts_cutoff",
+          "uuid": "49bf0c95-0290-4f8b-a9d7-2f17f53e9d26"
+        },
+        {
+          "step_id": "44",
+          "label": "Purged Alternate Assembly",
+          "output_name": "Renamed Hap2 fasta",
+          "uuid": "2693feb1-7c7e-4671-950e-cb4c05a79aec"
+        },
+        {
+          "step_id": "44",
+          "label": "Name mapping Alternate assembly",
+          "output_name": "Name mapping Hap2",
+          "uuid": "bb3c83a3-94aa-4d3b-92c1-fe2976439298"
+        },
+        {
+          "step_id": "47",
+          "label": "Merqury on Phased assemblies: stats",
+          "output_name": "stats_files",
+          "uuid": "70f44477-6a3b-4ac4-b01a-f812ea880bae"
+        },
+        {
+          "step_id": "47",
+          "label": "Merqury on Phased assemblies: Images",
+          "output_name": "png_files",
+          "uuid": "ff9cfc96-449e-41d8-9c10-7f586ab6f479"
+        },
+        {
+          "step_id": "48",
+          "label": "Purged Alternate assembly (gfa)",
+          "output_name": "output",
+          "uuid": "5323cc49-9368-44f9-b1db-e027bcc77abd"
+        },
+        {
+          "step_id": "49",
+          "label": "Compleasm on purged alternate/hap2 assembly: Full Table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "e937d991-8b01-4a30-9146-285567779ce2"
+        },
+        {
+          "step_id": "49",
+          "label": "Compleasm on purged alternate/hap2 assembly: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "f97c5404-6439-4ae9-93ae-c24335ae92f2"
+        },
+        {
+          "step_id": "49",
+          "label": "Compleasm on purged alternate/hap2 assembly: Summary",
+          "output_name": "summary",
+          "uuid": "2fe475c7-d6bb-4d99-9198-cb292454eded"
+        },
+        {
+          "step_id": "49",
+          "label": "Compleasm on purged alternate/hap2 assembly: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "691bb4fc-1d27-4dac-b461-f796ef1e0a85"
+        },
+        {
+          "step_id": "49",
+          "label": "Compleasm on purged alternate/hap2 assembly: Full Table",
+          "output_name": "full_table",
+          "uuid": "cf3b87c0-bd75-4417-b982-cd37788d490c"
+        },
+        {
+          "step_id": "52",
+          "label": "merqury_QV",
+          "output_name": "output",
+          "uuid": "2f152e08-eaf2-4539-802c-cec3b72e6afe"
+        },
+        {
+          "step_id": "53",
+          "label": "output_merqury.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "f34e855e-09ed-4da3-970c-ec7ad337c651"
+        },
+        {
+          "step_id": "54",
+          "label": "output_merqury.spectra-asm.fl",
+          "output_name": "output",
+          "uuid": "71ffd225-48bd-4e96-8025-ebaa2ea02bad"
+        },
+        {
+          "step_id": "55",
+          "label": "output_merqury.assembly_01.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "05b7387f-ab38-403e-ab71-b1d65e1cb025"
+        },
+        {
+          "step_id": "56",
+          "label": "merqury_stats",
+          "output_name": "output",
+          "uuid": "bd69aaf0-461e-4c12-a8ad-48d97de3b00c"
+        },
+        {
+          "step_id": "57",
+          "label": "output_merqury.assembly_02.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "8bf731d1-0eee-4877-b93c-6989cec7d77f"
+        },
+        {
+          "step_id": "59",
+          "label": "Nx Plot",
+          "output_name": "Nx Plot",
+          "uuid": "a15bf8fc-7eae-497b-9f75-ddaf474ade51"
+        },
+        {
+          "step_id": "59",
+          "label": "Size Plot",
+          "output_name": "Size Plot",
+          "uuid": "b5516866-8b4f-41b8-a19a-12e1362d344c"
+        },
+        {
+          "step_id": "60",
+          "label": "Assembly statistics for purged assemblies",
+          "output_name": "output",
+          "uuid": "5c1dae47-1920-41b6-b86f-8627ea5e5721"
+        },
+        {
+          "step_id": "61",
+          "label": "clean_stats",
+          "output_name": "outfile",
+          "uuid": "a022ab8b-306a-4035-8604-810d39f1bde7"
+        }
+      ],
+      "connection_count": 80
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Purge-duplicates-one-haplotype-VGP6b/Purging-duplicates-one-haplotype-VGP6b.ga",
+      "name": "Purging duplicates in one haplotype VGP6b",
+      "steps": 51,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "parameter_input",
+          "label": "Haplotype"
+        },
+        {
+          "id": "3",
+          "type": "data_input",
+          "label": "Genomescope model parameters"
+        },
+        {
+          "id": "4",
+          "type": "data_collection_input",
+          "label": "Pacbio Reads Collection - Trimmed"
+        },
+        {
+          "id": "5",
+          "type": "data_input",
+          "label": "Assembly to purge"
+        },
+        {
+          "id": "6",
+          "type": "data_input",
+          "label": "Meryl Database"
+        },
+        {
+          "id": "7",
+          "type": "data_input",
+          "label": "Assembly to leave alone (For Merqury comparison)"
+        },
+        {
+          "id": "8",
+          "type": "data_input",
+          "label": "Estimated genome size - Parameter File"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "Database for Busco Lineage"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "Lineage"
+        },
+        {
+          "id": "11",
+          "type": "parameter_input",
+          "label": "Name of purged assembly"
+        },
+        {
+          "id": "12",
+          "type": "parameter_input",
+          "label": "Name of un-altered assembly"
+        }
+      ],
+      "tools": [
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "16",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "17",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "18",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "19",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "20",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "22",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "23",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "24",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "26",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "27",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "28",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "29",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "31",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_grep_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "33",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/purge_dups/purge_dups/1.2.6+galaxy1",
+          "version": "1.2.6+galaxy1"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/merqury/merqury/1.3+galaxy4",
+          "version": "1.3+galaxy4"
+        },
+        {
+          "id": "35",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "37",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.10+galaxy0",
+          "version": "0.2.10+galaxy0"
+        },
+        {
+          "id": "39",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "40",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "41",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "42",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "43",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "44",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "46",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "48",
+          "tool": "join1",
+          "version": "2.1.3"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "50",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "13",
+          "label": "Species for report",
+          "output_name": "out1",
+          "uuid": "1ac017b3-8360-47d2-8e34-5aa6a9343c7d"
+        },
+        {
+          "step_id": "14",
+          "label": "Assembly for report",
+          "output_name": "out1",
+          "uuid": "6511ffe7-463a-4df1-870a-9fc0c5b56a80"
+        },
+        {
+          "step_id": "15",
+          "label": "Haplotype for report",
+          "output_name": "out1",
+          "uuid": "b276cab9-674f-40de-85d5-387e0d250aa4"
+        },
+        {
+          "step_id": "21",
+          "label": "Lineage for report",
+          "output_name": "out1",
+          "uuid": "f01af345-9e68-45dd-8742-0c32c36c4398"
+        },
+        {
+          "step_id": "30",
+          "label": "Read Coverage and cutoffs calculation: Histogram plot",
+          "output_name": "hist",
+          "uuid": "dff0569f-d3c4-457c-842e-e62511ea754d"
+        },
+        {
+          "step_id": "30",
+          "label": "Cutoffs",
+          "output_name": "calcuts_cutoff",
+          "uuid": "0c375bcb-c80a-489e-b4fc-98a7c99813d7"
+        },
+        {
+          "step_id": "33",
+          "label": "Removed haplotigs",
+          "output_name": "get_seqs_hap",
+          "uuid": "0593d60a-a6ec-48c0-a1dc-c2a4bc5bd537"
+        },
+        {
+          "step_id": "33",
+          "label": "Purged assembly",
+          "output_name": "get_seqs_purged",
+          "uuid": "0fb19650-ae22-41da-8ccf-fc12842b8d6b"
+        },
+        {
+          "step_id": "34",
+          "label": "Merqury on Phased assemblies: stats",
+          "output_name": "stats_files",
+          "uuid": "c07cd28e-86b5-4e4f-87fa-bc2b3b65da33"
+        },
+        {
+          "step_id": "34",
+          "label": "qv_files",
+          "output_name": "qv_files",
+          "uuid": "9fb50959-0da7-4838-9f0e-9c945f04c1f6"
+        },
+        {
+          "step_id": "34",
+          "label": "Merqury on Phased assemblies: Images",
+          "output_name": "png_files",
+          "uuid": "4b7c4a1c-42e6-4d63-999d-bdce891470cd"
+        },
+        {
+          "step_id": "36",
+          "label": "Purged assembly (GFA)",
+          "output_name": "output",
+          "uuid": "25213685-ed44-44a7-84fd-8d92f9d1d734"
+        },
+        {
+          "step_id": "37",
+          "label": "Purged assembly statistics",
+          "output_name": "stats",
+          "uuid": "c98fd03e-3a3d-472b-8b13-f13479fc4dad"
+        },
+        {
+          "step_id": "38",
+          "label": "Compleasm on purged Assembly: Full Table",
+          "output_name": "full_table",
+          "uuid": "3567a192-b1ac-4c39-9925-b34ba7c52dd8"
+        },
+        {
+          "step_id": "38",
+          "label": "Compleasm on purged Assembly: Miniprot",
+          "output_name": "miniprot",
+          "uuid": "03d678ba-1a32-4795-b63f-6823ca8e37a2"
+        },
+        {
+          "step_id": "38",
+          "label": "Compleasm on purged Assembly: Translated Proteins",
+          "output_name": "translated_protein",
+          "uuid": "12ac40e3-846b-4cc9-b9c5-3965eaefb8e8"
+        },
+        {
+          "step_id": "38",
+          "label": "Compleasm on purged Assembly: Summary",
+          "output_name": "summary",
+          "uuid": "67d4870d-5db9-438d-a526-26437fc99851"
+        },
+        {
+          "step_id": "38",
+          "label": "Compleasm on purged Assembly: Full Table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "15581d19-38e4-412f-9d3d-860c355cc323"
+        },
+        {
+          "step_id": "39",
+          "label": "merqury_QV",
+          "output_name": "output",
+          "uuid": "958c426c-368c-4b7a-bd99-424bca35507a"
+        },
+        {
+          "step_id": "40",
+          "label": "output_merqury.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "fe3e5228-3805-4941-9063-25f3828742e8"
+        },
+        {
+          "step_id": "41",
+          "label": "output_merqury.spectra-asm.fl",
+          "output_name": "output",
+          "uuid": "003e44c6-ae7c-40cd-94a0-1a467fab9183"
+        },
+        {
+          "step_id": "42",
+          "label": "output_merqury.assembly_01.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "e8f58510-9603-4995-b37a-89d8f3392a15"
+        },
+        {
+          "step_id": "43",
+          "label": "merqury_stats",
+          "output_name": "output",
+          "uuid": "f05c41e7-96cf-4933-bb13-71ec5108e8a0"
+        },
+        {
+          "step_id": "44",
+          "label": "output_merqury.assembly_02.spectra-cn.fl",
+          "output_name": "output",
+          "uuid": "5557187a-4905-449b-b3e7-d1a9202c9b25"
+        },
+        {
+          "step_id": "47",
+          "label": "Size Plot",
+          "output_name": "Size Plot",
+          "uuid": "17b84f94-3fd6-4722-ac27-17998f5da324"
+        },
+        {
+          "step_id": "47",
+          "label": "Nx Plot",
+          "output_name": "Nx Plot",
+          "uuid": "f0d394c3-27d8-4286-a6ea-6c3f1b6fed81"
+        },
+        {
+          "step_id": "49",
+          "label": "Assembly statistics for both assemblies",
+          "output_name": "output",
+          "uuid": "d8c0c665-710f-44ce-a54f-17d585335d4b"
+        },
+        {
+          "step_id": "50",
+          "label": "clean_stats",
+          "output_name": "outfile",
+          "uuid": "95622471-0d6f-4d6d-91a6-f010a4b6d0c0"
+        }
+      ],
+      "connection_count": 55
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Scaffolding-Bionano-VGP7/Scaffolding-BioNano-VGP7.ga",
+      "name": "Scaffolding-BioNano-VGP7",
+      "steps": 17,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "data_input",
+          "label": "Bionano Data"
+        },
+        {
+          "id": "1",
+          "type": "data_input",
+          "label": "Estimated genome size - Parameter File"
+        },
+        {
+          "id": "2",
+          "type": "data_input",
+          "label": "Input GFA"
+        },
+        {
+          "id": "3",
+          "type": "data_input",
+          "label": "Conflict resolution files"
+        }
+      ],
+      "tools": [
+        {
+          "id": "4",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "5",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "6",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/bionano_scaffold/bionano_scaffold/3.7.0+galaxy3",
+          "version": "3.7.0+galaxy3"
+        },
+        {
+          "id": "7",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "8",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.6+galaxy0",
+          "version": "1.3.6+galaxy0"
+        },
+        {
+          "id": "9",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "10",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "11",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "13",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "14",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.5.1+galaxy2",
+          "version": "3.5.1+galaxy2"
+        },
+        {
+          "id": "16",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.5.1+galaxy2",
+          "version": "3.5.1+galaxy2"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "6",
+          "label": "Scaffolds: agp",
+          "output_name": "ngs_contigs_scaffold_agp",
+          "uuid": "fc8458cc-c385-406e-94d7-7420901d45be"
+        },
+        {
+          "step_id": "7",
+          "label": "Bionano scaffolds reconciliated: gfa",
+          "output_name": "output",
+          "uuid": "5748c26a-1859-4f2b-9c27-42e5822a4f64"
+        },
+        {
+          "step_id": "8",
+          "label": "Bionano scaffolds reconciliated: fasta",
+          "output_name": "output",
+          "uuid": "8a50c9c5-cb5f-4562-b11d-38af4581ff0c"
+        },
+        {
+          "step_id": "9",
+          "label": "Assembly Statistics for s1",
+          "output_name": "stats",
+          "uuid": "7cae5064-75a5-4536-97cb-e3d5fd5db33f"
+        },
+        {
+          "step_id": "11",
+          "label": "clean_stats",
+          "output_name": "outfile",
+          "uuid": "4a0bdf73-d0f9-4c54-9c82-9a63e19e4695"
+        },
+        {
+          "step_id": "15",
+          "label": "Nx Plot",
+          "output_name": "output1",
+          "uuid": "6cdf8b50-64ee-4a4c-add5-90c2ce73d32c"
+        },
+        {
+          "step_id": "16",
+          "label": "Size Plot",
+          "output_name": "output1",
+          "uuid": "23a8777f-9aa0-4210-a820-49060278e7c6"
+        }
+      ],
+      "connection_count": 17
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/Scaffolding-HiC-VGP8/Scaffolding-HiC-VGP8.ga",
+      "name": "Scaffolding with Hi-C data VGP8",
+      "steps": 71,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_input",
+          "label": "Assembly GFA"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "Haplotype"
+        },
+        {
+          "id": "4",
+          "type": "data_collection_input",
+          "label": "Hi-C reads"
+        },
+        {
+          "id": "5",
+          "type": "parameter_input",
+          "label": "Trim Hi-C Data?"
+        },
+        {
+          "id": "6",
+          "type": "parameter_input",
+          "label": "Minimum Mapping Quality"
+        },
+        {
+          "id": "7",
+          "type": "parameter_input",
+          "label": "Database for Busco Lineage"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Lineage"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "Restriction enzymes"
+        },
+        {
+          "id": "10",
+          "type": "data_input",
+          "label": "Estimated genome size - Parameter File"
+        }
+      ],
+      "tools": [
+        {
+          "id": "11",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy1",
+          "version": "1.3.11+galaxy1"
+        },
+        {
+          "id": "12",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/map_param_value/map_param_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "17",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "19",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "20",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/bamtools_filter/bamFilter/2.5.3+galaxy0",
+          "version": "2.5.3+galaxy0"
+        },
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.9",
+          "version": "2.0.9"
+        },
+        {
+          "id": "22",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.2.3+galaxy0",
+          "version": "0.2.3+galaxy0"
+        },
+        {
+          "id": "23",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.9",
+          "version": "2.0.9"
+        },
+        {
+          "id": "25",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/yahs/yahs/1.2a.2+galaxy3",
+          "version": "1.2a.2+galaxy3"
+        },
+        {
+          "id": "26",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.5+galaxy1",
+          "version": "0.0.5+galaxy1"
+        },
+        {
+          "id": "27",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "28",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_find_and_replace/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        },
+        {
+          "id": "29",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_tail_tool/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        },
+        {
+          "id": "31",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy1",
+          "version": "1.3.11+galaxy1"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy1",
+          "version": "1.3.11+galaxy1"
+        },
+        {
+          "id": "33",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy1",
+          "version": "1.3.11+galaxy1"
+        },
+        {
+          "id": "35",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy1",
+          "version": "1.3.11+galaxy1"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy1",
+          "version": "1.3.11+galaxy1"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2_idx/2.3+galaxy0",
+          "version": "2.3+galaxy0"
+        },
+        {
+          "id": "39",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compleasm/compleasm/0.2.6+galaxy3",
+          "version": "0.2.6+galaxy3"
+        },
+        {
+          "id": "40",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/fasta_compute_length/fasta_compute_length/1.0.4",
+          "version": "1.0.4"
+        },
+        {
+          "id": "41",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "42",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/bwa_mem2/bwa_mem2/2.3+galaxy0",
+          "version": "2.3+galaxy0"
+        },
+        {
+          "id": "44",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "45",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.5.1+galaxy2",
+          "version": "3.5.1+galaxy2"
+        },
+        {
+          "id": "46",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/ggplot2_point/ggplot2_point/3.5.1+galaxy2",
+          "version": "3.5.1+galaxy2"
+        },
+        {
+          "id": "47",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_merge/samtools_merge/1.22+galaxy1",
+          "version": "1.22+galaxy1"
+        },
+        {
+          "id": "48",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "50",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "51",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_sort/samtools_sort/2.0.8",
+          "version": "2.0.8"
+        },
+        {
+          "id": "52",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.2.3+galaxy0",
+          "version": "0.2.3+galaxy0"
+        },
+        {
+          "id": "53",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.9",
+          "version": "2.0.9"
+        },
+        {
+          "id": "54",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.9",
+          "version": "2.0.9"
+        },
+        {
+          "id": "55",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pairtools_parse/pairtools_parse/1.1.3+galaxy6",
+          "version": "1.1.3+galaxy6"
+        },
+        {
+          "id": "56",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.5+galaxy1",
+          "version": "0.0.5+galaxy1"
+        },
+        {
+          "id": "57",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.33+galaxy0",
+          "version": "1.33+galaxy0"
+        },
+        {
+          "id": "58",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "59",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pairtools_dedup/pairtools_dedup/1.1.3+galaxy6",
+          "version": "1.1.3+galaxy6"
+        },
+        {
+          "id": "60",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "61",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "62",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "63",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_tail_tool/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        },
+        {
+          "id": "64",
+          "tool": "trimmer",
+          "version": "0.0.2"
+        },
+        {
+          "id": "65",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "66",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        },
+        {
+          "id": "67",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.33+galaxy0",
+          "version": "1.33+galaxy0"
+        },
+        {
+          "id": "68",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_easyjoin_tool/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        },
+        {
+          "id": "70",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_cut_tool/9.5+galaxy3",
+          "version": "9.5+galaxy3"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "12",
+          "label": "Assembly Info",
+          "output_name": "out1",
+          "uuid": "7a0ebe5e-aa52-48b3-8a83-8cba57573da3"
+        },
+        {
+          "step_id": "13",
+          "label": "Hap_suffix",
+          "output_name": "output_param_text",
+          "uuid": "c6fcbfcf-3471-4eb6-94de-3d745fd55699"
+        },
+        {
+          "step_id": "15",
+          "label": "Lineage for report",
+          "output_name": "out1",
+          "uuid": "cf6128e3-1df3-43dc-9dde-ac1e656c6f1b"
+        },
+        {
+          "step_id": "16",
+          "label": "Raw Hi-C coverage",
+          "output_name": "Raw Hi-C coverage",
+          "uuid": "259dda77-0252-48a4-a379-1ada5fe4f6fe"
+        },
+        {
+          "step_id": "18",
+          "label": "Deduplicated Hi-C alignments on contigs",
+          "output_name": "Deduplicated Hi-C alignments on contigs",
+          "uuid": "b2ce5021-c731-4311-ab9e-a54609f24329"
+        },
+        {
+          "step_id": "18",
+          "label": "Merged Hi-C Alignments on contigs",
+          "output_name": "Merged Hi-C Alignments on contigs",
+          "uuid": "bc7e63d8-ef10-43f6-83c7-4e1d6bb8850a"
+        },
+        {
+          "step_id": "18",
+          "label": "Hi-C duplication stats on contigs: Raw",
+          "output_name": "Hi-C duplication stats on contigs: Raw",
+          "uuid": "117870de-e211-467e-85c4-cadfdc2f1812"
+        },
+        {
+          "step_id": "18",
+          "label": "Hi-C duplication stats on contigs",
+          "output_name": "Hi-C duplication stats on contigs",
+          "uuid": "88a06b1f-1055-4bf7-a79b-bacfb04b09a9"
+        },
+        {
+          "step_id": "18",
+          "label": "Pairtools Multiqc Stats on contigs",
+          "output_name": "Pairtools Multiqc Stats on contigs",
+          "uuid": "164e9d04-941e-4cf2-a04f-5c3edbf0f7e3"
+        },
+        {
+          "step_id": "18",
+          "label": "Hi-C duplication stats on contigs: MultiQc",
+          "output_name": "Hi-C duplication stats on contigs: MultiQc",
+          "uuid": "956d05c2-5a3d-4ac3-ab46-440eec155de2"
+        },
+        {
+          "step_id": "18",
+          "label": "Pairtools Multiqc on contigs: Plots",
+          "output_name": "Pairtools Multiqc on contigs: Plots",
+          "uuid": "25de7056-e1ad-4df6-b464-d77e2c61b0f1"
+        },
+        {
+          "step_id": "18",
+          "label": "Trimmed Hi-C data",
+          "output_name": "Trimmed Hi-C data",
+          "uuid": "4073596a-e4ff-4228-a4b8-06c62a75bdc1"
+        },
+        {
+          "step_id": "20",
+          "label": "Filtered H-C Alignments on contigs",
+          "output_name": "out_file1",
+          "uuid": "ca98e7ae-8802-442f-b519-e683fd13bf0f"
+        },
+        {
+          "step_id": "21",
+          "label": "Hi-C Alignment Stats pre-scaffolding",
+          "output_name": "output",
+          "uuid": "9acf4f02-191a-4bb7-95ec-317d67adbb54"
+        },
+        {
+          "step_id": "25",
+          "label": "YAHS on input dataset(s): Final scaffolds agp output",
+          "output_name": "final_agp_out",
+          "uuid": "bf7b1438-ec6d-4da7-9699-feb6a70a3234"
+        },
+        {
+          "step_id": "27",
+          "label": "Summary Numbers Contigs",
+          "output_name": "output",
+          "uuid": "ccf398ce-607d-446d-844c-3f04579b4093"
+        },
+        {
+          "step_id": "28",
+          "label": "Suffixed AGP",
+          "output_name": "outfile",
+          "uuid": "bad93ed2-474b-4d14-900e-697e9c5f6325"
+        },
+        {
+          "step_id": "29",
+          "label": "Pretext Map Before HiC scaffolding",
+          "output_name": "output",
+          "uuid": "40c397f4-282b-46b3-8e73-56475a411cf5"
+        },
+        {
+          "step_id": "31",
+          "label": "Reconciliated Scaffolds: gfa no sequence",
+          "output_name": "output",
+          "uuid": "ae66bdd9-9a05-427c-b622-5fecf43f722c"
+        },
+        {
+          "step_id": "32",
+          "label": "Reconciliated Scaffolds: gfa",
+          "output_name": "output",
+          "uuid": "61df9811-7dff-4c08-a06f-635d9f857a95"
+        },
+        {
+          "step_id": "35",
+          "label": "Reconciliated Scaffolds: fasta",
+          "output_name": "output",
+          "uuid": "85707e8b-f3ab-41ba-a761-a1b5effed8d5"
+        },
+        {
+          "step_id": "36",
+          "label": "Assembly Statistics for s2",
+          "output_name": "stats",
+          "uuid": "373bb382-8584-4ebd-a4a1-9bb87bd50f58"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm Full table",
+          "output_name": "full_table",
+          "uuid": "d639dd00-b1f7-497e-9a5d-01cd00dc5bc4"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm miniprot",
+          "output_name": "miniprot",
+          "uuid": "eb7d5b78-b308-46d8-8718-597604c53a4f"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm Full Table Busco",
+          "output_name": "full_table_busco",
+          "uuid": "3686f2e3-a4c0-4fd5-b8f5-25da225539eb"
+        },
+        {
+          "step_id": "39",
+          "label": "Scaffolds Compleasm Summary",
+          "output_name": "summary",
+          "uuid": "6785e6ab-e01e-4c16-afec-70c658d870ef"
+        },
+        {
+          "step_id": "39",
+          "label": "Compleasm translated proteins",
+          "output_name": "translated_protein",
+          "uuid": "96498b92-f563-4674-bf8b-1cc4eb47c368"
+        },
+        {
+          "step_id": "43",
+          "label": "Hi-C Alignments",
+          "output_name": "bam_output",
+          "uuid": "16019374-1e25-4b5b-a89e-a9a4fe7dcb95"
+        },
+        {
+          "step_id": "45",
+          "label": "Size Plot",
+          "output_name": "output1",
+          "uuid": "6756b2b5-d6f6-4dac-8c08-7d1c00f1f276"
+        },
+        {
+          "step_id": "46",
+          "label": "Nx Plot",
+          "output_name": "output1",
+          "uuid": "e6c248d6-fff2-408f-a31e-2077e36b5708"
+        },
+        {
+          "step_id": "49",
+          "label": "Scaffolding Plots",
+          "output_name": "output",
+          "uuid": "92d59b97-f325-467a-8ac1-1f9cca2ebc16"
+        },
+        {
+          "step_id": "50",
+          "label": "Merged Hi-C Alignments on scaffolds",
+          "output_name": "data_param",
+          "uuid": "423d4a89-418f-4a9a-b72c-88db0923d6d4"
+        },
+        {
+          "step_id": "53",
+          "label": "Hi-C Alignment Stats scaffolds",
+          "output_name": "output",
+          "uuid": "74166fc4-e6aa-4f2c-8467-c46ec40fb6e4"
+        },
+        {
+          "step_id": "57",
+          "label": "Hi-C alignments on Scaffolds stats HTML Report",
+          "output_name": "html_report",
+          "uuid": "79078c18-33e6-487b-9db9-7483b4a7556e"
+        },
+        {
+          "step_id": "57",
+          "label": "Hi-C alignments on Scaffolds stats multiqc",
+          "output_name": "stats",
+          "uuid": "fce878fb-f2da-4c66-b877-9a44819e2abb"
+        },
+        {
+          "step_id": "58",
+          "label": "Summary Numbers Scaffolds",
+          "output_name": "output",
+          "uuid": "f66a67af-86ff-4872-9b51-85787ab77dca"
+        },
+        {
+          "step_id": "59",
+          "label": "Hi-C duplication stats on scaffolds: Raw",
+          "output_name": "dedup_pairs_stats",
+          "uuid": "ff14c34f-c075-49ef-abb8-870fb11d3d52"
+        },
+        {
+          "step_id": "60",
+          "label": "Pretext Map After HiC scaffolding",
+          "output_name": "output",
+          "uuid": "d7fed6f0-7fb1-4a9b-a112-bce5bc04e873"
+        },
+        {
+          "step_id": "61",
+          "label": "samtools_alignment_plot-pct",
+          "output_name": "output",
+          "uuid": "ef4cf6d7-72e4-47bc-ae7e-1cafeaaceec7"
+        },
+        {
+          "step_id": "62",
+          "label": "samtools-stats-dp",
+          "output_name": "output",
+          "uuid": "566fdc2d-46a1-4997-a399-defd840f7d2c"
+        },
+        {
+          "step_id": "65",
+          "label": "Hi-C maps",
+          "output_name": "output",
+          "uuid": "ce216f71-d0b6-48f2-ae97-9ab29848990f"
+        },
+        {
+          "step_id": "67",
+          "label": "MultiQC Pairtools stats",
+          "output_name": "stats",
+          "uuid": "b19a1416-765c-4159-8038-c6252d903a89"
+        },
+        {
+          "step_id": "67",
+          "label": "Hi-C duplication stats on scaffolds: MultiQc",
+          "output_name": "html_report",
+          "uuid": "af2e3a03-e4f0-49dc-9a68-bdc4a6f47c49"
+        },
+        {
+          "step_id": "69",
+          "label": "Broom Plots",
+          "output_name": "Broom Plots",
+          "uuid": "6430562a-bde1-43dc-a656-ab79c4167dc5"
+        },
+        {
+          "step_id": "69",
+          "label": "Pair by orientation cnt plots",
+          "output_name": "Pair by orientation cnt plots",
+          "uuid": "7ffdbc17-2bda-4c57-b9aa-aa5cd3a4af92"
+        },
+        {
+          "step_id": "69",
+          "label": "Pair Types Plots",
+          "output_name": "Pair Types Plots",
+          "uuid": "b355644a-6729-4b57-8972-e92e9ed8dd7a"
+        },
+        {
+          "step_id": "69",
+          "label": "Pair by orientation pct plots",
+          "output_name": "Pair by orientation pct plots",
+          "uuid": "3869ffb7-7ae4-46cf-a776-6385611e9dd0"
+        },
+        {
+          "step_id": "70",
+          "label": "Merged Alignment stats",
+          "output_name": "output",
+          "uuid": "d43a8ed6-a869-417f-a9e9-d92c84902fe2"
+        }
+      ],
+      "connection_count": 87
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/hi-c-contact-map-for-assembly-manual-curation/hi-c-map-for-assembly-manual-curation.ga",
+      "name": "PretextMap Generation from 1 or 2 haplotypes",
+      "steps": 82,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "parameter_input",
+          "label": "Generate gene annotations"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "Lineage for Compleasm"
+        },
+        {
+          "id": "4",
+          "type": "parameter_input",
+          "label": "Database for Compleasm"
+        },
+        {
+          "id": "5",
+          "type": "data_input",
+          "label": "Haplotype 1"
+        },
+        {
+          "id": "6",
+          "type": "parameter_input",
+          "label": "Will you use a second haplotype?"
+        },
+        {
+          "id": "7",
+          "type": "data_input",
+          "label": "Haplotype 2"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Do you want to add suffixes to the scaffold names?"
+        },
+        {
+          "id": "9",
+          "type": "parameter_input",
+          "label": "First Haplotype suffix"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "Second Haplotype suffix"
+        },
+        {
+          "id": "11",
+          "type": "data_collection_input",
+          "label": "Hi-C reads"
+        },
+        {
+          "id": "12",
+          "type": "parameter_input",
+          "label": "Do you want to trim the Hi-C data?"
+        },
+        {
+          "id": "13",
+          "type": "parameter_input",
+          "label": "Remove duplicated Hi-C reads?"
+        },
+        {
+          "id": "14",
+          "type": "data_collection_input",
+          "label": "PacBio reads"
+        },
+        {
+          "id": "15",
+          "type": "parameter_input",
+          "label": "Remove adapters from HiFi reads?"
+        },
+        {
+          "id": "16",
+          "type": "parameter_input",
+          "label": "Generate high resolution Hi-C maps"
+        },
+        {
+          "id": "17",
+          "type": "parameter_input",
+          "label": "Minimum Mapping Quality"
+        },
+        {
+          "id": "18",
+          "type": "parameter_input",
+          "label": "Canonical telomeric pattern"
+        },
+        {
+          "id": "19",
+          "type": "parameter_input",
+          "label": "Telomeric Patterns to explore (comma-separated), IUPAC allowed"
+        },
+        {
+          "id": "20",
+          "type": "parameter_input",
+          "label": "Bin Size for Bigwig files"
+        }
+      ],
+      "tools": [
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "22",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/map_param_value/map_param_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "25",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "27",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "28",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "29",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/teloscope/teloscope/0.1.6+galaxy0",
+          "version": "0.1.6+galaxy0"
+        },
+        {
+          "id": "33",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.31+galaxy1",
+          "version": "2.31+galaxy1"
+        },
+        {
+          "id": "36",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.2.4+galaxy1",
+          "version": "0.2.4+galaxy1"
+        },
+        {
+          "id": "37",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.2.4+galaxy1",
+          "version": "0.2.4+galaxy1"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.2.4+galaxy1",
+          "version": "0.2.4+galaxy1"
+        },
+        {
+          "id": "39",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_map/pretext_map/0.2.4+galaxy1",
+          "version": "0.2.4+galaxy1"
+        },
+        {
+          "id": "40",
+          "tool": "Filter1",
+          "version": "1.1.1"
+        },
+        {
+          "id": "41",
+          "tool": "Filter1",
+          "version": "1.1.1"
+        },
+        {
+          "id": "42",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_merge/samtools_merge/1.22+galaxy2",
+          "version": "1.22+galaxy2"
+        },
+        {
+          "id": "44",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "45",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "46",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_snapshot/pretext_snapshot/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "47",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "48",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "50",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "51",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "52",
+          "tool": "__EXTRACT_DATASET__",
+          "version": "1.0.2"
+        },
+        {
+          "id": "53",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "54",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "55",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/deeptools_bam_coverage/deeptools_bam_coverage/4.0.0+galaxy1",
+          "version": "4.0.0+galaxy1"
+        },
+        {
+          "id": "56",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_depth/samtools_depth/1.22+galaxy1",
+          "version": "1.22+galaxy1"
+        },
+        {
+          "id": "57",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/map_param_value/map_param_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "58",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/map_param_value/map_param_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "59",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "60",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "61",
+          "tool": "Filter1",
+          "version": "1.1.1"
+        },
+        {
+          "id": "62",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "63",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "64",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/column_maker/Add_a_column1/2.1+galaxy0",
+          "version": "2.1+galaxy0"
+        },
+        {
+          "id": "65",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "66",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "67",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "68",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "69",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "70",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/bedtools/bedtools_mergebed/2.31.1+galaxy2",
+          "version": "2.31.1+galaxy2"
+        },
+        {
+          "id": "71",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "72",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "73",
+          "tool": "toolshed.g2.bx.psu.edu/repos/devteam/add_value/addValue/1.0.1",
+          "version": "1.0.1"
+        },
+        {
+          "id": "74",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "75",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "76",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "77",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "78",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "79",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pretext_graph/pretext_graph/0.0.9+galaxy0",
+          "version": "0.0.9+galaxy0"
+        },
+        {
+          "id": "80",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "81",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "21",
+          "label": "Assembly Info",
+          "output_name": "out1",
+          "uuid": "0c1bc167-f66b-4d07-9729-9c10669f6e02"
+        },
+        {
+          "step_id": "23",
+          "label": "Both Haplotypes merged",
+          "output_name": "Merged Haplotypes",
+          "uuid": "6af5a08f-74aa-4a03-bf0c-22d443a02b18"
+        },
+        {
+          "step_id": "25",
+          "label": "HiFi reads adapters trimming report",
+          "output_name": "report",
+          "uuid": "71d127d4-af3f-4fbe-a54b-e609fe2a9209"
+        },
+        {
+          "step_id": "25",
+          "label": "HiFi reads without adapters",
+          "output_name": "out1",
+          "uuid": "affdce69-14ee-4260-90c7-889ac630ba10"
+        },
+        {
+          "step_id": "27",
+          "label": "Decontaminated Hap2 with Suffix",
+          "output_name": "data_param",
+          "uuid": "c34f2961-3386-4be9-bcb5-77ca2f0fffe5"
+        },
+        {
+          "step_id": "29",
+          "label": "Assembly for curation",
+          "output_name": "data_param",
+          "uuid": "ef7e194c-19b7-4bc0-a6f7-f049d1a6b25d"
+        },
+        {
+          "step_id": "30",
+          "label": "Decontaminated Hap1 with Suffix",
+          "output_name": "data_param",
+          "uuid": "f5841bfd-2f87-4676-88a5-6c64f139c7e0"
+        },
+        {
+          "step_id": "31",
+          "label": "Pairtools Multiqc Stats on Scaffolds",
+          "output_name": "Pairtools Multiqc Stats on Scaffolds",
+          "uuid": "f6e65a23-e1e9-4d7a-9002-7cb6290f3c17"
+        },
+        {
+          "step_id": "31",
+          "label": "Hi-C duplication stats on Scaffolds: MultiQc",
+          "output_name": "Hi-C duplication stats on Scaffolds: MultiQc",
+          "uuid": "08d9dbc2-45e9-4f9b-ac5d-bfa3ae3e6212"
+        },
+        {
+          "step_id": "31",
+          "label": "Pairtools MultiQc on Scaffolds: Plots",
+          "output_name": "Pairtools MultiQc on Scaffolds: Plots",
+          "uuid": "1eeda1e7-9e92-4391-bc75-68f454a5e45f"
+        },
+        {
+          "step_id": "31",
+          "label": "Hi-C duplication stats on Scaffolds: Raw",
+          "output_name": "Hi-C duplication stats on Scaffolds: Raw",
+          "uuid": "9029ce2c-a017-40d8-a2fa-fb5a1f5e633b"
+        },
+        {
+          "step_id": "31",
+          "label": "Trimmed Hi-C data",
+          "output_name": "Trimmed Hi-C data",
+          "uuid": "dcfda183-0f3d-4230-8df5-c5cdf57ce8ed"
+        },
+        {
+          "step_id": "31",
+          "label": "Merged Hi-C Alignments on Scaffolds",
+          "output_name": "Merged Hi-C Alignments on Scaffolds",
+          "uuid": "5e57b67b-0d56-4bde-8fd2-3d974e378137"
+        },
+        {
+          "step_id": "31",
+          "label": "Hi-C duplication stats on Scaffolds",
+          "output_name": "Hi-C duplication stats on Scaffolds",
+          "uuid": "04e4799b-2eaf-4ea1-875b-33a4b8948a35"
+        },
+        {
+          "step_id": "31",
+          "label": "Precuration Hi-C alignments",
+          "output_name": "Precuration Hi-C alignments",
+          "uuid": "6b3631b2-9f33-4697-8294-cc0091a26988"
+        },
+        {
+          "step_id": "32",
+          "label": "Telomere Report",
+          "output_name": "telo_report",
+          "uuid": "83cf865b-a124-4a84-9cf7-8bb6d966ad7c"
+        },
+        {
+          "step_id": "32",
+          "label": "terminal telomeres",
+          "output_name": "terminal_telomeres",
+          "uuid": "edf9292a-fd55-4391-80ca-d8e0eef89960"
+        },
+        {
+          "step_id": "33",
+          "label": "Gaps Bed",
+          "output_name": "stats",
+          "uuid": "4a7f2ef2-c635-4ddb-b23b-8546f9290ef9"
+        },
+        {
+          "step_id": "35",
+          "label": "Compleasm Genes track",
+          "output_name": "Compleasm Genes track",
+          "uuid": "f8399762-1903-4af7-ba37-4c75350cef30"
+        },
+        {
+          "step_id": "42",
+          "label": "Gaps Bedgraph",
+          "output_name": "out_file1",
+          "uuid": "9fa64361-b645-4ca3-91cd-4a0d13f13a41"
+        },
+        {
+          "step_id": "47",
+          "label": "Q telomeres Bed",
+          "output_name": "out_file1",
+          "uuid": "b9b7d743-5f41-49f3-a640-5a68ee3a63a4"
+        },
+        {
+          "step_id": "48",
+          "label": "P telomeres bed",
+          "output_name": "out_file1",
+          "uuid": "4b23fce7-a313-42ef-b365-783ee0bd24e6"
+        },
+        {
+          "step_id": "50",
+          "label": "Merged HiFi Alignments",
+          "output_name": "data_param",
+          "uuid": "b0149c13-2ddf-4fb1-9939-5d38c8a98312"
+        },
+        {
+          "step_id": "51",
+          "label": "Pretext Snapshot With tracks - Multimapping",
+          "output_name": "output",
+          "uuid": "70a9b730-a184-47e3-ad69-de0034bf35ed"
+        },
+        {
+          "step_id": "52",
+          "label": "Pretext Snapshot With tracks",
+          "output_name": "output",
+          "uuid": "892bc21e-a9b2-4524-8b1e-02f2a139ab25"
+        },
+        {
+          "step_id": "55",
+          "label": "BigWig Coverage",
+          "output_name": "outFileName",
+          "uuid": "99e50ff7-22ae-4afc-af83-e81b69c73931"
+        },
+        {
+          "step_id": "73",
+          "label": "Coverage Gaps Track",
+          "output_name": "out_file1",
+          "uuid": "cf85bc54-e8bc-4bca-9a2b-8a068c6f2145"
+        },
+        {
+          "step_id": "80",
+          "label": "Pretext All tracks - Multimapping",
+          "output_name": "data_param",
+          "uuid": "2a7c9556-2e13-44ce-a9d1-4d2c580bcf57"
+        },
+        {
+          "step_id": "81",
+          "label": "Pretext All tracks",
+          "output_name": "data_param",
+          "uuid": "f0a3c0de-b572-4312-84d8-08fa43f3973d"
+        }
+      ],
+      "connection_count": 119
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/kmer-profiling-hifi-VGP1/kmer-profiling-hifi-VGP1.ga",
+      "name": "K-mer profiling and reads statistics VGP1",
+      "steps": 23,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Collection of Pacbio Data"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "K-mer length"
+        },
+        {
+          "id": "4",
+          "type": "parameter_input",
+          "label": "Ploidy"
+        }
+      ],
+      "tools": [
+        {
+          "id": "5",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "6",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "8",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_count_kmers/meryl_count_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "9",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "11",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_groups_kmers/meryl_groups_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "12",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_histogram_kmers/meryl_histogram_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.1.0+galaxy0",
+          "version": "2.1.0+galaxy0"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "17",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "18",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "19",
+          "tool": "param_value_from_file",
+          "version": "0.1.0"
+        },
+        {
+          "id": "20",
+          "tool": "toolshed.g2.bx.psu.edu/repos/richard-burhans/rdeval/rdeval/0.0.9+galaxy2",
+          "version": "0.0.9+galaxy2"
+        },
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/collection_column_join/collection_column_join/0.0.3",
+          "version": "0.0.3"
+        },
+        {
+          "id": "22",
+          "tool": "toolshed.g2.bx.psu.edu/repos/richard-burhans/rdeval/rdeval_report/0.0.9+galaxy2",
+          "version": "0.0.9+galaxy2"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "5",
+          "label": "Species for report",
+          "output_name": "out1",
+          "uuid": "459fba4d-a4ce-4f3c-a8cf-5cc02c944b02"
+        },
+        {
+          "step_id": "6",
+          "label": "Assembly for report",
+          "output_name": "out1",
+          "uuid": "cf12b1ba-65c2-428e-849c-90797a4c0163"
+        },
+        {
+          "step_id": "9",
+          "label": "K-mer length for report",
+          "output_name": "out1",
+          "uuid": "3f97290c-1d9c-4541-8e2f-5097d48b54f1"
+        },
+        {
+          "step_id": "10",
+          "label": "HeatMap",
+          "output_name": "HeatMap",
+          "uuid": "b515dc25-202e-401e-948b-e1d8066a09af"
+        },
+        {
+          "step_id": "10",
+          "label": "Data for Interactive HeatMap",
+          "output_name": "Data for Interactive HeatMap",
+          "uuid": "41039808-3e91-4ea4-b011-50e8c52bd680"
+        },
+        {
+          "step_id": "11",
+          "label": "Merged Meryl Database",
+          "output_name": "read_db",
+          "uuid": "72fcc42e-2c61-4e86-a2dc-6fe974f2a35d"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope transformed log plot",
+          "output_name": "transformed_log_plot",
+          "uuid": "ea87bd08-a6d9-4c9e-9497-8bfb1725da04"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope Model Parameters",
+          "output_name": "model_params",
+          "uuid": "a010636a-9df2-4ea9-9a4f-452fcb450cf2"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope log plot",
+          "output_name": "log_plot",
+          "uuid": "988e2189-d5f2-4e9e-8fc2-4434e68e8501"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope linear plot",
+          "output_name": "linear_plot",
+          "uuid": "57230be4-36d5-4307-b4b0-b8a73f6800ce"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope transformed linear plot",
+          "output_name": "transformed_linear_plot",
+          "uuid": "48e2c4c5-8658-44e6-8981-673a2f1f719e"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope Model",
+          "output_name": "model",
+          "uuid": "5732acc1-bca6-4ca6-90cc-8a320882e5f9"
+        },
+        {
+          "step_id": "13",
+          "label": "GenomeScope summary",
+          "output_name": "summary",
+          "uuid": "115ec9de-57d6-4f42-9858-a877f2201ef0"
+        },
+        {
+          "step_id": "15",
+          "label": "Montage Genomescope",
+          "output_name": "output",
+          "uuid": "086b1d3c-dad1-47e7-9151-eda3a96fa305"
+        },
+        {
+          "step_id": "16",
+          "label": "Estimated Genome Size File",
+          "output_name": "Estimated Genome Size File",
+          "uuid": "9abf5bcc-0531-4a90-9868-0253256d6205"
+        },
+        {
+          "step_id": "17",
+          "label": "Homozygous Read Coverage",
+          "output_name": "float_param",
+          "uuid": "6d10aba9-a316-4f25-84d8-584fcaba396a"
+        },
+        {
+          "step_id": "19",
+          "label": "Est_size_param",
+          "output_name": "text_param",
+          "uuid": "da7d039a-dea0-4fb7-8c33-c86480093b71"
+        },
+        {
+          "step_id": "20",
+          "label": "Reads Statistics",
+          "output_name": "stats_outfile",
+          "uuid": "6fe044ee-d7d5-42e2-8588-f7631d079a0f"
+        },
+        {
+          "step_id": "21",
+          "label": "Merged Read Statistics",
+          "output_name": "tabular_output",
+          "uuid": "3b714642-e082-4487-989b-7f436eb67fda"
+        },
+        {
+          "step_id": "22",
+          "label": "Rdeval report",
+          "output_name": "outfile",
+          "uuid": "ed229e2c-8395-4885-a343-22608387328a"
+        }
+      ],
+      "connection_count": 24
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/kmer-profiling-hifi-trio-VGP2/kmer-profiling-hifi-trio-VGP2.ga",
+      "name": "kmer-profiling-hifi-trio-VGP2",
+      "steps": 16,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "data_collection_input",
+          "label": "Pacbio Hifi reads"
+        },
+        {
+          "id": "1",
+          "type": "data_collection_input",
+          "label": "Paternal reads"
+        },
+        {
+          "id": "2",
+          "type": "data_collection_input",
+          "label": "Maternal reads"
+        },
+        {
+          "id": "3",
+          "type": "parameter_input",
+          "label": "K-mer length"
+        },
+        {
+          "id": "4",
+          "type": "parameter_input",
+          "label": "Ploidy"
+        }
+      ],
+      "tools": [
+        {
+          "id": "5",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "6",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_count_kmers/meryl_count_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "7",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy6",
+          "version": "1.3+galaxy6"
+        },
+        {
+          "id": "8",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl/meryl/1.3+galaxy6",
+          "version": "1.3+galaxy6"
+        },
+        {
+          "id": "9",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_groups_kmers/meryl_groups_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "10",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_groups_kmers/meryl_groups_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "11",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.1.0+galaxy0",
+          "version": "2.1.0+galaxy0"
+        },
+        {
+          "id": "12",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_histogram_kmers/meryl_histogram_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "13",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/meryl_histogram_kmers/meryl_histogram_kmers/1.4.1+galaxy0",
+          "version": "1.4.1+galaxy0"
+        },
+        {
+          "id": "14",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.1.0+galaxy0",
+          "version": "2.1.0+galaxy0"
+        },
+        {
+          "id": "15",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/genomescope/genomescope/2.1.0+galaxy0",
+          "version": "2.1.0+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "8",
+          "label": "Meryl database : maternal",
+          "output_name": "mat_db",
+          "uuid": "66a5ba61-a290-4350-ac33-3b9a878cca67"
+        },
+        {
+          "step_id": "8",
+          "label": "Meryl database : Child",
+          "output_name": "read_db",
+          "uuid": "69021571-e6a3-4014-8449-94b5ff8af000"
+        },
+        {
+          "step_id": "8",
+          "label": "Meryl database : paternal",
+          "output_name": "pat_db",
+          "uuid": "84990c33-282b-44dc-8a5e-6db7889ca79c"
+        },
+        {
+          "step_id": "11",
+          "label": "GenomeScope transformed linear plot (child)",
+          "output_name": "transformed_linear_plot",
+          "uuid": "acebbb13-a1bd-4866-9e6f-b15708e7c78d"
+        },
+        {
+          "step_id": "11",
+          "label": "GenomeScope transformed log plot (child)",
+          "output_name": "transformed_log_plot",
+          "uuid": "bc1789b4-8cc8-4f74-ac92-f6d20c1fbd7f"
+        },
+        {
+          "step_id": "11",
+          "label": "GenomeScope summary (child)",
+          "output_name": "summary",
+          "uuid": "12268f46-c221-4417-884b-27cdad90ec05"
+        },
+        {
+          "step_id": "11",
+          "label": "GenomeScope linear plot (child)",
+          "output_name": "linear_plot",
+          "uuid": "2fbf41bc-b939-4a05-b788-2be6008aa36a"
+        },
+        {
+          "step_id": "11",
+          "label": "GenomeScope log plot (child)",
+          "output_name": "log_plot",
+          "uuid": "4fc5e47d-bae4-44f3-957b-4dce5068610a"
+        },
+        {
+          "step_id": "11",
+          "label": "GenomeScope Model Parameters (child)",
+          "output_name": "model_params",
+          "uuid": "3bc4131f-ce9b-4358-a20b-885020d34f09"
+        },
+        {
+          "step_id": "14",
+          "label": "GenomeScope linear plot (paternal)",
+          "output_name": "linear_plot",
+          "uuid": "bba131ee-0c54-404a-87f8-067faebea46b"
+        },
+        {
+          "step_id": "14",
+          "label": "GenomeScope transformed log plot (paternal)",
+          "output_name": "transformed_log_plot",
+          "uuid": "eddc8909-df19-48c2-8406-d6bc784ceb8b"
+        },
+        {
+          "step_id": "14",
+          "label": "GenomeScope log plot (paternal)",
+          "output_name": "log_plot",
+          "uuid": "cc24ee83-d9ee-4759-9353-1be2e7dbb253"
+        },
+        {
+          "step_id": "14",
+          "label": "GenomeScope transformed linear plot (paternal)",
+          "output_name": "transformed_linear_plot",
+          "uuid": "2b73811b-e91e-49c6-a122-5065977f9f0e"
+        },
+        {
+          "step_id": "15",
+          "label": "GenomeScope linear plot (maternal)",
+          "output_name": "linear_plot",
+          "uuid": "ed208558-8a6f-4405-bd9c-7e6343e9f71d"
+        },
+        {
+          "step_id": "15",
+          "label": "GenomeScope log plot (maternal)",
+          "output_name": "log_plot",
+          "uuid": "e2ef48ab-bbb8-4a89-8d10-4de7998db481"
+        },
+        {
+          "step_id": "15",
+          "label": "GenomeScope transformed log plot (maternal)",
+          "output_name": "transformed_log_plot",
+          "uuid": "ebe91290-a02b-498d-adb6-75fab0739fbf"
+        },
+        {
+          "step_id": "15",
+          "label": "GenomeScope transformed linear plot (maternal)",
+          "output_name": "transformed_linear_plot",
+          "uuid": "7ecb789d-57e3-40f2-81ff-f853b444609b"
+        }
+      ],
+      "connection_count": 22
+    },
+    {
+      "file": "pipelines/VGP_galaxy_iwc/workflows/VGP-assembly-v2/post-curation-processing/Post_Curation.ga",
+      "name": "Post-curation assembly processing and evaluation",
+      "steps": 58,
+      "inputs": [
+        {
+          "id": "0",
+          "type": "parameter_input",
+          "label": "Species Name"
+        },
+        {
+          "id": "1",
+          "type": "parameter_input",
+          "label": "Assembly Name"
+        },
+        {
+          "id": "2",
+          "type": "data_input",
+          "label": "Curated AGP file"
+        },
+        {
+          "id": "3",
+          "type": "data_input",
+          "label": "Fasta file with both haplotypes"
+        },
+        {
+          "id": "4",
+          "type": "parameter_input",
+          "label": "Genome larger than 10GB"
+        },
+        {
+          "id": "5",
+          "type": "parameter_input",
+          "label": "Expected Genome Size"
+        },
+        {
+          "id": "6",
+          "type": "parameter_input",
+          "label": "Generate Gene tracks with Compleasm?"
+        },
+        {
+          "id": "7",
+          "type": "parameter_input",
+          "label": "Database For Compleasm Lineages"
+        },
+        {
+          "id": "8",
+          "type": "parameter_input",
+          "label": "Lineage for Compleasm Genes"
+        },
+        {
+          "id": "9",
+          "type": "data_collection_input",
+          "label": "Hi-C reads"
+        },
+        {
+          "id": "10",
+          "type": "parameter_input",
+          "label": "Trim the Hi-C data?"
+        },
+        {
+          "id": "11",
+          "type": "parameter_input",
+          "label": "Remove duplicated Hi-C reads?"
+        },
+        {
+          "id": "12",
+          "type": "data_collection_input",
+          "label": "PacBio reads"
+        },
+        {
+          "id": "13",
+          "type": "parameter_input",
+          "label": "Remove adapters from HiFi reads?"
+        },
+        {
+          "id": "14",
+          "type": "parameter_input",
+          "label": "Canonical telomeric pattern"
+        },
+        {
+          "id": "15",
+          "type": "parameter_input",
+          "label": "Telomere patterns to explore"
+        },
+        {
+          "id": "16",
+          "type": "parameter_input",
+          "label": "Minimum Mapping Quality"
+        },
+        {
+          "id": "17",
+          "type": "parameter_input",
+          "label": "Bin Size for BigWig files"
+        },
+        {
+          "id": "18",
+          "type": "parameter_input",
+          "label": "Generate high resolution Hi-C maps?"
+        },
+        {
+          "id": "19",
+          "type": "parameter_input",
+          "label": "Name Haplotype 1"
+        },
+        {
+          "id": "20",
+          "type": "parameter_input",
+          "label": "Name Haplotype 2"
+        }
+      ],
+      "tools": [
+        {
+          "id": "21",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "23",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/map_param_value/map_param_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "24",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "25",
+          "tool": "toolshed.g2.bx.psu.edu/repos/lparsons/cutadapt/cutadapt/5.2+galaxy2",
+          "version": "5.2+galaxy2"
+        },
+        {
+          "id": "26",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "27",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "28",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "29",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "30",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "31",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/gfastats/gfastats/1.3.11+galaxy2",
+          "version": "1.3.11+galaxy2"
+        },
+        {
+          "id": "32",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compress_file/compress_file/0.1.0",
+          "version": "0.1.0"
+        },
+        {
+          "id": "33",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compress_file/compress_file/0.1.0",
+          "version": "0.1.0"
+        },
+        {
+          "id": "34",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/mashmap/mashmap/3.1.3+galaxy0",
+          "version": "3.1.3+galaxy0"
+        },
+        {
+          "id": "37",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "38",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/pick_value/pick_value/0.2.0",
+          "version": "0.2.0"
+        },
+        {
+          "id": "39",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/add_line_to_file/add_line_to_file/0.1.0",
+          "version": "0.1.0"
+        },
+        {
+          "id": "40",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/add_line_to_file/add_line_to_file/0.1.0",
+          "version": "0.1.0"
+        },
+        {
+          "id": "41",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "42",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "43",
+          "tool": "toolshed.g2.bx.psu.edu/repos/iuc/compose_text_param/compose_text_param/0.1.1",
+          "version": "0.1.1"
+        },
+        {
+          "id": "44",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_sed_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "47",
+          "tool": "join1",
+          "version": "2.1.3"
+        },
+        {
+          "id": "48",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_text_file_with_recurring_lines/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "49",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_text_file_with_recurring_lines/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "50",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "51",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/imagemagick_image_montage/imagemagick_image_montage/7.1.2-2+galaxy1",
+          "version": "7.1.2-2+galaxy1"
+        },
+        {
+          "id": "52",
+          "tool": "toolshed.g2.bx.psu.edu/repos/fubar/jbrowse2/jbrowse2/3.7.0+galaxy1",
+          "version": "3.7.0+galaxy1"
+        },
+        {
+          "id": "53",
+          "tool": "toolshed.g2.bx.psu.edu/repos/fubar/jbrowse2/jbrowse2/3.7.0+galaxy1",
+          "version": "3.7.0+galaxy1"
+        },
+        {
+          "id": "54",
+          "tool": "Cut1",
+          "version": "1.0.2"
+        },
+        {
+          "id": "55",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "56",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_awk_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        },
+        {
+          "id": "57",
+          "tool": "toolshed.g2.bx.psu.edu/repos/bgruening/text_processing/tp_easyjoin_tool/9.11+galaxy0",
+          "version": "9.11+galaxy0"
+        }
+      ],
+      "outputs": [
+        {
+          "step_id": "21",
+          "label": "Assembly information",
+          "output_name": "out1",
+          "uuid": "252fbbe9-604d-4e3a-863c-93c23e6018d5"
+        },
+        {
+          "step_id": "22",
+          "label": "Chromosome mapping Hap2",
+          "output_name": "Chromosome mapping Hap2",
+          "uuid": "62039b7c-0594-432f-a3c3-db9c369bb5fd"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap2 Unlocs",
+          "output_name": "Hap2 Unlocs",
+          "uuid": "d4303f36-4b76-41d6-ab5f-a22f99633e6c"
+        },
+        {
+          "step_id": "22",
+          "label": "Curated Hap1",
+          "output_name": "Curated Hap1",
+          "uuid": "7f2b5e85-c7ab-494e-aafd-e1b19df316e9"
+        },
+        {
+          "step_id": "22",
+          "label": "Sequences missing in mashmap",
+          "output_name": "Sequences missing in mashmap",
+          "uuid": "0743da3c-c0b4-40b6-9798-7e529d72aaf1"
+        },
+        {
+          "step_id": "22",
+          "label": "Chromosome mapping Hap1",
+          "output_name": "Chromosome mapping Hap1",
+          "uuid": "9f251554-becc-4b09-847f-579dd16b4059"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap1 Hap2 orientation mapping",
+          "output_name": "Hap1 Hap2 orientation mapping",
+          "uuid": "fdd8315c-7af3-4e2b-9691-8bd190bafbd2"
+        },
+        {
+          "step_id": "22",
+          "label": "Curated Hap2",
+          "output_name": "Curated Hap2",
+          "uuid": "b16633ce-89a8-4e2c-8b17-173fa49f30d0"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap1 Haplotigs",
+          "output_name": "Hap1 Haplotigs",
+          "uuid": "b3d591eb-a7a3-4287-a161-ea1f2a02448c"
+        },
+        {
+          "step_id": "22",
+          "label": "Chromosome level Hap2",
+          "output_name": "Chromosome level Hap2",
+          "uuid": "88bfa111-a533-4eea-96da-8808fc566b4c"
+        },
+        {
+          "step_id": "22",
+          "label": "Mashmap for Hap2 sync",
+          "output_name": "Mashmap Chromosome level",
+          "uuid": "5a487acd-1c58-4464-9d6f-da29479252b9"
+        },
+        {
+          "step_id": "22",
+          "label": "Reorientation and renaming instructions",
+          "output_name": "Reorientation and renaming instructions",
+          "uuid": "af7ea7f9-616e-4eb1-a94b-efcde11de07a"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap1 AGP",
+          "output_name": "Hap1 AGP",
+          "uuid": "5c5344b7-0400-42d1-b4ce-52fef26f6cf3"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap2 Unlocs no hap dups AGP",
+          "output_name": "Hap2 Unlocs no hap dups AGP",
+          "uuid": "cded246e-99fe-464a-9426-9f9d0545c886"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap1 Unlocs no hap dups AGP",
+          "output_name": "Hap1 Unlocs no hap dups AGP",
+          "uuid": "6fa6198e-98cd-44ae-89b4-8906133fab5a"
+        },
+        {
+          "step_id": "22",
+          "label": "Corrected AGP",
+          "output_name": "Corrected AGP",
+          "uuid": "93f7403b-700a-4ecd-bc6e-91fa43de7c0c"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap2 AGP",
+          "output_name": "Hap2 AGP",
+          "uuid": "3d9c2506-6206-4d45-8a54-8edf71b88757"
+        },
+        {
+          "step_id": "22",
+          "label": "Hap1 Unlocs",
+          "output_name": "Hap1 Unlocs",
+          "uuid": "2900380d-d868-4018-b49d-c6300d439db7"
+        },
+        {
+          "step_id": "32",
+          "label": "Compressed Curated Hap1",
+          "output_name": "output_file",
+          "uuid": "296d2fea-85f3-4d74-b249-ba600fe923ca"
+        },
+        {
+          "step_id": "33",
+          "label": "Compressed Curated Hap2",
+          "output_name": "output_file",
+          "uuid": "ff56d18c-f699-4613-bb0e-96fdab48f952"
+        },
+        {
+          "step_id": "34",
+          "label": "Mashmap Chromosome level",
+          "output_name": "mashout",
+          "uuid": "e04903dd-16cf-443e-9a75-a367d56bdda3"
+        },
+        {
+          "step_id": "35",
+          "label": "Percentage of Sequence Assigned to Chromosomes Hap1",
+          "output_name": "Percentage of Sequence Assigned to Chromosomes",
+          "uuid": "418743e6-eef0-416a-b0ec-58815f592923"
+        },
+        {
+          "step_id": "35",
+          "label": "Chromosome File Hap1",
+          "output_name": "Chromosome File",
+          "uuid": "1f022ce1-9d92-4899-8b82-eabba77bf474"
+        },
+        {
+          "step_id": "36",
+          "label": "Chromosome File Hap2",
+          "output_name": "Chromosome File",
+          "uuid": "b85fd8c8-a28a-4bba-98e9-06831200d34f"
+        },
+        {
+          "step_id": "36",
+          "label": "Percentage of Sequence Assigned to Chromosomes Hap2",
+          "output_name": "Percentage of Sequence Assigned to Chromosomes",
+          "uuid": "66e121c5-132e-4de1-9ebd-3e9a2f9f6496"
+        },
+        {
+          "step_id": "41",
+          "label": "Chromosome Hap1 Csv",
+          "output_name": "output",
+          "uuid": "89455650-07a6-4fa2-9e4e-198ed61c30e4"
+        },
+        {
+          "step_id": "44",
+          "label": "Chromosome Hap2 Csv",
+          "output_name": "output",
+          "uuid": "b2b00e07-e050-4277-bc87-729acf0f3543"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Compleasm Summary",
+          "output_name": "Compleasm Summary",
+          "uuid": "19fb17f5-68b2-428d-a1a8-4e89eb12fe70"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Genes track",
+          "output_name": "Genes track",
+          "uuid": "c483c610-20e5-4d0e-86dd-f22222155c98"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Merged Hi-C Alignments on Curated Assembly",
+          "output_name": "Merged Hi-C Alignments on Curated Assembly",
+          "uuid": "909929c5-dd52-41e6-a1a1-69836eec6dbf"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Hi-C duplication stats on Curated Assembly",
+          "output_name": "Hi-C duplication stats on Curated Assembly",
+          "uuid": "454606ba-f67f-414b-af9d-ed243550ad7f"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Hi-C duplication stats on Curated Assembly: Raw",
+          "output_name": "Hi-C duplication stats on Curated Assembly: Raw",
+          "uuid": "818d35b5-5a32-465d-b917-09fea516af00"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Hi-C alignments on Curated Assembly",
+          "output_name": "Hi-C alignments on Curated Assembly",
+          "uuid": "7c936041-1d8d-4cfe-9118-88177b35b69b"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Hi-C duplication stats on Curated Assembly: MultiQC",
+          "output_name": "Hi-C duplication stats on Curated Assembly: MultiQC",
+          "uuid": "eab5b4b2-57d5-42b7-8daa-aa66ec0c4be8"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Pairtools MultiQC on Curated Assembly: Plots",
+          "output_name": "Pairtools MultiQC on Curated Assembly: Plots",
+          "uuid": "f05ed433-7907-446f-a5ad-b5e60ac6516c"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Pairtools MultiQC Stats on Curated Assembly",
+          "output_name": "Pairtools MultiQC Stats on Curated Assembly",
+          "uuid": "bebffee4-ccec-4ca3-89f4-dd7ddee8d650"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Telomere Report",
+          "output_name": "Telomere Report",
+          "uuid": "10e78e10-1999-47e0-8a94-1e92dfb34551"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 terminal telomeres",
+          "output_name": "terminal telomeres",
+          "uuid": "8a1e35a1-15ab-44e4-94a0-d15e826f9543"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Gaps BEDgraph",
+          "output_name": "Gaps BEDgraph",
+          "uuid": "c518bae6-d082-4b8c-aa3d-2fc97d87735e"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Merged HiFi Alignments",
+          "output_name": "Merged HiFi Alignments",
+          "uuid": "9b5ede77-7c07-4e75-bbd8-32a51d6f4b2e"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Q telomeres BED",
+          "output_name": "Q telomeres BED",
+          "uuid": "40f12749-d8cd-4681-ad70-bb04879cf666"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Pretext Snapshot",
+          "output_name": "Pretext Snapshot",
+          "uuid": "8426fb0f-a056-4c73-9b97-d54cac3ba7d8"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 P telomeres BED",
+          "output_name": "P telomeres BED",
+          "uuid": "85ae3135-ba07-40e9-a003-94e20e24d444"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 BigWig Coverage",
+          "output_name": "BigWig Coverage",
+          "uuid": "d1bef11d-3c91-4e41-8f40-8e8167cacc82"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Pretext Snapshot - Multimapping",
+          "output_name": "Pretext Snapshot - Multimapping",
+          "uuid": "2a3d8454-ba1a-4659-b605-daae41929140"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Coverage gap BED for JBrowse2",
+          "output_name": "Coverage gap BED for JBrowse2",
+          "uuid": "62a620fe-9a1c-4a04-9977-07a77ddd32e9"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Coverage Gaps Track",
+          "output_name": "Coverage Gaps Track",
+          "uuid": "7f1552aa-2902-4f6a-a311-8a9f0bc4862b"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Pretext All tracks - Multimapping",
+          "output_name": "Pretext All tracks - Multimapping",
+          "uuid": "a7886d65-91f6-4c28-a89b-2ab57135d07f"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Pretext All tracks",
+          "output_name": "Pretext All tracks",
+          "uuid": "6a07c134-37d8-4394-a77e-97f9afc25cd6"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 Gaps BED",
+          "output_name": "Gaps BED",
+          "uuid": "a42dfc73-aedb-4c1b-9ba7-08a030b61928"
+        },
+        {
+          "step_id": "45",
+          "label": "Hap1 miniprot",
+          "output_name": "miniprot",
+          "uuid": "bc3a1b09-c88c-479a-8b1a-67f6ff6e2aec"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Telomere Report",
+          "output_name": "Telomere Report",
+          "uuid": "2d5107aa-33e0-4534-ac68-cef693924685"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Merged Hi-C Alignments on Curated Assembly",
+          "output_name": "Merged Hi-C Alignments on Curated Assembly",
+          "uuid": "91ecb286-43d8-42f3-ba2b-adac48339b8c"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Hi-C duplication stats on Curated Assembly: MultiQC",
+          "output_name": "Hi-C duplication stats on Curated Assembly: MultiQC",
+          "uuid": "535e1a4b-82b7-4154-8c5a-a3367deb84b1"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Coverage gap BED for JBrowse2",
+          "output_name": "Coverage gap BED for JBrowse2",
+          "uuid": "a79eeb0d-4cba-4bc1-ac87-ba06b2a47c02"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 BigWig Coverage",
+          "output_name": "BigWig Coverage",
+          "uuid": "816ed26c-4b50-4a44-b668-0930cb715d75"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Pairtools MultiQC Stats on Curated Assembly",
+          "output_name": "Pairtools MultiQC Stats on Curated Assembly",
+          "uuid": "f3352359-0df4-4374-bd1c-9c49b1777ddf"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Pairtools MultiQC on Curated Assembly: Plots",
+          "output_name": "Pairtools MultiQC on Curated Assembly: Plots",
+          "uuid": "3165238a-73aa-4d35-9238-49ffa6d7c567"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 P telomeres BED",
+          "output_name": "P telomeres BED",
+          "uuid": "58adb65d-99c4-481d-8a5b-f710c729e3d0"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 miniprot",
+          "output_name": "miniprot",
+          "uuid": "4dcd2402-84d8-4c73-8269-16bdf10f3e80"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Hi-C duplication stats on Curated Assembly",
+          "output_name": "Hi-C duplication stats on Curated Assembly",
+          "uuid": "b0b2e471-6a10-491b-8000-554800cf19f5"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Pretext All tracks",
+          "output_name": "Pretext All tracks",
+          "uuid": "5232d077-cae5-45bc-b9d8-514b370fce6f"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Genes track",
+          "output_name": "Genes track",
+          "uuid": "731e731e-053b-41fb-9d4c-7cd10d7c2ca1"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Gaps BED",
+          "output_name": "Gaps BED",
+          "uuid": "d3e3b3b2-69b9-487c-afa7-189d87584941"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Pretext Snapshot - Multimapping",
+          "output_name": "Pretext Snapshot - Multimapping",
+          "uuid": "fe5a537d-59bd-4a8a-802b-8f9a209d79ba"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Compleasm Summary",
+          "output_name": "Compleasm Summary",
+          "uuid": "93eb3d05-5fde-4645-b477-b559c6c93d51"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Q telomeres BED",
+          "output_name": "Q telomeres BED",
+          "uuid": "4e3118cf-1657-46d3-9f92-083722d793f7"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Merged HiFi Alignments",
+          "output_name": "Merged HiFi Alignments",
+          "uuid": "afec0a4a-b7bc-48b3-bbdf-9618b9fecaf3"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Gaps BEDgraph",
+          "output_name": "Gaps BEDgraph",
+          "uuid": "8e8c1312-d5a1-4f76-8316-34c1f418f64b"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 terminal telomeres",
+          "output_name": "terminal telomeres",
+          "uuid": "b49daac4-7a14-4e92-9655-d3425bb0f0c8"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Pretext Snapshot",
+          "output_name": "Pretext Snapshot",
+          "uuid": "dcfd61e2-d37e-4b53-892e-079daed06dae"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Pretext All tracks - Multimapping",
+          "output_name": "Pretext All tracks - Multimapping",
+          "uuid": "6398cdf2-3fef-4a4a-935e-ee513989f9c9"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Coverage Gaps Track",
+          "output_name": "Coverage Gaps Track",
+          "uuid": "ed281872-673b-4982-93f4-d6239340c107"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Hi-C duplication stats on Curated Assembly: Raw",
+          "output_name": "Hi-C duplication stats on Curated Assembly: Raw",
+          "uuid": "1799dc7b-d6b3-4f7e-8781-4c490f90188f"
+        },
+        {
+          "step_id": "46",
+          "label": "Hap2 Hi-C alignments on Curated Assembly",
+          "output_name": "Hi-C alignments on Curated Assembly",
+          "uuid": "32189108-16d4-4efe-8fd1-5a14128d1955"
+        },
+        {
+          "step_id": "50",
+          "label": "Hi-C maps for each haplotype",
+          "output_name": "output",
+          "uuid": "c3b2f5a1-9d16-41c4-bd67-afbf9b4d4994"
+        },
+        {
+          "step_id": "51",
+          "label": "Hi-C maps for each haplotype - Multimapping",
+          "output_name": "output",
+          "uuid": "be8fa716-32c0-46f0-ba92-f8798bbf63f7"
+        },
+        {
+          "step_id": "52",
+          "label": "JBrowse2 without Gene tracks",
+          "output_name": "output",
+          "uuid": "a170f29a-ca31-4e91-8eb0-0d3243b79df2"
+        },
+        {
+          "step_id": "53",
+          "label": "JBrowse2 with Gene tracks",
+          "output_name": "output",
+          "uuid": "d51dd0ec-088c-41c9-b1cc-08d586d5663a"
+        },
+        {
+          "step_id": "54",
+          "label": "Assembly statistics",
+          "output_name": "out_file1",
+          "uuid": "4676d67a-b32d-438d-9f1b-aa5071c1d48d"
+        },
+        {
+          "step_id": "57",
+          "label": "Sequence Assignment Stats",
+          "output_name": "output",
+          "uuid": "543898e8-1045-49e5-92e1-1c50448cbc68"
+        }
+      ],
+      "connection_count": 106
+    }
+  ]
+}

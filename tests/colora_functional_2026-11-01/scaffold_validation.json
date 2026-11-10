@@ -1,0 +1,25 @@
+{
+  "haplotypes": {
+    "hap1": {
+      "input_contigs": 4,
+      "output_scaffolds": 4,
+      "total_bp": 1251523,
+      "gap_bp": 0,
+      "unrepresented_input_bp": 0,
+      "reused_input_bp": 0,
+      "agp_reconstruction_exact": true,
+      "sequences_unchanged_ignoring_names": true
+    },
+    "hap2": {
+      "input_contigs": 4,
+      "output_scaffolds": 4,
+      "total_bp": 1251570,
+      "gap_bp": 0,
+      "unrepresented_input_bp": 0,
+      "reused_input_bp": 0,
+      "agp_reconstruction_exact": true,
+      "sequences_unchanged_ignoring_names": true
+    }
+  },
+  "scope": "AGP bookkeeping and sequence reconstruction. Not independent confirmation of chromosome-scale structural correctness."
+}

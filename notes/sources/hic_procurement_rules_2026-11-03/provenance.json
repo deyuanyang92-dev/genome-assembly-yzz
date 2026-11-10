@@ -1,0 +1,18 @@
+{
+  "retrieved_utc": "2026-11-03T06:12:17.786349+00:00",
+  "scope": "Vendor sequencing planning statements reviewed; not independent experimental thresholds; no biological execution",
+  "sources": [
+    {
+      "url": "https://phasegenomics.com/resources-and-support/faqs-2/",
+      "html": "phase_faq.html",
+      "sha256": "7f9266f801519715bbfa33c18426bb607fa88b123837b790432e539762c9b4b6",
+      "text": "phase_faq.txt"
+    },
+    {
+      "url": "https://dovetail-genomics.com/support/omni-c",
+      "html": "omnic_support.html",
+      "sha256": "60c45cb7e0580f17df95936a94684e3a4682f58daedc30207dcc5b99c352a183",
+      "text": "omnic_support.txt"
+    }
+  ]
+}

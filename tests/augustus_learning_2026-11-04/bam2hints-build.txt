@@ -1,0 +1,6 @@
+make: Entering directory '/tmp/yzz-augustus-3.5.0/auxprogs/bam2hints'
+g++  -Wall -O3    -I/tmp/yzz-augustus-bamtools-install/include/bamtools  -c bam2hints.cc
+g++  -Wall -O3    -L/tmp/yzz-augustus-bamtools-install/lib -Wl,-rpath,/tmp/yzz-augustus-bamtools-install/lib  -I/tmp/yzz-augustus-bamtools-install/include/bamtools  -o bam2hints bam2hints.o -lbamtools -lz
+mkdir -p ../../bin
+cp -f bam2hints ../../bin
+make: Leaving directory '/tmp/yzz-augustus-3.5.0/auxprogs/bam2hints'

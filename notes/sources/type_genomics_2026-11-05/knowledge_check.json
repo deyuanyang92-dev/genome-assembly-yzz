@@ -1,0 +1,13 @@
+{
+  "checked_at": "2026-11-05T05:19:17.075064+00:00",
+  "validation_scope": "catalog/references/hashes/metadata only; not biological validation",
+  "topics": 33,
+  "documents": 65,
+  "software_rows": 61,
+  "decision_cards": 11,
+  "diagnostic_design_records": 29,
+  "source_hashes": 8,
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

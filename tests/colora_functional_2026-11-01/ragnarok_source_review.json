@@ -1,0 +1,31 @@
+{
+  "url": "https://github.com/ryandkuster/ragnarok",
+  "revision": "cff1969a040a4f8fa52ddcc067126a7f08d3b339",
+  "validation_level": "static partial module review; no native or biological execution",
+  "files": [
+    {
+      "path": "main.nf",
+      "sha256": "6a8e4908426ede4ebee88e4ef77ee05d2de6cb37b4ad0866e45535e8869f7cb8"
+    },
+    {
+      "path": "nextflow.config",
+      "sha256": "cdc0809acbde1dbdb68017d0ac3a6a15cc7672e465f7228fb73c36f158eca8b0"
+    },
+    {
+      "path": "modules/stringtie.nf",
+      "sha256": "3a900d51f1106d694fab1c0476d86629db09c4cad478feb19c1502e04b8e82ec"
+    },
+    {
+      "path": "modules/minimap2.nf",
+      "sha256": "7249df89a06ef7fcae2f6734ad9bbc4f7f73870c2651c418e9b4f2e92b056d2d"
+    },
+    {
+      "path": "modules/miniprot.nf",
+      "sha256": "9176227ce7ba9b44bc5c3901c54847dcdad9632ee251f3420609a3b5f3dac64d"
+    },
+    {
+      "path": "modules/mikado2.nf",
+      "sha256": "a4d00dab47bc0ca38a234e63967f6cab028181cdb29bfb7a26b6d006320781e9"
+    }
+  ]
+}

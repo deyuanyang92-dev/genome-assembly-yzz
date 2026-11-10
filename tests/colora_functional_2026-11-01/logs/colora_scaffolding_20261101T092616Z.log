@@ -1,0 +1,285 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: yangdeyuan
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=48000
+Job stats:
+job                      count
+---------------------  -------
+bwa_index                    2
+bwa_mem                      2
+fiter_five_end               2
+picard                       2
+two_read_bam_combiner        2
+yahs                         2
+total                       12
+
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Nov  1 17:26:21 2026]
+localrule bwa_index:
+    input: results/hifiasm/asm.hap2.fa
+    output: results/bwa_index_hap2, results/bwa_index_hap2/asm.fa
+    log: logs/bwa_index_hap2.log
+    jobid: 1
+    reason: Missing output files: results/bwa_index_hap2/asm.fa
+    wildcards: hap=hap2
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        ln -srn results/hifiasm/asm.hap2.fa results/bwa_index_hap2/asm.fa
+        bwa index -a bwtsw results/bwa_index_hap2/asm.fa >> logs/bwa_index_hap2.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+
+[Sun Nov  1 17:26:21 2026]
+localrule bwa_index:
+    input: results/hifiasm/asm.hap1.fa
+    output: results/bwa_index_hap1, results/bwa_index_hap1/asm.fa
+    log: logs/bwa_index_hap1.log
+    jobid: 10
+    reason: Missing output files: results/bwa_index_hap1/asm.fa
+    wildcards: hap=hap1
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        ln -srn results/hifiasm/asm.hap1.fa results/bwa_index_hap1/asm.fa
+        bwa index -a bwtsw results/bwa_index_hap1/asm.fa >> logs/bwa_index_hap1.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:26:24 2026]
+Finished job 1.
+1 of 12 steps (8%) done
+Select jobs to execute...
+Waiting for more resources.
+[Sun Nov  1 17:26:24 2026]
+Finished job 10.
+2 of 12 steps (17%) done
+Execute 1 jobs...
+
+[Sun Nov  1 17:26:24 2026]
+localrule bwa_mem:
+    input: results/bwa_index_hap2/asm.fa, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    output: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam
+    log: logs/bwa_mem_hap2.log
+    jobid: 8
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam; Input files updated by another job: results/bwa_index_hap2/asm.fa
+    wildcards: hap=hap2
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        (bwa mem -5SPM -t 4 results/bwa_index_hap2/asm.fa results/fastp/hic_trim_1.fastq.gz | samtools view -@ 4 -Sb - > results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam) >> logs/bwa_mem_hap2.log 2>&1
+        (bwa mem -5SPM -t 4 results/bwa_index_hap2/asm.fa results/fastp/hic_trim_2.fastq.gz | samtools view -@ 4 -Sb - > results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam) >> logs/bwa_mem_hap2.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:27:01 2026]
+Finished job 8.
+3 of 12 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:27:01 2026]
+localrule fiter_five_end:
+    input: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam
+    output: results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam
+    log: logs/fiter_five_end_hap2.log
+    jobid: 7
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam; Input files updated by another job: results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam
+    wildcards: hap=hap2
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        echo "Running filter_five_end.pl on hic_vs_contigs_1.bam..." >> logs/fiter_five_end_hap2.log
+        (samtools view -h results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_1.bam | perl scripts/filter_five_end.pl | samtools view -Sb - > results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam) >> logs/fiter_five_end_hap2.log 2>&1 
+        echo "Running filter_five_end.pl on hic_vs_contigs_2.bam..." >> logs/fiter_five_end_hap2.log
+        (samtools view -h results/arima_mapping_pipeline_hap2/RAW_DIR/hic_vs_contigs_2.bam | perl scripts/filter_five_end.pl | samtools view -Sb - > results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam) >> logs/fiter_five_end_hap2.log 2>&1
+        echo "Done" >> logs/fiter_five_end_hap2.log
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:27:35 2026]
+Finished job 7.
+4 of 12 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:27:35 2026]
+localrule two_read_bam_combiner:
+    input: results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam, results/bwa_index_hap2/asm.fa
+    output: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    log: logs/two_read_bam_combiner_hap2.log
+    jobid: 6
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam; Input files updated by another job: results/bwa_index_hap2/asm.fa, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam
+    wildcards: hap=hap2
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+
+        (samtools faidx results/bwa_index_hap2/asm.fa) >> logs/two_read_bam_combiner_hap2.log 2>&1
+        (perl scripts/two_read_bam_combiner.pl results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_1.bam results/arima_mapping_pipeline_hap2/FILT_DIR/hic_vs_contigs_filt_2.bam samtools 10 | samtools view -bS -t results/bwa_index_hap2/asm.fa.fai - | samtools sort -@ 4 -o results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam - ) >> logs/two_read_bam_combiner_hap2.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:27:55 2026]
+Finished job 6.
+5 of 12 steps (42%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:27:55 2026]
+localrule bwa_mem:
+    input: results/bwa_index_hap1/asm.fa, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    output: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam
+    log: logs/bwa_mem_hap1.log
+    jobid: 14
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam; Input files updated by another job: results/bwa_index_hap1/asm.fa
+    wildcards: hap=hap1
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        (bwa mem -5SPM -t 4 results/bwa_index_hap1/asm.fa results/fastp/hic_trim_1.fastq.gz | samtools view -@ 4 -Sb - > results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam) >> logs/bwa_mem_hap1.log 2>&1
+        (bwa mem -5SPM -t 4 results/bwa_index_hap1/asm.fa results/fastp/hic_trim_2.fastq.gz | samtools view -@ 4 -Sb - > results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam) >> logs/bwa_mem_hap1.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:28:30 2026]
+Finished job 14.
+6 of 12 steps (50%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Nov  1 17:28:30 2026]
+localrule picard:
+    input: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    output: results/arima_mapping_pipeline_hap2/PAIR_DIR/paired_add_read_group.bam, results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam, results/arima_mapping_pipeline_hap2/REP_DIR/metrics.final.txt, results/arima_mapping_pipeline_hap2/REP_DIR/final.bam.stats
+    log: logs/picard_hap2.log
+    jobid: 5
+    reason: Missing output files: results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam; Input files updated by another job: results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    wildcards: hap=hap2
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        PICARD=${CONDA_PREFIX}/share/picard-*/picard.jar
+        java -Xmx4G -Djava.io.tmpdir=temp/ -jar ${PICARD} AddOrReplaceReadGroups INPUT=results/arima_mapping_pipeline_hap2/TMP_DIR/hic_vs_contigs_filt_paired.bam OUTPUT=results/arima_mapping_pipeline_hap2/PAIR_DIR/paired_add_read_group.bam ID=sorted_hic_test_YBP2_SRR27548905_PRJNA1013711 LB=sorted_hic_test_YBP2_SRR27548905_PRJNA1013711 SM=sorted_hic_test_YBP2_SRR27548905_PRJNA1013711 PL=ILLUMINA PU=none >> logs/picard_hap2.log 2>&1
+        java -Xmx30G -XX:-UseGCOverheadLimit -Djava.io.tmpdir=temp/ -jar ${PICARD} MarkDuplicates INPUT=results/arima_mapping_pipeline_hap2/PAIR_DIR/paired_add_read_group.bam OUTPUT=results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam METRICS_FILE=results/arima_mapping_pipeline_hap2/REP_DIR/metrics.final.txt TMP_DIR=results/arima_mapping_pipeline_hap2/TMP_DIR ASSUME_SORTED=TRUE VALIDATION_STRINGENCY=LENIENT REMOVE_DUPLICATES=TRUE >> logs/picard_hap2.log 2>&1
+        samtools index results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam >> logs/picard_hap2.log 2>&1
+        (perl scripts/get_stats.pl results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam > results/arima_mapping_pipeline_hap2/REP_DIR/final.bam.stats) >> logs/picard_hap2.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+
+[Sun Nov  1 17:28:30 2026]
+localrule fiter_five_end:
+    input: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam
+    output: results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam
+    log: logs/fiter_five_end_hap1.log
+    jobid: 13
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam; Input files updated by another job: results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam, results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam
+    wildcards: hap=hap1
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        echo "Running filter_five_end.pl on hic_vs_contigs_1.bam..." >> logs/fiter_five_end_hap1.log
+        (samtools view -h results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_1.bam | perl scripts/filter_five_end.pl | samtools view -Sb - > results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam) >> logs/fiter_five_end_hap1.log 2>&1 
+        echo "Running filter_five_end.pl on hic_vs_contigs_2.bam..." >> logs/fiter_five_end_hap1.log
+        (samtools view -h results/arima_mapping_pipeline_hap1/RAW_DIR/hic_vs_contigs_2.bam | perl scripts/filter_five_end.pl | samtools view -Sb - > results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam) >> logs/fiter_five_end_hap1.log 2>&1
+        echo "Done" >> logs/fiter_five_end_hap1.log
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:29:06 2026]
+Finished job 13.
+7 of 12 steps (58%) done
+Select jobs to execute...
+Waiting for more resources.
+[Sun Nov  1 17:29:22 2026]
+Finished job 5.
+8 of 12 steps (67%) done
+Execute 1 jobs...
+
+[Sun Nov  1 17:29:22 2026]
+localrule two_read_bam_combiner:
+    input: results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam, results/bwa_index_hap1/asm.fa
+    output: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    log: logs/two_read_bam_combiner_hap1.log
+    jobid: 12
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam; Input files updated by another job: results/bwa_index_hap1/asm.fa, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam, results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam
+    wildcards: hap=hap1
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+
+        (samtools faidx results/bwa_index_hap1/asm.fa) >> logs/two_read_bam_combiner_hap1.log 2>&1
+        (perl scripts/two_read_bam_combiner.pl results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_1.bam results/arima_mapping_pipeline_hap1/FILT_DIR/hic_vs_contigs_filt_2.bam samtools 10 | samtools view -bS -t results/bwa_index_hap1/asm.fa.fai - | samtools sort -@ 4 -o results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam - ) >> logs/two_read_bam_combiner_hap1.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+[Sun Nov  1 17:29:44 2026]
+Finished job 12.
+9 of 12 steps (75%) done
+Select jobs to execute...
+Execute 2 jobs...
+
+[Sun Nov  1 17:29:44 2026]
+localrule picard:
+    input: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    output: results/arima_mapping_pipeline_hap1/PAIR_DIR/paired_add_read_group.bam, results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam, results/arima_mapping_pipeline_hap1/REP_DIR/metrics.final.txt, results/arima_mapping_pipeline_hap1/REP_DIR/final.bam.stats
+    log: logs/picard_hap1.log
+    jobid: 11
+    reason: Missing output files: results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam; Input files updated by another job: results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam
+    wildcards: hap=hap1
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        PICARD=${CONDA_PREFIX}/share/picard-*/picard.jar
+        java -Xmx4G -Djava.io.tmpdir=temp/ -jar ${PICARD} AddOrReplaceReadGroups INPUT=results/arima_mapping_pipeline_hap1/TMP_DIR/hic_vs_contigs_filt_paired.bam OUTPUT=results/arima_mapping_pipeline_hap1/PAIR_DIR/paired_add_read_group.bam ID=sorted_hic_test_YBP2_SRR27548905_PRJNA1013711 LB=sorted_hic_test_YBP2_SRR27548905_PRJNA1013711 SM=sorted_hic_test_YBP2_SRR27548905_PRJNA1013711 PL=ILLUMINA PU=none >> logs/picard_hap1.log 2>&1
+        java -Xmx30G -XX:-UseGCOverheadLimit -Djava.io.tmpdir=temp/ -jar ${PICARD} MarkDuplicates INPUT=results/arima_mapping_pipeline_hap1/PAIR_DIR/paired_add_read_group.bam OUTPUT=results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam METRICS_FILE=results/arima_mapping_pipeline_hap1/REP_DIR/metrics.final.txt TMP_DIR=results/arima_mapping_pipeline_hap1/TMP_DIR ASSUME_SORTED=TRUE VALIDATION_STRINGENCY=LENIENT REMOVE_DUPLICATES=TRUE >> logs/picard_hap1.log 2>&1
+        samtools index results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam >> logs/picard_hap1.log 2>&1
+        (perl scripts/get_stats.pl results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam > results/arima_mapping_pipeline_hap1/REP_DIR/final.bam.stats) >> logs/picard_hap1.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/73e5cacac5f872399bf6e046ca258528_
+
+[Sun Nov  1 17:29:44 2026]
+localrule yahs:
+    input: results/bwa_index_hap2/asm.fa, results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam
+    output: results/yahs_hap2/asm_yahs_scaffolds_final.fa, results/assemblies/yahs_hap2.fa
+    log: logs/yahs_hap2.log
+    jobid: 0
+    reason: Missing output files: results/yahs_hap2/asm_yahs_scaffolds_final.fa; Input files updated by another job: results/bwa_index_hap2/asm.fa, results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam
+    wildcards: hap=hap2
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+ 
+        yahs results/bwa_index_hap2/asm.fa results/arima_mapping_pipeline_hap2/REP_DIR/paired_mark_dups_final.bam -o results/yahs_hap2/asm_yahs -e GATC >> logs/yahs_hap2.log 2>&1
+        ln -srn results/yahs_hap2/asm_yahs_scaffolds_final.fa results/assemblies/yahs_hap2.fa
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/b330ab8f3179cc77730b3bd76dc9b21e_
+[Sun Nov  1 17:29:48 2026]
+Finished job 0.
+10 of 12 steps (83%) done
+[Sun Nov  1 17:30:31 2026]
+Finished job 11.
+11 of 12 steps (92%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:30:31 2026]
+localrule yahs:
+    input: results/bwa_index_hap1/asm.fa, results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam
+    output: results/yahs_hap1/asm_yahs_scaffolds_final.fa, results/assemblies/yahs_hap1.fa
+    log: logs/yahs_hap1.log
+    jobid: 9
+    reason: Missing output files: results/yahs_hap1/asm_yahs_scaffolds_final.fa; Input files updated by another job: results/bwa_index_hap1/asm.fa, results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam
+    wildcards: hap=hap1
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+ 
+        yahs results/bwa_index_hap1/asm.fa results/arima_mapping_pipeline_hap1/REP_DIR/paired_mark_dups_final.bam -o results/yahs_hap1/asm_yahs -e GATC >> logs/yahs_hap1.log 2>&1
+        ln -srn results/yahs_hap1/asm_yahs_scaffolds_final.fa results/assemblies/yahs_hap1.fa
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/b330ab8f3179cc77730b3bd76dc9b21e_
+[Sun Nov  1 17:30:33 2026]
+Finished job 9.
+12 of 12 steps (100%) done
+Complete log: .snakemake/log/2026-11-01T172618.069828.snakemake.log

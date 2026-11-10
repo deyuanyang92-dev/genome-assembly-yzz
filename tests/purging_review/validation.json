@@ -1,0 +1,94 @@
+{
+  "source_hashes": [
+    {
+      "path": "pipelines/dfguan_purge_dups/README.md",
+      "passed": true
+    },
+    {
+      "path": "pipelines/dfguan_purge_dups/src/get_seqs.c",
+      "passed": true
+    },
+    {
+      "path": "pipelines/dfguan_purge_dups/src/calcuts.c",
+      "passed": true
+    },
+    {
+      "path": "pipelines/dfguan_purge_dups/src/opt.c",
+      "passed": true
+    },
+    {
+      "path": "pipelines/dfguan_purge_dups/src/purge_dups.c",
+      "passed": true
+    },
+    {
+      "path": "pipelines/lh3_hifiasm/CommandLines.cpp",
+      "passed": true
+    },
+    {
+      "path": "pipelines/sanger-tol_genomeassembly/conf/modules.config",
+      "passed": true
+    },
+    {
+      "path": "pipelines/sanger-tol_genomeassembly/subworkflows/sanger-tol/fasta_purge_retained_haplotype/main.nf",
+      "passed": true
+    },
+    {
+      "path": "pipelines/sanger-tol_genomeassembly/modules/nf-core/purgedups/getseqs/main.nf",
+      "passed": true
+    },
+    {
+      "path": "pipelines/LiaOb21_colora/workflow/rules/purge_dups.smk",
+      "passed": true
+    },
+    {
+      "path": "pipelines/cnag_CLAWS/modules/purging.rules.smk",
+      "passed": true
+    },
+    {
+      "path": "pipelines/marbl_merqury/README.md",
+      "passed": true
+    }
+  ],
+  "local_links": [
+    {
+      "source": "36_去冗余软件说明书与参数核查.md",
+      "target": "38_去冗余流程开发与验收需求.md",
+      "exists": true
+    },
+    {
+      "source": "36_去冗余软件说明书与参数核查.md",
+      "target": "37_去冗余文献与公开流程实际用法.md",
+      "exists": true
+    },
+    {
+      "source": "37_去冗余文献与公开流程实际用法.md",
+      "target": "38_去冗余流程开发与验收需求.md",
+      "exists": true
+    },
+    {
+      "source": "38_去冗余流程开发与验收需求.md",
+      "target": "36_去冗余软件说明书与参数核查.md",
+      "exists": true
+    },
+    {
+      "source": "38_去冗余流程开发与验收需求.md",
+      "target": "37_去冗余文献与公开流程实际用法.md",
+      "exists": true
+    },
+    {
+      "source": "38_去冗余流程开发与验收需求.md",
+      "target": "../tests/purging_review/get_seqs_results.json",
+      "exists": true
+    }
+  ],
+  "bash_blocks": [
+    {
+      "source": "36_去冗余软件说明书与参数核查.md",
+      "syntax_passed": true,
+      "executed": false
+    }
+  ],
+  "biological_runs": 0,
+  "synthetic_extraction_cases_passed": 7,
+  "classifier_or_biological_validation": false
+}

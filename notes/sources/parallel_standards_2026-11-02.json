@@ -1,0 +1,128 @@
+{
+  "reviewed_at": "2026-11-02T10:02:26.932892+00:00",
+  "review_window": [
+    "2024-11-02",
+    "2026-11-02"
+  ],
+  "review_scope": "targeted deepening; not an exhaustive systematic review",
+  "sources": [
+    {
+      "url": "https://www.earthbiogenome.org/report-on-assembly-standards",
+      "version": "EBP Assembly Standards v7, January2026; approved2026-01-31",
+      "reading_scope": "selected §1–4; comparison operators, required versus encouraged, material categories and T2T boundary",
+      "access": "web_primary_text",
+      "evidence_status": "reuse_with_additional_wording_review"
+    },
+    {
+      "url": "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+      "version": "Recommendations v4, January2026; approved2026-01-31",
+      "reading_scope": "selected scope/input flexibility, sequencing, polishing, T2T recipes and workflow links",
+      "access": "web_primary_text",
+      "evidence_status": "reuse_with_selected_deeper_review"
+    },
+    {
+      "url": "https://doi.org/10.1093/gbe/evag258",
+      "version": "published2026-10-12; typeset metadata2026-10-23",
+      "reading_scope": "publication identity; indexed reporting/review text and Table1; supplementS1/S2 not obtained",
+      "access": "publisher_search_index_fuller_than_direct_abstract_redirect",
+      "evidence_status": "reuse_not_new_full_read"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41586-025-09140-6",
+      "version": "published2025-07-23; AuthorCorrection linked2025-08-26",
+      "reading_scope": "quality/T2T results; Methods assembly/QC and CodeAvailability; no complete SupplementaryMethods extraction",
+      "access": "web_primary_selected_body",
+      "evidence_status": "new_selected_method_review"
+    },
+    {
+      "url": "https://doi.org/10.1038/s41586-025-09547-1",
+      "version": "linked AuthorCorrection2025-08-26",
+      "reading_scope": "existence and date from original paper; correction body inaccessible",
+      "access": "redirect_failed",
+      "evidence_status": "not_reviewed_body"
+    },
+    {
+      "url": "https://github.com/hgsvc/phase3-main-pub",
+      "version": "main, commit unresolved; paper freeze archive Zenodo14546729 linked",
+      "reading_scope": "README, frozen/plain source organization and software/workflow index",
+      "access": "web_primary_readme",
+      "evidence_status": "new_candidate_not_cloned_or_run"
+    },
+    {
+      "url": "https://github.com/core-unit-bioinformatics/workflow-smk-assembly-evaluation/tree/prototype",
+      "version": "prototype branch, commit unresolved",
+      "reading_scope": "repository entry existence from paper central index; no individual rule audit",
+      "access": "web_repository_entry",
+      "evidence_status": "candidate_only"
+    },
+    {
+      "url": "https://github.com/core-unit-bioinformatics/workflow-smk-genome-hybrid-assembly/tree/prototype",
+      "version": "prototype branch, commit unresolved",
+      "reading_scope": "repository entry existence from paper central index; no individual rule audit",
+      "access": "web_repository_entry",
+      "evidence_status": "candidate_only"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42711426/",
+      "version": "NatureGenetics58(9):2078,2026Sep; DOI10.1038/s41588-026-02761-1",
+      "reading_scope": "bibliographic identity, single page, single author and no abstract; not full benchmark methods",
+      "access": "pubmed_bibliographic_record",
+      "evidence_status": "candidate_identity_only"
+    },
+    {
+      "url": "https://github.com/mobinasri/flagger",
+      "version": "currentREADME; HMM-Flagger1.2.0 references",
+      "reading_scope": "dual/diploid purpose, presets, bias annotations, conservative mode; no runtime",
+      "access": "web_primary_readme",
+      "evidence_status": "new_tool_manual_review"
+    },
+    {
+      "url": "https://github.com/mobinasri/flagger/releases/tag/v1.2.0",
+      "version": "v1.2.0 commit2a4c09fa8cec9db021cf44aafc0ccc34db60beec",
+      "reading_scope": "release identity and BAM-index check note",
+      "access": "web_primary_release",
+      "evidence_status": "new_version_review"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mobinasri/flagger/v1.2.0/wdls/workflows/hmm_flagger_end_to_end_with_mapping.wdl",
+      "version": "v1.2.0 commit2a4c09fa8cec9db021cf44aafc0ccc34db60beec",
+      "reading_scope": "input/parameter_meta/mapping call/inner evaluation call/output; declared downsample not propagated; BAM default differs from metadata",
+      "access": "web_primary_selected_source_no_local_full_snapshot",
+      "evidence_status": "static_risks_not_runtime_confirmed"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mobinasri/flagger/v1.2.0/wdls/workflows/hmm_flagger_end_to_end.wdl",
+      "version": "v1.2.0 commit2a4c09fa8cec9db021cf44aafc0ccc34db60beec",
+      "reading_scope": "selected lines0–460: diploid input, filtering, optional annotation projection, cov/HMM, canonical masks, raw/conservative output",
+      "access": "web_primary_selected_source_no_local_full_snapshot",
+      "evidence_status": "partial_source_review_not_HMM_algorithm_audit"
+    }
+  ],
+  "local_artifacts": [
+    {
+      "path": "notes/57_质量标准与证据验收深读补充.md",
+      "sha256": "3babce543af0daf6c4681745cc98009bac0b49104f185449d471d4eb42be6e9a"
+    },
+    {
+      "path": "tests/parallel_standards_review/acceptance_semantics_demo.py",
+      "sha256": "4bca5dfdcd62fa98ef05fd295714410b3e2e80eded25a7c86a2feff58045c8bb"
+    },
+    {
+      "path": "tests/parallel_standards_review/acceptance_semantics_results.json",
+      "sha256": "5ff4aded038c882adc77f00d230158c4bc467067d8fb5c80ea123f1cffcc2941"
+    }
+  ],
+  "counts": {
+    "new_upstream_clones": 0,
+    "new_biological_runs": 0,
+    "flagger_runs": 0,
+    "new_acceptance_demo_scripts": 1,
+    "synthetic_semantics_cases": 16
+  },
+  "limitations": [
+    "No complete paper supplementary methods or GBE S1/S2 obtained",
+    "Paper correction body inaccessible",
+    "No HMM-Flagger WDL validation or runtime; static findings remain risks",
+    "Do not count previously read papers as new full reading"
+  ]
+}

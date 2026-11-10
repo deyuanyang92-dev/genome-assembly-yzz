@@ -1,146 +1,113 @@
-# 全基因组组装流程学习库
+# 全基因组组装流程与 bioSkills 学习库
 
-> 位置：`/media/deyuan/18T_B/genome_assembly` · 建于 2026-10-26
-> 用途：收集、学习、测试经典的全基因组 de novo 组装流程，为环节动物（Annelida）组装做准备。
+2026-11-03功能规划：[QS019 Hi-C测序采购与挂载充分性指导](notes/62_HiC测序采购与挂载充分性规划_QS019.md)。优先支持只有HiFi时制定首批采购方案，再接实际QC更新和挂载充分性复核。已保存功能规格、输入与报告模板，尚未实现。
 
-## 1. 目录结构
+2026-11-03追加：固定RagTag v2.1.0已完成3个人工挂载分支；默认/推断gap、独立AGP重建、未定位保留及参考重排偏倚已检查。见[实测记录](tests/ragtag_scaffold_2026-11-03/README.md)。没有新增真实样本、Hi-C或完整初装流程；历史批次计数保留。
 
-```
-genome_assembly/
-├── README.md                          ← 本文件：总览、对比、学习路线、测试状态
-├── pipelines/                         ← 各流程源码（固定版本，供阅读学习；不进 git，用 fetch_pipelines.sh 拉取）
-│   ├── fetch_pipelines.sh             ← 按固定 commit 一键拉取下面 8 个仓库
-│   ├── sanger-tol_genomeassembly/     1.0.1  (131f0ea)
-│   ├── VGP_galaxy_iwc/                main@d9ec763（只检出 workflows/VGP-assembly-v2）
-│   ├── nf-core_genomeassembler/       2.0.1  (c608622)
-│   ├── cnag_CLAWS/                    v3.2   (b7af156)
-│   ├── ebp-nor_GenomeAssembly/        main@d31bbee（仓库没有 tag）
-│   ├── marbl_verkko/                  v2.3.2 (39e9fb2)
-│   ├── aidenlab_juicer/               1.6    (f866383)；注意 main 分支已经是 Juicer 2
-│   └── aidenlab_3d-dna/               201008 (cb63403)；注意 master 分支反而是更旧的 180922
-├── notes/                             ← 中文学习笔记（每篇都有"本笔记依据"，标明读过哪些文件）
-│   ├── 01_sanger-tol_genomeassembly.md   ★ 本机已测试
-│   ├── 02_VGP_Galaxy.md
-│   ├── 03_nf-core_genomeassembler.md
-│   ├── 04_CNAG_CLAWS.md
-│   ├── 05_EBP-Nor_GenomeAssembly.md
-│   ├── 06_Verkko.md
-│   ├── 07_Juicer_3D-DNA.md
-│   └── 08_核心工具速查.md               ← 建议先读这篇
-├── tests/
-│   └── sanger-tol_genomeassembly_test/  ← run_test.sh、fetch_test_data.sh、compare_with_snapshot.py
-│                                           results/（本机测试结果）、results_official_busco/（用官方 BUSCO 库复核）
-├── containers/
-│   ├── singularity/                   ← Singularity 镜像缓存（NXF_SINGULARITY_CACHEDIR），各流程共用
-│   └── prefetch_singularity_images.sh ← 带续传和重试的镜像预下载脚本
-└── databases/
-    └── busco_downloads/lineages/eukaryota_odb12   ← 离线 BUSCO 谱系库
-```
+## 2026-11-02 本轮纠错与补齐
 
-## 2. 本机运行环境
+新增[59参考辅助方法与选择](notes/59_参考辅助组装方法体系与工具选择.md)、[60格式转换](notes/60_组装格式转换与数据交接.md)、[61 Hi-C选型与HapHiC](notes/61_HiC挂载选型与HapHiC机制.md)。[全历史20类请求审计](notes/sources/full_request_gap_audit_2026-11-02.md)逐项区分完成部分与缺口；不能称全部学习完成。新增samtools1.21合成格式交接证据，未增加目标生物组装验收。
 
-| 项目 | 情况 |
-|---|---|
-| 硬件 | 72 核 / 503 GB 内存；18T_B 盘可用 13 T |
-| Nextflow | 用 conda 环境 **`nextflow`**（Nextflow 25.10.4 + OpenJDK 21）。系统自带的 `/usr/local/bin/nextflow` 是 19.10，配 Java 11，太旧，没有改动它 |
-| 容器 | Singularity CE 4.3.1（推荐）；也有 Docker 29.1.3 |
-| 网络 | 通过代理 `127.0.0.1:7890` 上网，**偶尔会断连**，见 §6 |
+后续实际补齐：HapHiC官方113页补充材料已保存并复核选定方法/命令；Sanger两份培训PDF文本及12个关键图文页已审阅；gfatools固定源码已编译并保存成功/失败例。详见[本轮交付索引及模型分工](notes/sources/reference_hic_batch_2026-11-02.md)，所有阅读和运行范围分开记录。
 
-```bash
-source /home/deyuan/miniforge3/etc/profile.d/conda.sh && conda activate nextflow
-export NXF_SINGULARITY_CACHEDIR=/media/deyuan/18T_B/genome_assembly/containers/singularity
-export NXF_OPTS='-Xms1g -Xmx4g'
-```
+## 知识库当前入口
 
-## 3. 流程总览对比
+[50 知识库导航与32专题覆盖账本](notes/50_全基因组知识库导航与覆盖账本.md)；[51 组装原理与证据判断](notes/51_组装原理与证据驱动判断手册.md)；[52 Juicer/BUSCO/Flye源码补充](notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md)。
 
-| 流程 | 框架 | 主要输入 | 组装器 | 分型 | 去冗余 | 挂载 | 去污染 | 细胞器 | 人工校正材料 | 在本机好不好跑 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| **sanger-tol/genomeassembly** 1.0.1 | Nextflow | HiFi/ONT + Hi-C（CRAM）± trio、UL、10X | hifiasm | pri/alt、Hi-C、trio | purge_dups（可选） | YaHS | ✗（另用 ascc、blobtoolkit） | MitoHiFi、oatk | Pretext、`.hic`、`.mcool` | ★★★ 已容器化，**本机已测试** |
-| **VGP**（Galaxy IWC） | Galaxy | HiFi ± Hi-C、trio、Bionano | hifiasm | pri/alt、Hi-C、trio | purge_dups（VGP6/6b） | YaHS（VGP8）；Bionano（VGP7） | ✓ FCS（VGP9） | MitoHiFi（VGP0） | ✓ 带轨道的 PretextMap + 校正后处理 | ★★ 公共 Galaxy 网页直接用；本地部署很重 |
-| **nf-core/genomeassembler** 2.0.1 | Nextflow | ONT/HiFi ± Hi-C、短读长、参考基因组 | hifiasm、Flye（可用 RagTag patch 合并） | ✗（只适合单倍体或近交系） | ✗ | YaHS（要设 `scaffold_hic: true`）、LINKS、LongStitch、RagTag | ✗ | ✗ | ✗ | ★★★ 已容器化 |
-| **CNAG CLAWS** v3.2 | Snakemake 6/7 | ONT/HiFi + Illumina、10X、Hi-C | Flye 和 hifiasm 并行（± NextDenovo） | Hi-C（hifiasm） | purge_dups | YaHS（chromap 比对） | ✗（可选 Kraken2） | ✗ | ✓ Pretext + 轨道 + TPF | ★ 强依赖 CNAG 集群环境 |
-| **EBP-Nor** GenomeAssembly | Snakemake 7 | HiFi/ONT ± Hi-C | hifiasm | Hi-C（要设 `haploid: False`） | ✗ | YaHS（先按单倍型 k-mer 过滤 Hi-C） | ✓ FCS-adaptor + FCS-GX | oatk | ✓ rapid-curation 轨道 | ★ Sigma2 集群路径写死；要手动装好几个软件 |
-| **Verkko** v2.3.2 | Snakemake 7（sh 启动脚本） | HiFi（必须）+ ONT UL（强烈推荐）± Hi-C、Pore-C、trio | 自带：MBG 图 + GraphAligner + Canu utgcns 共识 | trio、Hi-C、Pore-C（统一用 rukki），**不输出 pri/alt** | 不需要 | 内置（Hi-C/Pore-C 模式） | `--screen` 移出 mito、rDNA 等 | 移出 mito 并尝试环化 | 不生成 `.hic`；可手工编辑图路径后用 `--paths` 重跑共识 | ★★ conda 可装；必须用 Snakemake 7；资源需求大 |
-| **Juicer 1.6 + 3D-DNA** 201008 | Bash/awk/Java | 已有的草图 contig + Hi-C FASTQ | **不做组装**，只做挂载 | 主流程不分型 | 仅 diploid 模式有 merge | 3D-DNA（迭代纠错 + debris 切除） | ✗ | ✗ | ✓ `.hic` + `.assembly` → JBAT 人工校正 | ★★ 不用安装；3D-DNA 的 Java 固定占 48 GB；一定要用 tag 版本 |
+当前实测口径（2026-11-02）：已保存1套Colora测试配置的功能闭环记录，24项默认DAG目标有输出；QUAST单独执行后接回，可选FCS-GX关闭。目标物种生产级生物学验收为0，不能称原生未修改全流程通过。详见[测试记录](tests/colora_functional_2026-11-01/README.md)。
 
-### 横向对比：同一步骤，各流程怎么做
+当前副本：`/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz`，即 Windows `P:\yzz-全基因组工作流程\genome-assembly-yzz`。核查日期：2026-11-01。
 
-| 环节 | sanger-tol | VGP | nf-core | CLAWS | EBP-Nor |
-|---|---|---|---|---|---|
-| k-mer 与基因组调查 | FastK + GenomeScope2 | Meryl + GenomeScope2 | jellyfish + GenomeScope **1.0** 脚本 | meryl + GenomeScope2 + Smudgeplot | FastK + GenomeScope2（ploidy 1/2/4）+ Smudgeplot |
-| purge_dups 阈值 | `-m 1.5c -u 6c`（c = 1n 覆盖度） | transition = 1.5×kcov，upper = 4.5×kcov | 无 | calcuts 自动 | 无 |
-| Hi-C 比对 | bwa-mem2 或 minimap2，CRAM 分块并行，samtools markdup | bwa-mem2 `-5SP`，markdup **删除重复**，MAPQ ≥ 10 | bwa-mem2 `-5SP`，Picard **只标记**重复，**不按 MAPQ 过滤** | chromap，去 PCR 重复，mq0 和 mq10 两套 | bwa `-5SPM`，samtools markdup |
-| QC | asmstats、gfastats、BUSCO、MerquryFK | gfastats、Compleasm、Merqury | QUAST、BUSCO、Merqury | gfastats、BUSCO、Merqury、tidk，汇总成一张表 | BUSCO、gfastats |
+**已下载 26 个上游仓库，其中 6 套完整组装工作流/集合。bioSkills 全库 63 类、561 个技能已建立索引；重点阅读 25 个技能正文，仍有 536 个未通读。截至早期清点尚无完整工作流实测；当前测试配置记录见下。** hifiasm/YaHS 等单工具不计入完整工作流数。
 
-> 这张表就是最好的学习材料：同样是"HiFi + Hi-C → 染色体级"，各团队在阈值、去重、MAPQ 过滤上的取舍都不一样。每一格的出处见对应笔记。
+## 优先阅读
 
-## 4. 怎么选（结合环节动物）
+- [49任务范围与数据路由总纲](notes/49_全基因组组装任务范围与数据路由总纲.md)：覆盖二代、长读、混合、Hi-C/图谱及参考辅助；按输入和目标选择完整路线。
 
-| 你的情况 | 建议 |
-|---|---|
-| HiFi + Hi-C（主流的参考基因组方案） | 主力用 **sanger-tol/genomeassembly**（本机已能跑）。参照 **VGP** 的设计补上去污染（FCS-GX）和人工校正步骤 |
-| 只有 ONT（± Hi-C） | **nf-core/genomeassembler**（Flye 或 `hifiasm --ont`）。它不做去冗余，要自己补 purge_dups；挂载记得设 `scaffold_hic: true` |
-| 目标是 T2T | **Verkko**（见笔记 06） |
-| Hi-C 挂载后人工校正 | PretextView（ToL、VGP 的做法），或 Juicer + 3D-DNA + Juicebox（DNA Zoo 的做法，见笔记 07） |
-| 只有 Illumina 短读长 | 现成流程都不适合；做系统发育可以用短读长组装器拿 BUSCO 基因（见笔记 08 §0） |
+- [21 组装基础与质量判断](notes/21_组装基础与质量判断.md)：如何判断准确/完整/结构正确，只有 HiFi 及不同个体 Hi-C 的处理。
+- [19 编程与验收规范](notes/19_全基因组组装编程与验收规范.md)、[20 源码追踪与能力验证](notes/20_源码追踪与能力验证.md)：后续开发的数据模型、阶段交接和版本风险。
+- [CONTEXT 项目上下文](CONTEXT.md)：后续会话恢复学习成果和待办的入口。
+- [00 学习进度和证据边界](notes/00_学习进度清单.md)：究竟下载了多少、读到哪里、哪些实际运行过。
+- [15 六套完整组装工作流源码核查](notes/15_完整组装工作流源码核查.md)：Sanger、VGP、nf-core、CLAWS、EBP-Nor、Colora 的输入、执行链和缺口。
+- [16 Colora 论文流程与复现入口](notes/16_Colora流程与复现入口.md)：较紧凑的 Snakemake 全流程、配置与官方测试准备。
+- [17 bioSkills 系统学习与使用](notes/17_bioSkills系统学习与使用.md)：架构、目录、技能路由、安装器、9 个组装技能和完整流程的对应关系。
+- [18 bioSkills 源码勘误](notes/18_bioSkills源码勘误与使用边界.md)：Hi-C 输出前缀、Omni-C 空酶配置、YaHS 排序/MAPQ、污染清理等问题。
 
-**环节动物的几个参数（已核实）**：
-- **BUSCO 谱系**：odb12 里没有单独的 Annelida 谱系，最接近的是 **`lophotrochozoa_odb12`**。odb10 只能用 `metazoa_odb10`（EBP-Nor 的代码写死了 `_odb10` 后缀；VGP 用的 Compleasm 是 odb10 库）。
-- **线粒体遗传密码**：**表 5（Invertebrate Mitochondrial）**，NCBI Taxonomy 中 Annelida 的 taxid 是 6340。
-- **端粒序列**：VGP、EBP-Nor 默认是 `TTAGGG`。环节动物是否也是这个序列**尚未核实**，建议先用 `tidk explore` 在自己的数据上确认。
+## 六套完整流程
 
-## 5. 学习路线（建议顺序）
+| 流程 | 框架 | 本项目学习重点 | 详细笔记 |
+|---|---|---|---|
+| Sanger genomeassembly 1.0.1 | Nextflow | dataset/spec/stage、分型后分 hap 挂载、阶段 QC、细胞器 | [01](notes/01_sanger-tol_genomeassembly.md)、[15](notes/15_完整组装工作流源码核查.md) |
+| VGP Galaxy/IWC | Galaxy 工作流集合 | 调查→组装/分型→挂载→去污染→人工校正前后评价 | [02](notes/02_VGP_Galaxy.md) |
+| nf-core/genomeassembler 2.0.1 | Nextflow | 单倍体/近交系；组装、可选 polishing/scaffolding、多阶段报告 | [03](notes/03_nf-core_genomeassembler.md) |
+| CNAG CLAWS v3.2 | Snakemake | 多组装器比较、polish/purge、Hi-C、Pretext；需本地化集群配置 | [04](notes/04_CNAG_CLAWS.md) |
+| EBP-Nor GenomeAssembly | Snakemake | 分 hap k-mer 过滤 Hi-C、挂载、FCS、oatk、curation 轨道 | [05](notes/05_EBP-Nor_GenomeAssembly.md)、[15](notes/15_完整组装工作流源码核查.md) |
+| Colora | Snakemake | HiFi + Hi-C ± ONT、核与细胞器组装、有论文/测试数据 | [16](notes/16_Colora流程与复现入口.md) |
 
-1. **`notes/08_核心工具速查.md`**：先弄清每一步解决什么问题、有哪些工具可选。
-2. **`notes/01_sanger-tol_genomeassembly.md`**：对照本机测试结果（`tests/sanger-tol_genomeassembly_test/results/`），一个目录一个目录地看输出。
-3. **`notes/02_VGP_Galaxy.md`**：同样的 HiFi + Hi-C 思路，用 Galaxy 实现，并补上了去污染和人工校正。重点对比 purge_dups 阈值和 Hi-C 去重方式的差别。
-4. **`notes/03_nf-core_genomeassembler.md`**：ONT 路线，以及"一次运行比较多种策略"的设计。
-5. **`notes/04、05`**：欧洲两个生产流程（Snakemake），看实际生产中怎么组织配置、去污染和校正前的准备。
-6. **`notes/06_Verkko.md`**：T2T 组装。
-7. **`notes/07_Juicer_3D-DNA.md`**：经典的 Hi-C 挂载和人工校正。
+固定提交以 [源码清单](notes/sources/source_manifest.json) 为准。01–08 是原仓库既有深入笔记；其中原机器绝对路径、测试结果和部分旧提交不能当作本机现状。本轮补充核查以00、14–31为准。原 README 已保存在 [历史说明](README_previous_machine.md)。
 
-## 6. 测试状态与本机已知问题
+## 工具、论文和视频
 
-| 流程 | 测试内容 | 状态 |
-|---|---|---|
-| sanger-tol/genomeassembly 1.0.1 | 官方 test profile（二星瓢虫 icAdaBipu1：pri/alt + Hi-C phased + oatk） | ✅ **通过**。与官方 nf-test 快照逐个比对：输出路径 526/526、md5 111/111、任务数 170、48 个进程的软件版本零差异（用官方同版本的 BUSCO 谱系库时）。详情和结果解读见笔记 01 §10 |
-| 其余流程 | 只读学习，未运行 | — |
+- [06 Verkko](notes/06_Verkko.md)：组装核心工作流，单列学习。
+- [07 Juicer + 3D-DNA](notes/07_Juicer_3D-DNA.md)：已有 contigs 后的 Hi-C 子流程。
+- [08 核心工具速查](notes/08_核心工具速查.md)。
+- [09 视频访问证据与 Skills 工作方法](notes/09_视频与Skills学习.md)：公众号页面与封面已取得，媒体仍要求微信客户端；**没有取得视频音轨/逐帧内容**。
+- [10 论文和复现资源地图](notes/10_论文与复现资源地图.md)。
+- [11 Hi-C scaffolders benchmark 精读](notes/11_HiC_scaffolders_benchmark.md)：用户指定论文、评分与复现障碍。
+- [12 hifiasm、YaHS、HapHiC 使用说明](notes/12_组装与HiC挂载使用说明.md)。
+- [13 去冗余、质量评价与流程选择](notes/13_质控与流程选择.md)。
+- [14 本地源码与验证记录](notes/14_本地源码与验证记录.md)：此前 11 仓库阶段的实测记录；后新增 15 仓库见清单及15–31。
 
-**本机已知问题与解决办法**：
-1. **代理链路偶尔断连**（实测：Java 发起的 HTTPS 请求约 9% 遇到 `SSLHandshakeException`，curl 下载有时出现 `unexpected EOF`）。Nextflow 在这两处不会重试：
-   - 校验远程输入文件时，会误报 "does not exist" → 先把输入下载到本地（`tests/.../fetch_test_data.sh`）。
-   - 拉取 Singularity 镜像时，断一次整个流程就失败 → 先预下载镜像（`containers/prefetch_singularity_images.sh`，镜像列表用 `nextflow inspect` 生成）。
-   - BUSCO 运行时自己下载谱系库 → 改用离线谱系库（`--busco_lineage_directory`）。
-   - 根本的解决办法是改善代理的稳定性，这需要你来处理。
-2. **sanger-tol 1.0.1 的 bug**：单独写 `assembler: mitohifi` 的方案会被静默跳过，见笔记 01 §7。dev 分支已修复。
+## 本地文件与复核
 
-## 7. 下一步
+源码在 `pipelines/`，被 Git 忽略；可运行 `bash pipelines/fetch_pipelines.sh /新的目标目录` 按清单下载全部 26 仓库。已有仓库 SHA 不符会保留并停止，避免静默混用版本。只做恢复时须准备网络与磁盘空间，Colora 附带测试 reads；Verkko、KMC 子模块不由此脚本安装。
 
-- 准备好自己的数据（HiFi/ONT/Hi-C）后，可以照笔记 01 §4.3 的模板写 `genomic_data.yaml` 和 `assembly_specs.yaml`。Hi-C 要先转成未比对的 CRAM。
-- 如果想实际跑其他流程：nf-core/genomeassembler 有现成的 `-profile test`；VGP 可以直接在 usegalaxy.eu 上运行。
+bioSkills [全库索引](notes/sources/bioskills_catalog.json)、[阅读范围](notes/sources/bioskills_reading_ledger.json)、[结构校验/安装预览](tests/bioskills_audit/validation.json)、[专项核查](tests/bioskills_audit/content_checks.json)均已保存。可在学习库根目录运行 `python3 tests/bioskills_audit/audit.py` 重查模板问题；它不安装技能，不运行组装。
 
-## 8. 关于这个 Git 仓库
+此前 hifiasm/YaHS 官方小数据与 benchmark 微型评分验证见 [learning_smoke/validation.json](tests/learning_smoke/validation.json)。它们不能代表六套工作流跑通。大数据、容器、数据库、测试结果日志保留在本地且忽略提交；本轮没有提交或推送 GitHub，也没有全局安装 bioSkills。
 
-本目录同步到 https://github.com/deyuanyang92-dev/genome-assembly-yzz （**公开仓库**）。
+追加的严格无损挂载契约检查：`python3 tests/assembly_contracts/check_contracts.py`，14个合成案例通过，覆盖反向互补、坐标、序列遗漏/重复等；见[结果](tests/assembly_contracts/validation.json)。这不验证真实染色体挂载准确性。新核查的生物学资料及适用范围见[来源记录](notes/sources/assembly_foundations_review.json)。
 
-- **入库的**：笔记、README、各个脚本、测试配置，都是文本。
-- **不入库的**：大文件、第三方源码、可以重新生成的内容，具体见 `.gitignore`。
+- [22 近期论文对标地图](notes/22_近期组装论文与对标地图.md)：6篇2025–2026正式论文、1篇预印本、2份EBP文件及VGP基线。
+- [23 EBP 2026与项目验收](notes/23_EBP2026规范与本项目对标要求.md)：外部标准与本项目提升目标分开。
+- [24 新增源码核查](notes/24_论文配套源码核查_Galeolaria与GPhase.md)：新增2仓库，完整工作流仍6套，端到端实测仍0套。
 
-换一台机器（或删掉本地数据后）按下面步骤还原：
+- [25 近期标准论文及项目动作](notes/25_近期标准论文与项目高标准验收.md)：新增2026年标准/细胞遗传综述和ERGA实证核查。
+- [26 追加学习与边界](notes/26_追加学习与适用边界.md)：bioSkills正文25篇、VGP14个接口、Colora运行准备及阻碍。
+- **用户要求高于最低标准：**默认按[23高标准验收表](notes/23_EBP2026规范与本项目对标要求.md)规划；选择HiFi路线时有效HiFi≥50×为硬门槛，QV≥50争取60，完整度/挂载98%争取99%，结合产品角色、独立证据和物种适用性。未达目标和缺数据必须明示。
 
-```bash
-git clone https://github.com/deyuanyang92-dev/genome-assembly-yzz.git genome_assembly && cd genome_assembly
-bash pipelines/fetch_pipelines.sh            # 8 个流程源码，按固定 commit 拉取（已验证与本机版本逐文件一致）
+- [27 测序数据调查及100×二代决策](notes/27_测序数据预判组装难度与二代补充策略.md)：HiFi-only调查、跨平台核查、有效HiFi≥50×和重复困难证据。
+- [28 已收集的调查源码与脚本](notes/28_基因组调查源码与脚本使用说明.md)：新增6个单工具源码及命令/风险/验证状态；不是新增完整流程。
+- [29 后续开发清单](notes/29_基因组调查开发待办.md)：6项集成缺口与验收要求，尚未实现。
 
-# 复现 sanger-tol 测试（环境见 §2）：
-bash tests/sanger-tol_genomeassembly_test/fetch_test_data.sh
-bash containers/prefetch_singularity_images.sh tests/sanger-tol_genomeassembly_test/images.txt
-mkdir -p databases/busco_downloads/lineages && (cd databases/busco_downloads/lineages \
-  && curl -fLO --retry 10 --retry-all-errors https://busco-data.s3.amazonaws.com/lineages/eukaryota_odb12.2026-05-22.tar.gz \
-  && echo "08fb6d94a1699643c257653b77e05af5  eukaryota_odb12.2026-05-22.tar.gz" | md5sum -c - \
-  && tar -xzf eukaryota_odb12.2026-05-22.tar.gz && rm eukaryota_odb12.2026-05-22.tar.gz)
-bash tests/sanger-tol_genomeassembly_test/run_test.sh
-```
+- [30 ONT质控与三类数据联合组装](notes/30_ONT质控与HiFi_HiC联合组装.md)：普通/超长ONT、过滤前后和长尾覆盖、hifiasm/Verkko接口及验证边界。
+- [31 非同个体Hi-C贡献与干扰评估](notes/31_非同个体HiC贡献与干扰评估.md)：固定初装对照、逐连接支持/冲突、目标个体证据和未知范围。
 
-> 脚本里写的是本机的绝对路径（`/media/deyuan/18T_B/genome_assembly`、`/home/deyuan/miniforge3`）。换机器时，先改各脚本开头的路径变量。
+- [32 跨个体Hi-C直接进入hifiasm的风险与对照](notes/32_跨个体HiC直接参与hifiasm分型的风险与对照.md)：分型与挂载的区别、相位不匹配机制、独立证据和两分支比较。
+
+- [QS010 自动评估功能需求](notes/33_跨个体HiC自动评估功能需求_QS010.md)：用户要求后续开发；对照hifiasm两分支，分开报告收益、干扰与无法确认，尚未实现。
+
+- [34 ONT量与高覆盖的软件规则](notes/34_ONT数据量充分性与高覆盖软件说明核查.md)：5种组装器阶段阈值、长尾与区域证据、QS011；无真实ONT覆盖试验。
+- [35 EBP/Sanger Hi-C挂载与人工校正](notes/35_EBP与Sanger_HiC挂载及人工校正指南.md)：YaHS→图谱/轨道→人工审阅→AGP恢复→重新比对/QC；官方网页已读，PDF/视频及培训实操未完成；QS012待开发。
+
+- [36 去冗余工具说明与参数](notes/36_去冗余软件说明书与参数核查.md)、[37 文献与流程实际用法](notes/37_去冗余文献与公开流程实际用法.md)、[38 QS013开发验收](notes/38_去冗余流程开发与验收需求.md)：5类工具/实现，6篇方法/比较及4个用法案例；7例提取合成检查，真实purge实验0；不同资料阅读深度已逐项标注。
+
+- [39 完整性判断与缺口定位](notes/39_组装完整性判断与缺口定位.md)：区分基因/序列拷贝/染色体完整性，显式gap与隐性缺失定位、T2T证据及QS014需求；无真实样本鉴定。
+
+- [40 注释软件与论文调查](notes/40_基因组注释软件与文献调研.md)、[41 二代/三代RNA证据](notes/41_二代三代RNA注释证据处理规范.md)、[42 自动配置/整合QS015](notes/42_自动多方法注释流程开发与验收_QS015.md)：新旧BRAKER区别、Helixer/EviAnn互补、证据整合及QA；仅资料/静态核查与模板，新增安装和真实注释运行均0。
+
+- [43 现成自动注释流程核查](notes/43_现成自动注释流程核查与开发复用.md)：9种架构，RAGNAROK部分调度源码、GETA入口与其余文档/论文分层核查；新增clone/实测0。
+- [44 公开环节动物数据、核心基因与机器学习](notes/44_公开环节动物基因组核心基因与机器学习可行性.md)：AnnelidaDB及23种重注释先例、跨库状态、核心/特有/必需概念、训练标签/防泄漏与QS016；实际资产普查和训练尚未执行。
+
+
+## 2026-11-02追加记录
+
+- [45 软件说明书、issues与源码诊断库](notes/45_软件说明书Issues与源码诊断知识库.md)：6个核心项目、10个issue主题、18条诊断设计规则；固定commit和源码指纹；不是已实现诊断器。
+- [46 二代与HiFi估G比较](notes/46_二代与HiFi估计基因组大小的比较.md)：偏倚、多k/独立验证、50×保守判定和LVgs候选；无目标reads实测。
+- [47 最近两年规范论文续读](notes/47_最近两年组装规范论文续读.md)：2024-11-02至2026-11-02，4篇补查+2篇既有复用；标准/建议/项目要求分开。
+
+- [48 二代与参考辅助染色体组装](notes/48_二代数据与参考辅助染色体组装路线.md)：二代初装、参考/Hi-C/图谱挂载、共识与补洞的区别；版本、证据验收和QS018；本轮无生物运行。
+
+- [53 二代/混合原理、源码与实测](notes/53_二代与混合组装方法源码及实测.md)、[54 bioSkills短读纠错](notes/54_bioSkills短读专题复核与纠错.md)：SPAdes实际4.0.0与审查4.3.0区分；官方小例1、人工4、负例3，真实物种生产验收0。
+
+- [多agent本批汇总](tests/multi_agent_learning_2026-11-02/README.md)：新增55–58四篇专题；短读源码、Hi-C编辑回写、标准验收及RNA路由，分别保存阅读与实测边界。

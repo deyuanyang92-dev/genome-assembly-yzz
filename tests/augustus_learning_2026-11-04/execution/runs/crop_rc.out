@@ -1,0 +1,61 @@
+##gff-version 3
+# This output was generated with AUGUSTUS (version 3.5.0).
+# AUGUSTUS is a gene prediction tool written by M. Stanke (mario.stanke@uni-greifswald.de),
+# O. Keller, S. König, L. Gerischer, L. Romoth, Katharina Hoff, Henry Mehlan and Daniel Honsel.
+# Please cite: Mario Stanke, Mark Diekhans, Robert Baertsch, David Haussler (2008),
+# Using native and syntenically mapped cDNA alignments to improve de novo gene finding
+# Bioinformatics 24: 637-644, doi 10.1093/bioinformatics/btn013
+# No extrinsic information on sequences given.
+# Initializing the parameters using config directory /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/ ...
+# human version. Using default transition matrix.
+# Looks like /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/crop_rc.fa is in fasta format.
+# We have hints for 0 sequences and for 0 of the sequences in the input set.
+#
+# ----- prediction on sequence number 1 (length = 8453, name = HS04636_crop_rc) -----
+#
+# Predicted genes for sequence number 1 on both strands
+# start gene g1
+HS04636_crop_rc	AUGUSTUS	gene	2051	7988	1	-	.	ID=g1
+HS04636_crop_rc	AUGUSTUS	transcript	2051	7988	.	-	.	ID=g1.t1;Parent=g1
+HS04636_crop_rc	AUGUSTUS	stop_codon	2051	2053	.	-	0	Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	2051	2460	.	-	2	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	2947	3094	.	-	0	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	3596	3882	.	-	2	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	4165	4411	.	-	0	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	4531	4614	.	-	0	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	5347	5528	.	-	2	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	5959	6102	.	-	2	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	6756	6899	.	-	2	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	7020	7136	.	-	2	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	CDS	7937	7988	.	-	0	ID=g1.t1.cds;Parent=g1.t1
+HS04636_crop_rc	AUGUSTUS	start_codon	7986	7988	.	-	0	Parent=g1.t1
+# coding sequence = [atgctcgcccgcgccctgctgctgtgcgcggtcctggcgctcagccatacagcaaatccttgctgttcccacccatgtc
+# aaaaccgaggtgtatgtatgagtgtgggatttgaccagtataagtgcgattgtacccggacaggattctatggagaaaactgctcaacaccggaattt
+# ttgacaagaataaaattatttctgaaacccactccaaacacagtgcactacatacttacccacttcaagggattttggaacgttgtgaataacattcc
+# cttccttcgaaatgcaattatgagttatgtcttgacatccagatcacatttgattgacagtccaccaacttacaatgctgactatggctacaaaagct
+# gggaagccttctctaacctctcctattatactagagcccttcctcctgtgcctgatgattgcccgactcccttgggtgtcaaaggtaaaaagcagctt
+# cctgattcaaatgagattgtggaaaaattgcttctaagaagaaagttcatccctgatccccagggctcaaacatgatgtttgcattctttgcccagca
+# cttcacgcatcagtttttcaagacagatcataagcgagggccagctttcaccaacgggctgggccatggggtggacttaaatcatatttacggtgaaa
+# ctctggctagacagcgtaaactgcgccttttcaaggatggaaaaatgaaatatcagataattgatggagagatgtatcctcccacagtcaaagatact
+# caggcagagatgatctaccctcctcaagtccctgagcatctacggtttgctgtggggcaggaggtctttggtctggtgcctggtctgatgatgtatgc
+# cacaatctggctgcgggaacacaacagagtatgcgatgtgcttaaacaggagcatcctgaatggggtgatgagcagttgttccagacaagcaggctaa
+# tactgataggagagactattaagattgtgattgaagattatgtgcaacacttgagtggctatcacttcaaactgaaatttgacccagaactacttttc
+# aacaaacaattccagtaccaaaatcgtattgctgctgaatttaacaccctctatcactggcatccccttctgcctgacacctttcaaattcatgacca
+# gaaatacaactatcaacagtttatctacaacaactctatattgctggaacatggaattacccagtttgttgaatcattcaccaggcaaattgctggca
+# gggttgctggtggtaggaatgttccacccgcagtacagaaagtatcacaggcttccattgaccagagcaggcagatgaaataccagtcttttaatgag
+# taccgcaaacgctttatgctgaagccctatgaatcatttgaagaacttacaggagaaaaggaaatgtctgcagagttggaagcactctatggtgacat
+# cgatgctgtggagctgtatcctgcccttctggtagaaaagcctcggccagatgccatctttggtgaaaccatggtagaagttggagcaccattctcct
+# tgaaaggacttatgggtaatgttatatgttctcctgcctactggaagccaagcacttttggtggagaagtgggttttcaaatcatcaacactgcctca
+# attcagtctctcatctgcaataacgtgaagggctgtccctttacttcattcagtgttccagatccagagctcattaaaacagtcaccatcaatgcaag
+# ttcttcccgctccggactagatgatatcaatcccacagtactactaaaagaacgttcgactgaactgtag]
+# protein sequence = [MLARALLLCAVLALSHTANPCCSHPCQNRGVCMSVGFDQYKCDCTRTGFYGENCSTPEFLTRIKLFLKPTPNTVHYIL
+# THFKGFWNVVNNIPFLRNAIMSYVLTSRSHLIDSPPTYNADYGYKSWEAFSNLSYYTRALPPVPDDCPTPLGVKGKKQLPDSNEIVEKLLLRRKFIPD
+# PQGSNMMFAFFAQHFTHQFFKTDHKRGPAFTNGLGHGVDLNHIYGETLARQRKLRLFKDGKMKYQIIDGEMYPPTVKDTQAEMIYPPQVPEHLRFAVG
+# QEVFGLVPGLMMYATIWLREHNRVCDVLKQEHPEWGDEQLFQTSRLILIGETIKIVIEDYVQHLSGYHFKLKFDPELLFNKQFQYQNRIAAEFNTLYH
+# WHPLLPDTFQIHDQKYNYQQFIYNNSILLEHGITQFVESFTRQIAGRVAGGRNVPPAVQKVSQASIDQSRQMKYQSFNEYRKRFMLKPYESFEELTGE
+# KEMSAELEALYGDIDAVELYPALLVEKPRPDAIFGETMVEVGAPFSLKGLMGNVICSPAYWKPSTFGGEVGFQIINTASIQSLICNNVKGCPFTSFSV
+# PDPELIKTVTINASSSRSGLDDINPTVLLKERSTEL]
+# end gene g1
+###
+# command line:
+# /tmp/yzz-augustus-3.5.0/bin/augustus --species=human --gff3=on --UTR=off --softmasking=0 --sample=0 --codingseq=on --stopCodonExcludedFromCDS=false /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/crop_rc.fa

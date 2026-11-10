@@ -1,0 +1,69 @@
+{
+  "scope": "samtools 1.21 synthetic SAM/BAM export only; no actual HiFi, no CCS, no bam2fastq/gfatools/hifiasm execution",
+  "version": "samtools 1.21",
+  "binary": "/root/miniconda3/envs/mitoz3.6/bin/samtools",
+  "commands": [
+    {
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/samtools",
+        "--version"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/samtools",
+        "fastq",
+        "-n",
+        "-T",
+        "rq,np",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/synthetic.sam"
+      ],
+      "returncode": 0,
+      "stderr": "[M::bam2fq_mainloop] discarded 0 singletons\n[M::bam2fq_mainloop] processed 4 reads\n"
+    },
+    {
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/samtools",
+        "view",
+        "-b",
+        "-o",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/synthetic.bam",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/synthetic.sam"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/samtools",
+        "fastq",
+        "-n",
+        "-T",
+        "rq,np",
+        "-0",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/synthetic.fastq.gz",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/synthetic.bam"
+      ],
+      "returncode": 0,
+      "stderr": "[M::bam2fq_mainloop] discarded 0 singletons\n[M::bam2fq_mainloop] processed 4 reads\n"
+    }
+  ],
+  "checks": {
+    "secondary_supplementary_not_exported_twice": true,
+    "reverse_complement_restored": true,
+    "reverse_quality_restored": true,
+    "requested_tags_in_header": true,
+    "hard_clipped_bases_not_reconstructed": true,
+    "observed_missing_quality_placeholder_not_original": true,
+    "bam_to_gz_content_matches_sam_stdout": true
+  },
+  "passed": true,
+  "files": {
+    "synthetic.sam": "be661166ff3c7254528bd6d7bc025691a851ad2506ae04fba250ac4b2244f493",
+    "synthetic.bam": "12c8fb45233cf8a264188d5331320f5eb2348f84a61c17faf6cea06fe53c68d4",
+    "synthetic.fastq": "52d1f471021d0be6be14a7f06ed8f85d05caf07f642bd899b994c1e06d4b8975",
+    "synthetic.fastq.gz": "d586b4d64e7e79d3319dd7f108ab622645ad6ec0eeba00b0585b6974e52da2d8"
+  }
+}

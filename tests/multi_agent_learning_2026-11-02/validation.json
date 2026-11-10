@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checked_sha256": 72,
+  "branch_evidence_files": 49,
+  "research_agents": 3,
+  "scope": "archive integrity and recorded toy outcomes; not independent biological QC",
+  "runtime_counts": {
+    "yahs_synthetic_post_conversions": 4,
+    "minimap2_synthetic_rna_mappings": 2,
+    "independent_shell_mechanism_experiments": 1,
+    "shell_conditions": 2,
+    "acceptance_semantics_examples": 1,
+    "acceptance_semantics_cases": 16,
+    "new_biological_assemblies": 0,
+    "new_complete_workflow_runs": 0,
+    "new_upstream_clones": 0,
+    "new_production_acceptances": 0
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source": "13_\u5168\u57fa\u56e0\u7ec4\u81ea\u4e3b\u5b66\u4e60_2026-11-01/work/colora/results/fastp/hic_report_fastp.HiC.json",
+  "before": {
+    "total_reads": 4138556,
+    "total_bases": 206927800,
+    "q20_bases": 203874449,
+    "q30_bases": 198812289,
+    "q20_rate": 0.985244,
+    "q30_rate": 0.960781,
+    "read1_mean_length": 50,
+    "read2_mean_length": 50,
+    "gc_content": 0.431172
+  },
+  "after": {
+    "total_reads": 4128528,
+    "total_bases": 206266649,
+    "q20_bases": 203436684,
+    "q30_bases": 198454152,
+    "q20_rate": 0.98628,
+    "q30_rate": 0.962124,
+    "read1_mean_length": 49,
+    "read2_mean_length": 49,
+    "gc_content": 0.430781
+  },
+  "filtering": {
+    "passed_filter_reads": 4128528,
+    "low_quality_reads": 9974,
+    "too_many_N_reads": 0,
+    "adapter_dimer_reads": 0,
+    "too_short_reads": 54,
+    "too_long_reads": 0
+  },
+  "interpretation": "Hi-C sequence trimming metrics; no contact-map, proximity-ligation quality, mapping rate or structural validation implied."
+}

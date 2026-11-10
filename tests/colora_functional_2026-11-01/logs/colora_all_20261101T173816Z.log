@@ -1,0 +1,100 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: yangdeyuan
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=48000
+Job stats:
+job         count
+--------  -------
+all             1
+bandage         1
+gfastats        1
+nanoplot        1
+oatk            1
+quast           1
+total           6
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Nov  2 01:38:37 2026]
+localrule nanoplot:
+    input: results/reads/hifi/hifi.fastq.gz
+    output: results/nanoplot/NanoPlot-report.html
+    log: logs/nanoplot.log
+    jobid: 1
+    reason: Missing output files: results/nanoplot/NanoPlot-report.html
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+
+        NanoPlot -t 4 --fastq results/reads/hifi/hifi.fastq.gz --loglength -o results/nanoplot --plots dot --verbose >> logs/nanoplot.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/bed4089c7b03833ad636547f76d08913_
+[Mon Nov  2 01:41:12 2026]
+Finished job 1.
+1 of 6 steps (17%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Nov  2 01:41:12 2026]
+localrule oatk:
+    input: results/reads/hifi/hifi.fastq.gz
+    output: results/oatk/oatk.asm.mito.gfa, results/oatk/oatk.asm.mito.ctg.fasta
+    log: logs/oatk.log
+    jobid: 22
+    reason: Missing output files: results/oatk/oatk.asm.mito.ctg.fasta, results/oatk/oatk.asm.mito.gfa
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        oatk -k 1001 -c 150 -t 4 -m test_data/oatkDB/dikarya_mito.fam results/reads/hifi/hifi.fastq.gz >> logs/oatk.log 2>&1
+        mv oatk.asm* results/oatk >> logs/oatk.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/d48d6be445b3719cef18d7ae0a3f3788_
+[Mon Nov  2 01:43:47 2026]
+Finished job 22.
+2 of 6 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Nov  2 01:43:47 2026]
+localrule quast:
+    input: results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/asm_hap2.fa, results/assemblies/yahs_hap2.fa
+    output: results/quast
+    log: logs/quast.log
+    jobid: 5
+    reason: Missing output files: results/quast
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+
+        quast results/assemblies/asm_hap1.fa results/assemblies/yahs_hap1.fa results/assemblies/asm_hap2.fa results/assemblies/yahs_hap2.fa -l asm_hap1,yahs_hap1,asm_hap2,yahs_hap2 -o results/quast  -t 4  >> logs/quast.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/a5819c42fbae0aea21fcb9dcece3717b_
+RuleException:
+CalledProcessError in file /mnt/p/Travisia/13_全基因组自主学习_2026-11-01/work/colora/workflow/rules/quast.smk, line 21:
+Command 'source /root/miniconda3/bin/activate '/tmp/yzz-learning-colora-envs/a5819c42fbae0aea21fcb9dcece3717b_'; set -euo pipefail;  
+        quast results/assemblies/asm_hap1.fa results/assemblies/yahs_hap1.fa results/assemblies/asm_hap2.fa results/assemblies/yahs_hap2.fa -l asm_hap1,yahs_hap1,asm_hap2,yahs_hap2 -o results/quast  -t 4  >> logs/quast.log 2>&1' returned non-zero exit status 1.
+[Mon Nov  2 01:43:49 2026]
+Error in rule quast:
+    jobid: 5
+    input: results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/asm_hap2.fa, results/assemblies/yahs_hap2.fa
+    output: results/quast
+    log: logs/quast.log (check log file(s) for error details)
+    conda-env: /tmp/yzz-learning-colora-envs/a5819c42fbae0aea21fcb9dcece3717b_
+    shell:
+        
+        quast results/assemblies/asm_hap1.fa results/assemblies/yahs_hap1.fa results/assemblies/asm_hap2.fa results/assemblies/yahs_hap2.fa -l asm_hap1,yahs_hap1,asm_hap2,yahs_hap2 -o results/quast  -t 4  >> logs/quast.log 2>&1
+        
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-11-02T013821.707817.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

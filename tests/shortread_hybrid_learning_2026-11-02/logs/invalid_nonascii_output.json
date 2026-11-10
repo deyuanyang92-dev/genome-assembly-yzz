@@ -1,0 +1,21 @@
+{
+  "label": "invalid_nonascii_output",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--only-assembler",
+    "-1",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+    "-2",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+    "-o",
+    "/tmp/yzz-shortread-hybrid-20261102/\u4e2d\u6587\u8f93\u51fa"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+  "started_at": "2026-11-02T09:39:48.988606+00:00",
+  "expected_success": false,
+  "returncode": 255,
+  "finished_at": "2026-11-02T09:39:50.136042+00:00",
+  "log": "logs/invalid_nonascii_output.log",
+  "log_sha256": "992519ec63d4e2a38ddbb48e2abeb5642e9b03293214b547a94e94eec752ef6d"
+}

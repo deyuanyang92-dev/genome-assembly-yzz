@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "run_version": "SPAdes4.0.0 existing environment",
+  "review_version": "SPAdes4.3.0 not executed",
+  "records": [
+    {
+      "label": "version",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--version"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:33:12.532386+00:00",
+      "expected_success": true,
+      "returncode": 0,
+      "finished_at": "2026-11-02T09:33:12.644699+00:00",
+      "log": "logs/version.log",
+      "log_sha256": "8fefd3e31b50feb36258475ca1973175d1d75bf6d58abe85d9dd271d78c7032c"
+    },
+    {
+      "label": "official_test",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--test",
+        "-t",
+        "2",
+        "-m",
+        "4"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102/official",
+      "started_at": "2026-11-02T09:33:12.651279+00:00",
+      "expected_success": true,
+      "returncode": 0,
+      "finished_at": "2026-11-02T09:33:19.908652+00:00",
+      "log": "logs/official_test.log",
+      "log_sha256": "a68d131bb1aed991db05da43afe6b1c81cb92cb045f2210576e03ddfdd6537b2"
+    },
+    {
+      "label": "repeat_pe",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--only-assembler",
+        "-1",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+        "-2",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+        "-k",
+        "21,33,55",
+        "-t",
+        "2",
+        "-m",
+        "4",
+        "-o",
+        "/tmp/yzz-shortread-hybrid-20261102/repeat_pe"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:33:19.956920+00:00",
+      "expected_success": true,
+      "returncode": 0,
+      "finished_at": "2026-11-02T09:33:21.566580+00:00",
+      "log": "logs/repeat_pe.log",
+      "log_sha256": "3112b3ab1fd365f0f8b9c33ff591baf92fe08a4aea5585d412ab7434ec8112a2"
+    },
+    {
+      "label": "repeat_hybrid",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--only-assembler",
+        "-1",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+        "-2",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+        "-k",
+        "21,33,55",
+        "-t",
+        "2",
+        "-m",
+        "4",
+        "--nanopore",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/long2300.fa",
+        "-o",
+        "/tmp/yzz-shortread-hybrid-20261102/repeat_hybrid"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:33:21.573409+00:00",
+      "expected_success": true,
+      "returncode": 0,
+      "finished_at": "2026-11-02T09:33:23.425600+00:00",
+      "log": "logs/repeat_hybrid.log",
+      "log_sha256": "e6b8a03645d07c58757fd6898fd5732ab4283d3978f0675464947b08e7663119"
+    },
+    {
+      "label": "invalid_isolate_careful",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--isolate",
+        "--careful",
+        "-1",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+        "-2",
+        "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+        "-k",
+        "21,33,55",
+        "-t",
+        "2",
+        "-m",
+        "4",
+        "-o",
+        "/tmp/yzz-shortread-hybrid-20261102/invalid_flags"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:33:23.432074+00:00",
+      "expected_success": false,
+      "returncode": 255,
+      "finished_at": "2026-11-02T09:33:23.521225+00:00",
+      "log": "logs/invalid_isolate_careful.log",
+      "log_sha256": "064b188b34a08b5e432c5bec1354cdb4c8f9476ea830419328d1b5f129fdb909"
+    },
+    {
+      "label": "invalid_continue_extra",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--continue",
+        "-o",
+        "/tmp/yzz-shortread-hybrid-20261102/repeat_pe",
+        "-t",
+        "3"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:33:23.526810+00:00",
+      "expected_success": false,
+      "returncode": 255,
+      "finished_at": "2026-11-02T09:33:23.614943+00:00",
+      "log": "logs/invalid_continue_extra.log",
+      "log_sha256": "9a7891834913eb9eb24cffbbaeb2c468dc69f0439536c9ed59fb6763dbc14b33"
+    }
+  ],
+  "artifacts": {
+    "official": {
+      "contigs.fasta": {
+        "sha256": "165aab3427b9808b750aaf3793cadb3e92085548bcbee6c3d8c6c32d67031783",
+        "bytes": 1052
+      },
+      "scaffolds.fasta": {
+        "sha256": "165aab3427b9808b750aaf3793cadb3e92085548bcbee6c3d8c6c32d67031783",
+        "bytes": 1052
+      },
+      "assembly_graph_with_scaffolds.gfa": {
+        "sha256": "567b08965d8c53075be2196f0ba586bd429f418c381e6d748d2f8b96dceaac58",
+        "bytes": 1099
+      },
+      "params.txt": {
+        "sha256": "788845be44304133265baca6e1fcd3ea9397d4f4cc61a4a6c440e32ce83054c7",
+        "bytes": 1451
+      },
+      "spades.log": {
+        "sha256": "a7d146e835efccb9a1ad91cc390653604f2e83418a2e3de2ba1c1ffe85b225aa",
+        "bytes": 115393
+      },
+      "input_dataset.yaml": {
+        "sha256": "8ed4ab891bb40b1f731c53ca9ec79c3529c0d77b9ee137012f3a008e2c0a1d4c",
+        "bytes": 260
+      }
+    },
+    "repeat_pe": {
+      "contigs.fasta": {
+        "sha256": "f03d9619ea4c968c4de9f21b82820d764481beead6734cecad2ce1e4941a7212",
+        "bytes": 3377
+      },
+      "scaffolds.fasta": {
+        "sha256": "f03d9619ea4c968c4de9f21b82820d764481beead6734cecad2ce1e4941a7212",
+        "bytes": 3377
+      },
+      "assembly_graph_with_scaffolds.gfa": {
+        "sha256": "30a87ef44b47e99f518ca9dbafd313a4a447b00cfe6abe190aaa15ff70f846c8",
+        "bytes": 3522
+      },
+      "params.txt": {
+        "sha256": "717b18687069637ae06cde12940a5889467675cc2659118f4dcdaf995ab404d1",
+        "bytes": 1432
+      },
+      "spades.log": {
+        "sha256": "f943eee59d821b27f402c4e9c99c091482d1417d3c733c6487640e5c4688a42f",
+        "bytes": 103021
+      },
+      "input_dataset.yaml": {
+        "sha256": "3873a2b7512acf2d62fa8d8dce4b48ea3818d8f3c14b8ccc61195ace4e46ae48",
+        "bytes": 220
+      }
+    },
+    "repeat_hybrid": {
+      "contigs.fasta": {
+        "sha256": "f03d9619ea4c968c4de9f21b82820d764481beead6734cecad2ce1e4941a7212",
+        "bytes": 3377
+      },
+      "scaffolds.fasta": {
+        "sha256": "f03d9619ea4c968c4de9f21b82820d764481beead6734cecad2ce1e4941a7212",
+        "bytes": 3377
+      },
+      "assembly_graph_with_scaffolds.gfa": {
+        "sha256": "30a87ef44b47e99f518ca9dbafd313a4a447b00cfe6abe190aaa15ff70f846c8",
+        "bytes": 3522
+      },
+      "params.txt": {
+        "sha256": "2b90a24d79cbf5e753d68aa9bc6c1f77f17e2b55bc53e623f3cf94043e6802fb",
+        "bytes": 1770
+      },
+      "spades.log": {
+        "sha256": "33668a5060db0bd5fd006915077e1acd87c3d1dcf3b838bfade484a7c5f11068",
+        "bytes": 110544
+      },
+      "input_dataset.yaml": {
+        "sha256": "24c77a1779691b762ae004e2db2d5878d96918d792e1f9549a79da6f96d8c8e1",
+        "bytes": 341
+      }
+    }
+  },
+  "inputs": {
+    "pe_R2.fq.gz": {
+      "sha256": "4c4ee872a9f3b31a06cc53bfe7a1810bbc0c0ee963dab2fbea0269b18ac24997",
+      "bytes": 25747
+    },
+    "pe_R1.fq.gz": {
+      "sha256": "d8a899e4c1939f75ae03215a431c914145e3c5b99539f624df2abc18bc512d52",
+      "bytes": 28578
+    },
+    "long2300.fa": {
+      "sha256": "9a33087f25d8e4f7b64933c38e47cfb936e31b7b219dab671fcbc82d707e6f3f",
+      "bytes": 533460
+    }
+  },
+  "biological_toy_runs": 1,
+  "synthetic_assembler_runs": 2,
+  "negative_cli_checks": 2,
+  "production_validation": 0
+}

@@ -1,0 +1,10 @@
+[M::mm_idx_gen::0.370*0.80] collected minimizers
+[M::mm_idx_gen::0.427*0.95] sorted minimizers
+[M::main::0.427*0.95] loaded/built the index for 17 target sequence(s)
+[M::mm_mapopt_update::0.444*0.95] mid_occ = 50
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 17
+[M::mm_idx_stat::0.457*0.95] distinct minimizers: 1149976 (98.19% are singletons); average occurrences: 1.058; average spacing: 9.989; total length: 12157105
+[M::worker_pipeline::16.391*1.51] mapped 8078 sequences
+[M::main] Version: 2.31-r1302
+[M::main] CMD: /tmp/yzz-learning-minimap2/minimap2 -x map-hifi -t 2 13_全基因组自主学习_2026-11-01/databases/GCF_000146045.2_R64_genomic.fna.gz 13_全基因组自主学习_2026-11-01/work/colora/test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz
+[M::main] Real time: 16.410 sec; CPU: 24.819 sec; Peak RSS: 0.190 GB

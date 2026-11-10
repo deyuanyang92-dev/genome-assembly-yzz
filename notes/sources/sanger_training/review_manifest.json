@@ -1,0 +1,170 @@
+{
+  "review_recorded_at_utc": "2026-11-02T14:04:16.147158+00:00",
+  "repository": "https://github.com/sanger-tol/curation-resources",
+  "contemporaneous_main_api_commit": "d8763186ee0c5246520eb2643765b4705e449cc7",
+  "commit_evidence_note": "Parent agent additionally downloaded both PDFs from full fixed commit into /tmp using curl; both exit0 and SHA256 equal the saved main downloads. No claim that all repository files or README were independently pinned.",
+  "documents": [
+    {
+      "path": "notes/sources/sanger_training/PretextView-Tutorial.pdf",
+      "source_url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/PretextView-Tutorial.pdf",
+      "downloaded_by": "parent agent via curl; child agent curl proxy context failed",
+      "retrieval_date_utc": "2026-11-02",
+      "retrieval_time_note": "approximately 14:01–14:02 UTC, parent report; exact completion seconds not logged",
+      "bytes": 5035563,
+      "sha256": "c6c498b19b16fa2e954fb1e49ac486cb4df2a40bd860c4e1f7b75c1c8585da7f",
+      "pages": 20,
+      "metadata": {
+        "format": "PDF 1.4",
+        "title": "PretextView -  Tutorial",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "",
+        "producer": "Skia/PDF m102 Google Docs Renderer",
+        "creationDate": "",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "document_version": "PDF p2 explicitly says PretextView 0.2.5",
+      "text_read_scope": "all extracted pages; no claim of every figure reviewed",
+      "visually_reviewed_pdf_pages": [
+        12,
+        16,
+        18,
+        20
+      ],
+      "visual_method": "PyMuPDF render scale 1.5, PIL 2x2 contact sheet, tools.view_image; no GUI curation",
+      "pinned_commit_content_verified": true,
+      "fixed_commit_url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/d8763186ee0c5246520eb2643765b4705e449cc7/PretextView-Tutorial.pdf",
+      "fixed_commit_comparison": {
+        "method": "parent agent repeated curl download from full commit to /tmp and compared SHA256",
+        "date_utc": "2026-11-02",
+        "download_exit_code": 0,
+        "sha256_match": true,
+        "evidence_origin": "parent agent tool result reported in collaboration message; exact completion time not recorded"
+      }
+    },
+    {
+      "path": "notes/sources/sanger_training/Interpreting_HiC_Maps_guide.pdf",
+      "source_url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/Interpreting_HiC_Maps_guide.pdf",
+      "downloaded_by": "parent agent via curl; child agent curl proxy context failed",
+      "retrieval_date_utc": "2026-11-02",
+      "retrieval_time_note": "approximately 14:01–14:02 UTC, parent report; exact completion seconds not logged",
+      "bytes": 2104384,
+      "sha256": "b73b045e7587716ba510a4edb98c6d7f8aa834b0d56dbbda35702795a0840904",
+      "pages": 17,
+      "metadata": {
+        "format": "PDF 1.4",
+        "title": "Interpreting_HiC_Maps_guide",
+        "author": "",
+        "subject": "",
+        "keywords": "",
+        "creator": "Google",
+        "producer": "",
+        "creationDate": "",
+        "modDate": "",
+        "trapped": "",
+        "encryption": null
+      },
+      "document_version": "No explicit tutorial/software version or creation/modification date found in metadata/text",
+      "text_read_scope": "all extracted pages; no claim of every figure reviewed",
+      "visually_reviewed_pdf_pages": [
+        5,
+        6,
+        8,
+        9,
+        11,
+        12,
+        14,
+        15
+      ],
+      "visual_method": "PyMuPDF render scale 1.5, PIL 2x2 contact sheet, tools.view_image; no GUI curation",
+      "pinned_commit_content_verified": true,
+      "fixed_commit_url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/d8763186ee0c5246520eb2643765b4705e449cc7/Interpreting_HiC_Maps_guide.pdf",
+      "fixed_commit_comparison": {
+        "method": "parent agent repeated curl download from full commit to /tmp and compared SHA256",
+        "date_utc": "2026-11-02",
+        "download_exit_code": 0,
+        "sha256_match": true,
+        "evidence_origin": "parent agent tool result reported in collaboration message; exact completion time not recorded"
+      }
+    }
+  ],
+  "other_sources": [
+    {
+      "path": "notes/sources/sanger_training/README.upstream.md",
+      "source_url": "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/README.md",
+      "sha256": "63231be5807aa9cb6966f59ecbfd1def612542d7ad7c6a016995af6230fb98c6",
+      "scope": "full saved README read; suggested workflow, tags, pretext-to-asm options"
+    }
+  ],
+  "extraction_commands": [
+    "pdfinfo notes/sources/sanger_training/PretextView-Tutorial.pdf",
+    "pdfinfo notes/sources/sanger_training/Interpreting_HiC_Maps_guide.pdf",
+    "pdftotext -layout notes/sources/sanger_training/PretextView-Tutorial.pdf notes/sources/sanger_training/PretextView-Tutorial.txt",
+    "pdftotext -layout notes/sources/sanger_training/Interpreting_HiC_Maps_guide.pdf notes/sources/sanger_training/Interpreting_HiC_Maps_guide.txt"
+  ],
+  "extraction_observations": [
+    "pdftotext emitted two Badly formatted number warnings for Interpreting PDF; rendered selected pages successfully; warnings do not establish semantic corruption"
+  ],
+  "new_executions": {
+    "gui_curation": 0,
+    "pipeline_test_profile": 0,
+    "biological_scaffolding": 0,
+    "pretext_to_asm": 0
+  },
+  "remaining": [
+    "Other figures not all visually reviewed",
+    "Training sample interactive edit/export/rebuild not executed",
+    "Video content not viewed",
+    "TreeVal/curationpretext version/schema/test-profile runtime not performed",
+    "No biological cross-individual truth validation"
+  ],
+  "network_note": "Child default curl returned exit7 proxy-unreachable and direct retry exit6 DNS failure, while parent curl downloaded both PDFs exit0 this round; do not generalize child failures as current resource unavailability.",
+  "child_failed_attempts": "child_network_attempts.json",
+  "download_commands_parent_reported": [
+    [
+      "curl",
+      "-fL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "60",
+      "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/PretextView-Tutorial.pdf",
+      "-o",
+      "notes/sources/sanger_training/PretextView-Tutorial.pdf"
+    ],
+    [
+      "curl",
+      "-fL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "60",
+      "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/Interpreting_HiC_Maps_guide.pdf",
+      "-o",
+      "notes/sources/sanger_training/Interpreting_HiC_Maps_guide.pdf"
+    ],
+    [
+      "curl",
+      "-fL",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "30",
+      "https://api.github.com/repos/sanger-tol/curation-resources/commits/main",
+      "-o",
+      "notes/sources/sanger_training/commit_main.json"
+    ],
+    [
+      "curl",
+      "-fsSL",
+      "--max-time",
+      "25",
+      "https://raw.githubusercontent.com/sanger-tol/curation-resources/main/README.md",
+      "-o",
+      "notes/sources/sanger_training/README.upstream.md"
+    ]
+  ]
+}

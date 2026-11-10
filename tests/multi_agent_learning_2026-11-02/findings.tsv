@@ -1,0 +1,10 @@
+id	version_scope	evidence	development_requirement	note	implementation_status
+PL001	Platanus main unresolved	static source	Do not accept success solely by exit0; inspect stage manifest and expected products	55	design_not_implemented
+PL002	Platanus product-specific	paper/source	Interpret BUSCO-D and NG50 by diploid phased versus primary product	55	design_not_implemented
+HC001	YaHS1.2.2 pinned	executed synthetic	Distinguish .fai AGP-only from FASTA export	56	design_not_implemented
+HC002	YaHS1.2.2 pinned	executed synthetic	Audit source-coordinate use across all outputs and justified exclusions	56	design_not_implemented
+HC003	agp-tpf main unresolved / NCBI AGP2.1	documentation/source	Record internal U200 versus submission U100; transform coordinates explicitly	56	design_not_implemented
+QC001	EBPv7	official standard	Preserve required/encouraged, strict operators, applicability and evidence freshness	57	design_not_implemented
+QC002	HMM-Flagger1.2.0	static source unconfirmed runtime	Check declared configuration actually reaches inner WDL call	57	design_not_implemented
+AN001	RAGNAROK main unresolved	static source	Reject or explicitly redesign simultaneous pb+ont branch; do not silently discard	58	design_not_implemented
+AN002	minimap2 2.31-r1302 / StringTie live manual	executed toy + manual	Route DNA/RNA separately; preserve short-first long-second StringTie mix contract	58	design_not_implemented

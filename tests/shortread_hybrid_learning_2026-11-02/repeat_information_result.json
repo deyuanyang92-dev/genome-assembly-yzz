@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-02T09:31:52.025106+00:00",
+  "kind": "synthetic_information_limit_experiment_not_upstream_assembler_execution",
+  "seed": 20261102,
+  "reference_structures": [
+    "A-R-B-R-C-R-D",
+    "A-R-C-R-B-R-D"
+  ],
+  "unique_block_bp": 500,
+  "identical_repeat_bp": 2000,
+  "genome_bp": 8000,
+  "single_fragment_equality": {
+    "31": true,
+    "150": true,
+    "500": true
+  },
+  "pe_read_bp": 150,
+  "pe_insert_bp": 500,
+  "pe_fragment_count_per_genome": 7501,
+  "ideal_pe_mean_base_coverage": 281.2875,
+  "duplication_factor_equality": {
+    "1": true,
+    "10": true,
+    "100": true
+  },
+  "long_read_bp": 2300,
+  "unique_long_fragment_multiset_difference": 895,
+  "checks": {
+    "genomes_are_different": true,
+    "genome_lengths_equal": true,
+    "short_fragment_spectra_equal": true,
+    "pe150_insert500_multisets_equal": true,
+    "deeper_identical_sampling_remains_ambiguous": true,
+    "long2300_multisets_are_distinguishable": true
+  },
+  "passed": true,
+  "input_hashes": {
+    "G1.fa": "62a0969ddcc0598d70f8c3bdfa921c7df688199efe424bd4abdf4a650eff7f3c",
+    "G2.fa": "b9ffb266617d457ab5b64724166ad07cdeaf3005418bbb6bd1efcaf9971f0cb7"
+  },
+  "limitations": [
+    "No sequencing errors, ploidy, GC bias or random sampling",
+    "Exhaustive fragments are a controlled mathematical construction, not raw biological data",
+    "Does not prove that any particular assembler resolves the long-read case",
+    "A real repeat with informative internal differences may be resolvable without spanning it"
+  ]
+}

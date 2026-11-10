@@ -1,0 +1,21 @@
+{
+  "verified_at": "2026-11-04T21:03:15.958522+08:00",
+  "scope": "artifact/source identity and recorded official component outcomes; no new biological execution; no target-species validation",
+  "checks": {
+    "json_files_parsed": 11,
+    "python_harness_syntax": true,
+    "archives_hashes_match": true,
+    "selected_official_source_hashes_match": 29,
+    "archived_binary_hashes_match": 3,
+    "original_inputs_hashes_match": 6,
+    "previous_structure_coordinate_partition_checks": true,
+    "execution_command_count": 14,
+    "followup_command_count": 8,
+    "optimization_command_count": 3,
+    "corrected_training_and_bam_evidence_confirmed": true,
+    "bounded_optimization_baseline_retained_holdout_unchanged": true,
+    "new_markdown_local_links_resolve": true,
+    "knowledge_catalog_check_passed": true
+  },
+  "passed": true
+}

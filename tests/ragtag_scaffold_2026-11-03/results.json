@@ -1,0 +1,200 @@
+{
+  "timestamp_utc": "2026-11-03T03:31:07.179905+00:00",
+  "evidence_level": "synthetic_component_execution",
+  "seed": 20261103,
+  "versions": {
+    "ragtag_commit": "e993fb2787346345662c240967a3ec80bb2aac64",
+    "minimap2_version": "2.31-r1302",
+    "python_dependencies": "3.14.10 | packaged by conda-forge | (main, Oct 26 2026, 11:35:38) [GCC 15.3.0]\npysam 0.24.1"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/tmp/yzz-learning-colora-envs/bed4089c7b03833ad636547f76d08913_/bin/python",
+        "/tmp/yzz-ragtag-20261103/ragtag.py",
+        "scaffold",
+        "-t",
+        "1",
+        "-u",
+        "-o",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/forward",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/ref_forward.fa",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/query.fa"
+      ],
+      "exit_code": 0,
+      "log": "forward.log"
+    },
+    {
+      "argv": [
+        "/tmp/yzz-learning-colora-envs/bed4089c7b03833ad636547f76d08913_/bin/python",
+        "/tmp/yzz-ragtag-20261103/ragtag.py",
+        "scaffold",
+        "-t",
+        "1",
+        "-u",
+        "-o",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inferred_gaps",
+        "-r",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/ref_forward.fa",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/query.fa"
+      ],
+      "exit_code": 0,
+      "log": "inferred_gaps.log"
+    },
+    {
+      "argv": [
+        "/tmp/yzz-learning-colora-envs/bed4089c7b03833ad636547f76d08913_/bin/python",
+        "/tmp/yzz-ragtag-20261103/ragtag.py",
+        "scaffold",
+        "-t",
+        "1",
+        "-u",
+        "-o",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/reference_bias",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/ref_rearranged.fa",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/query.fa"
+      ],
+      "exit_code": 0,
+      "log": "reference_bias.log"
+    }
+  ],
+  "cases": {
+    "forward": {
+      "layout": {
+        "chr1_RagTag": [
+          [
+            "ctg_A",
+            "+"
+          ],
+          [
+            "ctg_B_rc",
+            "-"
+          ],
+          [
+            "ctg_C",
+            "+"
+          ]
+        ],
+        "novel_RagTag": [
+          [
+            "novel",
+            "+"
+          ]
+        ]
+      },
+      "gap_lengths": [
+        100,
+        100
+      ],
+      "non_N_bases": 80000,
+      "total_bases": 80200,
+      "independent_agp_reconstruction": true,
+      "each_component_once": true,
+      "novel_sequence_retained": true
+    },
+    "inferred_gaps": {
+      "layout": {
+        "chr1_RagTag": [
+          [
+            "ctg_A",
+            "+"
+          ],
+          [
+            "ctg_B_rc",
+            "-"
+          ],
+          [
+            "ctg_C",
+            "+"
+          ]
+        ],
+        "novel_RagTag": [
+          [
+            "novel",
+            "+"
+          ]
+        ]
+      },
+      "gap_lengths": [
+        2000,
+        3000
+      ],
+      "non_N_bases": 80000,
+      "total_bases": 85000,
+      "independent_agp_reconstruction": true,
+      "each_component_once": true,
+      "novel_sequence_retained": true
+    },
+    "reference_bias": {
+      "layout": {
+        "chr1_RagTag": [
+          [
+            "ctg_A",
+            "+"
+          ],
+          [
+            "ctg_C",
+            "-"
+          ],
+          [
+            "ctg_B_rc",
+            "-"
+          ]
+        ],
+        "novel_RagTag": [
+          [
+            "novel",
+            "+"
+          ]
+        ]
+      },
+      "gap_lengths": [
+        100,
+        100
+      ],
+      "non_N_bases": 80000,
+      "total_bases": 80200,
+      "independent_agp_reconstruction": true,
+      "each_component_once": true,
+      "novel_sequence_retained": true,
+      "matches_artificial_target_order_and_orientation": false
+    }
+  },
+  "sha256": {
+    "forward/ragtag.scaffold.agp": "a48d8e4d15961c69fa842568f0ff6c132b583547f1dbf96dbab8da32546ad57c",
+    "forward/ragtag.scaffold.asm.paf": "a822d0bce571e7fdd30fdb7e97be456d9234186325a904a6b53097c1135a3f63",
+    "forward/ragtag.scaffold.asm.paf.log": "fda0099d5aa1816e5f65ac6f98e04d69d4d55ea172cb2b535b7e4f712e993b12",
+    "forward/ragtag.scaffold.confidence.txt": "1d3550e09e2dba7589a7c57387dcef23ffa1051ff348dfa9587acd9cb090005e",
+    "forward/ragtag.scaffold.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "forward/ragtag.scaffold.fasta": "b27d2d392d9ab7e40797ec0d2f94714bc7ea2c028550083dd6c273d75275b333",
+    "forward/ragtag.scaffold.stats": "a614b3e76ffc20cb597d0c4c92d476ca7bad67bc1a6348a0f3c4cc99403167ea",
+    "forward.log": "7da73c2be1c2256df29c7e83738067dfcf96c99e8848de292023ea256ab3e05d",
+    "inferred_gaps/ragtag.scaffold.agp": "936ba441308f7bc986055d71e72f49eaa38034cb919ca74d5b8753e0c0dc6d92",
+    "inferred_gaps/ragtag.scaffold.asm.paf": "a822d0bce571e7fdd30fdb7e97be456d9234186325a904a6b53097c1135a3f63",
+    "inferred_gaps/ragtag.scaffold.asm.paf.log": "803558055c45899027f182107bee2a20b424bcc509f0b36a650a22c34468bb45",
+    "inferred_gaps/ragtag.scaffold.confidence.txt": "1d3550e09e2dba7589a7c57387dcef23ffa1051ff348dfa9587acd9cb090005e",
+    "inferred_gaps/ragtag.scaffold.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inferred_gaps/ragtag.scaffold.fasta": "6919ce12a1e1729fd0c2439790dd79e2750b1a5b347d12ddb1fe9e21dcb75fac",
+    "inferred_gaps/ragtag.scaffold.stats": "a8dd3ec633b0ac181d028f8cd0c4cb4a3b99df49f39d3aa2b51c4b703765b19d",
+    "inferred_gaps.log": "1fe5827790e96c8563691928ed2a62479a32e633596c6a4679aecfd16f44acc7",
+    "inputs/query.fa": "5b5c08c8e27ec0fc12bb8956c9466c4cfc2aafe3ebaa843dc96f9b706a1d9294",
+    "inputs/query.fa.fai": "b0ecc4b05e2c531e9f18deaa4eca77a3d7bfd4615835cedfbb0a97c9be499714",
+    "inputs/ref_forward.fa": "6a7bc448e3aa1ab402155537a73f2cfd48ff589f8bcfa22a75c5f7f91bcbd50d",
+    "inputs/ref_rearranged.fa": "ce4d61f91fcee2b0d67b63d658c9ed69eb53f6cf9a2a9f3ab853abdc17d9afb6",
+    "inputs/target_truth.fa": "c2b8024b37d2aeb679aa9a15c9d10d6f35537f12eab10b1bb898e908d48917c0",
+    "reference_bias/ragtag.scaffold.agp": "3b6e9835d241c4cc598c283733582f100fb751d55ceca82e966fba5c7edf6f71",
+    "reference_bias/ragtag.scaffold.asm.paf": "1db50df9e7b82550092d7ca7ca30d8370755a2f7e464bb0bf466a7382774ec97",
+    "reference_bias/ragtag.scaffold.asm.paf.log": "37d79306c297893892464cb7afb0bb30c39a617c353d62454d7d4a84d62a4004",
+    "reference_bias/ragtag.scaffold.confidence.txt": "0ea6cd1cc07f08090930c088381b96bbaf2f0724700a143173e8f2d7bc3d8641",
+    "reference_bias/ragtag.scaffold.err": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reference_bias/ragtag.scaffold.fasta": "231c3704168a3cf02a6f8c3b4faad67afd1072c409a9d3dae02ee217d2df5958",
+    "reference_bias/ragtag.scaffold.stats": "a614b3e76ffc20cb597d0c4c92d476ca7bad67bc1a6348a0f3c4cc99403167ea",
+    "reference_bias.log": "452ac0af145507611996d266392e9e8238d492b5a51e08f5da0f954d8d05b3b0",
+    "run_examples.py": "5e74a287b5c41ad077012b3feb78dc8067e0641d90c6e71caf7981e97e86d3b7"
+  },
+  "limitations": [
+    "No raw-read assembly, real biological sample or Hi-C data.",
+    "Only scaffold executed; correct/patch/merge not executed.",
+    "Reference gap lengths are not observed target gap lengths."
+  ]
+}

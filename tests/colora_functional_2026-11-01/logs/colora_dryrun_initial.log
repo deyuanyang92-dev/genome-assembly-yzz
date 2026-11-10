@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/cli.py", line 2083, in args_to_api
+    dag_api = workflow_api.dag(
+        dag_settings=DAGSettings(
+    ...<13 lines>...
+        ),
+    )
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/api.py", line 336, in dag
+    return DAGApi(
+        self.snakemake_api,
+        self,
+        dag_settings=dag_settings,
+    )
+
+  File "<string>", line 6, in __init__
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/api.py", line 441, in __post_init__
+    self.workflow_api._workflow.dag_settings = self.dag_settings
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/api.py", line 386, in _workflow
+    workflow = self._get_workflow()
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/api.py", line 401, in _get_workflow
+    return Workflow(
+        config_settings=self.config_settings,
+    ...<7 lines>...
+        **kwargs,
+    )
+
+  File "<string>", line 20, in __init__
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/workflow.py", line 196, in __post_init__
+    self._sourcecache = SourceCache(self.source_cache_path)
+                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/tmp/yzz-learning-snakemake-env/lib/python3.13/site-packages/snakemake/sourcecache.py", line 358, in __init__
+    os.makedirs(runtime_cache_parent, exist_ok=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "<frozen os>", line 228, in makedirs
+
+OSError: [Errno 30] Read-only file system: '/root/.cache/snakemake/snakemake/source-cache/runtime-cache'
+

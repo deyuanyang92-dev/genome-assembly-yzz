@@ -1,0 +1,14 @@
+{
+  "retrieved_utc": "2026-11-03T04:36:35.142613+00:00",
+  "doi": "10.1038/s41477-024-01755-3",
+  "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41477-024-01755-3/MediaObjects/41477_2024_1755_MOESM3_ESM.xlsx",
+  "file": "41477_2024_1755_MOESM3_ESM.xlsx",
+  "sha256": "d8ee1c377bc71eeee30fd35d60c071645eace73326c686af555b597b0e16a92f",
+  "read_scope": [
+    "Supplementary Data 1 Sheet 3 full rows",
+    "Supplementary Data 1 Sheet 14 full rows",
+    "Previously acquired Supplementary Information Table 3 and low-depth commands",
+    "Benchmark sample_rate.py and selected manuscript depth paragraphs"
+  ],
+  "limits": "No upstream scaffolder execution or new biological validation; the full HapHiC main text was not accessible; public supplement and official README were reviewed."
+}

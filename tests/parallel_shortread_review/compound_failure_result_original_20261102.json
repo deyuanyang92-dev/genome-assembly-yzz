@@ -1,0 +1,43 @@
+{
+  "checked_at": "2026-11-02T10:00:19.947341+00:00",
+  "scope": "synthetic shell mechanism demonstration; not upstream bug reproduction",
+  "cases": [
+    {
+      "case": "complete",
+      "argv": [
+        "/bin/sh",
+        "-c",
+        "cat primary.fa secondary.fa other.fa fork1.fa fork2.fa nested.fa > all.fa; cat fork1.fa fork2.fa nested.fa > hetero.fa; cat primary.fa fork1.fa other.fa > consensus.fa"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "expected_input_missing": null,
+      "all_fasta_headers": 6,
+      "output_sha256": {
+        "all.fa": "deb568b8e95d75fa708637f06da8abd36b8346c86a5282b42d5fb146c1342c4b",
+        "hetero.fa": "58ee38e2293185aafceb57010038786b609b29a5e849a15932f0402241a2d29b",
+        "consensus.fa": "313b171797228bf94811429fca23a2c3a5e62309e6c70638c3c65afb29b4f440"
+      }
+    },
+    {
+      "case": "missing_secondary",
+      "argv": [
+        "/bin/sh",
+        "-c",
+        "cat primary.fa secondary.fa other.fa fork1.fa fork2.fa nested.fa > all.fa; cat fork1.fa fork2.fa nested.fa > hetero.fa; cat primary.fa fork1.fa other.fa > consensus.fa"
+      ],
+      "returncode": 0,
+      "stderr": "cat: secondary.fa: No such file or directory\n",
+      "expected_input_missing": "secondary",
+      "all_fasta_headers": 5,
+      "output_sha256": {
+        "all.fa": "7e398802ffaf2412dd84096b8ba8f6a68b2ef463d93d764dd95b80199363a464",
+        "hetero.fa": "58ee38e2293185aafceb57010038786b609b29a5e849a15932f0402241a2d29b",
+        "consensus.fa": "313b171797228bf94811429fca23a2c3a5e62309e6c70638c3c65afb29b4f440"
+      }
+    }
+  ],
+  "passed": true,
+  "upstream_assembler_runs": 0,
+  "biological_runs": 0
+}

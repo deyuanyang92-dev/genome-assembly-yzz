@@ -1,0 +1,176 @@
+{
+  "official": {
+    "contig_lengths": [
+      1000
+    ],
+    "total_bp": 1000,
+    "truth_bp": 1000,
+    "N50": 1000,
+    "NG50": 1000,
+    "auN": 1000.0,
+    "auNG": 1000.0,
+    "exact_truth_substring_matches": [
+      [
+        {
+          "strand": "+",
+          "start_0based": 0,
+          "end_exclusive": 1000
+        }
+      ]
+    ]
+  },
+  "repeat_pe": {
+    "contig_lengths": [
+      2000,
+      610,
+      610
+    ],
+    "total_bp": 3220,
+    "truth_bp": 8000,
+    "N50": 2000,
+    "NG50": null,
+    "auN": 1473.3540372670807,
+    "auNG": 593.025,
+    "exact_truth_substring_matches": [
+      [
+        {
+          "strand": "+",
+          "start_0based": 500,
+          "end_exclusive": 2500
+        }
+      ],
+      [
+        {
+          "strand": "+",
+          "start_0based": 2445,
+          "end_exclusive": 3055
+        }
+      ],
+      [
+        {
+          "strand": "+",
+          "start_0based": 4945,
+          "end_exclusive": 5555
+        }
+      ]
+    ]
+  },
+  "repeat_hybrid": {
+    "contig_lengths": [
+      2000,
+      610,
+      610
+    ],
+    "total_bp": 3220,
+    "truth_bp": 8000,
+    "N50": 2000,
+    "NG50": null,
+    "auN": 1473.3540372670807,
+    "auNG": 593.025,
+    "exact_truth_substring_matches": [
+      [
+        {
+          "strand": "+",
+          "start_0based": 500,
+          "end_exclusive": 2500
+        }
+      ],
+      [
+        {
+          "strand": "+",
+          "start_0based": 2445,
+          "end_exclusive": 3055
+        }
+      ],
+      [
+        {
+          "strand": "+",
+          "start_0based": 4945,
+          "end_exclusive": 5555
+        }
+      ]
+    ]
+  },
+  "anchor3000_pe": {
+    "contig_lengths": [
+      3110,
+      3110,
+      3055,
+      3053,
+      2000
+    ],
+    "total_bp": 14328,
+    "truth_bp": 18000,
+    "N50": 3055,
+    "NG50": 3055,
+    "auN": 2931.186069235064,
+    "auNG": 2333.224111111111,
+    "exact_truth_substring_matches": [
+      [
+        {
+          "strand": "-",
+          "start_0based": 9945,
+          "end_exclusive": 13055
+        }
+      ],
+      [
+        {
+          "strand": "-",
+          "start_0based": 4945,
+          "end_exclusive": 8055
+        }
+      ],
+      [
+        {
+          "strand": "-",
+          "start_0based": 0,
+          "end_exclusive": 3055
+        }
+      ],
+      [
+        {
+          "strand": "+",
+          "start_0based": 14946,
+          "end_exclusive": 17999
+        }
+      ],
+      [
+        {
+          "strand": "-",
+          "start_0based": 3000,
+          "end_exclusive": 5000
+        }
+      ]
+    ]
+  },
+  "anchor3000_hybrid": {
+    "contig_lengths": [
+      17999
+    ],
+    "total_bp": 17999,
+    "truth_bp": 18000,
+    "N50": 17999,
+    "NG50": 17999,
+    "auN": 17999.0,
+    "auNG": 17998.000055555556,
+    "exact_truth_substring_matches": [
+      [
+        {
+          "strand": "-",
+          "start_0based": 0,
+          "end_exclusive": 17999
+        }
+      ]
+    ]
+  },
+  "metric_source_check": {
+    "source": "/tmp/yzz-learning-colora-envs/0eff1dd08048feedc658ebba6bc8c0c4_/lib/python3.11/site-packages/quast_libs/N50.py",
+    "sha256": "2f3f23cbff16ac9b86a32681297e78a6c07c98f9fe259b0765281b2250de521e",
+    "lengths": [
+      1000,
+      500
+    ],
+    "auN": 833.3333333333334,
+    "auNG_G2000": 625.0
+  }
+}

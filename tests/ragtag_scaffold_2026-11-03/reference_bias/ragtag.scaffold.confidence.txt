@@ -1,0 +1,4 @@
+query	grouping_confidence	location_confidence	orientation_confidence
+ctg_A	1.0	1.0	1.0
+ctg_C	1.0	1.0	1.0
+ctg_B_rc	1.0	1.0	1.0

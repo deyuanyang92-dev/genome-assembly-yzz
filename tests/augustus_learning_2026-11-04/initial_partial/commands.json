@@ -1,0 +1,186 @@
+[
+  {
+    "name": "version",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--version"
+    ],
+    "started_at": "2026-11-04T20:46:06.484540+08:00",
+    "elapsed_seconds": 0.036,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "abinitio",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/example.fa"
+    ],
+    "started_at": "2026-11-04T20:46:06.526269+08:00",
+    "elapsed_seconds": 0.284,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "eb4dc0ad5e6a72cf3db53a931a912e694c12c8592fccace76877799ffa9f6bc6"
+  },
+  {
+    "name": "hints",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "--hintsfile=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/hints.gff",
+      "--extrinsicCfgFile=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/extrinsic/extrinsic.MPE.cfg",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/example.fa"
+    ],
+    "started_at": "2026-11-04T20:46:06.815831+08:00",
+    "elapsed_seconds": 0.341,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "f88ce6eac792659ad96347256434d9eb033916bb760106d1b8f39fe8dabd957e"
+  },
+  {
+    "name": "utr",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "--UTR=on",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/example.fa"
+    ],
+    "started_at": "2026-11-04T20:46:07.161079+08:00",
+    "elapsed_seconds": 0.286,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "cbb672aa0446f95b3efaf5582034305831fb6c34dbb2e8b6db1ecdc96d333246"
+  },
+  {
+    "name": "range",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "--predictionStart=501",
+      "--predictionEnd=8953",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/HS04636.fa"
+    ],
+    "started_at": "2026-11-04T20:46:07.475917+08:00",
+    "elapsed_seconds": 0.223,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "cda708df64487f3f85980969c3b887a5ef2ab0baec75a4397c16f218429d7465"
+  },
+  {
+    "name": "crop",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/crop.fa"
+    ],
+    "started_at": "2026-11-04T20:46:07.704647+08:00",
+    "elapsed_seconds": 0.228,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "82c33ad484bf35b1f8d3886bdab36fabbcdc478d9447512f64b7ba22dc28f94b"
+  },
+  {
+    "name": "crop_rc",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/crop_rc.fa"
+    ],
+    "started_at": "2026-11-04T20:46:07.940908+08:00",
+    "elapsed_seconds": 0.225,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "bc55dffdb0f0d77800efe88b0e215a070933b888bdc86a29d9975fa69a7aaea4"
+  },
+  {
+    "name": "invalid_species",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=yzz_missing_model_20261104",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/HS04636.fa"
+    ],
+    "started_at": "2026-11-04T20:46:08.170601+08:00",
+    "elapsed_seconds": 0.021,
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "invalid_interval",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "--predictionStart=9000",
+      "--predictionEnd=100",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/HS04636.fa"
+    ],
+    "started_at": "2026-11-04T20:46:08.196231+08:00",
+    "elapsed_seconds": 0.122,
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "stdout_sha256": "2be71ccd3efb0a8471f1f2d53aea7563e515e5d0a133bf908ae4fb65154cfbb0"
+  },
+  {
+    "name": "genbank_evaluation",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--gff3=on",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "--codingseq=on",
+      "--stopCodonExcludedFromCDS=false",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/hsackI10.gb"
+    ],
+    "started_at": "2026-11-04T20:46:08.324007+08:00",
+    "elapsed_seconds": 0.233,
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "stdout_sha256": "966e4d979988fe8602384e148c575a81f6c93717cda08e3fd3e78a4e25d486c9"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "terminal_codons": {
+    "train": {
+      "TGA": 116,
+      "TAA": 143,
+      "TAG": 133
+    },
+    "test": {
+      "TAA": 35,
+      "TAG": 39,
+      "TGA": 26
+    }
+  },
+  "metrics": {
+    "trained_holdout_included": {
+      "nucleotide": {
+        "sensitivity": 0.873,
+        "specificity_label_precision": 0.626
+      },
+      "exon": {
+        "sensitivity": 0.696,
+        "specificity_label_precision": 0.477
+      },
+      "gene": {
+        "sensitivity": 0.47,
+        "specificity_label_precision": 0.301
+      }
+    },
+    "shipped_fly_holdout_included": {
+      "nucleotide": {
+        "sensitivity": 0.956,
+        "specificity_label_precision": 0.633
+      },
+      "exon": {
+        "sensitivity": 0.834,
+        "specificity_label_precision": 0.497
+      },
+      "gene": {
+        "sensitivity": 0.59,
+        "specificity_label_precision": 0.373
+      }
+    }
+  },
+  "utr_features": {
+    "gene": 2,
+    "transcript": 2,
+    "transcription_start_site": 2,
+    "five_prime_utr": 2,
+    "start_codon": 2,
+    "CDS": 15,
+    "stop_codon": 1,
+    "three_prime_utr": 1,
+    "transcription_end_site": 1
+  },
+  "bam2hints_expected_bytes_match": true,
+  "bam_input_source": "tests/short/auxprogs/bam2hints/test_files/test.s.sorted.bam",
+  "bam_sha256": "46c552a5889d595cfd2eec5680af822f1c9441a60a9cd1a64991176ba3e693a4",
+  "rna_local_hints": 1,
+  "rna_window_original_coordinates": [
+    11860001,
+    11900000
+  ],
+  "rna_genome_source": "docs/tutorial/data/chr2R.fa",
+  "rna_genome_sha256": "dcf0f58d162c93f8f629d2f55374e916015987092f0fefdd0bbeb03c3e854547",
+  "est_psl_source": "docs/tutorial/data/est.psl",
+  "est_psl_sha256": "246d532449fda5014c0cb15c2b176879394e8d77c3933f1c9a58518115130c3c",
+  "training_accepted": true,
+  "optimization_run": false,
+  "target_species_validation": false,
+  "corrections": [
+    "initial excluded-stop training retained as negative example; included-stop convention matches these inputs",
+    "initial UTR run had duplicate switches; explicit unique-switch run tested here"
+  ],
+  "limitations": [
+    "official holdout loci disjoint by name; homology and training-history independence not established",
+    "RNA BAM and local genome are bundled fly examples, not target-species data",
+    "BLAT itself not run; conversion uses provided PSL",
+    "BAM upstream RNA mapping/QC not reproduced"
+  ]
+}

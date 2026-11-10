@@ -1,0 +1,22 @@
+{
+  "scope": "local document links, JSON parsing and TSV headers only; no upstream execution or biological validation",
+  "checked_local_links": 150,
+  "broken_links": [],
+  "source_entries": 29,
+  "templates": {
+    "public_annelid_assets.tsv": {
+      "rows": 1,
+      "unique_header": true,
+      "columns": 22
+    },
+    "annotation_training_labels.tsv": {
+      "rows": 1,
+      "unique_header": true,
+      "columns": 21
+    }
+  },
+  "notes_sha256": {
+    "notes/43_现成自动注释流程核查与开发复用.md": "1926237d1fb5321c29b93feb90ea216ca8ae6b137ac7f89447c6eb4358f9ec99",
+    "notes/44_公开环节动物基因组核心基因与机器学习可行性.md": "f81321d8f6028b36adf24b787baeba3b2daba7d29a15d4701f7cbf916eb21ac6"
+  }
+}

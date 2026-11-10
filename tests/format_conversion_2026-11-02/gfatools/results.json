@@ -1,0 +1,46 @@
+{
+  "scope": "Synthetic GFA conversion only; no hifiasm or Hi-C run",
+  "commit": "39c54d5dfe4678d4cfb75b37bd27d4fb21f4de72",
+  "version": "gfa.h: 0.5-r292-dirty\ngfatools: 0.5-r296-dirty",
+  "commands": [
+    {
+      "argv": [
+        "/tmp/genome_gfatools_conversion_review/gfatools",
+        "gfa2fa",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/gfatools/segments_with_path.gfa"
+      ],
+      "returncode": 0,
+      "stdout": ">a\nAACCGG\n>b\nGGTTAA\n",
+      "stderr": "[M::main] Version: 0.5-r296-dirty\n[M::main] CMD: /tmp/genome_gfatools_conversion_review/gfatools gfa2fa /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/gfatools/segments_with_path.gfa\n[M::main] Real time: 0.003 sec; CPU: 0.001 sec\n"
+    },
+    {
+      "argv": [
+        "/tmp/genome_gfatools_conversion_review/gfatools",
+        "gfa2fa",
+        "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/gfatools/missing_sequence.gfa"
+      ],
+      "returncode": -11,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "checks": {
+    "sequence_bearing_segments_preserved": true,
+    "path_not_assembled": true
+  },
+  "missing_sequence_observation": "Inspect returncode/stdout/stderr; never infer biological sequence from success",
+  "sha256": {
+    "gfatools/missing.fa": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gfatools/missing.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gfatools/missing_sequence.gfa": "64754418fe344380afe98f80c09affb83d53c93435faeb191c53ef6381f39ecf",
+    "gfatools/segments.fa": "c0af8bb50c418d86de7a6f11cea453baa4db2bdfbcf2f225ca19d8781b13d4e0",
+    "gfatools/segments.stderr": "3887e04d168311dd8cbee14d39ab07c3c8bd2612b9a3045b34a5612224fcb8e0",
+    "gfatools/segments_with_path.gfa": "b28e5f1e9555d34c49639f284af3502bc6a6b8f3458405dc0a4810ff92a36c08"
+  },
+  "source_sha256": {
+    "main.c": "3d6ad104030dfa936de6d8bca0d59e116e1a75d51b1405e0bdc0ec84fe662722",
+    "gfa-io.c": "7142f813c2b662769059a76dcf8b7ed1d0ab2bba3aede0ca5a2b51b6a4261d23",
+    "README.md": "0b9d591ca6d313856e2f03cceae76b1c0a5c9b6287af98490430a01a66375180"
+  },
+  "binary_sha256": "d0b96a3bd25c2b264ab13dd478664f2420eac4f15ac7ce2b0e4f3440ec80bc5e"
+}

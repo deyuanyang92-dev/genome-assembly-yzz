@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-11-04T20:55:23.384298+08:00",
+  "python": "3.13.11 | packaged by Anaconda, Inc. | (main, Dec 10 2025, 21:28:48) [GCC 14.3.0]",
+  "biopython": "1.86",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "augustus": {
+    "tag": "v3.5.0",
+    "commit": "99e04771a7dc2feac4a62a60e88fd2f790c7bb3a",
+    "build_command": "mkdir -p bin; make -C src -j4 augustus etraining COMPGENEPRED=false ZIPINPUT=false",
+    "scope": "single-genome; uncompressed input; no CGP",
+    "build_initial": "Direct src target linked both executables but copy failed because bin was missing. Created bin, reissued target (up to date), copied the two linked binaries. No source edits.",
+    "binary_sha256": {
+      "augustus": "8e95c6db1b39f7d10d8fdb4bfbdeed0cd4ff177baed9ef92452a0412d0ddf6c7",
+      "etraining": "482b5a0432d7012d126863f6c93d604d9da6dbef72e883bb08ab6f7c6f6f7083",
+      "bam2hints": "2c8435738e1139ff396a4431159283f45d363ab90317c7791de4b7f8739da942"
+    }
+  },
+  "bamtools": {
+    "version": "v2.5.3",
+    "commit": "7e5c183cdf37a6ab216402b26c07296807416472",
+    "url": "https://github.com/pezmaster31/bamtools",
+    "configure": "cmake -S /tmp/yzz-augustus-bamtools-2.5.3 -B /tmp/yzz-augustus-bamtools-build -DCMAKE_INSTALL_PREFIX=/tmp/yzz-augustus-bamtools-install -DBUILD_SHARED_LIBS=OFF",
+    "build": "cmake --build /tmp/yzz-augustus-bamtools-build -j4; cmake --install /tmp/yzz-augustus-bamtools-build",
+    "bam2hints_build": "make -C auxprogs/bam2hints BAMTOOLS_INSTALL_DIR=/tmp/yzz-augustus-bamtools-install"
+  },
+  "archives": {
+    "selected_official_sources.tar.gz": "e3d54e2e538be92e01c0972f872f5db4ed9e4a316de336cabcf3dc0085772b29",
+    "runtime_binaries.tar.gz": "ec1047b653d0f034eb2929d318c5808e9f822d1b32afc651247c06034e521e41"
+  },
+  "environment_note": "Temporary Linux/WSL build; no global package install or configuration edits. Old /tmp tool locations from previous machine absent; not reused.",
+  "initial_harness_failure": "Biopython strict GenBank reader rejected AUGUSTUS simplified LOCUS formatting; fixed ID audit to use LOCUS parsing. Original inputs unchanged. Initial partial commands preserved.",
+  "followup_harness_failure": "UTR assertion used upper-case UTR while GFF3 uses five_prime_utr/three_prime_utr; corrected case-insensitive summary, no biological commands rerun.",
+  "completed_at": "2026-11-04T21:02:24.751483+08:00",
+  "bounded_optimization_result": "kept original dss_end=4; holdout gene sensitivity/precision unchanged at0.47/0.301"
+}

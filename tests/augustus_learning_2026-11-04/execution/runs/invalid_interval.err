@@ -1,0 +1,4 @@
+
+/tmp/yzz-augustus-3.5.0/bin/augustus: ERROR
+	predictionEnd (100) is smaller than predictionStart (9000). No predictions made!
+

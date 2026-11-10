@@ -1,0 +1,14 @@
+{
+  "minimap2": {
+    "source": "https://github.com/lh3/minimap2",
+    "commit": "3c28777e7e2dcc90f825de1b9f17a89cca7d4452",
+    "version": "2.31-r1302",
+    "binary_sha256": "d6e10ffaa0a1ec5592e2a85f6339efd99baf86d7d5cbfce416da420256808ebb"
+  },
+  "miniprot": {
+    "source": "https://github.com/lh3/miniprot",
+    "commit": "81f9b93481cec16622eff339fc998e4f38da344e",
+    "version": "0.18-r281",
+    "binary_sha256": "7f9a8d979c0d995a188e8a9ce85d9d816cc7c6bcb863ac70da556128f4f5df1e"
+  }
+}

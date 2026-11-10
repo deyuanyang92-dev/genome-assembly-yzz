@@ -1,0 +1,162 @@
+{
+  "recorded": "2026-11-01",
+  "repositories": [
+    {
+      "directory": "GPTomics_bioSkills",
+      "url": "https://github.com/GPTomics/bioSkills.git",
+      "commit": "d91ed3d563019e649dc854c56ccd62551359488a",
+      "classification": "agent_skill_library"
+    },
+    {
+      "directory": "LiaOb21_colora",
+      "url": "https://github.com/LiaOb21/colora.git",
+      "commit": "d6569edaff8da51739688b246dda2dfb2da13d7a",
+      "classification": "complete_workflow"
+    },
+    {
+      "directory": "Noble-Lab_hic_scaffolder_benchmarks",
+      "url": "https://github.com/Noble-Lab/hic_scaffolder_benchmarks.git",
+      "commit": "c6d09ad3cfed358d8186af5c99f99d94918b7be1",
+      "classification": "benchmark"
+    },
+    {
+      "directory": "VGP_galaxy_iwc",
+      "url": "https://github.com/galaxyproject/iwc.git",
+      "commit": "8da21209171cc44fe6f10a6a99dd0227ed1c0c2e",
+      "classification": "complete_workflow_collection"
+    },
+    {
+      "directory": "aidenlab_3d-dna",
+      "url": "https://github.com/aidenlab/3d-dna.git",
+      "commit": "cb63403c329dd45d0fdc4851746b5a8587528132",
+      "classification": "hic_subworkflow"
+    },
+    {
+      "directory": "aidenlab_juicer",
+      "url": "https://github.com/aidenlab/juicer.git",
+      "commit": "f866383d66f780d98de2c1267703b4d3473f6250",
+      "classification": "hic_subworkflow"
+    },
+    {
+      "directory": "c-zhou_yahs",
+      "url": "https://github.com/c-zhou/yahs.git",
+      "commit": "6c46061ea1665073068cccbed81c6707e3bd07bf",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "cnag_CLAWS",
+      "url": "https://github.com/cnag-aat/CLAWS.git",
+      "commit": "b7af1567c1a7f7024f299e771571eb41d476f131",
+      "classification": "complete_workflow"
+    },
+    {
+      "directory": "dfguan_purge_dups",
+      "url": "https://github.com/dfguan/purge_dups.git",
+      "commit": "f14dae13b7f41559bafd058f7278e8f5ac2813da",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "ebp-nor_GenomeAssembly",
+      "url": "https://github.com/ebp-nor/GenomeAssembly.git",
+      "commit": "d31bbeec1aeb772d4b4eb30e29138b5a610a95dc",
+      "classification": "complete_workflow"
+    },
+    {
+      "directory": "lh3_hifiasm",
+      "url": "https://github.com/chhylp123/hifiasm.git",
+      "commit": "ec9a8b222d149d25b7355e83765698640d59b189",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "marbl_merqury",
+      "url": "https://github.com/marbl/merqury.git",
+      "commit": "88f37c0f4dbb073001d194bcc5d5989a0b0527df",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "marbl_verkko",
+      "url": "https://github.com/marbl/verkko.git",
+      "commit": "39e9fb22816da30b22426ad1914034bc3a2d0cfa",
+      "classification": "assembly_core_workflow"
+    },
+    {
+      "directory": "nf-core_genomeassembler",
+      "url": "https://github.com/nf-core/genomeassembler.git",
+      "commit": "c608622876dc627020e6627a5ea8cffd0d2e3f3d",
+      "classification": "complete_workflow"
+    },
+    {
+      "directory": "sanger-tol_genomeassembly",
+      "url": "https://github.com/sanger-tol/genomeassembly.git",
+      "commit": "131f0ea272bb2fce9869d57f684f20f645467e34",
+      "classification": "complete_workflow"
+    },
+    {
+      "directory": "zengxiaofei_HapHiC",
+      "url": "https://github.com/zengxiaofei/HapHiC.git",
+      "commit": "74f1cb27d7753ce061ee673c0d62fdd44187060e",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "moniquevdor_GaleolariaReferenceGenome",
+      "url": "https://github.com/moniquevdor/GaleolariaReferenceGenome.git",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "classification": "paper_analysis_scripts"
+    },
+    {
+      "directory": "panlab-bioinfo_GPhase",
+      "url": "https://github.com/panlab-bioinfo/GPhase.git",
+      "commit": "a9221035274e7397fc05dc5be693270c2758528c",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "tbenavi1_genomescope2.0",
+      "url": "https://github.com/tbenavi1/genomescope2.0.git",
+      "commit": "8f25e3a25eaa691cdae474daf5cfe5416bfc60dc",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "KamilSJaron_smudgeplot",
+      "url": "https://github.com/KamilSJaron/smudgeplot.git",
+      "commit": "8ff8cd9885f8edcdf938e51dcfe9b9631d8cd1d0",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "thegenemyers_FASTK",
+      "url": "https://github.com/thegenemyers/FASTK.git",
+      "commit": "0e24fb45b71c4e14382ae1e1bc063bf66ea4e112",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "mbhall88_lrge",
+      "url": "https://github.com/mbhall88/lrge.git",
+      "commit": "01669fe358e3c6aec7328d5e4c238bdeb0eb2397",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "shenwei356_seqkit",
+      "url": "https://github.com/shenwei356/seqkit.git",
+      "commit": "30d7dfc25893809acce74459d5000afef027b8d0",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "refresh-bio_KMC",
+      "url": "https://github.com/refresh-bio/KMC.git",
+      "commit": "751ef36a3c1ccc6dda664f529ad218dc51d76f55",
+      "classification": "individual_tool",
+      "submodules_fetched": false
+    },
+    {
+      "directory": "wdecoster_NanoPlot",
+      "url": "https://github.com/wdecoster/NanoPlot.git",
+      "commit": "71af721be406cdcfcb1b974fe1db8e96f9e93c9e",
+      "classification": "individual_tool"
+    },
+    {
+      "directory": "wdecoster_chopper",
+      "url": "https://github.com/wdecoster/chopper.git",
+      "commit": "ed2b6941c1aee157b841528f9461fec66dd77984",
+      "classification": "individual_tool"
+    }
+  ]
+}

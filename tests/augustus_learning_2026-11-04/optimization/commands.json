@@ -1,0 +1,46 @@
+[
+  {
+    "name": "optimize",
+    "command": [
+      "perl",
+      "/tmp/yzz-augustus-3.5.0/scripts/optimize_augustus.pl",
+      "--species=yzz_fly_included",
+      "--metapars=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/optimization/one_parameter.cfg",
+      "--rounds=1",
+      "--kfold=2",
+      "--cpus=1",
+      "--pstep=2",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/genes.gb.train"
+    ],
+    "started_at": "2026-11-04T20:50:25.012309+08:00",
+    "elapsed_seconds": 385.268,
+    "exit_code": 0
+  },
+  {
+    "name": "retrain",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/etraining",
+      "--species=yzz_fly_included",
+      "--stopCodonExcludedFromCDS=false",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/genes.gb.train"
+    ],
+    "started_at": "2026-11-04T20:56:21.725609+08:00",
+    "elapsed_seconds": 9.456,
+    "exit_code": 0
+  },
+  {
+    "name": "holdout",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=yzz_fly_included",
+      "--stopCodonExcludedFromCDS=false",
+      "--UTR=off",
+      "--softmasking=0",
+      "--sample=0",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/genes.gb.test"
+    ],
+    "started_at": "2026-11-04T20:56:28.765874+08:00",
+    "elapsed_seconds": 6.948,
+    "exit_code": 0
+  }
+]

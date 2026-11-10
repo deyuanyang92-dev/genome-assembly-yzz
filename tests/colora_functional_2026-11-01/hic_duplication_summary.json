@@ -1,0 +1,27 @@
+{
+  "hap1": {
+    "LIBRARY": "sorted_hic_test_YBP2_SRR27548905_PRJNA1013711",
+    "UNPAIRED_READS_EXAMINED": "0",
+    "READ_PAIRS_EXAMINED": "107032",
+    "SECONDARY_OR_SUPPLEMENTARY_RDS": "0",
+    "UNMAPPED_READS": "0",
+    "UNPAIRED_READ_DUPLICATES": "0",
+    "READ_PAIR_DUPLICATES": "42856",
+    "READ_PAIR_OPTICAL_DUPLICATES": "0",
+    "PERCENT_DUPLICATION": "0.400404",
+    "ESTIMATED_LIBRARY_SIZE": "94894"
+  },
+  "hap2": {
+    "LIBRARY": "sorted_hic_test_YBP2_SRR27548905_PRJNA1013711",
+    "UNPAIRED_READS_EXAMINED": "0",
+    "READ_PAIRS_EXAMINED": "105942",
+    "SECONDARY_OR_SUPPLEMENTARY_RDS": "0",
+    "UNMAPPED_READS": "0",
+    "UNPAIRED_READ_DUPLICATES": "0",
+    "READ_PAIR_DUPLICATES": "42719",
+    "READ_PAIR_OPTICAL_DUPLICATES": "0",
+    "PERCENT_DUPLICATION": "0.40323",
+    "ESTIMATED_LIBRARY_SIZE": "92971"
+  },
+  "interpretation": "Picard metrics after paired mapping/MAPQ filtering; denominator is the filtered input to MarkDuplicates, not all raw Hi-C pairs. Different strains and biased assembly subset."
+}

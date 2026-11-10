@@ -1,0 +1,3 @@
+component	review_date	reviewed_identity	scope	runtime	evidence
+HMM-Flagger	2026-11-02	v1.2.0 2a4c09fa8cec9db021cf44aafc0ccc34db60beec	README/release and two selected WDL interfaces; not HMM algorithm audit	not_executed	notes/sources/parallel_standards_2026-11-02.json
+acceptance_semantics_demo	2026-11-02	4bca5dfdcd62fa98ef05fd295714410b3e2e80eded25a7c86a2feff58045c8bb	16 synthetic status/boundary/provenance cases	python3; 16 passed; biological runs0	tests/parallel_standards_review/acceptance_semantics_results.json

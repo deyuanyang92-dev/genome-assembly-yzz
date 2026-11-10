@@ -1,0 +1,96 @@
+{
+  "biological_validation": false,
+  "scope": "7 synthetic extraction cases; not purge_dups classification or full pipeline",
+  "results": [
+    {
+      "case": "internal_ends_only",
+      "options": [
+        "-e"
+      ],
+      "returncode": 0,
+      "primary_bases": 50000,
+      "moved_bases": 0,
+      "inserted_primary_ns": 0,
+      "expected_primary_bases": 50000,
+      "passed": true,
+      "stderr": "[W::get_seqs_core] ctg 20000 30000 is skipped\n"
+    },
+    {
+      "case": "internal_general",
+      "options": [],
+      "returncode": 0,
+      "primary_bases": 40023,
+      "moved_bases": 10000,
+      "inserted_primary_ns": 23,
+      "expected_primary_bases": 40023,
+      "passed": true,
+      "stderr": ""
+    },
+    {
+      "case": "terminal_ends_only",
+      "options": [
+        "-e"
+      ],
+      "returncode": 0,
+      "primary_bases": 40000,
+      "moved_bases": 10000,
+      "inserted_primary_ns": 0,
+      "expected_primary_bases": 40000,
+      "passed": true,
+      "stderr": ""
+    },
+    {
+      "case": "whole_haplotig_ends_only",
+      "options": [
+        "-e"
+      ],
+      "returncode": 0,
+      "primary_bases": 0,
+      "moved_bases": 50000,
+      "inserted_primary_ns": 0,
+      "expected_primary_bases": 0,
+      "passed": true,
+      "stderr": ""
+    },
+    {
+      "case": "whole_junk_ends_only",
+      "options": [
+        "-e"
+      ],
+      "returncode": 0,
+      "primary_bases": 0,
+      "moved_bases": 50000,
+      "inserted_primary_ns": 0,
+      "expected_primary_bases": 0,
+      "passed": true,
+      "stderr": ""
+    },
+    {
+      "case": "whole_highcov_default",
+      "options": [
+        "-e"
+      ],
+      "returncode": 0,
+      "primary_bases": 0,
+      "moved_bases": 50000,
+      "inserted_primary_ns": 0,
+      "expected_primary_bases": 0,
+      "passed": true,
+      "stderr": ""
+    },
+    {
+      "case": "whole_highcov_keep",
+      "options": [
+        "-e",
+        "-c"
+      ],
+      "returncode": 0,
+      "primary_bases": 50000,
+      "moved_bases": 0,
+      "inserted_primary_ns": 0,
+      "expected_primary_bases": 50000,
+      "passed": true,
+      "stderr": ""
+    }
+  ]
+}

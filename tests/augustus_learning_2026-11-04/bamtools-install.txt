@@ -1,0 +1,25 @@
+-- Install configuration: "Release"
+-- Installing: /tmp/yzz-augustus-bamtools-install/lib/libbamtools.a
+-- Installing: /tmp/yzz-augustus-bamtools-install/bin/bamtools
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamAlgorithms.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamAlignment.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamAux.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamConstants.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamIndex.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamMultiReader.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamReader.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/BamWriter.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/IBamIODevice.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamConstants.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamHeader.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamProgram.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamProgramChain.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamReadGroup.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamReadGroupDictionary.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamSequence.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/SamSequenceDictionary.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/api_global.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/bamtools_api_export.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/api/algorithms/Sort.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/include/bamtools/shared/bamtools_global.h
+-- Installing: /tmp/yzz-augustus-bamtools-install/lib/pkgconfig/bamtools-1.pc

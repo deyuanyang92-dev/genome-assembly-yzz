@@ -1,0 +1,74 @@
+{
+  "upstream": "https://github.com/LiaOb21/colora",
+  "revision": "d6569edaff8da51739688b246dda2dfb2da13d7a",
+  "inputs": [
+    {
+      "kind": "hifi",
+      "source_parts": [
+        {
+          "path": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684aa.fastq.gz",
+          "sha256": "7fa3bad1bfc62f1643ab0607f3acf4135160cc38115c7159f07f64385c961d36"
+        },
+        {
+          "path": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684ab.fastq.gz",
+          "sha256": "d83699d89a3394ef33282fa57443261a386ac84f5cd4b0af51797dfc26b6876f"
+        }
+      ],
+      "merged_path": "work/colora/test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz",
+      "sha256": "2c3e6bacfdd6c9ae6dd47684c2b266757e224b89fcdd9e0e6b44743b259ed060",
+      "reads": 8078,
+      "bases": 145099146,
+      "min_length": 2685,
+      "max_length": 44163
+    },
+    {
+      "kind": "ont",
+      "source_parts": [
+        {
+          "path": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_ont/ont_test_SPSC01_SRR27947616_PRJNA1075684aa.fastq.gz",
+          "sha256": "f3fa7ff4846de0cd74ea06c3438a92f71fc65a0a39430fae6a79a81553aae87d"
+        },
+        {
+          "path": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_ont/ont_test_SPSC01_SRR27947616_PRJNA1075684ab.fastq.gz",
+          "sha256": "e7840258c7d70334e5a46045fb8629f54c296f5aafcf317c4f187c4121294393"
+        },
+        {
+          "path": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_ont/ont_test_SPSC01_SRR27947616_PRJNA1075684ac.fastq.gz",
+          "sha256": "d794c659a697e94d4e7ce56a572590d5c220a2dce870453112521d578d77e194"
+        }
+      ],
+      "merged_path": "work/colora/test_data/raw_ont/ont_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz",
+      "sha256": "268f9bea6125f6b7dc32a5e8543278f8dd1c483916bc13c3b40df53237ad4cae",
+      "reads": 15534,
+      "bases": 274711323,
+      "min_length": 2000,
+      "max_length": 158836
+    },
+    {
+      "kind": "hic",
+      "source": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_1.fastq.gz",
+      "sha256": "4805c52f70bfa089aeb94f18c4222c3b051564a726ecfaefa31880c5e97adbb6",
+      "linked_read_only_by_policy": true
+    },
+    {
+      "kind": "hic",
+      "source": "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/LiaOb21_colora/test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_2.fastq.gz",
+      "sha256": "5b6adcbaea76b343a1e6eac16610b44b7e2c04b5003aa8aa03374a8bb510bd24",
+      "linked_read_only_by_policy": true
+    }
+  ],
+  "config_changes": {
+    "include_fcsgx": {
+      "upstream": true,
+      "local": false,
+      "reason": "Optional contamination screen omitted from this functional test; no production decontamination claim."
+    },
+    "busco.optional_params.--offline": {
+      "upstream": null,
+      "local": true,
+      "reason": "Use locally downloaded lineage verified against official MD5; disable unnecessary network version check. Does not change lineage selection."
+    }
+  },
+  "biological_scope": "Different yeast strains for HiFi/ONT and Hi-C. Functional test only.",
+  "created_unix": 1793523264.779505
+}

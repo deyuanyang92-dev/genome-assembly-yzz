@@ -1,0 +1,6 @@
+Could not find the config file /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/species/yzz_missing_model_20261104/yzz_missing_model_20261104_parameters.cfg.
+ Looking for yzz_missing_model_20261104_parameters.cfg in the configuration directory instead ... not found.
+
+/tmp/yzz-augustus-3.5.0/bin/augustus: ERROR
+	Species-specific configuration files not found in /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/species/. Type "augustus --species=help" to see available species.
+

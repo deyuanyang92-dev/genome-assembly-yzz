@@ -1,0 +1,16 @@
+@read_u	rq:f:0.999	np:i:8
+ACGTA
++
+IIIII
+@read_reverse
+AAGTC
++
+ABCDE
+@read_hardclip
+ACGTA
++
+FFFFF
+@read_missingqual
+ACGTA
++
+BBBBB

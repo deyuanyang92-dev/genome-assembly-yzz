@@ -1,0 +1,19 @@
+{
+  "label": "official_test",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--test",
+    "-t",
+    "2",
+    "-m",
+    "4"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102/official",
+  "started_at": "2026-11-02T09:33:12.651279+00:00",
+  "expected_success": true,
+  "returncode": 0,
+  "finished_at": "2026-11-02T09:33:19.908652+00:00",
+  "log": "logs/official_test.log",
+  "log_sha256": "a68d131bb1aed991db05da43afe6b1c81cb92cb045f2210576e03ddfdd6537b2"
+}

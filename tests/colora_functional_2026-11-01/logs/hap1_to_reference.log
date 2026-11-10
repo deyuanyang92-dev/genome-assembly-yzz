@@ -1,0 +1,10 @@
+[M::mm_idx_gen::0.468*0.81] collected minimizers
+[M::mm_idx_gen::0.534*0.93] sorted minimizers
+[M::main::0.534*0.93] loaded/built the index for 17 target sequence(s)
+[M::mm_mapopt_update::0.560*0.93] mid_occ = 50
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 17
+[M::mm_idx_stat::0.577*0.93] distinct minimizers: 1149976 (98.19% are singletons); average occurrences: 1.058; average spacing: 9.989; total length: 12157105
+[M::worker_pipeline::2.155*1.37] mapped 4 sequences
+[M::main] Version: 2.31-r1302
+[M::main] CMD: /tmp/yzz-learning-minimap2/minimap2 -x asm5 -c -t 2 13_全基因组自主学习_2026-11-01/databases/GCF_000146045.2_R64_genomic.fna.gz 13_全基因组自主学习_2026-11-01/work/colora/results/assemblies/asm_hap1.fa
+[M::main] Real time: 2.171 sec; CPU: 2.954 sec; Peak RSS: 0.695 GB

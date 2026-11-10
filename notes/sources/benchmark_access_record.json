@@ -1,0 +1,12 @@
+{
+  "recorded": "2026-11-01",
+  "article_doi": "10.1186/s13059-026-03978-3",
+  "preprint_doi": "10.1101/2022.04.20.488415",
+  "supplement_url": "https://static-content.springer.com/esm/art%3A10.1186%2Fs13059-026-03978-3/MediaObjects/13059_2026_3978_MOESM1_ESM.docx",
+  "supplement_review_scope": "Read three tables and figure captions; did not reconstruct figure data",
+  "sha256": {
+    "article.html": "48420a2a6566c613d33634b77f0679a8071ea36432a36f465828b96456ca13c0",
+    "supplement.docx": "54b1837370ba0cacf786ba11ae34b49e57727027d91d0d7e74a2035d859a593b",
+    "table2.html": "325d74db533d6232c9239076b8dca0bd345686a0e1b46df3ff5899f39d20fe87"
+  }
+}

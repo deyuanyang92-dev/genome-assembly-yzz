@@ -1,0 +1,145 @@
+{
+  "reviewed_at": "2026-11-02T10:01:34.275836+00:00",
+  "topic": "short-read/hybrid pipeline targeted source study",
+  "new_vs_prior": "Platanus main and phase orchestration/exception/output semantics; paper methods and product-aware QC",
+  "sources": [
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee",
+      "access": "read",
+      "reading_scope": "README relevant stages/input/output and parameters",
+      "identity": "README2.4.0; global latest not established"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/main.cpp",
+      "access": "read",
+      "reading_scope": "main dispatch, parse errors, exception branches and final return",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/phase.cpp",
+      "access": "read",
+      "reading_scope": "selected Phase constructor/help, exec, execSolveDBG, execGapClose and final aggregation",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/ChangeLog.md",
+      "access": "read",
+      "reading_scope": "version history and safety-related changes",
+      "identity": "highest visible2.3.2; differs from README2.4.0"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6461651/",
+      "access": "read_selected_main_text",
+      "reading_scope": "Development, selected Methods and Table1 caption; supplements not fully read",
+      "identity": "2019 paper DOI10.1038/s41467-019-09575-2, software2.0.2"
+    },
+    {
+      "url": "https://github.com/BirolLab/abyss-2.0-giab",
+      "access": "read_existing_plus_confirmed_link",
+      "reading_scope": "README companion Makefile pointer only",
+      "identity": "historical companion repo"
+    },
+    {
+      "url": "https://github.com/BirolLab/abyss-2.0-giab/blob/master/Makefile",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/sjackman/giab/blob/master/Makefile",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/BirolLab/abyss-2.0-giab/tree/master/abyss2",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rkajitani/Platanus-allee/main/main.cpp",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rkajitani/Platanus-allee/main/phase.cpp",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/rkajitani/Platanus-allee/main/consensus.cpp",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/consensus.cpp",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/assemble.cpp",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/baseCommand.cpp",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/blob/main/common.h",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://github.com/rkajitani/Platanus-allee/commits/main/",
+      "access": "cache_miss_not_read",
+      "reading_scope": "no claim of source reading or runtime identity",
+      "identity": "main; full commit unresolved"
+    },
+    {
+      "url": "https://www.nature.com/articles/s41467-019-09575-2",
+      "access": "redirect_failed",
+      "reading_scope": "main text instead read through PMC",
+      "identity": "2019 paper"
+    },
+    {
+      "url": "https://academic.oup.com/mbe/article/43/2/msag017/8425074",
+      "access": "search_excerpt_only_direct_access_failed",
+      "reading_scope": "candidate paper only; not counted as main-text learning",
+      "identity": "2026 amphioxus study; follow-up needed"
+    }
+  ],
+  "local_artifacts": [
+    {
+      "path": "notes/55_短读与混合流程深读补充.md",
+      "sha256": "7e4fd5b9f561e882a3a021bd417137feae02551b5c08803c0e44ebd1d9605177"
+    },
+    {
+      "path": "tests/parallel_shortread_review/check_compound_failure.py",
+      "sha256": "403826168e951111452b9decd9fd9a92e37b257db12bd7809d86761f7b3e1623"
+    },
+    {
+      "path": "tests/parallel_shortread_review/compound_failure_result_original_20261102.json",
+      "sha256": "ff00f51012e1004d8cfa6ef2491215d5e4eeceeef9c587d09fa07bfb64fc0b36"
+    },
+    {
+      "path": "tests/parallel_shortread_review/README.md",
+      "sha256": "323e7af7a0d0eb8c177eac1fb5ac571e573baa8cccada25632e1a71cb559b6db"
+    }
+  ],
+  "source_snapshot_warning": "Local hashes identify own notes/fixture, not remote source; remote main commit and full-file hash unresolved",
+  "new_upstream_clones": 0,
+  "new_upstream_assembler_runs": 0,
+  "new_synthetic_mechanism_experiments": 1,
+  "new_biological_runs": 0,
+  "diagnostic_status": "design suggestions only; not added to shared executable code"
+}

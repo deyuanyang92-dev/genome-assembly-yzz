@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-01",
+  "checks": [
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/README.md",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/1_RepeatMasker/runrepeatmaskerH1.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/2_RNAProcessing/1_runIsoSeqPreProcessing.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/2_RNAProcessing/2_runIsoSeqProcessingH1.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/2_RNAProcessing/2_runstar_short_read.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/1_runB1annotation.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/2_runB2annotation.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/3_runGeneMark.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/3_StructuralAnnotation/4_runTsebra.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/4_FunctionnalAnnotation/1_runInterproscan.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_source_hash",
+      "path": "pipelines/moniquevdor_GaleolariaReferenceGenome/AnnotationPipeline/4_FunctionnalAnnotation/2_runEggnog.sh",
+      "passed": true
+    },
+    {
+      "kind": "local_link",
+      "file": "41_二代三代RNA注释证据处理规范.md",
+      "target": "40_基因组注释软件与文献调研.md",
+      "passed": true
+    },
+    {
+      "kind": "local_link",
+      "file": "41_二代三代RNA注释证据处理规范.md",
+      "target": "42_自动多方法注释流程开发与验收_QS015.md",
+      "passed": true
+    },
+    {
+      "kind": "bash_syntax_only",
+      "file": "41_二代三代RNA注释证据处理规范.md",
+      "passed": true,
+      "executed": false
+    },
+    {
+      "kind": "local_link",
+      "file": "42_自动多方法注释流程开发与验收_QS015.md",
+      "target": "40_基因组注释软件与文献调研.md",
+      "passed": true
+    },
+    {
+      "kind": "local_link",
+      "file": "42_自动多方法注释流程开发与验收_QS015.md",
+      "target": "41_二代三代RNA注释证据处理规范.md",
+      "passed": true
+    },
+    {
+      "kind": "local_link",
+      "file": "42_自动多方法注释流程开发与验收_QS015.md",
+      "target": "../templates/annotation_rna_samples.tsv",
+      "passed": true
+    },
+    {
+      "kind": "local_link",
+      "file": "42_自动多方法注释流程开发与验收_QS015.md",
+      "target": "../templates/annotation_project.example.json",
+      "passed": true
+    },
+    {
+      "kind": "local_link",
+      "file": "42_自动多方法注释流程开发与验收_QS015.md",
+      "target": "../templates/annotation_model_review.tsv",
+      "passed": true
+    },
+    {
+      "kind": "header_only_template",
+      "file": "annotation_rna_samples.tsv",
+      "columns": 20,
+      "passed": true
+    },
+    {
+      "kind": "header_only_template",
+      "file": "annotation_model_review.tsv",
+      "columns": 21,
+      "passed": true
+    },
+    {
+      "kind": "design_json_parse_and_explicit_status",
+      "passed": true
+    }
+  ],
+  "all_static_checks_passed": true,
+  "tool_installations": 0,
+  "tool_help_checks": 0,
+  "native_config_dry_runs": 0,
+  "biological_annotation_runs": 0,
+  "implemented_automatic_annotator": false
+}

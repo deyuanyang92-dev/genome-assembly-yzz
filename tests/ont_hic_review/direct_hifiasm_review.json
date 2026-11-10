@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-01",
+  "kind": "source_sections_and_document_review",
+  "assembly_runs": 0,
+  "source_commit": "ec9a8b222d149d25b7355e83765698640d59b189",
+  "source_files": [
+    {
+      "path": "pipelines/lh3_hifiasm/README.md",
+      "sha256": "82bf387dbaa0ef19c32a6bca48e5c83b42324c76529fe0bee6d7d1056b05238e",
+      "scope": "selected Hi-C input/phasing/cache/misjoin sections only"
+    },
+    {
+      "path": "pipelines/lh3_hifiasm/docs/source/hic-assembly.rst",
+      "sha256": "4a723029dddfd44fcbd6ced7fec862b64d194eb5aed2e7eb71ee898d3c104d08",
+      "scope": "selected Hi-C input/phasing/cache/misjoin sections only"
+    },
+    {
+      "path": "pipelines/lh3_hifiasm/CommandLines.cpp",
+      "sha256": "0d3d5c62642fe68209ed8e69dcd58f16d31c28c95cee15d5869f057914a9881d",
+      "scope": "selected Hi-C input/phasing/cache/misjoin sections only"
+    },
+    {
+      "path": "pipelines/lh3_hifiasm/hic.cpp",
+      "sha256": "e09f95550c974572969ab5193a992dc2f6e0eb1223adad6282967d3371e5639b",
+      "scope": "selected Hi-C input/phasing/cache/misjoin sections only"
+    }
+  ],
+  "local_links_verified": 1,
+  "bash_template_blocks_syntax_checked": 1,
+  "biological_validation": "pending_no_user_reads",
+  "web_access": "Fixed GitHub doc cache miss; Nature access failed. Local fixed source used; paper not newly read."
+}

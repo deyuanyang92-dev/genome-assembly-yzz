@@ -1,0 +1,15 @@
+{
+  "input_reference_proteins": 6021,
+  "alignment_records": 1115,
+  "distinct_proteins_aligned": 935,
+  "records_query_coverage_ge90_identity_ge90": 681,
+  "distinct_proteins_query_coverage_ge90_identity_ge90": 562,
+  "CDS_segments": 1293,
+  "coordinates_and_parent_links": "passed",
+  "by_contig": {
+    "h1tg000003l": 649,
+    "h1tg000001l": 228,
+    "h1tg000002l": 238
+  },
+  "interpretation": "Reference-protein evidence projection. Multiple hits can represent alleles, paralogs, or fragmented matches; no final gene count, complete gene catalog, annotation accuracy, or true gene absence claimed."
+}

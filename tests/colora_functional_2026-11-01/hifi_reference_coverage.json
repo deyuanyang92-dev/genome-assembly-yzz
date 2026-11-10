@@ -1,0 +1,161 @@
+{
+  "mapped_query_names": 7732,
+  "retained_queries": 7683,
+  "mapq_threshold": 20,
+  "references": [
+    {
+      "reference": "NC_001133.9",
+      "length": 230218,
+      "best_queries": 3636,
+      "covered_bp": 229921,
+      "covered_fraction": 0.9987099184251449,
+      "matching_bases": 55081373,
+      "aligned_query_bp": 67472098
+    },
+    {
+      "reference": "NC_001134.8",
+      "length": 813184,
+      "best_queries": 2,
+      "covered_bp": 35798,
+      "covered_fraction": 0.044022017157248544,
+      "matching_bases": 33624,
+      "aligned_query_bp": 35798
+    },
+    {
+      "reference": "NC_001135.5",
+      "length": 316620,
+      "best_queries": 12,
+      "covered_bp": 20534,
+      "covered_fraction": 0.06485376792369402,
+      "matching_bases": 77501,
+      "aligned_query_bp": 105094
+    },
+    {
+      "reference": "NC_001136.10",
+      "length": 1531933,
+      "best_queries": 1,
+      "covered_bp": 13882,
+      "covered_fraction": 0.009061754006213065,
+      "matching_bases": 11121,
+      "aligned_query_bp": 13640
+    },
+    {
+      "reference": "NC_001137.3",
+      "length": 576874,
+      "best_queries": 0,
+      "covered_bp": 0,
+      "covered_fraction": 0.0,
+      "matching_bases": 0,
+      "aligned_query_bp": 0
+    },
+    {
+      "reference": "NC_001138.5",
+      "length": 270161,
+      "best_queries": 2,
+      "covered_bp": 28185,
+      "covered_fraction": 0.10432667927643147,
+      "matching_bases": 24538,
+      "aligned_query_bp": 28164
+    },
+    {
+      "reference": "NC_001139.9",
+      "length": 1090940,
+      "best_queries": 5,
+      "covered_bp": 75511,
+      "covered_fraction": 0.06921645553375988,
+      "matching_bases": 74022,
+      "aligned_query_bp": 98992
+    },
+    {
+      "reference": "NC_001140.6",
+      "length": 562643,
+      "best_queries": 12,
+      "covered_bp": 42774,
+      "covered_fraction": 0.0760233398442707,
+      "matching_bases": 88606,
+      "aligned_query_bp": 107564
+    },
+    {
+      "reference": "NC_001141.2",
+      "length": 439888,
+      "best_queries": 0,
+      "covered_bp": 0,
+      "covered_fraction": 0.0,
+      "matching_bases": 0,
+      "aligned_query_bp": 0
+    },
+    {
+      "reference": "NC_001142.9",
+      "length": 745751,
+      "best_queries": 3,
+      "covered_bp": 64412,
+      "covered_fraction": 0.08637199279652323,
+      "matching_bases": 54201,
+      "aligned_query_bp": 69165
+    },
+    {
+      "reference": "NC_001143.9",
+      "length": 666816,
+      "best_queries": 2342,
+      "covered_bp": 665239,
+      "covered_fraction": 0.9976350297533353,
+      "matching_bases": 39732549,
+      "aligned_query_bp": 44703852
+    },
+    {
+      "reference": "NC_001144.5",
+      "length": 1078177,
+      "best_queries": 8,
+      "covered_bp": 111385,
+      "covered_fraction": 0.10330864041803897,
+      "matching_bases": 112369,
+      "aligned_query_bp": 128914
+    },
+    {
+      "reference": "NC_001145.3",
+      "length": 924431,
+      "best_queries": 1,
+      "covered_bp": 31666,
+      "covered_fraction": 0.0342545847121094,
+      "matching_bases": 26859,
+      "aligned_query_bp": 32237
+    },
+    {
+      "reference": "NC_001146.8",
+      "length": 784333,
+      "best_queries": 1,
+      "covered_bp": 9022,
+      "covered_fraction": 0.011502767319493123,
+      "matching_bases": 7507,
+      "aligned_query_bp": 9051
+    },
+    {
+      "reference": "NC_001147.6",
+      "length": 1091291,
+      "best_queries": 3,
+      "covered_bp": 54418,
+      "covered_fraction": 0.04986570951286137,
+      "matching_bases": 62704,
+      "aligned_query_bp": 68117
+    },
+    {
+      "reference": "NC_001148.4",
+      "length": 948066,
+      "best_queries": 3,
+      "covered_bp": 64561,
+      "covered_fraction": 0.06809757970436657,
+      "matching_bases": 58321,
+      "aligned_query_bp": 66211
+    },
+    {
+      "reference": "NC_001224.1",
+      "length": 85779,
+      "best_queries": 1652,
+      "covered_bp": 85763,
+      "covered_fraction": 0.9998134741603423,
+      "matching_bases": 16547019,
+      "aligned_query_bp": 20827862
+    }
+  ],
+  "interpretation": "One best mapping per query; intervals count spans, including gaps. Cross-strain reference, not exact truth; no QV, phased accuracy, or complete-genome claim. Unmapped queries require FASTQ counts."
+}

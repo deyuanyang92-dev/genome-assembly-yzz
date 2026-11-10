@@ -1,0 +1,7 @@
+- "left reads":
+  - "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz"
+  "number": !!int "1"
+  "orientation": "fr"
+  "right reads":
+  - "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz"
+  "type": "paired-end"

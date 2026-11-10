@@ -1,0 +1,65 @@
+{
+  "schema_status": "design_only_not_executable",
+  "feature": "QS015",
+  "taxon": {
+    "scientific_name": null,
+    "taxid": null,
+    "lineage": null,
+    "ploidy": null,
+    "nuclear_genetic_code": null
+  },
+  "assembly": {
+    "path": null,
+    "sha256": null,
+    "role": null,
+    "status": "pending",
+    "upstream_hifi_min_effective_coverage": 50
+  },
+  "rna": {
+    "sample_sheet": "annotation_rna_samples.tsv",
+    "infer_metadata": true,
+    "allow_unverified_critical_inference": false,
+    "public_download_enabled": false
+  },
+  "evidence": {
+    "protein_files": [],
+    "repeat_library": null,
+    "database_manifest": null
+  },
+  "routing": {
+    "policy": "compatible_evidence_branches",
+    "candidate_backends": [
+      "braker4",
+      "helixer",
+      "eviann"
+    ],
+    "ont_as_isoseq_allowed": false,
+    "silent_fallback_allowed": false
+  },
+  "integration": {
+    "backend": null,
+    "strategy": "evidence_reviewed_primary_plus_supported_changes",
+    "count_shared_evidence_once": true,
+    "preserve_alternatives": true,
+    "weights": null
+  },
+  "versions": {
+    "require_pinned_commits": true,
+    "require_container_digests": true,
+    "require_database_checksums": true,
+    "helixer_model_sha256": null
+  },
+  "resources": {
+    "executor": null,
+    "max_cpus": null,
+    "max_memory_gb": null,
+    "gpu": null
+  },
+  "qc": {
+    "report_unassessed_dimensions": true,
+    "heldout_policy": null,
+    "require_model_provenance": true,
+    "review_conflicts": true
+  },
+  "run_status": "not_implemented"
+}

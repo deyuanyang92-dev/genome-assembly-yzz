@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-01",
+  "scope": "online selected documentation and source sections; followup correcting first-pass omissions; QS015/QS016 design",
+  "new_complete_clones": 0,
+  "new_installs": 0,
+  "native_dry_runs": 0,
+  "biological_runs": 0,
+  "trained_models": 0,
+  "independent_cross_database_species_inventory": false,
+  "upstream_commit_pinned": false,
+  "terminal_download": "proxy failed earlier; direct curl failed with connection reset; online tools used",
+  "sources": [
+    {
+      "name": "RAGNAROK README",
+      "url": "https://github.com/ryandkuster/ragnarok",
+      "read_scope": "read input/configuration/run sections; author claims"
+    },
+    {
+      "name": "RAGNAROK main.nf",
+      "url": "https://raw.githubusercontent.com/ryandkuster/ragnarok/main/main.nf",
+      "read_scope": "read imports and selected branches/calls; modules not audited"
+    },
+    {
+      "name": "RAGNAROK nextflow.config",
+      "url": "https://github.com/ryandkuster/ragnarok/blob/main/nextflow.config",
+      "read_scope": "read parameter defaults"
+    },
+    {
+      "name": "REAT",
+      "url": "https://github.com/EI-CoreBioinformatics/reat",
+      "read_scope": "repository overview; documentation subpages inaccessible"
+    },
+    {
+      "name": "Minos",
+      "url": "https://github.com/EI-CoreBioinformatics/minos",
+      "read_scope": "read README configuration/run/integration sections; native config file unavailable"
+    },
+    {
+      "name": "EASEL README",
+      "url": "https://gitlab.com/PlantGenomicsLab/easel/-/raw/main/README.md",
+      "read_scope": "read overview and input/parameter sections"
+    },
+    {
+      "name": "EASEL main.nf",
+      "url": "https://gitlab.com/PlantGenomicsLab/easel/-/raw/main/main.nf",
+      "read_scope": "help and entry; subworkflow unavailable"
+    },
+    {
+      "name": "LoReAn",
+      "url": "https://github.com/lfaino/LoReAn",
+      "read_scope": "README scope/dependencies"
+    },
+    {
+      "name": "LoReAn options",
+      "url": "https://github.com/lfaino/LoReAn/blob/master/OPTIONS.md",
+      "read_scope": "short/long RNA options"
+    },
+    {
+      "name": "LoReAn paper author archive",
+      "url": "https://iris.uniroma1.it/handle/11573/1213709",
+      "read_scope": "abstract and DOI metadata, not full text"
+    },
+    {
+      "name": "Sylvan",
+      "url": "https://github.com/plantgenomicslab/Sylvan",
+      "read_scope": "README architecture/configuration; config/Snakefile bodies unavailable"
+    },
+    {
+      "name": "GETA",
+      "url": "https://github.com/chenlianfu/geta",
+      "read_scope": "README input/workflow"
+    },
+    {
+      "name": "GETA entry source",
+      "url": "https://raw.githubusercontent.com/chenlianfu/geta/master/bin/geta.pl",
+      "read_scope": "selected CLI checks and workflow sections; not all subprograms"
+    },
+    {
+      "name": "SmedAnno",
+      "url": "https://github.com/Norreanea/SmedAnno",
+      "read_scope": "README scope and wrapper parameters; wrapper not audited"
+    },
+    {
+      "name": "nf-annotate",
+      "url": "https://github.com/nschan/nf-annotate",
+      "read_scope": "README data types, sample sheet restriction, method sequence"
+    },
+    {
+      "name": "EGAPx",
+      "url": "https://github.com/ncbi/egapx",
+      "read_scope": "README scope/taxa, input RNA, auto protein/HMM and run/output"
+    },
+    {
+      "name": "REAT Minos fungal case",
+      "url": "https://academic.oup.com/gbe/article/17/1/evaf003/7951093",
+      "read_scope": "methods search extract; full supplementary protocol not read"
+    },
+    {
+      "name": "REAT Minos tilapia case",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12062369/",
+      "read_scope": "methods search extract; not full paper"
+    },
+    {
+      "name": "DToL data",
+      "url": "https://www.darwintreeoflife.org/data/",
+      "read_scope": "official data/annotation availability overview"
+    },
+    {
+      "name": "DToL FAQ",
+      "url": "https://www.darwintreeoflife.org/faqs/",
+      "read_scope": "annotation availability sections"
+    },
+    {
+      "name": "AnnelidaDB NAR",
+      "url": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkag1087/9005756",
+      "read_scope": "publication metadata, abstract, annotation/source availability methods; no independent species census"
+    },
+    {
+      "name": "AnnelidaDB guide",
+      "url": "https://www.annelidadb.com/user-guide/",
+      "read_scope": "data/gene-set guidance selected sections"
+    },
+    {
+      "name": "AnnelidaDB About",
+      "url": "https://www.annelidadb.com/about/",
+      "read_scope": "shell only; promised source code link not resolved"
+    },
+    {
+      "name": "Annelid comparative genomics MBE",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11371463/",
+      "read_scope": "annotation/phylogeny methods and data availability sections"
+    },
+    {
+      "name": "OrthoFinder",
+      "url": "https://github.com/OrthoFinder/",
+      "read_scope": "official overview/version output changes"
+    },
+    {
+      "name": "OrthoFinder tutorial",
+      "url": "https://orthofinder.github.io/OrthoFinder/tutorials/beginner-tutorial/",
+      "read_scope": "orthogroup and ortholog distinction/output"
+    },
+    {
+      "name": "ANNEVO",
+      "url": "https://github.com/xjtu-omics/ANNEVO",
+      "read_scope": "overview/training code availability; not training implementation"
+    },
+    {
+      "name": "ANNEVO Nature Methods",
+      "url": "https://www.nature.com/articles/s41592-026-03036-7",
+      "read_scope": "search excerpt; full article redirect inaccessible"
+    },
+    {
+      "name": "Tiberius",
+      "url": "https://github.com/Gaius-Augustus/Tiberius",
+      "read_scope": "model clades/FASTA+GTF training guidance and evidence pipeline relocation"
+    }
+  ],
+  "limitations": [
+    "Some web pages are cached at different times; counts/defaults not release-fixed",
+    "No downloaded full upstream source",
+    "No architecture declared universally optimal",
+    "Source papers/databases are not independent gold-standard annotations"
+  ]
+}

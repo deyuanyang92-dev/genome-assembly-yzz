@@ -1,0 +1,56 @@
+{
+  "validated": true,
+  "python": "3.13.11",
+  "fixtures_sha256": {
+    "LYZE01.contigs.fasta.gz": "e1381d5df12e71f494aeaed68c4593a7d22d775188dfa33ebee76290a66c025d",
+    "LYZE01.contigs.fasta.gz.fai": "bdb1eb367fa92f75ca50147a8b56acc38d6b644e381c4454a00fcd7156072930",
+    "LYZE01.hic.bed.gz": "ebfe010d9f5802d9f1cdd5f8a057dc20318d25a0a9a616dc014002e2720ba14a",
+    "hic-study-chr11-2M.fa.gz": "c1ff1393a9abd2f245119e081e5c8f20d8141a0f38b70f070f0eacf470f6e0f2"
+  },
+  "hifiasm": {
+    "hifiasm.bp.hap1.p_ctg.gfa": {
+      "segments": 1,
+      "bases": 2217142
+    },
+    "hifiasm.bp.hap2.p_ctg.gfa": {
+      "segments": 1,
+      "bases": 2221193
+    },
+    "hifiasm.bp.p_ctg.gfa": {
+      "segments": 1,
+      "bases": 2217142
+    }
+  },
+  "yahs": {
+    "input_contigs": 198,
+    "input_bases": 12431314,
+    "output_scaffolds": 107,
+    "output_bases": 12441214,
+    "agp_coordinates_and_complete_component_coverage": true,
+    "agp_to_fasta_roundtrip": true,
+    "unedited_jbat_roundtrip": true
+  },
+  "benchmark": {
+    "reference": {
+      "grouping": 1.0,
+      "order": 1.0,
+      "orientation": 1.0,
+      "accuracy": 1.0,
+      "edit_distance": 0
+    },
+    "flipped": {
+      "grouping": 1.0,
+      "order": 1.0,
+      "orientation": 0.5,
+      "accuracy": 0.75,
+      "edit_distance": 1
+    }
+  },
+  "upstream_insufficient_coverage_stdout": "0.000000000000",
+  "limits": [
+    "No full paper benchmark",
+    "No Java hic generation or manual curation",
+    "No Hi-C hifiasm test",
+    "Video not acquired"
+  ]
+}

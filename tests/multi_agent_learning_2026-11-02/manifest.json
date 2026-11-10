@@ -1,0 +1,291 @@
+{
+  "timestamp": "2026-11-02T10:03:45.553600+00:00",
+  "authorization": "user explicitly requested multi-agent learning",
+  "research_agents": 3,
+  "integrating_agent": 1,
+  "branches": [
+    {
+      "owner": "shortread_deep",
+      "note": "notes/55_短读与混合流程深读补充.md",
+      "source": "notes/sources/parallel_shortread_2026-11-02.json",
+      "evidence": "tests/parallel_shortread_review/README.md"
+    },
+    {
+      "owner": "hic_deep",
+      "note": "notes/56_HiC挂载校正流程深读补充.md",
+      "source": "notes/sources/parallel_hic_2026-11-02.json",
+      "evidence": "tests/parallel_hic_review/README.md"
+    },
+    {
+      "owner": "standards_deep",
+      "note": "notes/57_质量标准与证据验收深读补充.md",
+      "source": "notes/sources/parallel_standards_2026-11-02.json",
+      "evidence": "tests/parallel_standards_review/README.md"
+    },
+    {
+      "owner": "root",
+      "note": "notes/58_自动注释输入路由与剪接比对核查.md",
+      "source": "notes/sources/parallel_annotation_2026-11-02.json",
+      "evidence": "tests/parallel_annotation_review/README.md"
+    }
+  ],
+  "runtime_counts": {
+    "yahs_synthetic_post_conversions": 4,
+    "minimap2_synthetic_rna_mappings": 2,
+    "independent_shell_mechanism_experiments": 1,
+    "shell_conditions": 2,
+    "acceptance_semantics_examples": 1,
+    "acceptance_semantics_cases": 16,
+    "new_biological_assemblies": 0,
+    "new_complete_workflow_runs": 0,
+    "new_upstream_clones": 0,
+    "new_production_acceptances": 0
+  },
+  "files": [
+    {
+      "path": "notes/55_短读与混合流程深读补充.md",
+      "sha256": "7e4fd5b9f561e882a3a021bd417137feae02551b5c08803c0e44ebd1d9605177",
+      "bytes": 5114
+    },
+    {
+      "path": "notes/56_HiC挂载校正流程深读补充.md",
+      "sha256": "55038682ec857160142e03e83d3cf8fc8f5be335d822f92bc83a6837184e60ed",
+      "bytes": 9231
+    },
+    {
+      "path": "notes/57_质量标准与证据验收深读补充.md",
+      "sha256": "3babce543af0daf6c4681745cc98009bac0b49104f185449d471d4eb42be6e9a",
+      "bytes": 8540
+    },
+    {
+      "path": "notes/58_自动注释输入路由与剪接比对核查.md",
+      "sha256": "45f62f41d9e96400ab5de5ff56f06425d18a0077a1287e4244c2e87606843753",
+      "bytes": 4107
+    },
+    {
+      "path": "notes/sources/parallel_annotation_2026-11-02.json",
+      "sha256": "32adc2e1644dfeffcbedabdbbc53274db2a45a89cc44047d928119a1f9ef51c0",
+      "bytes": 2810
+    },
+    {
+      "path": "notes/sources/parallel_hic_2026-11-02.json",
+      "sha256": "b47004ce8e2999a9150aca68a22e7e6a27cf601a08c3b97f08862610f6cd0200",
+      "bytes": 4411
+    },
+    {
+      "path": "notes/sources/parallel_shortread_2026-11-02.json",
+      "sha256": "1b09e6f0dc3aa11b71e8a0e8ac4bb63195e5678d42f6315ce2ef9e03b7939351",
+      "bytes": 6210
+    },
+    {
+      "path": "notes/sources/parallel_standards_2026-11-02.json",
+      "sha256": "56a6670c8eb3df7e34034e422fdaca0237b4abce22b4cad599ab96a2c9b21d9b",
+      "bytes": 6157
+    },
+    {
+      "path": "tests/parallel_annotation_review/README.md",
+      "sha256": "c78b30ddbc2b71020c604201f25b7059ac0d64690feed4d2886d66ccb4d8c463",
+      "bytes": 276
+    },
+    {
+      "path": "tests/parallel_annotation_review/execution.json",
+      "sha256": "72012ae1379206ec1486fef34df22aad20b6d612aa0c7c8e42672026a5a80d29",
+      "bytes": 2936
+    },
+    {
+      "path": "tests/parallel_annotation_review/genome.fa",
+      "sha256": "332f8a36796698fce262f9058259cec6ebca3f8f142a50c9c24eee77c1ad48cb",
+      "bytes": 3610
+    },
+    {
+      "path": "tests/parallel_annotation_review/genomic_hifi.sam",
+      "sha256": "b263cfbd76383b454d437ed6e6a37e8e48452760b93a3c2b0585bbd5c9a90fe6",
+      "bytes": 2088
+    },
+    {
+      "path": "tests/parallel_annotation_review/genomic_hifi.stderr",
+      "sha256": "28cc3f738c2228a83bb593d2568a97253c83bc7e0553f146edfcafbf58f7fb7c",
+      "bytes": 888
+    },
+    {
+      "path": "tests/parallel_annotation_review/rna.fa",
+      "sha256": "c82eabf0a4b555c6fed519fcab7f01f5b1a378019fa4035f335934ad6325409d",
+      "bytes": 1631
+    },
+    {
+      "path": "tests/parallel_annotation_review/splice_fixture.py",
+      "sha256": "171ea0a0ea810a2e7e52982ea70a6dba6c5afed6f3bbf1e13629b70a2ee28e85",
+      "bytes": 2066
+    },
+    {
+      "path": "tests/parallel_annotation_review/splice_hq.sam",
+      "sha256": "ed9580301cf144e2beaed5ff604d815f1a8e8c784f2a6012997ec8c83cd4e0ac",
+      "bytes": 2092
+    },
+    {
+      "path": "tests/parallel_annotation_review/splice_hq.stderr",
+      "sha256": "16e5bb36c467d6f4c3510cbdc658d92517e16deaae03999cf06178db52db6b58",
+      "bytes": 893
+    },
+    {
+      "path": "tests/parallel_hic_review/README.md",
+      "sha256": "53b54106dc979d9586d085b25c750371df37de522915ba90951f9450b2dd4e83",
+      "bytes": 1117
+    },
+    {
+      "path": "tests/parallel_hic_review/execution_manifest.json",
+      "sha256": "923cede851785556b63f2d5a2036977831b273af644f6e98e0d001eff49dee3b",
+      "bytes": 7737
+    },
+    {
+      "path": "tests/parallel_hic_review/inputs/duplicated.assembly",
+      "sha256": "269577c2e14df47d6dad3b2fe0812301e8ccb41d0671579168b235c2dd135c8c",
+      "bytes": 117
+    },
+    {
+      "path": "tests/parallel_hic_review/inputs/edited.assembly",
+      "sha256": "0479e2e1e23a4631804c1eecf7938b9e3ba3d94bccf8acd9350b699509766b99",
+      "bytes": 115
+    },
+    {
+      "path": "tests/parallel_hic_review/inputs/liftover.agp",
+      "sha256": "b3a01bf693e69b73a88ab6fc7f766069b187024ef972ef29ca979a9387333965",
+      "bytes": 96
+    },
+    {
+      "path": "tests/parallel_hic_review/inputs/omitted.assembly",
+      "sha256": "6b319d9769661098b649c0c55df34d2a766b11c4ec50d7f4ed856e870363a950",
+      "bytes": 113
+    },
+    {
+      "path": "tests/parallel_hic_review/inputs/original.fa",
+      "sha256": "5cfac2ef6b3a82e5b4a258d8b45da194958100eaa5f9838ed682d2392b6d50ab",
+      "bytes": 60
+    },
+    {
+      "path": "tests/parallel_hic_review/inputs/original.fa.fai",
+      "sha256": "d1e238a71645859455d02d7b59b8bf2b211a074c911cfe71107787c3422de04d",
+      "bytes": 41
+    },
+    {
+      "path": "tests/parallel_hic_review/logs/duplicated.log",
+      "sha256": "d74432540b20ad9b591cbaeff1ce4f9132272d4823b89be886ddeb0cd89f14d8",
+      "bytes": 713
+    },
+    {
+      "path": "tests/parallel_hic_review/logs/edited.log",
+      "sha256": "995c1f9aebaae673d8c152b42357093c2f4d4729c0b7024bf75ba1c4e4f82ec1",
+      "bytes": 705
+    },
+    {
+      "path": "tests/parallel_hic_review/logs/index_only.log",
+      "sha256": "698a0ba249bc4e001090bb1408aacb7156e0a843611a0fe1e41ff193cf600766",
+      "bytes": 565
+    },
+    {
+      "path": "tests/parallel_hic_review/logs/omitted.log",
+      "sha256": "fe7f7ea95a708b4ed740555ece33892fe43212ef89b436b03bec14c4e60b8a34",
+      "bytes": 707
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/duplicated.FINAL.agp",
+      "sha256": "34156d13d1832a2ec5f8e4d41d0481c8dccac8dd6a71e81a8b71607e2a964d9c",
+      "bytes": 328
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/duplicated.FINAL.fa",
+      "sha256": "b9215fe581be63c0350683a66bda4f436f9bfb806540c73e08e334ef9c0105e6",
+      "bytes": 387
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/edited.FINAL.agp",
+      "sha256": "686d497ea68d2cd716d167cc152499cfeea208dd99c20fcbf22d2aeb5b0cd591",
+      "bytes": 238
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/edited.FINAL.fa",
+      "sha256": "ce2ff0cc84e3c487183e26cd67fbd5da4fff95ded518dbd51b3bc02e068372bf",
+      "bytes": 277
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/index_only.FINAL.agp",
+      "sha256": "686d497ea68d2cd716d167cc152499cfeea208dd99c20fcbf22d2aeb5b0cd591",
+      "bytes": 238
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/omitted.FINAL.agp",
+      "sha256": "6d2fb9d917b12bd77fbeb4ccf8980ab6d6cb552a447030d8b7ff70890f22a241",
+      "bytes": 148
+    },
+    {
+      "path": "tests/parallel_hic_review/outputs/omitted.FINAL.fa",
+      "sha256": "79193cabc1705398d2f22e30bacb0fa566905d007bc2c55e209d79cdcd13cb28",
+      "bytes": 168
+    },
+    {
+      "path": "tests/parallel_hic_review/scripts/edited_roundtrip.py",
+      "sha256": "04a398718de241ea60ed383126a9b9f37d1b97533b469a422236ba297957fa52",
+      "bytes": 4357
+    },
+    {
+      "path": "tests/parallel_hic_review/software_learning_ledger.tsv",
+      "sha256": "8568ba5976188eb642d36953f4e821198b86082da68614ac27cde06dacc10af2",
+      "bytes": 608
+    },
+    {
+      "path": "tests/parallel_hic_review/validation.json",
+      "sha256": "1b8f3255a8c9a06296f64eb44efa905113edd6f997a02f5fcf5d0771bd01dcb8",
+      "bytes": 211
+    },
+    {
+      "path": "tests/parallel_shortread_review/README.md",
+      "sha256": "323e7af7a0d0eb8c177eac1fb5ac571e573baa8cccada25632e1a71cb559b6db",
+      "bytes": 921
+    },
+    {
+      "path": "tests/parallel_shortread_review/check_compound_failure.py",
+      "sha256": "403826168e951111452b9decd9fd9a92e37b257db12bd7809d86761f7b3e1623",
+      "bytes": 1985
+    },
+    {
+      "path": "tests/parallel_shortread_review/compound_failure_result.json",
+      "sha256": "ff00f51012e1004d8cfa6ef2491215d5e4eeceeef9c587d09fa07bfb64fc0b36",
+      "bytes": 1663
+    },
+    {
+      "path": "tests/parallel_shortread_review/compound_failure_result_original_20261102.json",
+      "sha256": "ff00f51012e1004d8cfa6ef2491215d5e4eeceeef9c587d09fa07bfb64fc0b36",
+      "bytes": 1663
+    },
+    {
+      "path": "tests/parallel_shortread_review/software_learning_ledger.tsv",
+      "sha256": "6d46c8a281eea56e3f31bde435c515a3283333a2cb0f8a9e2701b62ef1e2f4c7",
+      "bytes": 404
+    },
+    {
+      "path": "tests/parallel_standards_review/README.md",
+      "sha256": "b8fe6311cfcda6703de149f844f2dba56e3923ed39f0ae582ebc0e62dea1bd2d",
+      "bytes": 890
+    },
+    {
+      "path": "tests/parallel_standards_review/acceptance_semantics_demo.py",
+      "sha256": "4bca5dfdcd62fa98ef05fd295714410b3e2e80eded25a7c86a2feff58045c8bb",
+      "bytes": 4491
+    },
+    {
+      "path": "tests/parallel_standards_review/acceptance_semantics_results.json",
+      "sha256": "5ff4aded038c882adc77f00d230158c4bc467067d8fb5c80ea123f1cffcc2941",
+      "bytes": 3323
+    },
+    {
+      "path": "tests/parallel_standards_review/software_learning_ledger.tsv",
+      "sha256": "577ebe068af9b9217ae9e4e53fd52e4e8c8d56e852964f620cbf1a2f1c9527ab",
+      "bytes": 522
+    },
+    {
+      "path": "tests/parallel_standards_review/validation.json",
+      "sha256": "8347e35d501a9dae2f0fc7f2eea2ff474be07803f8f8aa8f1d0ed8816b4c5574",
+      "bytes": 171
+    }
+  ]
+}

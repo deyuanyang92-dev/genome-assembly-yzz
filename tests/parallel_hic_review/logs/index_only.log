@@ -1,0 +1,3 @@
+[I::main_post] Version: 1.2.2
+[I::main_post] CMD: juicer post --gap-size 100 -o /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/outputs/index_only /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/inputs/edited.assembly /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/inputs/liftover.agp /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/parallel_hic_review/inputs/original.fa.fai
+[I::main_post] Real time: 0.010 sec; CPU: 0.002 sec; Peak RSS: 0.017 GB

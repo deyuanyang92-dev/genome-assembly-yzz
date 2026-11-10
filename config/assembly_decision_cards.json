@@ -1,0 +1,241 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-03",
+  "purpose": "Human-readable reusable questions and development requirements; not executable or validated decision rules",
+  "cards": [
+    {
+      "id": "WGA001",
+      "question": "只有HiFi时如何开始",
+      "required_inputs": [
+        "物种/个体/倍性和交付目标",
+        "FASTQ身份与有效目标核碱基",
+        "基因组大小估计及其不确定性"
+      ],
+      "assessment": "先质控和k-mer/可用方法调查，评价G与拟合；分母不确定时给覆盖区间。选HiFi路线执行有效覆盖≥50×，再以固定版hifiasm试装，按产品角色评价完整度/拷贝/碱基与结构",
+      "uncertainty_policy": "小于50×标未达；G未知标覆盖待评估；不把assembly长度当可靠独立G",
+      "avoid": "不能把初装高N50当充分，也不能用ONT/二代碱基抵扣HiFi门槛",
+      "notes": [
+        "notes/49_全基因组组装任务范围与数据路由总纲.md",
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA002",
+      "question": "初装能否反推大小和测序是否足够",
+      "required_inputs": [
+        "初装角色及非N长度",
+        "k-mer模型",
+        "reads回贴覆盖/GC",
+        "单倍体/倍性假设"
+      ],
+      "assessment": "将初装长度与独立G、覆盖分布、可靠k-mer恢复和BUSCO联合；对低覆盖区与高拷贝区分别调查，必要时同配置做下采样趋势",
+      "uncertainty_policy": "塌缩/遗漏会低估G；等位未折叠/污染会高估；饱和趋势不是全基因组充分保证",
+      "avoid": "不能用D/偏小assembly长度证明数据足够",
+      "notes": [
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/46_二代与HiFi估计基因组大小的比较.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA003",
+      "question": "重复是否导致组装困难",
+      "required_inputs": [
+        "k-mer拷贝谱、图分支/断点",
+        "重复长度与相似度",
+        "read长尾/锚定",
+        "局部深度"
+      ],
+      "assessment": "将断点和重复邻域、独立跨越分子及唯一锚点交叉定位；区分重复塌缩、等位/倍性、覆盖偏倚和比对问题",
+      "uncertainty_policy": "只有repeat百分比时结论不足；应报告候选解释和缺少的证据",
+      "avoid": "不能将高重复率直接等同难组装或简单加深度即可解决",
+      "notes": [
+        "notes/27_测序数据预判组装难度与二代补充策略.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA004",
+      "question": "ONT够不够、过多是否干扰",
+      "required_inputs": [
+        "测序化学/basecaller、质量/错误模型",
+        "读长长尾、嵌合、目标核有效量",
+        "固定工具版及模式"
+      ],
+      "assessment": "先看可用跨度和困难区域覆盖，再看D/G；区分初始图和后续阶段。对高覆盖做同输入来源/固定配置分支比较与资源评价",
+      "uncertainty_policy": "没有跨物种通用ONT充分阈值；未知质量/跨度不能仅按总Gb判足够",
+      "avoid": "Flye asm-coverage不是所有阶段统一丢弃；不把混合不同read类型拼接后直接喂给互斥接口",
+      "notes": [
+        "notes/30_ONT质控与HiFi_HiC联合组装.md",
+        "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA005",
+      "question": "异个体Hi-C到底有益还是干扰",
+      "required_inputs": [
+        "目标HiFi个体与Hi-C个体/核型性别",
+        "S0基线",
+        "统一坐标下接触/连接",
+        "同个体长读支持"
+      ],
+      "assessment": "并行保留不使用Hi-C、仅挂载、参与分相等适用分支；逐连接核查新增支持与冲突；评价结构、保留序列、相位证据及资源",
+      "uncertainty_policy": "接触图改善但无独立支持的连接保留未知；别的个体Hi-C不作为目标相位真值",
+      "avoid": "不能只按染色体数或N50选分支；不能拿同一个Hi-C图既决策又当完全独立验收",
+      "notes": [
+        "notes/31_非同个体HiC贡献与干扰评估.md",
+        "notes/32_跨个体HiC直接参与hifiasm分型的风险与对照.md",
+        "notes/33_跨个体HiC自动评估功能需求_QS010.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA006",
+      "question": "去冗余后BUSCO重复下降是否更好",
+      "required_inputs": [
+        "目标表示/倍性",
+        "未purge基线",
+        "深度/自比对",
+        "保留与移出序列",
+        "BUSCO库和模式",
+        "可靠k-mer"
+      ],
+      "assessment": "定位移除区间并核查真复制/等位；对比非N长度、k-mer保留和基因/相位影响；保留全部移出序列和可追溯参数",
+      "uncertainty_policy": "只有BUSCO D下降而无其他证据时不可宣称去冗余正确",
+      "avoid": "不能两个hap合并后以D高为由默认purge；不得静默永久删除",
+      "notes": [
+        "notes/36_去冗余软件说明书与参数核查.md",
+        "notes/37_去冗余文献与公开流程实际用法.md",
+        "notes/38_去冗余流程开发与验收需求.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA007",
+      "question": "如何知道完整、正确和哪里有缺口",
+      "required_inputs": [
+        "预期G及倍性",
+        "N/gap/端粒",
+        "拷贝k-mer",
+        "碱基QV",
+        "BUSCO",
+        "结构/相位/污染证据"
+      ],
+      "assessment": "分别报告碱基准确度、序列与基因完整度、拷贝/相位、结构和染色体归属；将异常定位到区间并给证据来源",
+      "uncertainty_policy": "无N不等于无缺失；BUSCO高不证明重复区完整；内部一致不等于独立验证",
+      "avoid": "不能凭单指标或参考排序后的共线图宣布完整染色体/T2T",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/23_EBP2026规范与本项目对标要求.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/51_组装原理与证据驱动判断手册.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA008",
+      "question": "只有二代和近缘参考能否做染色体尺度",
+      "required_inputs": [
+        "二代WGS类型、有效覆盖/GC/插入跨度",
+        "物种倍性和杂合",
+        "参考距离与结构",
+        "可用Hi-C/图谱"
+      ],
+      "assessment": "先评估参考与目标/产品；选择参考引导局部组装、参考辅助再组装或初装后参考挂载，参考坐标共识单列；独立初装可作偏差对照而非排斥参考；记录排序/切断/裁切/填补与逐段来源，保留unplaced",
+      "uncertainty_policy": "可以探索参考辅助产品；未知结构/重复无法凭参考推断解决，交付名称和限制须明确",
+      "avoid": "不因没有HiFi拒绝；也不把100×二代或参考辅助等同真实染色体全部重建",
+      "notes": [
+        "notes/48_二代数据与参考辅助染色体组装路线.md",
+        "notes/49_全基因组组装任务范围与数据路由总纲.md",
+        "notes/51_组装原理与证据驱动判断手册.md",
+        "notes/59_参考辅助组装方法体系与工具选择.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA009",
+      "question": "BUSCO低或版本升级后分数变化怎么查",
+      "required_inputs": [
+        "BUSCO软件/后端",
+        "模式",
+        "lineage版本/日期/校验和",
+        "完整表和日志",
+        "输入assembly角色"
+      ],
+      "assessment": "先统一软件/数据库/模式再比较；逐marker查预测/命中与序列；结合覆盖和独立k-mer区分缺失、预测和谱系问题",
+      "uncertainty_policy": "6.0.0运行记录不能冒称6.1.0已验证；odb12.2需按兼容版本执行",
+      "avoid": "不能将缺失一律归因为组装丢失；不能静默下载新库后直接比较旧百分数",
+      "notes": [
+        "notes/21_组装基础与质量判断.md",
+        "notes/39_组装完整性判断与缺口定位.md",
+        "notes/45_软件说明书Issues与源码诊断知识库.md",
+        "notes/52_Juicer_BUSCO_Flye接口源码与排错补充.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA010",
+      "question": "只有测序输入如何自动选择注释方法",
+      "required_inputs": [
+        "核组装版本/污染",
+        "重复库",
+        "物种与基因模型",
+        "RNA类型/组织/链特异/质量",
+        "蛋白证据来源"
+      ],
+      "assessment": "按证据存在与质量路由从头、短RNA、长RNA、蛋白流程；统一GFF坐标和ID，记录权重与冲突；整合后核查完整度、剪接、TE和异构体",
+      "uncertainty_policy": "自动多证据完整注释仍需实现和实测；缺组织RNA不代表基因不存在",
+      "avoid": "不能把不同预测简单并集当高质量注释；基因数更多不是验收指标",
+      "notes": [
+        "notes/40_基因组注释软件与文献调研.md",
+        "notes/41_二代三代RNA注释证据处理规范.md",
+        "notes/42_自动多方法注释流程开发与验收_QS015.md",
+        "notes/43_现成自动注释流程核查与开发复用.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    },
+    {
+      "id": "WGA011",
+      "question": "只有HiFi时，为染色体挂载应采购多少Hi-C，何时追加或重建文库",
+      "required_inputs": [
+        "HiFi与样本身份",
+        "单套G范围、倍性与目标套数",
+        "初装版本、总跨度及contig分布",
+        "建库组织、产品与读长",
+        "同口径文献实验及有效率来源",
+        "报价与raw/clean交付口径（可选）"
+      ],
+      "assessment": "先审阅建库方案和初装适用性：可按特定方案有来源的规则给首批订单，或按可比实验有效联系目标及同口径保留率反推Gb/pairs；两种依据分开记录。实际QC更新复杂度及追加、重建、修正初装或停止理由",
+      "uncertainty_policy": "方案首批规划不等于结构充分性；缺少两类适用依据时只给待校准情景。有效率假设不当作预测，稳定性不当作正确性；QS019尚未实现",
+      "avoid": "不能套用50–100×通用剂量；不混用raw/clean、reads/pairs、单套G/输入跨度S；不能仅凭高挂载率或10%有效率决定满足或失败",
+      "notes": [
+        "notes/62_HiC测序采购与挂载充分性规划_QS019.md",
+        "notes/sources/hic_depth_production_review_2026-11-03.md"
+      ],
+      "status": "documented_decision_aid_not_implemented",
+      "automated_action": false
+    }
+  ]
+}

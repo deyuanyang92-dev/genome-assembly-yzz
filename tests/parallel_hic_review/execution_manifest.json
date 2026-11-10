@@ -1,0 +1,183 @@
+{
+  "kind": "artificial_conversion_fixture_not_hic_biological_validation",
+  "software": "YaHS juicer 1.2.2",
+  "source_commit": "6c46061ea1665073068cccbed81c6707e3bd07bf",
+  "binary_sha256": "bde55afc7670d4b61935b915d7c4a71867f466d697bd58e9b5dfa2f84fc54755",
+  "records": [
+    {
+      "label": "edited",
+      "argv": [
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/c-zhou_yahs/juicer",
+        "post",
+        "--gap-size",
+        "100",
+        "-o",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/outputs/edited",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/edited.assembly",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/liftover.agp",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/original.fa"
+      ],
+      "started_at": "2026-11-02T10:00:14.728246+00:00",
+      "finished_at": "2026-11-02T10:00:14.751664+00:00",
+      "returncode": 0,
+      "log": "logs/edited.log",
+      "log_sha256": "995c1f9aebaae673d8c152b42357093c2f4d4729c0b7024bf75ba1c4e4f82ec1"
+    },
+    {
+      "label": "index_only",
+      "argv": [
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/c-zhou_yahs/juicer",
+        "post",
+        "--gap-size",
+        "100",
+        "-o",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/outputs/index_only",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/edited.assembly",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/liftover.agp",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/original.fa.fai"
+      ],
+      "started_at": "2026-11-02T10:00:14.755275+00:00",
+      "finished_at": "2026-11-02T10:00:14.772111+00:00",
+      "returncode": 0,
+      "log": "logs/index_only.log",
+      "log_sha256": "698a0ba249bc4e001090bb1408aacb7156e0a843611a0fe1e41ff193cf600766"
+    },
+    {
+      "label": "duplicated",
+      "argv": [
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/c-zhou_yahs/juicer",
+        "post",
+        "--gap-size",
+        "100",
+        "-o",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/outputs/duplicated",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/duplicated.assembly",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/liftover.agp",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/original.fa"
+      ],
+      "started_at": "2026-11-02T10:00:14.775121+00:00",
+      "finished_at": "2026-11-02T10:00:14.797415+00:00",
+      "returncode": 0,
+      "log": "logs/duplicated.log",
+      "log_sha256": "d74432540b20ad9b591cbaeff1ce4f9132272d4823b89be886ddeb0cd89f14d8"
+    },
+    {
+      "label": "omitted",
+      "argv": [
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/pipelines/c-zhou_yahs/juicer",
+        "post",
+        "--gap-size",
+        "100",
+        "-o",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/outputs/omitted",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/omitted.assembly",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/liftover.agp",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_hic_review/inputs/original.fa"
+      ],
+      "started_at": "2026-11-02T10:00:14.800755+00:00",
+      "finished_at": "2026-11-02T10:00:14.825636+00:00",
+      "returncode": 0,
+      "log": "logs/omitted.log",
+      "log_sha256": "fe7f7ea95a708b4ed740555ece33892fe43212ef89b436b03bec14c4e60b8a34"
+    }
+  ],
+  "expected_lengths": {
+    "scaffold_1": 236,
+    "scaffold_2": 12
+  },
+  "source_sequence_bp": 48,
+  "exact_sequence_assertion": true,
+  "index_only_produces_fasta": false,
+  "interval_accounting": {
+    "edited": {
+      "missing_source_bp": 0,
+      "overused_source_bp": 0,
+      "extra_source_copies_bp": 0
+    },
+    "duplicated": {
+      "missing_source_bp": 0,
+      "overused_source_bp": 8,
+      "extra_source_copies_bp": 8
+    },
+    "omitted": {
+      "missing_source_bp": 8,
+      "overused_source_bp": 0,
+      "extra_source_copies_bp": 0
+    }
+  },
+  "artifacts": {
+    "inputs/duplicated.assembly": {
+      "sha256": "269577c2e14df47d6dad3b2fe0812301e8ccb41d0671579168b235c2dd135c8c",
+      "bytes": 117
+    },
+    "inputs/edited.assembly": {
+      "sha256": "0479e2e1e23a4631804c1eecf7938b9e3ba3d94bccf8acd9350b699509766b99",
+      "bytes": 115
+    },
+    "inputs/liftover.agp": {
+      "sha256": "b3a01bf693e69b73a88ab6fc7f766069b187024ef972ef29ca979a9387333965",
+      "bytes": 96
+    },
+    "inputs/omitted.assembly": {
+      "sha256": "6b319d9769661098b649c0c55df34d2a766b11c4ec50d7f4ed856e870363a950",
+      "bytes": 113
+    },
+    "inputs/original.fa": {
+      "sha256": "5cfac2ef6b3a82e5b4a258d8b45da194958100eaa5f9838ed682d2392b6d50ab",
+      "bytes": 60
+    },
+    "inputs/original.fa.fai": {
+      "sha256": "d1e238a71645859455d02d7b59b8bf2b211a074c911cfe71107787c3422de04d",
+      "bytes": 41
+    },
+    "outputs/duplicated.FINAL.agp": {
+      "sha256": "34156d13d1832a2ec5f8e4d41d0481c8dccac8dd6a71e81a8b71607e2a964d9c",
+      "bytes": 328
+    },
+    "outputs/duplicated.FINAL.fa": {
+      "sha256": "b9215fe581be63c0350683a66bda4f436f9bfb806540c73e08e334ef9c0105e6",
+      "bytes": 387
+    },
+    "outputs/edited.FINAL.agp": {
+      "sha256": "686d497ea68d2cd716d167cc152499cfeea208dd99c20fcbf22d2aeb5b0cd591",
+      "bytes": 238
+    },
+    "outputs/edited.FINAL.fa": {
+      "sha256": "ce2ff0cc84e3c487183e26cd67fbd5da4fff95ded518dbd51b3bc02e068372bf",
+      "bytes": 277
+    },
+    "outputs/index_only.FINAL.agp": {
+      "sha256": "686d497ea68d2cd716d167cc152499cfeea208dd99c20fcbf22d2aeb5b0cd591",
+      "bytes": 238
+    },
+    "outputs/omitted.FINAL.agp": {
+      "sha256": "6d2fb9d917b12bd77fbeb4ccf8980ab6d6cb552a447030d8b7ff70890f22a241",
+      "bytes": 148
+    },
+    "outputs/omitted.FINAL.fa": {
+      "sha256": "79193cabc1705398d2f22e30bacb0fa566905d007bc2c55e209d79cdcd13cb28",
+      "bytes": 168
+    },
+    "logs/duplicated.log": {
+      "sha256": "d74432540b20ad9b591cbaeff1ce4f9132272d4823b89be886ddeb0cd89f14d8",
+      "bytes": 713
+    },
+    "logs/edited.log": {
+      "sha256": "995c1f9aebaae673d8c152b42357093c2f4d4729c0b7024bf75ba1c4e4f82ec1",
+      "bytes": 705
+    },
+    "logs/index_only.log": {
+      "sha256": "698a0ba249bc4e001090bb1408aacb7156e0a843611a0fe1e41ff193cf600766",
+      "bytes": 565
+    },
+    "logs/omitted.log": {
+      "sha256": "fe7f7ea95a708b4ed740555ece33892fe43212ef89b436b03bec14c4e60b8a34",
+      "bytes": 707
+    }
+  },
+  "limitations": [
+    "No .hic, Pretext or Juicebox GUI was used",
+    "No Hi-C alignment or biological scaffolding run",
+    "Duplicated/omitted fragments are accepted converter inputs, not established upstream bugs"
+  ]
+}

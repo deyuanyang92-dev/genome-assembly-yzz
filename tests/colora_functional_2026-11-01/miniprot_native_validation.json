@@ -1,0 +1,16 @@
+{
+  "example": "official DPP3 mouse protein to human genomic region",
+  "mRNA_count": 1,
+  "CDS_count": 17,
+  "coordinate_bounds": "passed",
+  "parent_links": "passed",
+  "successive_CDS_phase_checks": 16,
+  "full_query_target": "1..738 aa",
+  "validation_scope": "Native integration and structural consistency, not accuracy against a curated annotation; not an annelid annotation run.",
+  "commit": "81f9b93481cec16622eff339fc998e4f38da344e",
+  "version": "0.18-r281",
+  "inputs": {
+    "test/DPP3-hs.gen.fa.gz": "20dc963654c85d42219428bc3e33f815574924f6631c4facbd04a0938a2311ce",
+    "test/DPP3-mm.pep.fa.gz": "2310fa2f1f73b3153a515c7ade07ef84548110560880d8f5f8a77c911a5a552a"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-01",
+  "documents": [
+    {
+      "path": "notes/34_ONT数据量充分性与高覆盖软件说明核查.md",
+      "sha256": "65cbc23e78e8392f46123cb1ea97d88009cfa47aa80b3eced429156ad2702235"
+    },
+    {
+      "path": "notes/35_EBP与Sanger_HiC挂载及人工校正指南.md",
+      "sha256": "891ec5f6100560318fd20b54ee1edf329305ae710a748cc01719ac30e6e9e78b"
+    }
+  ],
+  "source_ledgers": [
+    "notes/sources/ont_coverage_manual_review.json",
+    "notes/sources/hic_curation_manual_review.json"
+  ],
+  "local_document_links_checked": 2,
+  "bash_blocks_syntax_checked": 2,
+  "errors": [],
+  "biological_runs": 0,
+  "interactive_training_cases": 0,
+  "pdf_pages_interpreted": 0,
+  "new_upstream_clones": 0,
+  "qualification": "Static documentation checks only; no biological or interactive curation validation."
+}

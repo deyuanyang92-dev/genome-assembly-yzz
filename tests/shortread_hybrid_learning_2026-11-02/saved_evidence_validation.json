@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "checked_sha256": 55,
+  "successful_assembly_runs": 5,
+  "negative_cli_cases": 3,
+  "validation_scope": "saved provenance integrity, not independent biological QC"
+}

@@ -1,0 +1,124 @@
+{
+  "review_date": "2026-11-01",
+  "scope": "Targeted literature reading, not exhaustive: six 2025-2026 research papers, two 2026 reviews, one preprint, two EBP committee documents, VGP 2024 workflow and ERGA 2024 empirical baselines. No paper experiments replicated.",
+  "search_queries": [
+    "2026 genome assembly standards EBP",
+    "2025 2026 annelid chromosome genome assembly HiFi Hi-C",
+    "2025 Verkko2 proximity ligation",
+    "2026 hifiasm ONT simplex near telomere",
+    "2026 polyploid assembly graph scaffolding GPhase"
+  ],
+  "sources": [
+    {
+      "title": "EBP Assembly Standards v7.0",
+      "status": "official_standard_approved_2026-01-31",
+      "url": "https://www.earthbiogenome.org/report-on-assembly-standards",
+      "read_scope": "Quality thresholds, exceptions, additional requirements, submission and diploid representation"
+    },
+    {
+      "title": "EBP Assembly Recommendations v4.0",
+      "status": "official_recommendations_approved_2026-01-31",
+      "url": "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+      "read_scope": "Coverage, specimen relationships, assembly, curation and QC recommendations"
+    },
+    {
+      "title": "A phased chromosome-level genome of the annelid tubeworm Galeolaria caespitosa",
+      "status": "journal_2025-04-22",
+      "url": "https://academic.oup.com/jhered/article/116/5/702/8118891",
+      "read_scope": "Sample and assembly methods, haplotype redistribution, QC, code availability; repository lacks nuclear assembly script chain"
+    },
+    {
+      "title": "Chromosome-level genome assembly of the model organism Lumbriculus variegatus (Lumbriculidae: Clitellata)",
+      "status": "accepted_article_in_press_2026-09-23",
+      "url": "https://www.nature.com/articles/s41597-026-08364-z",
+      "read_scope": "Accepted PDF sample and methods pp1-3, technical validation and data/code sections pp6-7; primary assembly; no custom workflow supplied"
+    },
+    {
+      "title": "Complex genetic variation in nearly complete human genomes",
+      "status": "journal_2025-07-23_with_2025-08-26_correction",
+      "url": "https://www.nature.com/articles/s41586-025-09140-6",
+      "read_scope": "Assembly and validation Methods and code availability; hgsvc/phase3-main-pub entry confirmed, repository not downloaded or audited"
+    },
+    {
+      "title": "Verkko2 integrates proximity-ligation data with long-read De Bruijn graphs for efficient telomere-to-telomere genome assembly, phasing, and scaffolding",
+      "status": "journal_2025_Genome_Research_35_7_1583_1594",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12212074/",
+      "read_scope": "Introduction, relevant methods and software availability; paper benchmark 2.2.1 differs from local 2.3.2; supplemental code not downloaded"
+    },
+    {
+      "title": "Efficient near-telomere-to-telomere assembly of nanopore simplex reads",
+      "status": "journal_2026-02-04",
+      "url": "https://www.nature.com/articles/s41586-026-10105-6",
+      "read_scope": "Introduction, ONT methods, dual-scaffold gap representation and code availability; article code archive not equated with local hifiasm SHA"
+    },
+    {
+      "title": "Assembly-graph-assisted haplotype-resolved scaffolding of polyploid genomes",
+      "status": "journal_2026-10-16",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13680272/",
+      "read_scope": "Paper methods and code entry plus repository README, environment, pipeline entry/output and Python naming sections; no biological execution"
+    },
+    {
+      "title": "Generating eukaryotic reference genome assemblies: Earth BioGenome Project quality standards and recommendations",
+      "status": "arxiv_v1_2026-10-02_not_journal_peer_review",
+      "url": "https://arxiv.org/abs/2610.03075",
+      "read_scope": "34-page PDF: assembly/curation pp9-11, standards table pp14-15 and evaluation table; selected sections, not complete replication"
+    },
+    {
+      "title": "VGP Galaxy assembly workflows",
+      "status": "journal_2024-01-26_baseline",
+      "url": "https://www.nature.com/articles/s41587-023-02100-3",
+      "read_scope": "Workflow/data-combination baseline; current local IWC is not frozen article release"
+    },
+    {
+      "title": "Toward high-quality genomes: Standards, challenges, and strategies for assembly and annotation",
+      "status": "journal_review_first_published_2026-09-16",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/jse.70118",
+      "read_scope": "Abstract; selected assembly criteria/strategies sections 2.2-2.4 and annotation assessment 3.2; cited papers and tools not fully audited"
+    },
+    {
+      "title": "The role of cytogenetics in the chromosome-level genomic era",
+      "status": "journal_review_2026-10-27",
+      "url": "https://www.nature.com/articles/s44573-026-00017-x",
+      "read_scope": "Abstract; chromosome-level/Hi-C limitations, Oligo-FISH and integrated workflow sections; no cytogenetic experiment performed"
+    },
+    {
+      "title": "The European Reference Genome Atlas: piloting a decentralised approach to equitable biodiversity genomics",
+      "status": "journal_2024-09-17_empirical_baseline",
+      "url": "https://www.nature.com/articles/s44185-024-00054-6",
+      "read_scope": "Genome assembly and annotation assessment/curation paragraphs; QV data-dependence and chromosome-size caveats"
+    }
+  ],
+  "new_repositories": [
+    {
+      "directory": "moniquevdor_GaleolariaReferenceGenome",
+      "url": "https://github.com/moniquevdor/GaleolariaReferenceGenome",
+      "commit": "01c252196c6a8ba7c8fd93376ded2bb266eb3e7e",
+      "classification": "paper_analysis_scripts"
+    },
+    {
+      "directory": "panlab-bioinfo_GPhase",
+      "url": "https://github.com/panlab-bioinfo/GPhase",
+      "commit": "a9221035274e7397fc05dc5be693270c2758528c",
+      "classification": "individual_tool"
+    }
+  ],
+  "candidate_not_reviewed": [
+    {
+      "name": "Capitella teleta GBE 2026 evag041",
+      "url": "https://academic.oup.com/gbe/article/18/3/evag041/8495731",
+      "limitation": "Publisher access errors; methods not reviewed"
+    },
+    {
+      "name": "Alvinella pompejana BMC Biology 2025",
+      "url": "https://doi.org/10.1186/s12915-025-02369-7",
+      "limitation": "Search candidate only; methods not reviewed"
+    }
+  ],
+  "records": [
+    "../22_近期组装论文与对标地图.md",
+    "../23_EBP2026规范与本项目对标要求.md",
+    "../24_论文配套源码核查_Galeolaria与GPhase.md",
+    "../25_近期标准论文与项目高标准验收.md"
+  ],
+  "preprint_status_checked": "PubMed PMID 42859441 lists ArXiv/Preprint on 2026-11-01; PMC presence is not journal peer-review evidence."
+}

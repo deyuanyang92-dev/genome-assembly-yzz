@@ -1,0 +1,150 @@
+{
+  "recorded": "2026-11-01",
+  "biological_runs": 0,
+  "new_repositories": [
+    {
+      "directory": "tbenavi1_genomescope2.0",
+      "url": "https://github.com/tbenavi1/genomescope2.0.git",
+      "commit": "8f25e3a25eaa691cdae474daf5cfe5416bfc60dc",
+      "classification": "individual_tool",
+      "reading_scope": "README; CLI and selected model/report source; not all source lines",
+      "validation": "not_run_R_dependencies_missing",
+      "files": [
+        {
+          "path": "pipelines/tbenavi1_genomescope2.0/README.md",
+          "sha256": "6443344b28913ac9257425a1acaaae6e13d5d6c510d66dd372f2275b23d5daa7"
+        },
+        {
+          "path": "pipelines/tbenavi1_genomescope2.0/genomescope.R",
+          "sha256": "27f36ea01ec60ec47f2dafcef1b9f263e563930d6043fb0848b809a81ee9b135"
+        },
+        {
+          "path": "pipelines/tbenavi1_genomescope2.0/R/report_results.R",
+          "sha256": "0e4a5e94bd0078771632fbc78e58953e35be299e09c240911b8188f7201d611b"
+        },
+        {
+          "path": "pipelines/tbenavi1_genomescope2.0/R/nls_peak.R",
+          "sha256": "f38c3976f3ee1e7794d8eed20c22d0b8420b85198416ce5c4a0a1da9e76ad36e"
+        }
+      ]
+    },
+    {
+      "directory": "KamilSJaron_smudgeplot",
+      "url": "https://github.com/KamilSJaron/smudgeplot.git",
+      "commit": "8ff8cd9885f8edcdf938e51dcfe9b9631d8cd1d0",
+      "classification": "individual_tool",
+      "reading_scope": "README; CLI/output sections; not all source lines",
+      "validation": "C_backend_compiled_only_Python_pipeline_not_run",
+      "files": [
+        {
+          "path": "pipelines/KamilSJaron_smudgeplot/README.md",
+          "sha256": "1c1fab41d6c773a2c1c679a9d00974156be0e0c3e9a982adf75568adb60b16b2"
+        },
+        {
+          "path": "pipelines/KamilSJaron_smudgeplot/pyproject.toml",
+          "sha256": "d3c5076c729936107dcc70cc8de74aaa58859cd17883ced7ed0a2683d2d0491f"
+        },
+        {
+          "path": "pipelines/KamilSJaron_smudgeplot/src/smudgeplot/smudgeplot.py",
+          "sha256": "3bd387aff47088800c40b4ab4d734278e9c78564a7ed160989452393365126e0"
+        },
+        {
+          "path": "pipelines/KamilSJaron_smudgeplot/src/lib/PloidyPlot.c",
+          "sha256": "37a515b7d6d8a19302f4f37e1662e24ad2bb90d204c898d4b2c640d4bf24f185"
+        }
+      ]
+    },
+    {
+      "directory": "thegenemyers_FASTK",
+      "url": "https://github.com/thegenemyers/FASTK.git",
+      "commit": "0e24fb45b71c4e14382ae1e1bc063bf66ea4e112",
+      "classification": "individual_tool",
+      "reading_scope": "README command/histogram sections; build and Histex source sections",
+      "validation": "full_make_failed_Histex_Tabex_compiled_only",
+      "files": [
+        {
+          "path": "pipelines/thegenemyers_FASTK/README.md",
+          "sha256": "4a075168d08a5b3e2c4c56bb9f349bea4b058b9190e7e9098ea5e2b8aeec4b43"
+        },
+        {
+          "path": "pipelines/thegenemyers_FASTK/Makefile",
+          "sha256": "52b409918b5fdfe9104fc4bef4583d4485965c35bbaaf14412f6756f13a68023"
+        },
+        {
+          "path": "pipelines/thegenemyers_FASTK/Histex.c",
+          "sha256": "2cf2f4d5447173b43e9bc1bbaf8a08c6097e65f4c6fefba41e97a0fc90a74f1f"
+        }
+      ]
+    },
+    {
+      "directory": "mbhall88_lrge",
+      "url": "https://github.com/mbhall88/lrge.git",
+      "commit": "01669fe358e3c6aec7328d5e4c238bdeb0eb2397",
+      "classification": "individual_tool",
+      "reading_scope": "README usage/version sections; selected methods; entire genomescope wrapper",
+      "validation": "LRGE_not_run_wrapper_mock_audit_2_cases",
+      "files": [
+        {
+          "path": "pipelines/mbhall88_lrge/README.md",
+          "sha256": "81c2cb85d366ea9aca50991d2ef32a0700362e2f5cdb413276c42de5ec7ef524"
+        },
+        {
+          "path": "pipelines/mbhall88_lrge/paper/workflow/scripts/genomescope.py",
+          "sha256": "5cb9b4af00ac28e4caaa6935430dd0d8b389204fcfcf521f295e5724db2ae72c"
+        }
+      ]
+    },
+    {
+      "directory": "shenwei356_seqkit",
+      "url": "https://github.com/shenwei356/seqkit.git",
+      "commit": "30d7dfc25893809acce74459d5000afef027b8d0",
+      "classification": "individual_tool",
+      "reading_scope": "README and stats CLI/output sections",
+      "validation": "not_built_not_run",
+      "files": [
+        {
+          "path": "pipelines/shenwei356_seqkit/README.md",
+          "sha256": "4ed56acd795ca499f4cd3b84b01c6f792ad3db842c020bee616127961351ae90"
+        },
+        {
+          "path": "pipelines/shenwei356_seqkit/seqkit/cmd/stat.go",
+          "sha256": "19ee7e0e76700d1f6bacc79bda5815be650e23e306803de49c5c6d5aca7bbe62"
+        }
+      ]
+    },
+    {
+      "directory": "refresh-bio_KMC",
+      "url": "https://github.com/refresh-bio/KMC.git",
+      "commit": "751ef36a3c1ccc6dda664f529ad218dc51d76f55",
+      "classification": "individual_tool",
+      "submodules_fetched": false,
+      "reading_scope": "README beginning and CLI flag/parser sections",
+      "validation": "not_built_submodules_not_fetched",
+      "files": [
+        {
+          "path": "pipelines/refresh-bio_KMC/README.md",
+          "sha256": "1f1078a617165b7a709f100b752f735136c75ad0626b8ecadb0baae6f6f1d15d"
+        },
+        {
+          "path": "pipelines/refresh-bio_KMC/kmc_CLI/kmc.cpp",
+          "sha256": "af63dfcfd175720ff0e82418f5e8a0a488fb99665e5e314430d49106b40bdcce"
+        },
+        {
+          "path": "pipelines/refresh-bio_KMC/kmc_tools/parameters_parser.cpp",
+          "sha256": "c1eea7028916bafbac9497286315a8cb4d5c7bc57f7c293fbb64580a5179927f"
+        }
+      ]
+    }
+  ],
+  "existing_resources": [
+    "pipelines/marbl_merqury/best_k.sh",
+    "pipelines/marbl_merqury/merqury.sh",
+    "pipelines/marbl_merqury/eval/qv.sh"
+  ],
+  "primary_sources": [
+    "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+    "https://www.nature.com/articles/s41467-020-14998-3",
+    "https://doi.org/10.1093/bioinformatics/btaf593"
+  ],
+  "development_status": "notes/29 documents planned integration, not implemented"
+}

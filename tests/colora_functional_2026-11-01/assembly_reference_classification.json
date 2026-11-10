@@ -1,0 +1,41 @@
+{
+  "rows": [
+    {
+      "contig": "h1tg000001l",
+      "length": 229767,
+      "classification": "nuclear_reference_majority",
+      "primary_matching_bases_by_reference": {
+        "NC_001133.9": 181916,
+        "NC_001142.9": 4631,
+        "NC_001144.5": 3657
+      }
+    },
+    {
+      "contig": "h1tg000002l",
+      "length": 232371,
+      "classification": "nuclear_reference_majority",
+      "primary_matching_bases_by_reference": {
+        "NC_001133.9": 205952
+      }
+    },
+    {
+      "contig": "h1tg000003l",
+      "length": 699300,
+      "classification": "nuclear_reference_majority",
+      "primary_matching_bases_by_reference": {
+        "NC_001143.9": 657188,
+        "NC_001144.5": 12310
+      }
+    },
+    {
+      "contig": "h1tg000004c",
+      "length": 90085,
+      "classification": "mitochondrial_reference_majority",
+      "primary_matching_bases_by_reference": {
+        "NC_001224.1": 76457
+      }
+    }
+  ],
+  "output": "13_\u5168\u57fa\u56e0\u7ec4\u81ea\u4e3b\u5b66\u4e60_2026-11-01/work/hap1_reference_classified_nuclear.fa",
+  "scope": "Reference-assisted practice subset; primary PAF block matching-bases votes may overlap. Not a contamination filter or exact truth."
+}

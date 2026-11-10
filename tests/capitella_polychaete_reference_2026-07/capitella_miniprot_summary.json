@@ -1,0 +1,59 @@
+{
+  "proteins_total": 34669,
+  "proteins_with_miniprot_mRNA_alignment": 34665,
+  "mRNA_alignments": 41294,
+  "CDS_alignments": 265806,
+  "target_contigs": 308,
+  "alignment_sequence_top10": [
+    [
+      "chrom_2",
+      5693
+    ],
+    [
+      "chrom_1",
+      5343
+    ],
+    [
+      "chrom_3",
+      5206
+    ],
+    [
+      "chrom_6",
+      4158
+    ],
+    [
+      "chrom_5",
+      3830
+    ],
+    [
+      "chrom_4",
+      3546
+    ],
+    [
+      "chrom_9",
+      2887
+    ],
+    [
+      "chrom_7",
+      2742
+    ],
+    [
+      "chrom_8",
+      2692
+    ],
+    [
+      "chrom_10",
+      2673
+    ]
+  ],
+  "identity_median": 1.0,
+  "identity_lt_0_9": 671,
+  "identity_lt_0_7": 11,
+  "interpretation": "same-release proteins remapped to their genome; internal consistency only, not independent completeness evidence",
+  "software": "miniprot 0.18-r281",
+  "command": "miniprot -t 4 --gff genome.mpi proteins.fa",
+  "alignment_sha256": {
+    "capitella_miniprot_alignment.gff.gz": "0d3a6181ba7bd32827db4beb4d27f24e38d5d26aa027cbc356fe866e0ade23b4",
+    "capitella_miniprot.log": "139e97f4e9cdccddb6b0cba65442b080b224cac9bccfd67f5860cfaac8bbbc92"
+  }
+}

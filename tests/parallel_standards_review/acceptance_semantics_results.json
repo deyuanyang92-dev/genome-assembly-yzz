@@ -1,0 +1,135 @@
+{
+  "checked_at": "2026-11-02T10:01:47.986227+00:00",
+  "kind": "synthetic_acceptance_semantics_only",
+  "biological_runs": 0,
+  "script_sha256": "4bca5dfdcd62fa98ef05fd295714410b3e2e80eded25a7c86a2feff58045c8bb",
+  "cases": [
+    {
+      "name": "HiFi exactly50 conservative bound",
+      "observed": {
+        "status": "pass",
+        "coverage_min": 50.0,
+        "coverage_max": 55.55555555555556,
+        "threshold": 50,
+        "operator": ">=",
+        "authority": "user_project_requirement"
+      },
+      "expected": "pass",
+      "passed": true
+    },
+    {
+      "name": "G uncertainty straddles50",
+      "observed": {
+        "status": "pending",
+        "coverage_min": 45.0,
+        "coverage_max": 56.25,
+        "threshold": 50,
+        "operator": ">=",
+        "authority": "user_project_requirement"
+      },
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "all plausible G below50",
+      "observed": {
+        "status": "below_target",
+        "coverage_min": 39.0,
+        "coverage_max": 48.75,
+        "threshold": 50,
+        "operator": ">=",
+        "authority": "user_project_requirement"
+      },
+      "expected": "below_target",
+      "passed": true
+    },
+    {
+      "name": "unknown individual cannot pass",
+      "observed": {
+        "status": "pending",
+        "reason": "identity or genome denominator unresolved"
+      },
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "short reads not rejected for missing HiFi",
+      "observed": {
+        "status": "not_applicable",
+        "reason": "HiFi-specific gate; assess short-read route separately"
+      },
+      "expected": "not_applicable",
+      "passed": true
+    },
+    {
+      "name": "invalid interval",
+      "observed": {
+        "status": "pending",
+        "reason": "invalid/missing effective bases or genome interval"
+      },
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "strict EBP kmer boundary90",
+      "observed": "below_target",
+      "expected": "below_target",
+      "passed": true
+    },
+    {
+      "name": "strict EBP T2T QV boundary60",
+      "observed": "below_target",
+      "expected": "below_target",
+      "passed": true
+    },
+    {
+      "name": "project QV50 inclusive",
+      "observed": "pass",
+      "expected": "pass",
+      "passed": true
+    },
+    {
+      "name": "stale final assembly hash",
+      "observed": "pending",
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "unknown observed",
+      "observed": "pending",
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "NaN observed",
+      "observed": "pending",
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "absent evidence hash",
+      "observed": "pending",
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "not applicable without reason",
+      "observed": "pending",
+      "expected": "pending",
+      "passed": true
+    },
+    {
+      "name": "not applicable with reason",
+      "observed": "not_applicable",
+      "expected": "not_applicable",
+      "passed": true
+    },
+    {
+      "name": "boolean is not metric",
+      "observed": "pending",
+      "expected": "pending",
+      "passed": true
+    }
+  ],
+  "passed": true
+}

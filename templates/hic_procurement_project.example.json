@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "feature_id": "QS019",
+  "status": "planning_template_not_implemented",
+  "specimen_id": null,
+  "species": null,
+  "hifi_files": [],
+  "haploid_genome_size_bp_range": null,
+  "assembly": {
+    "fasta_path": null,
+    "gfa_paths": [],
+    "sha256": null,
+    "representation": "unknown",
+    "haplotype_sets": null,
+    "span_bp": null,
+    "contig_n50_bp": null,
+    "contig_n90_bp": null
+  },
+  "goal": {
+    "purpose": "chromosome_scaffolding",
+    "product_representation": null,
+    "quality_policy_note": "notes/23_EBP2026规范与本项目对标要求.md",
+    "structural_acceptance_criteria": null
+  },
+  "planned_library": {
+    "specimen_relationship": "unknown",
+    "tissue": null,
+    "product_and_chemistry_version": null,
+    "read_lengths_bp": [
+      150,
+      150
+    ],
+    "read_length_status": "illustrative_replace_with_vendor_contract",
+    "contract_quantity_basis": null,
+    "order_increment_Gb": null,
+    "price_per_Gb": null,
+    "currency": null,
+    "budget": null
+  },
+  "evidence_matches": [],
+  "effective_pair_target": {
+    "range": null,
+    "metric_definition_id": null,
+    "source_experiment_ids": [],
+    "transfer_assumptions": [],
+    "reviewed_by": null
+  },
+  "retention_scenarios": [],
+  "optional_hic_qc_files": [],
+  "recommendation_status": "needs_inputs",
+  "recommended_order": null,
+  "order_basis_type": null,
+  "order_rule_id": null,
+  "structural_sufficiency_status": "not_assessed"
+}

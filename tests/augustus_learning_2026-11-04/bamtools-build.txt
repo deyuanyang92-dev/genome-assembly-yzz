@@ -1,0 +1,78 @@
+[  4%] Building CXX object src/CMakeFiles/BamTools.dir/api/BamMultiReader.cpp.o
+[  4%] Building CXX object src/CMakeFiles/BamTools.dir/api/BamAlignment.cpp.o
+[  4%] Building CXX object src/third_party/jsoncpp/CMakeFiles/jsoncpp.dir/jsoncpp.cpp.o
+[  6%] Building CXX object src/CMakeFiles/BamTools.dir/api/BamReader.cpp.o
+[  8%] Building CXX object src/CMakeFiles/BamTools.dir/api/BamWriter.cpp.o
+/tmp/yzz-augustus-bamtools-2.5.3/src/third_party/jsoncpp/jsoncpp.cpp:998:34: warning: ‘Reader’ is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+  998 | Reader::Char Reader::getNextChar() {
+      |                                  ^
+In file included from /tmp/yzz-augustus-bamtools-2.5.3/src/third_party/jsoncpp/jsoncpp.cpp:76:
+/tmp/yzz-augustus-bamtools-2.5.3/src/third_party/jsoncpp/json/json.h:1382:83: note: declared here
+ 1382 | class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+      |                                                                                   ^~~~~~
+/tmp/yzz-augustus-bamtools-2.5.3/src/third_party/jsoncpp/jsoncpp.cpp:1056:21: warning: ‘Reader’ is deprecated: Use CharReader and CharReaderBuilder instead [-Wdeprecated-declarations]
+ 1056 | std::vector<Reader::StructuredError> Reader::getStructuredErrors() const {
+      |                     ^~~~~~~~~~~~~~~
+/tmp/yzz-augustus-bamtools-2.5.3/src/third_party/jsoncpp/json/json.h:1382:83: note: declared here
+ 1382 | class JSONCPP_DEPRECATED("Use CharReader and CharReaderBuilder instead") JSON_API Reader {
+      |                                                                                   ^~~~~~
+[  9%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamHeader.cpp.o
+[ 11%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamProgram.cpp.o
+[ 13%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamProgramChain.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamReadGroup.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamReadGroupDictionary.cpp.o
+[ 18%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamSequence.cpp.o
+[ 19%] Building CXX object src/CMakeFiles/BamTools.dir/api/SamSequenceDictionary.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/bam/BamHeader_p.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/bam/BamMultiReader_p.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/bam/BamRandomAccessController_p.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/bam/BamReader_p.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/bam/BamWriter_p.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/index/BamIndexFactory_p.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/index/BamStandardIndex_p.cpp.o
+[ 32%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/index/BamToolsIndex_p.cpp.o
+[ 34%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/BamDeviceFactory_p.cpp.o
+[ 36%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/BamFile_p.cpp.o
+[ 37%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/BamFtp_p.cpp.o
+[ 39%] Linking CXX static library libjsoncpp.a
+[ 40%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/BamHttp_p.cpp.o
+[ 42%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/BamPipe_p.cpp.o
+[ 44%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/BgzfStream_p.cpp.o
+[ 45%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/ByteArray_p.cpp.o
+[ 47%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/HostAddress_p.cpp.o
+[ 47%] Built target jsoncpp
+[ 49%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/HostInfo_p.cpp.o
+[ 50%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/HttpHeader_p.cpp.o
+[ 52%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/ILocalIODevice_p.cpp.o
+[ 54%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/RollingBuffer_p.cpp.o
+[ 55%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/TcpSocketEngine_p.cpp.o
+[ 57%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/TcpSocket_p.cpp.o
+[ 59%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/sam/SamFormatParser_p.cpp.o
+[ 60%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/sam/SamFormatPrinter_p.cpp.o
+[ 62%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/sam/SamHeaderValidator_p.cpp.o
+[ 63%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/utils/BamException_p.cpp.o
+[ 65%] Building CXX object src/CMakeFiles/BamTools.dir/api/internal/io/TcpSocketEngine_unix_p.cpp.o
+[ 67%] Linking CXX static library libbamtools.a
+[ 67%] Built target BamTools
+[ 73%] Building CXX object src/CMakeFiles/BamTools-utils.dir/utils/bamtools_fasta.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/BamTools-utils.dir/utils/bamtools_utilities.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/BamTools-utils.dir/utils/bamtools_options.cpp.o
+[ 73%] Building CXX object src/CMakeFiles/BamTools-utils.dir/utils/bamtools_pileup_engine.cpp.o
+[ 75%] Linking CXX static library libBamTools-utils.a
+[ 75%] Built target BamTools-utils
+[ 80%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_coverage.cpp.o
+[ 78%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools.cpp.o
+[ 78%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_convert.cpp.o
+[ 81%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_count.cpp.o
+[ 83%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_filter.cpp.o
+[ 85%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_header.cpp.o
+[ 86%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_index.cpp.o
+[ 88%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_merge.cpp.o
+[ 90%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_random.cpp.o
+[ 91%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_resolve.cpp.o
+[ 93%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_revert.cpp.o
+[ 95%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_sort.cpp.o
+[ 96%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_split.cpp.o
+[ 98%] Building CXX object src/CMakeFiles/bamtools_cmd.dir/toolkit/bamtools_stats.cpp.o
+[100%] Linking CXX executable bamtools
+[100%] Built target bamtools_cmd

@@ -1,0 +1,3 @@
+[M::main] Version: 0.5-r296-dirty
+[M::main] CMD: /tmp/genome_gfatools_conversion_review/gfatools gfa2fa /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/format_conversion_2026-11-02/gfatools/segments_with_path.gfa
+[M::main] Real time: 0.003 sec; CPU: 0.001 sec

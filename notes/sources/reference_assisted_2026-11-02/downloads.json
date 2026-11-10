@@ -1,0 +1,33 @@
+{
+  "retrieved_at": "2026-11-02T08:43:25.849959+00:00",
+  "files": [
+    {
+      "file": "notes/sources/reference_assisted_2026-11-02/ragtag_scaffold_v2.1.0.py",
+      "url": "https://raw.githubusercontent.com/malonge/RagTag/v2.1.0/ragtag_scaffold.py",
+      "download_returncode": 0,
+      "sha256": "769052f0d24dd5d332c1134437bbecba470c230b420224095dee520ea38818c1",
+      "scope": "initial subprocess failed; direct curl retry succeeded; selected sections statically reviewed"
+    },
+    {
+      "file": "notes/sources/reference_assisted_2026-11-02/ragtag_correct_v2.1.0.py",
+      "url": "https://raw.githubusercontent.com/malonge/RagTag/v2.1.0/ragtag_correct.py",
+      "download_returncode": 7,
+      "sha256": null,
+      "scope": "download_failed_not_read_as_local_source"
+    },
+    {
+      "file": "notes/sources/reference_assisted_2026-11-02/ragtag_patch_v2.1.0.py",
+      "url": "https://raw.githubusercontent.com/malonge/RagTag/v2.1.0/ragtag_patch.py",
+      "download_returncode": 7,
+      "sha256": null,
+      "scope": "download_failed_not_read_as_local_source"
+    },
+    {
+      "file": "notes/sources/reference_assisted_2026-11-02/ragtag_pypi_metadata.json",
+      "url": "https://pypi.org/pypi/RagTag/json",
+      "download_returncode": 7,
+      "sha256": null,
+      "scope": "download_failed_not_read_as_local_source"
+    }
+  ]
+}

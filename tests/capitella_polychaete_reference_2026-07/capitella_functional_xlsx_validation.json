@@ -1,0 +1,77 @@
+{
+  "checked_at_local": "2026-11-02T11:15:09+0800",
+  "openpyxl_version": "3.1.5",
+  "workbook_sha256": "353cf05fd2af850714c030d1b39c43eb292c40bbbca5215ecd70f485d2759d25",
+  "gff3_transcripts": 34669,
+  "proteins": 34669,
+  "sheets": {
+    "Trinotate": {
+      "rows_with_ids": 34669,
+      "unique_ids": 34669,
+      "duplicate_rows_beyond_unique": 0,
+      "ids_absent_from_july_gff": [],
+      "gff_transcripts_absent_from_sheet": 0,
+      "peptides_checked": 34666,
+      "peptide_id_absent_from_protein_fasta": 0,
+      "peptide_sequence_mismatch_count": 131,
+      "peptide_sequence_mismatch_examples": [
+        "CTELG00122.2",
+        "CTELG00226.10",
+        "CTELG00226.11",
+        "CTELG00226.12",
+        "CTELG00226.16",
+        "CTELG00364.1",
+        "CTELG00364.2",
+        "CTELG00383.2",
+        "CTELG00383.3",
+        "CTELG01128.3",
+        "CTELG01270.3",
+        "CTELG01270.4",
+        "CTELG01270.5",
+        "CTELG01329.3",
+        "CTELG01347.2"
+      ]
+    },
+    "Panther": {
+      "rows_with_ids": 36471,
+      "unique_ids": 30322,
+      "duplicate_rows_beyond_unique": 6149,
+      "ids_absent_from_july_gff": [
+        "CTELG06415.1",
+        "CTELG06755.1",
+        "CTELG06755.2",
+        "CTELG06755.3",
+        "CTELG06807.1",
+        "CTELG07829.1",
+        "CTELG1",
+        "CTELG11297.1",
+        "CTELG14954",
+        "CTELG16786.1",
+        "CTELG21697.1",
+        "CTELG22147.3:258-3035(+)",
+        "CTELG25389.1"
+      ],
+      "gff_transcripts_absent_from_sheet": 4360,
+      "peptides_checked": 0,
+      "peptide_id_absent_from_protein_fasta": 0,
+      "peptide_sequence_mismatch_count": 0,
+      "peptide_sequence_mismatch_examples": [],
+      "orphan_id_examples": [
+        "CTELG06415.1",
+        "CTELG06755.1",
+        "CTELG06755.2",
+        "CTELG06755.3",
+        "CTELG06807.1",
+        "CTELG07829.1",
+        "CTELG1",
+        "CTELG11297.1",
+        "CTELG14954",
+        "CTELG16786.1",
+        "CTELG21697.1",
+        "CTELG22147.3:258-3035(+)",
+        "CTELG25389.1"
+      ]
+    }
+  },
+  "interpretation": "Trinotate transcript IDs match the July 2026 GFF3 exactly, but 131 embedded peptide sequences differ from the July 2026 protein FASTA, so sequence-level release compatibility is not exact. NHGRI states that latest-release protein-coding annotations were lifted from the prior assembly with gene IDs preserved and that the prior release is no longer hosted; this may explain, but does not prove the cause of, sequence differences. Panther is sparse/multirow with 13 orphan IDs and 4,360 current transcripts without a row; review before database joins."
+}

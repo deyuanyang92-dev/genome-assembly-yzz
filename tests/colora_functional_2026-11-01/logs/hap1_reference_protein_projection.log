@@ -1,0 +1,10 @@
+[M::mp_ntseq_read@0.022*0.35] read 1251523 bases in 4 contigs
+[M::mp_idx_build@0.023*0.34] 9780 blocks
+[M::mp_idx_build@0.044*1.02] collected syncmers
+[M::mp_idx_build@0.139*0.98] 565650 kmer-block pairs
+[M::mp_idx_print_stat] 302157 distinct k-mers; mean occ of infrequent k-mers: 1.87; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::6.463*1.92] mapped 4050 sequences
+[M::worker_pipeline::8.766*1.89] mapped 1971 sequences
+[M::main] Version: 0.18-r281
+[M::main] CMD: /tmp/yzz-learning-miniprot/miniprot -t 2 -G 10000 -j 1 --gff 13_全基因组自主学习_2026-11-01/work/colora/results/assemblies/asm_hap1.fa 13_全基因组自主学习_2026-11-01/databases/GCF_000146045.2_R64_protein.faa.gz
+[M::main] Real time: 8.777 sec; CPU: 16.552 sec; Peak RSS: 0.136 GB

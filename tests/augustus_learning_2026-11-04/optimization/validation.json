@@ -1,0 +1,32 @@
+{
+  "optimization": "one meta parameter; 2-fold; 1 round; not full default optimization",
+  "metapars_sha256": "c5dd3e3d8942d3bc93448ac691f91c20cdc34b1e5213aab47b479343271cd435",
+  "heldout_file_used_for_optimization": false,
+  "retrained_on_all_392_training_loci": true,
+  "target_species_validation": false,
+  "recorded_at": "2026-11-04T21:02:24.751483+08:00",
+  "parameter_values": {
+    "before": 4,
+    "after": 4
+  },
+  "internal_cross_validation_targets": {
+    "baseline_4": 0.655,
+    "candidate_2": 0.6251,
+    "candidate_3": 0.6545
+  },
+  "holdout_metrics": {
+    "nucleotide": {
+      "sensitivity": 0.873,
+      "specificity_label_precision": 0.626
+    },
+    "exon": {
+      "sensitivity": 0.696,
+      "specificity_label_precision": 0.477
+    },
+    "gene": {
+      "sensitivity": 0.47,
+      "specificity_label_precision": 0.301
+    }
+  },
+  "result": "baseline retained; no improvement in heldout rounded metrics"
+}

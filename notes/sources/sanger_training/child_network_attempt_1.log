@@ -1,0 +1,12 @@
+COMMAND: ['curl', '-IL', '--max-time', '20', 'https://raw.githubusercontent.com/sanger-tol/curation-resources/main/PretextView-Tutorial.pdf']
+UTC: 2026-11-02T14:02:19.357509+00:00
+EXIT: 7
+STDOUT:
+
+STDERR:
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+curl: (7) Failed to connect to 172.24.64.1 port 7892 after 0 ms: Couldn't connect to server

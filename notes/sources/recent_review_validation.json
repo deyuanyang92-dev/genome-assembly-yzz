@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-01",
+  "repository_count": 18,
+  "classifications": {
+    "agent_skill_library": 1,
+    "complete_workflow": 5,
+    "benchmark": 1,
+    "complete_workflow_collection": 1,
+    "hic_subworkflow": 2,
+    "individual_tool": 6,
+    "assembly_core_workflow": 1,
+    "paper_analysis_scripts": 1
+  },
+  "all_local_heads_match_manifest": true,
+  "fetch_script_entries_match_manifest": true,
+  "local_links_checked": 76,
+  "broken_links": [],
+  "scope": "Source pins, JSON and documentation checks only; no new biological workflow execution"
+}

@@ -1,0 +1,5 @@
+H	VN:Z:1.0
+S	a	AACCGG
+S	b	GGTTAA
+L	a	+	b	+	2M
+P	joined	a+,b+	2M

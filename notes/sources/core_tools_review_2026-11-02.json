@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-02",
+  "scope": "selected documentation, CLI and code branches; not whole repository audit",
+  "new_biological_runs": 0,
+  "files": [
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/busco_6.1.0_Actions.py",
+      "url": "https://gitlab.com/ezlab/busco/-/raw/6.1.0/src/busco/Actions.py",
+      "sha256": "beeb99a5d616dea19a2027403b498fd14d76973e150c9ff09e16d0e03e0a6eb0"
+    },
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/busco_6.1.0_hmmer.py",
+      "url": "https://gitlab.com/ezlab/busco/-/raw/6.1.0/src/busco/busco_tools/hmmer.py",
+      "sha256": "aaa518ae30a8bdbb5168ac0800530e9683ae9f4ef7a263a287ae50e466fa37bd"
+    },
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/busco_6.1.0_run_BUSCO.py",
+      "url": "https://gitlab.com/ezlab/busco/-/raw/6.1.0/src/busco/run_BUSCO.py",
+      "sha256": "1b7e15cb9ed3f54ce3efb317873db5018fc4ea6b8ca197baa03d6821f748213e"
+    },
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/flye_2.9.6_main.py",
+      "url": "https://raw.githubusercontent.com/mikolmogorov/Flye/2.9.6/flye/main.py",
+      "sha256": "9fa37d47e9b7c4c0d9543c94aa6c59eb2a564c11bc36e54aab5feb22f4a221ab"
+    },
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/flye_2.9.6_USAGE.md",
+      "url": "https://raw.githubusercontent.com/mikolmogorov/Flye/2.9.6/docs/USAGE.md",
+      "sha256": "9da473a86948b69af15e2de527dcdf98e92c1c8413b0e636c9579f5dd193eb30"
+    },
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/flye_2.9.6_tag.json",
+      "url": "https://api.github.com/repos/mikolmogorov/Flye/git/ref/tags/2.9.6",
+      "sha256": "139abcc3458026e2e8f6c62cff42ce659de899d5d78bc2b1a5bd6f52dbce65a8"
+    },
+    {
+      "path": "notes/sources/core_tools_review_2026-11-02/juicertools_latest_release.json",
+      "url": "https://api.github.com/repos/aidenlab/JuicerTools/releases/latest",
+      "sha256": "e26b360768f01beb049912978f60c50e5e39b84f6f2798934485a6dfe8246f0b"
+    },
+    {
+      "path": "pipelines/aidenlab_juicer/CPU/juicer.sh",
+      "url": "https://github.com/aidenlab/juicer/blob/f866383d66f780d98de2c1267703b4d3473f6250/CPU/juicer.sh",
+      "sha256": "bee8421b178e64196d3d2c0847935527beb2c43d8bae5c94458a58440620befe",
+      "availability": "ignored upstream checkout; restore by pinned commit"
+    }
+  ],
+  "projects": [
+    {
+      "tool": "Juicer",
+      "version": "1.6",
+      "commit": "f866383d66f780d98de2c1267703b4d3473f6250",
+      "read_scope": "CPU options, stages, reference resources and output handoff",
+      "runtime": "not executed as a full pipeline"
+    },
+    {
+      "tool": "BUSCO",
+      "version_reviewed": "6.1.0",
+      "commit": "tag 6.1.0; full commit not resolved",
+      "read_scope": "manual; selected Actions.py, run_BUSCO.py main and hmmer.py _sort_matches branches",
+      "runtime": "6.0.0 already executed in Colora tests; 6.1.0 not executed"
+    },
+    {
+      "tool": "Flye",
+      "version": "2.9.6",
+      "commit": "886b8c17412cdf3a2868a28237bca6c5ad1da156",
+      "read_scope": "fixed USAGE and selected CLI/mode/validation branches, FAQ and release notes",
+      "runtime": "not executed this review"
+    }
+  ],
+  "issues": [
+    {
+      "url": "https://github.com/aidenlab/juicer/issues/350",
+      "scope": "visible report only; no local reproduction or verified resolution"
+    },
+    {
+      "url": "https://gitlab.com/ezlab/busco/-/issues/855",
+      "scope": "report plus selected length-classification source; no confirmed bug or local reproduction"
+    }
+  ],
+  "metadata": {
+    "juicertools_release": "v3.0.0",
+    "published_at": "2021-12-19T05:39:39Z",
+    "runtime": "JAR not executed"
+  },
+  "prior_runtime_evidence": [
+    "tests/colora_functional_2026-11-01/README.md",
+    "tests/colora_functional_2026-11-01/logs/colora_all_20261101T174700Z.json"
+  ],
+  "limitations": [
+    "No full Juicer/JBAT GUI chain executed",
+    "No full source or issues audit",
+    "No new production biological validation"
+  ]
+}

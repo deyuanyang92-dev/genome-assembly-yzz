@@ -1,0 +1,71 @@
+gcc -c -std=c99 -g -Wall -O3   kalloc.c -o kalloc.o
+gcc -c -std=c99 -g -Wall -O3   kthread.c -o kthread.o
+gcc -c -std=c99 -g -Wall -O3   nasw-sse.c -o nasw-sse.o
+gcc -c -std=c99 -g -Wall -O3   nasw-tab.c -o nasw-tab.o
+gcc -c -std=c99 -g -Wall -O3   sys.c -o sys.o
+gcc -c -std=c99 -g -Wall -O3   misc.c -o misc.o
+In file included from /usr/include/string.h:548,
+                 from nasw-sse.c:1:
+In function ‘memset’,
+    inlined from ‘ns_prep_nas’ at nasw-sse.c:95:2,
+    inlined from ‘ns_prep_seq_left’ at nasw-sse.c:204:2:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:59:10: warning: ‘__builtin_memset’ specified bound between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   59 |   return __builtin___memset_chk (__dest, __ch, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:59:10: warning: ‘__builtin_memset’ specified size between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+In function ‘memset’,
+    inlined from ‘ns_prep_nas’ at nasw-sse.c:95:2,
+    inlined from ‘ns_prep_seq’ at nasw-sse.c:153:2:
+/usr/include/x86_64-linux-gnu/bits/string_fortified.h:59:10: warning: ‘__builtin_memset’ specified bound between 18446744071562067968 and 18446744073709551615 exceeds maximum object size 9223372036854775807 [-Wstringop-overflow=]
+   59 |   return __builtin___memset_chk (__dest, __ch, __len,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   60 |                                  __glibc_objsize0 (__dest));
+      |                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -c -std=c99 -g -Wall -O3   options.c -o options.o
+gcc -c -std=c99 -g -Wall -O3   ntseq.c -o ntseq.o
+ntseq.c: In function ‘mp_ntseq_restore’:
+ntseq.c:184:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  184 |         fread(x, 4, 2, fp);
+      |         ^~~~~~~~~~~~~~~~~~
+ntseq.c:185:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  185 |         fread(&nt->l_seq, 8, 1, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+ntseq.c:192:17: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  192 |                 fread(&nt->ctg[i].len, 8, 1, fp);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ntseq.c:198:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  198 |         fread(nt->seq, 1, l, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~
+ntseq.c:199:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  199 |         fread(nt->name, 1, nt->l_name, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -c -std=c99 -g -Wall -O3   sketch.c -o sketch.o
+gcc -c -std=c99 -g -Wall -O3   index.c -o index.o
+index.c: In function ‘mp_idx_restore’:
+index.c:212:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  212 |         fread(magic, 1, 4, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~
+index.c:216:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  216 |         fread(&mi->opt, sizeof(mi->opt), 1, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index.c:218:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  218 |         fread(&mi->n_kb, 8, 1, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~
+index.c:222:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  222 |         fread(mi->ki, 8, mp_n_bucket(&mi->opt), fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+index.c:223:9: warning: ignoring return value of ‘fread’ declared with attribute ‘warn_unused_result’ [-Wunused-result]
+  223 |         fread(mi->kb, 4, mi->n_kb, fp);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -c -std=c99 -g -Wall -O3   bseq.c -o bseq.o
+gcc -c -std=c99 -g -Wall -O3   chain.c -o chain.o
+gcc -c -std=c99 -g -Wall -O3   hit.c -o hit.o
+gcc -c -std=c99 -g -Wall -O3   format.c -o format.o
+gcc -c -std=c99 -g -Wall -O3   map.c -o map.o
+gcc -c -std=c99 -g -Wall -O3   align.c -o align.o
+gcc -c -std=c99 -g -Wall -O3   main.c -o main.o
+ar -csru libminiprot.a kalloc.o kthread.o nasw-sse.o nasw-tab.o sys.o misc.o options.o ntseq.o sketch.o index.o bseq.o chain.o hit.o format.o map.o align.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+gcc -std=c99 -g -Wall -O3 main.o -o miniprot -L. -lminiprot -lpthread -lz -lm

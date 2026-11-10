@@ -1,0 +1,39 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: yangdeyuan
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=48000
+Job stats:
+job      count
+-----  -------
+busco        1
+total        1
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:31:54 2026]
+localrule busco:
+    input: results/assemblies/asm_hap1.fa, results/assemblies/yahs_hap1.fa, results/assemblies/asm_hap2.fa, results/assemblies/yahs_hap2.fa
+    output: results/busco
+    log: logs/busco.log
+    jobid: 0
+    reason: Missing output files: results/busco
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        mkdir -p results/busco
+        labels=(asm_hap1 yahs_hap1 asm_hap2 yahs_hap2)
+        count=0
+        for v in results/assemblies/asm_hap1.fa results/assemblies/yahs_hap1.fa results/assemblies/asm_hap2.fa results/assemblies/yahs_hap2.fa ; do
+            k=${labels[$count]}
+            busco -i $v -o results/busco/$k -m genome -l test_data/busco_db/saccharomycetaceae_odb12 -f -c 4  >> logs/busco.log 2>&1
+            count=$(( $count + 1 ))
+        done
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/56bb9dffd2889b7ff431888e3abbd2ca_

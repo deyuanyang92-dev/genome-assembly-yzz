@@ -1,0 +1,9 @@
+channels:
+  - conda-forge
+  - bioconda
+
+dependencies:
+  - quast=5.3.0
+  # QUAST 5.3.0 imports distutils.version; Python 3.12+ removed distutils.
+  # Pin the isolated test environment to a compatible interpreter.
+  - python=3.11

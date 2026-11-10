@@ -1,0 +1,7 @@
+
+
+== Error ==  path contains non-ASCII characters: /tmp/yzz-shortread-hybrid-20261102/中文输出 (output directory)
+
+
+In case you have troubles running SPAdes, you can report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.

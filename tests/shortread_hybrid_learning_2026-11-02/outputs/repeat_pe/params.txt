@@ -1,0 +1,34 @@
+Command line: /root/miniconda3/envs/mitoz3.6/bin/spades.py	--only-assembler	-1	/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz	-2	/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz	-k	21,33,55	-t	2	-m	4	-o	/tmp/yzz-shortread-hybrid-20261102/repeat_pe	
+
+System information:
+  SPAdes version: 4.0.0
+  Python version: 3.8.19
+  OS: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.10
+
+Output dir: /tmp/yzz-shortread-hybrid-20261102/repeat_pe
+Mode: ONLY assembling (without read error correction)
+Debug mode is turned OFF
+
+Dataset parameters:
+  Standard mode
+  For multi-cell/isolate data we recommend to use '--isolate' option; for single-cell MDA data use '--sc'; for metagenomic data use '--meta'; for RNA-Seq use '--rna'.
+  Reads:
+    Library number: 1, library type: paired-end
+      orientation: fr
+      left reads: ['/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz']
+      right reads: ['/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz']
+      interlaced reads: not specified
+      single reads: not specified
+      merged reads: not specified
+Assembly parameters:
+  k: [21, 33, 55]
+  Repeat resolution is enabled
+  Mismatch careful mode is turned OFF
+  MismatchCorrector will be SKIPPED
+  Coverage cutoff is turned OFF
+  Assembly graph output will use GFA v1.2 format
+Other parameters:
+  Dir for temp files: /tmp/yzz-shortread-hybrid-20261102/repeat_pe/tmp
+  Threads: 2
+  Memory limit (in Gb): 4
+

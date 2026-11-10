@@ -1,0 +1,11 @@
+{
+  "retrieved_date": "2026-11-02",
+  "article_doi": "10.1038/s41477-024-01755-3",
+  "url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41477-024-01755-3/MediaObjects/41477_2024_1755_MOESM1_ESM.pdf",
+  "file": "supplementary_information.pdf",
+  "bytes": 50669732,
+  "sha256": "7ad2cf9b9c226305f623faeaa3e0206418dd3cdc13a939b7e80d152bd427f4ea",
+  "pdfinfo": "Creator:         Adobe InDesign CS6 (Windows)\nProducer:        Adobe PDF Library 10.0.1\nCreationDate:    Tue Jul 30 17:39:44 2024 CST\nModDate:         Tue Jul 30 17:43:42 2024 CST\nCustom Metadata: no\nMetadata Stream: yes\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            AcroForm\nJavaScript:      no\nPages:           113\nEncrypted:       no\nPage size:       595.276 x 790.866 pts\nPage rot:        0\nFile size:       50669732 bytes\nOptimized:       yes\nPDF version:     1.6\n",
+  "text_extraction": "pdftotext -layout; completed 113 pages; selected methods/commands reviewed, not all figures read",
+  "scope_review": "../haphic_supplement_methods_review_2026-11-02.md"
+}

@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-02",
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/ryandkuster/ragnarok/main/main.nf",
+      "reading_scope": "selected input guard and StringTie routing",
+      "identity": "main full commit unresolved"
+    },
+    {
+      "url": "https://github.com/ryandkuster/ragnarok/releases",
+      "reading_scope": "prerelease list observed v2.7.1-beta f5785f6; not mapped to main",
+      "identity": "release observation only"
+    },
+    {
+      "url": "https://ccb.jhu.edu/software/stringtie/index.shtml?t=manual",
+      "reading_scope": "input order, sorting, -L/--mix/-e; not all manual",
+      "identity": "live manual"
+    },
+    {
+      "url": "https://github.com/gpertea/stringtie/releases/tag/v3.0.3",
+      "reading_scope": "mix segfault and duplicate model fix; full release timestamp unresolved",
+      "identity": "observed 3.0.3 short commit3436ad6; not run"
+    },
+    {
+      "url": "https://github.com/lh3/minimap2",
+      "reading_scope": "selected genomic vs RNA mapping presets",
+      "identity": "live README; runtime2.31-r1302"
+    }
+  ],
+  "failed_module_fetches": {
+    "branches": [
+      "main",
+      "v2.7.1-beta"
+    ],
+    "paths": [
+      "modules/stringtie.nf",
+      "modules/minimap2.nf",
+      "modules/mikado2.nf"
+    ],
+    "result": "cache miss; bodies not read"
+  },
+  "runtime_evidence": "tests/parallel_annotation_review/execution.json",
+  "new_synthetic_mapping_runs": 2,
+  "annotation_workflow_runs": 0,
+  "production_runs": 0,
+  "files": [
+    {
+      "path": "tests/parallel_annotation_review/execution.json",
+      "sha256": "72012ae1379206ec1486fef34df22aad20b6d612aa0c7c8e42672026a5a80d29"
+    },
+    {
+      "path": "tests/parallel_annotation_review/genome.fa",
+      "sha256": "332f8a36796698fce262f9058259cec6ebca3f8f142a50c9c24eee77c1ad48cb"
+    },
+    {
+      "path": "tests/parallel_annotation_review/genomic_hifi.sam",
+      "sha256": "b263cfbd76383b454d437ed6e6a37e8e48452760b93a3c2b0585bbd5c9a90fe6"
+    },
+    {
+      "path": "tests/parallel_annotation_review/genomic_hifi.stderr",
+      "sha256": "28cc3f738c2228a83bb593d2568a97253c83bc7e0553f146edfcafbf58f7fb7c"
+    },
+    {
+      "path": "tests/parallel_annotation_review/rna.fa",
+      "sha256": "c82eabf0a4b555c6fed519fcab7f01f5b1a378019fa4035f335934ad6325409d"
+    },
+    {
+      "path": "tests/parallel_annotation_review/splice_fixture.py",
+      "sha256": "171ea0a0ea810a2e7e52982ea70a6dba6c5afed6f3bbf1e13629b70a2ee28e85"
+    },
+    {
+      "path": "tests/parallel_annotation_review/splice_hq.sam",
+      "sha256": "ed9580301cf144e2beaed5ff604d815f1a8e8c784f2a6012997ec8c83cd4e0ac"
+    },
+    {
+      "path": "tests/parallel_annotation_review/splice_hq.stderr",
+      "sha256": "16e5bb36c467d6f4c3510cbdc658d92517e16deaae03999cf06178db52db6b58"
+    }
+  ]
+}

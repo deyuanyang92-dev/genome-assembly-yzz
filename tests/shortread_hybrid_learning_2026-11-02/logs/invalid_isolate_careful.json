@@ -1,0 +1,28 @@
+{
+  "label": "invalid_isolate_careful",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--isolate",
+    "--careful",
+    "-1",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+    "-2",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+    "-k",
+    "21,33,55",
+    "-t",
+    "2",
+    "-m",
+    "4",
+    "-o",
+    "/tmp/yzz-shortread-hybrid-20261102/invalid_flags"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+  "started_at": "2026-11-02T09:33:23.432074+00:00",
+  "expected_success": false,
+  "returncode": 255,
+  "finished_at": "2026-11-02T09:33:23.521225+00:00",
+  "log": "logs/invalid_isolate_careful.log",
+  "log_sha256": "064b188b34a08b5e432c5bec1354cdb4c8f9476ea830419328d1b5f129fdb909"
+}

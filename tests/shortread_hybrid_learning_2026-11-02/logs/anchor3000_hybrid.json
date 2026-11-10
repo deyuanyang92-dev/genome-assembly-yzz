@@ -1,0 +1,29 @@
+{
+  "label": "anchor3000_hybrid",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--only-assembler",
+    "-1",
+    "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R1.fq.gz",
+    "-2",
+    "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R2.fq.gz",
+    "-k",
+    "21,33,55",
+    "-t",
+    "2",
+    "-m",
+    "4",
+    "--nanopore",
+    "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/long5000.fa",
+    "-o",
+    "/tmp/yzz-shortread-hybrid-20261102/anchor3000_hybrid"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+  "started_at": "2026-11-02T09:34:45.944563+00:00",
+  "expected_success": true,
+  "returncode": 0,
+  "finished_at": "2026-11-02T09:34:48.287991+00:00",
+  "log": "logs/anchor3000_hybrid.log",
+  "log_sha256": "10b5f31d131bf40ee710527c3e36690cd9f692426a13bb84a49d95bcced19089"
+}

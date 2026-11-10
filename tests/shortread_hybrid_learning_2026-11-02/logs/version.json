@@ -1,0 +1,15 @@
+{
+  "label": "version",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--version"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+  "started_at": "2026-11-02T09:33:12.532386+00:00",
+  "expected_success": true,
+  "returncode": 0,
+  "finished_at": "2026-11-02T09:33:12.644699+00:00",
+  "log": "logs/version.log",
+  "log_sha256": "8fefd3e31b50feb36258475ca1973175d1d75bf6d58abe85d9dd271d78c7032c"
+}

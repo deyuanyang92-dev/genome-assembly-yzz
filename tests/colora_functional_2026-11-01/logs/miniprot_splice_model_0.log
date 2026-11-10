@@ -1,0 +1,9 @@
+[M::mp_ntseq_read@0.006*0.34] read 27033 bases in 1 contigs
+[M::mp_idx_build@0.007*0.33] 212 blocks
+[M::mp_idx_build@0.008*0.51] collected syncmers
+[M::mp_idx_build@0.087*0.92] 16125 kmer-block pairs
+[M::mp_idx_print_stat] 14397 distinct k-mers; mean occ of infrequent k-mers: 1.12; 0 frequent k-mers accounting for 0 occurrences
+[M::worker_pipeline::0.117*0.87] mapped 1 sequences
+[M::main] Version: 0.18-r281
+[M::main] CMD: /tmp/yzz-learning-miniprot/miniprot --gff -j 0 13_全基因组自主学习_2026-11-01/databases/miniprot_native_inputs/DPP3-hs.gen.fa.gz 13_全基因组自主学习_2026-11-01/databases/miniprot_native_inputs/DPP3-mm.pep.fa.gz
+[M::main] Real time: 0.125 sec; CPU: 0.106 sec; Peak RSS: 0.065 GB

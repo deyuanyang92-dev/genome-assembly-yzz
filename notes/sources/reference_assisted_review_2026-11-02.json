@@ -1,0 +1,181 @@
+{
+  "reviewed_at": "2026-11-02T08:47:46.588024+00:00",
+  "scope": "short-read de novo and reference-assisted chromosome scaffolding decision review",
+  "new_biological_runs": 0,
+  "new_tools_installed": 0,
+  "new_upstream_repositories_cloned": 0,
+  "entries": [
+    {
+      "tool": "RagTag",
+      "version_observed": "GitHub release observed 2.1.0; PyPI lists 2.1.1 uploaded 2026-10-01; package-to-upstream identity unresolved",
+      "url": "https://github.com/malonge/RagTag/releases",
+      "reading_scope": "manuals scaffold/correct/patch/merge; partial static inspection of downloaded v2.1.0 scaffold entry",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "RagTag PyPI",
+      "version_observed": "2.1.1",
+      "url": "https://pypi.org/project/RagTag/",
+      "reading_scope": "metadata page only; not installed or inspected as source",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "Ragout",
+      "version_observed": "website 2.0",
+      "url": "https://mikolmogorov.github.io/Ragout/",
+      "reading_scope": "description and usage; 2018 paper accessible excerpts, not all supplement",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "MaSuRCA",
+      "version_observed": "4.1.4; short commit 43e485a",
+      "url": "https://github.com/alekseyzimin/masurca/releases",
+      "reading_scope": "release and README, especially chromosome_scaffolder flags and long-read requirements",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "ABySS",
+      "version_observed": "2.3.10; short commit 5dc06d6",
+      "url": "https://github.com/BirolLab/abyss/releases",
+      "reading_scope": "README and release notes; no whole-source review",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "Platanus-allee",
+      "version_observed": "README 2.4.0; full commit not resolved",
+      "url": "https://github.com/rkajitani/Platanus-allee",
+      "reading_scope": "README description, version, input and command sections",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "GreenHill",
+      "version_observed": "version not locked",
+      "url": "https://github.com/ShunOuchi/GreenHill",
+      "reading_scope": "README inputs, requirements, examples; 2023 methods indexed excerpt",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "RACA",
+      "version_observed": "repository states original PNAS paper version; no semantic version locked",
+      "url": "https://github.com/ma-compbio/RACA",
+      "reading_scope": "README workflow, input preparation and coordinate output; paper summary",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "AlignGraph",
+      "version_observed": "original short-read implementation; version not locked",
+      "url": "https://github.com/baoe/AlignGraph",
+      "reading_scope": "README inputs/dependencies/output and 2014 method summary",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "RAGA",
+      "version_observed": "version unresolved; 2025 paper",
+      "url": "https://github.com/wzxie/RAGA",
+      "reading_scope": "indexed README and paper abstract/excerpts only; direct page access failed; HiFi required",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "ALLMAPS",
+      "version_observed": "version not checked; 2015 paper",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4305236/",
+      "reading_scope": "paper method summary; software link lookup failed",
+      "status": "documentation_or_selected_source_review_not_executed"
+    },
+    {
+      "tool": "LACHESIS precedent",
+      "version_observed": "2013 paper; not recommended as default new deployment",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4117202/",
+      "reading_scope": "paper methods and short-read/Hi-C precedent",
+      "status": "documentation_or_selected_source_review_not_executed"
+    }
+  ],
+  "method_papers": [
+    {
+      "tool": "RagTag",
+      "publication_year": "2022",
+      "doi": "10.1186/s13059-022-02823-7",
+      "url": "https://link.springer.com/article/10.1186/s13059-022-02823-7",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "Ragout2",
+      "publication_year": "2018",
+      "doi": "10.1101/gr.236273.118",
+      "url": "https://doi.org/10.1101/gr.236273.118",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "GreenHill",
+      "publication_year": "2023",
+      "doi": "10.1186/s13059-023-03006-8",
+      "url": "https://doi.org/10.1186/s13059-023-03006-8",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "Platanus-allee",
+      "publication_year": "2019",
+      "doi": "10.1038/s41467-019-09575-2",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6461651/",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "RACA",
+      "publication_year": "2013",
+      "doi": null,
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3562798/",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "AlignGraph",
+      "publication_year": "2014",
+      "doi": null,
+      "url": "https://academic.oup.com/bioinformatics/article/30/12/i319/391426",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "RAGA",
+      "publication_year": "2025",
+      "doi": "10.1093/hr/uhaf207",
+      "url": "https://doi.org/10.1093/hr/uhaf207",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "ALLMAPS",
+      "publication_year": "2015",
+      "doi": "10.1186/s13059-014-0573-1",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4305236/",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    },
+    {
+      "tool": "LACHESIS",
+      "publication_year": "2013",
+      "doi": "10.1038/nbt.2727",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4117202/",
+      "scope": "targeted methods/summary reading; not full supplementary reproduction"
+    }
+  ],
+  "local_source_snapshots": [
+    {
+      "file": "notes/sources/reference_assisted_2026-11-02/ragtag_scaffold_v2.1.0.py",
+      "url": "https://raw.githubusercontent.com/malonge/RagTag/v2.1.0/ragtag_scaffold.py",
+      "sha256": "769052f0d24dd5d332c1134437bbecba470c230b420224095dee520ea38818c1",
+      "tag": "v2.1.0",
+      "full_commit": null,
+      "scope": "selected AGP generation, filtering, gap defaults and AGP-to-FASTA handoff; helper implementations not audited",
+      "executed": false
+    }
+  ],
+  "limitations": [
+    "PyPI 2.1.1 identity vs official upstream release requires confirmation before selecting build",
+    "No target species data, no chromosome-scale benchmark executed",
+    "RAGA direct source lookup failed; indexed content only; not short-read-only",
+    "Version and whole-source/issue review incomplete for several candidates"
+  ],
+  "related_local_notes": [
+    "notes/03_nf-core_genomeassembler.md",
+    "notes/07_Juicer_3D-DNA.md",
+    "notes/08_核心工具速查.md",
+    "notes/48_二代数据与参考辅助染色体组装路线.md"
+  ]
+}

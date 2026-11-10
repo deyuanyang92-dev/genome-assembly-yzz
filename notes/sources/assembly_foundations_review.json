@@ -1,0 +1,71 @@
+{
+  "recorded": "2026-11-01",
+  "documents": [
+    "notes/19_全基因组组装编程与验收规范.md",
+    "notes/20_源码追踪与能力验证.md",
+    "notes/21_组装基础与质量判断.md"
+  ],
+  "sources": [
+    {
+      "name": "Merqury",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7488777/",
+      "read_scope": "QV/k-mer 完整度模型、reads 偏倚与分 hap 评价；重点段落，非实验复现"
+    },
+    {
+      "name": "BUSCO official user guide",
+      "url": "https://busco.ezlab.org/busco_userguide",
+      "read_scope": "结果解读、重复/缺失的生物学与技术来源；非工具实测"
+    },
+    {
+      "name": "GenomeScope 2.0 and Smudgeplot",
+      "url": "https://www.nature.com/articles/s41467-020-14998-3",
+      "read_scope": "基因组调查/倍性及原论文低错误短读数据边界；非复现"
+    },
+    {
+      "name": "Inspector",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8590762/",
+      "read_scope": "reads 支持、真实杂合与结构错误的区分；非本地运行"
+    },
+    {
+      "name": "hifiasm official Hi-C documentation",
+      "url": "https://github.com/chhylp123/hifiasm/blob/master/docs/source/hic-assembly.rst",
+      "read_scope": "染色体内分型、跨染色体亲本来源混合与不做 scaffolding"
+    },
+    {
+      "name": "CiFi original research",
+      "url": "https://www.nature.com/articles/s41467-025-66918-y",
+      "read_scope": "重点阅读引言中同个体数据原则；不是完整方法复现"
+    },
+    {
+      "name": "Breaking the cold chain",
+      "url": "https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giag061/8690708",
+      "read_scope": "Table 2 和挂载结果：不同个体 PacBio/Hi-C 实例及过度合并；未复现"
+    },
+    {
+      "name": "VGP original research",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/pmid/33911273/",
+      "read_scope": "多技术错误审查/结构支持，结合补充材料 reliable blocks；非全部实验复现"
+    }
+  ],
+  "interpretation": "条件性处理建议与异常候选解释为项目综合判断；来源不为未知物种的安全性背书。",
+  "new_validation": {
+    "path": "tests/assembly_contracts/validation.json",
+    "type": "synthetic AGP/FASTA invariant tests",
+    "tests": 14,
+    "passed": true
+  },
+  "full_workflows_executed": 0,
+  "source_trace_findings": [
+    {
+      "repository": "sanger-tol_genomeassembly",
+      "commit": "131f0ea272bb2fce9869d57f684f20f645467e34",
+      "findings": [
+        "stage MD5 identity is distinct from file content hashing and Nextflow task cache",
+        "trio caller maternal/paternal order conflicts with module variable naming; biological output impact not integration tested",
+        "MerquryFK nuclear statistics process uses ignore error strategy",
+        "coverage derivation for purge/oatk does not automatically set hifiasm --hom-cov"
+      ],
+      "evidence": "local pinned source static review; details in note20"
+    }
+  ]
+}

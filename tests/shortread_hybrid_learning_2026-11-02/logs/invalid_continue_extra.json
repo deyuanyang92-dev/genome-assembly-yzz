@@ -1,0 +1,19 @@
+{
+  "label": "invalid_continue_extra",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--continue",
+    "-o",
+    "/tmp/yzz-shortread-hybrid-20261102/repeat_pe",
+    "-t",
+    "3"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+  "started_at": "2026-11-02T09:33:23.526810+00:00",
+  "expected_success": false,
+  "returncode": 255,
+  "finished_at": "2026-11-02T09:33:23.614943+00:00",
+  "log": "logs/invalid_continue_extra.log",
+  "log_sha256": "9a7891834913eb9eb24cffbbaeb2c468dc69f0439536c9ed59fb6763dbc14b33"
+}

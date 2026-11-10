@@ -1,0 +1,10 @@
+[M::mm_idx_gen::0.007*0.22] collected minimizers
+[M::mm_idx_gen::0.009*0.34] sorted minimizers
+[M::main::0.010*0.32] loaded/built the index for 1 target sequence(s)
+[M::mm_mapopt_update::0.012*0.35] mid_occ = 500
+[M::mm_idx_stat] kmer size: 19; skip: 19; is_hpc: 0; #seq: 1
+[M::mm_idx_stat::0.013*0.35] distinct minimizers: 6018 (99.97% are singletons); average occurrences: 1.825; average spacing: 5.919; total length: 65000
+[M::worker_pipeline::0.023*0.49] mapped 4 sequences
+[M::main] Version: 2.31-r1302
+[M::main] CMD: minimap2 -x asm5 -t 1 /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/ref_forward.fa /mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/ragtag_scaffold_2026-11-03/inputs/query.fa
+[M::main] Real time: 0.031 sec; CPU: 0.013 sec; Peak RSS: 0.029 GB

@@ -1,0 +1,130 @@
+{
+  "kind": "synthetic_followup_not_biological_validation",
+  "genome_bp": 18000,
+  "unique_block_bp": 3000,
+  "repeat_bp": 2000,
+  "pe_read_bp": 150,
+  "pe_insert_bp": 500,
+  "pe_step": 3,
+  "long_read_bp": 5000,
+  "long_step": 50,
+  "records": [
+    {
+      "label": "anchor3000_pe",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--only-assembler",
+        "-1",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R1.fq.gz",
+        "-2",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R2.fq.gz",
+        "-k",
+        "21,33,55",
+        "-t",
+        "2",
+        "-m",
+        "4",
+        "-o",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_pe"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:34:44.251919+00:00",
+      "expected_success": true,
+      "returncode": 0,
+      "finished_at": "2026-11-02T09:34:45.937887+00:00",
+      "log": "logs/anchor3000_pe.log",
+      "log_sha256": "86c69d75f4588f9e30e6dc05617342a937740fce4b1920a4ebb4ee71669ce7f5"
+    },
+    {
+      "label": "anchor3000_hybrid",
+      "argv": [
+        "/root/miniconda3/envs/mitoz3.6/bin/python",
+        "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+        "--only-assembler",
+        "-1",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R1.fq.gz",
+        "-2",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R2.fq.gz",
+        "-k",
+        "21,33,55",
+        "-t",
+        "2",
+        "-m",
+        "4",
+        "--nanopore",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/long5000.fa",
+        "-o",
+        "/tmp/yzz-shortread-hybrid-20261102/anchor3000_hybrid"
+      ],
+      "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+      "started_at": "2026-11-02T09:34:45.944563+00:00",
+      "expected_success": true,
+      "returncode": 0,
+      "finished_at": "2026-11-02T09:34:48.287991+00:00",
+      "log": "logs/anchor3000_hybrid.log",
+      "log_sha256": "10b5f31d131bf40ee710527c3e36690cd9f692426a13bb84a49d95bcced19089"
+    }
+  ],
+  "artifacts": {
+    "anchor3000_pe": {
+      "contigs.fasta": {
+        "sha256": "6f7cf1b12ba39e6d34f166be0636926176a4f1af332a3bd67245fc16503095aa",
+        "bytes": 14739
+      },
+      "scaffolds.fasta": {
+        "sha256": "6f7cf1b12ba39e6d34f166be0636926176a4f1af332a3bd67245fc16503095aa",
+        "bytes": 14739
+      },
+      "assembly_graph_with_scaffolds.gfa": {
+        "sha256": "22d6eb64a209a3d5ffa231f156945b96c854b1e78cd03d9ca601affdce5dd781",
+        "bytes": 14891
+      },
+      "params.txt": {
+        "sha256": "e75d0ebae0aca308c8a24b5980bc8a2a563746ce534dcfb962d1081d4cc29fdf",
+        "bytes": 1488
+      },
+      "spades.log": {
+        "sha256": "a84dd244368efe61321061567a540bca9d964357c573b247e1eae881364afe7f",
+        "bytes": 104703
+      },
+      "input_dataset.yaml": {
+        "sha256": "53ed504da40e66458bb6dedf6b3b65bb940e496e704e5fdd73c9a99ff9144636",
+        "bytes": 242
+      }
+    },
+    "anchor3000_hybrid": {
+      "contigs.fasta": {
+        "sha256": "856b9e9017e4d66b7622a081dc10071e504161883d3827b18dc93132ef8f4a55",
+        "bytes": 18335
+      },
+      "scaffolds.fasta": {
+        "sha256": "856b9e9017e4d66b7622a081dc10071e504161883d3827b18dc93132ef8f4a55",
+        "bytes": 18335
+      },
+      "assembly_graph_with_scaffolds.gfa": {
+        "sha256": "3788c4edaeaea2da2e65ade33f310c0044b65cd750bd88cdb53b3ca0e685e086",
+        "bytes": 14753
+      },
+      "params.txt": {
+        "sha256": "a23327753fb926677561b49a7d19edcc926adf52dfdab8621e8bc4077e5635d6",
+        "bytes": 1848
+      },
+      "spades.log": {
+        "sha256": "3d806aa664a49891c882a1b5bdd706ac49ab153112a9e9187c7348894fd5da5f",
+        "bytes": 111120
+      },
+      "input_dataset.yaml": {
+        "sha256": "2b55537a529dab10d48a6458b314869582ebcb107cc2425db3018a2f7e07dd40",
+        "bytes": 374
+      }
+    }
+  },
+  "input_hashes": {
+    "pe_R2.fq.gz": "af83512479c3ed10574376297a5a58e8f361a16d5fd3ce78b1502fb656509b3c",
+    "long5000.fa": "1cf0bb3ace4ce78b664a7cb577efe67421894aebeeeb9dae386901f4071d770e",
+    "pe_R1.fq.gz": "7d5ea8ce3d45a919743cea549d010c6b28191c9a3c7b2b517120321ef4c2676b",
+    "truth.fa": "1669da60a759004fda17de1828163c7f5e31a2808d7f1208439be3ae0fc83ccb"
+  },
+  "limitations": "Relative to the prior experiment both unique-block length and long-read length change; do not infer a unique root cause"
+}

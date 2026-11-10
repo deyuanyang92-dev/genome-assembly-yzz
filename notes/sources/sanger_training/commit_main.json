@@ -1,0 +1,101 @@
+{
+  "sha": "d8763186ee0c5246520eb2643765b4705e449cc7",
+  "node_id": "C_kwDOM-_e6NoAKGQ4NzYzMTg2ZWUwYzUyNDY1MjBlYjI2NDM3NjViNDcwNWU0NDljYzc",
+  "commit": {
+    "author": {
+      "name": "additive3",
+      "email": "jmdw@sanger.ac.uk",
+      "date": "2026-08-13T14:37:18Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2026-08-13T14:37:18Z"
+    },
+    "message": "Update README.md",
+    "tree": {
+      "sha": "448f3db339ea088d506977ee57fd4f83cadaff79",
+      "url": "https://api.github.com/repos/sanger-tol/curation-resources/git/trees/448f3db339ea088d506977ee57fd4f83cadaff79"
+    },
+    "url": "https://api.github.com/repos/sanger-tol/curation-resources/git/commits/d8763186ee0c5246520eb2643765b4705e449cc7",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJqfdaeCRC1aQ7uu5UhlAAAChwQAKkFWXfY6h2s6WvNHxwIy4cX\n1jsgAIbVDJaGkyFg9zgBS4qqmrUn4bxwAYPVP9qRr04T5nf+7laeoaVqCfy3B4Pq\nC+kEOCf7WC7VElUniYl1g4zStLRTt2rni6f/yZZvEN19Q6WI4c4ES5g4RacQN69e\nJkqwxImrORs682tlK/o7LjXsEs8CjHnLwkpyUvwA9ol2yQEgRy+ES03Tok2eU21G\nSQyeVaa60d5SM2lpU+YeUgD1C+0Myl+dtCk0wKJP+zTnuj71i5NXu/XbD7hyx4Sx\n7lN2qzUp9RpVYWLttJcKuPedoF3NhEQVElBr0WOoCNjKyDVyxB2E9tdN9cgfn5Vw\n5MF7y5ld5qMkPDUoqSqtrFN4cQqJT1mKGt/sBUTMb+IK3e0iuUYBeL2tPYr5uliq\ntpu+X6nwMFWPmjHu0M+vdqOdFWcSgiLfjp2Mw1JgdkOkW28ug+QtD7uHMf95Ggb8\n93sWjldH4acb+1iZjfVB95Da+1bfl9bZVQ5RvFspTMabgDlioXWE5dsa8u/9FP6P\nePn7z7NpkdUfoF6gFAFUXOTZGzLV7OhvV/rIIBMkVonBO7UGPSHZDnw8kvTJl8ty\n3uDJSzi/AhBDCKKMwQY1OWhMEcUbh488dGT0GSQ0rYdrRTyhrHfWPeSQLsGt2kZj\n70zt8NyViJKW8R3VL7z8\n=BHnD\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree 448f3db339ea088d506977ee57fd4f83cadaff79\nparent f2701ffb7c75c50e4b59e728d1c081bdd4b83c80\nauthor additive3 <jmdw@sanger.ac.uk> 1786631838 +0100\ncommitter GitHub <noreply@github.com> 1786631838 +0100\n\nUpdate README.md",
+      "verified_at": "2026-08-13T14:44:30Z"
+    }
+  },
+  "url": "https://api.github.com/repos/sanger-tol/curation-resources/commits/d8763186ee0c5246520eb2643765b4705e449cc7",
+  "html_url": "https://github.com/sanger-tol/curation-resources/commit/d8763186ee0c5246520eb2643765b4705e449cc7",
+  "comments_url": "https://api.github.com/repos/sanger-tol/curation-resources/commits/d8763186ee0c5246520eb2643765b4705e449cc7/comments",
+  "author": {
+    "login": "additive3",
+    "id": 17472241,
+    "node_id": "MDQ6VXNlcjE3NDcyMjQx",
+    "avatar_url": "https://avatars.githubusercontent.com/u/17472241?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/additive3",
+    "html_url": "https://github.com/additive3",
+    "followers_url": "https://api.github.com/users/additive3/followers",
+    "following_url": "https://api.github.com/users/additive3/following{/other_user}",
+    "gists_url": "https://api.github.com/users/additive3/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/additive3/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/additive3/subscriptions",
+    "organizations_url": "https://api.github.com/users/additive3/orgs",
+    "repos_url": "https://api.github.com/users/additive3/repos",
+    "events_url": "https://api.github.com/users/additive3/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/additive3/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "user_view_type": "public",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "f2701ffb7c75c50e4b59e728d1c081bdd4b83c80",
+      "url": "https://api.github.com/repos/sanger-tol/curation-resources/commits/f2701ffb7c75c50e4b59e728d1c081bdd4b83c80",
+      "html_url": "https://github.com/sanger-tol/curation-resources/commit/f2701ffb7c75c50e4b59e728d1c081bdd4b83c80"
+    }
+  ],
+  "stats": {
+    "total": 6,
+    "additions": 1,
+    "deletions": 5
+  },
+  "files": [
+    {
+      "sha": "79f48a157acf0fa31681d1214d1894e7278eecb4",
+      "filename": "README.md",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 5,
+      "changes": 6,
+      "blob_url": "https://github.com/sanger-tol/curation-resources/blob/d8763186ee0c5246520eb2643765b4705e449cc7/README.md",
+      "raw_url": "https://github.com/sanger-tol/curation-resources/raw/d8763186ee0c5246520eb2643765b4705e449cc7/README.md",
+      "contents_url": "https://api.github.com/repos/sanger-tol/curation-resources/contents/README.md?ref=d8763186ee0c5246520eb2643765b4705e449cc7",
+      "patch": "@@ -11,12 +11,8 @@ This section will cover the curation tools and how they work.\n [Curation website](https://curation.tol.sanger.ac.uk/) with tutorial videos:\n * [Introduction](https://curation.tol.sanger.ac.uk/intro-series)\n \n-Other videos:\n-* [YouTube video 1](https://youtu.be/3IL2Q4f3k3I)\n-* [BGA24: Introduction to Manual Curation](https://www.youtube.com/watch?v=qlWZlFXy07w)\n \n-\n-PretextView can be obtained here https://github.com/wtsi-hpag/PretextView/releases\n+PretextView versions for all OS flavours can be obtained [HERE](https://github.com/sanger-tol/PretextView/releases)\n \n \n To generate the analysis data used for curation run one of the nextflow pipelines:"
+    }
+  ]
+}

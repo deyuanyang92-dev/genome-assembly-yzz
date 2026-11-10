@@ -1,0 +1,4 @@
+tool	version	commit	recorded_at	evidence	scope	limitations	record
+AUGUSTUS	3.5.0	99e04771a7dc2feac4a62a60e88fd2f790c7bb3a	2026-11-04T21:02:24.751483+08:00	documents_selected_source_component_executed	official prediction/hints/local coordinates; training392/test100; bounded optimization	no full default optimization; no target species; no TBtools/GSAman; no full workflow	README.md; execution/commands.json; followup/validation.json; optimization/commands.json
+bam2hints	bundled AUGUSTUS3.5.0	99e04771a7dc2feac4a62a60e88fd2f790c7bb3a	2026-11-04T21:02:24.751483+08:00	source_selected_component_executed	official BAM to6 intron hints; byte equality to upstream expected	no upstream RNA mapping; local fly example only	followup/validation.json
+BamTools	2.5.3	7e5c183cdf37a6ab216402b26c07296807416472	2026-11-04T21:02:24.751483+08:00	dependency_built	static dependency for bam2hints	not systematic BamTools learning	provenance.json

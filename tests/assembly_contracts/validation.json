@@ -1,0 +1,13 @@
+{
+  "recorded": "2026-11-01",
+  "tests_run": 14,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "scope": "Strict W-component AGP lossless-scaffolding invariants; synthetic fixtures only.",
+  "limits": [
+    "Not a full AGP 2.1 validator.",
+    "Intentional filtering, polishing and gap filling require an explicit change ledger instead of full input preservation.",
+    "No real Hi-C phasing, scaffolding accuracy or manual curation tested."
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "policy_version": "2026-11-01.1",
+  "status": "design_only_not_implemented",
+  "scope": "ONT QC and contribution of Hi-C specimen B to target specimen A; see notes30/31",
+  "hifi_requirement": "Effective target nuclear HiFi >=50x remains separate; other platforms never substitute",
+  "ont_required_reports": [
+    "specimen_and_run_identity",
+    "pore_kit_basecaller_full_model_version",
+    "POD5_and_tagged_BAM_availability",
+    "simplex_duplex_parent_relationships",
+    "raw_and_filtered_read_length_quality_distributions",
+    "effective_target_nuclear_bases_or_pending",
+    "nested_ge50kb_ge100kb_ge200kb_bases_and_coverage",
+    "local_repeat_bridging_and_mapping_ambiguity",
+    "before_after_retention_and_processing_log"
+  ],
+  "ont_universal_numeric_filter": null,
+  "hic_cross_individual_design": [
+    "fixed_target_contigs_and_sha",
+    "baseline_without_B_HiC",
+    "same_contigs_with_B_HiC",
+    "same_individual_HiC_control_if_available",
+    "molecule_level_heldout_and_resampling_if_sufficient",
+    "AGP_lossless_review_and_separate_break_events",
+    "join_level_support_conflict_and_unknowns",
+    "A_structural_evidence_prioritized_over_B_specific_structure"
+  ],
+  "hic_review_statuses": [
+    "supported_for_declared_scope",
+    "candidate_pending_confirmation",
+    "reject_or_mask_locally",
+    "insufficient_library_or_identity_evidence"
+  ],
+  "prohibited_inferences": [
+    "N50_or_cis_increase_alone_proves_correctness",
+    "same_B_HiC_heldout_proves_A_structure",
+    "absence_of_long_read_spanning_proves_wrong_when_unspanable",
+    "high_kmer_QV_proves_scaffold_order",
+    "unrelated_B_HiC_proves_A_parental_phasing"
+  ],
+  "review_template": "templates/hic_join_review.tsv"
+}

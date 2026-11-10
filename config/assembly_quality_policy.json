@@ -1,0 +1,171 @@
+{
+  "policy_version": "2026-11-01.1",
+  "status": "project_design_not_implemented_pipeline",
+  "authority": "User requires effective HiFi >=50x and quality substantially above published minimum standards. Other numerical targets are project-defined, not universal journal rules.",
+  "applies_to": "Eukaryotic nuclear reference assembly; product, ploidy, biological exceptions and evidence scope must be declared before evaluation.",
+  "sources": [
+    {
+      "id": "ebp_standards_v7",
+      "url": "https://www.earthbiogenome.org/report-on-assembly-standards",
+      "status": "committee_standard_approved_2026-01-31"
+    },
+    {
+      "id": "ebp_recommendations_v4",
+      "url": "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+      "status": "committee_recommendations_approved_2026-01-31"
+    },
+    {
+      "id": "li_2026",
+      "url": "https://doi.org/10.1111/jse.70118",
+      "status": "journal_review_2026-09-16"
+    },
+    {
+      "id": "sassi_2026",
+      "url": "https://doi.org/10.1038/s44573-026-00017-x",
+      "status": "journal_review_2026-10-27"
+    },
+    {
+      "id": "erga_pilot_2024",
+      "url": "https://doi.org/10.1038/s44185-024-00054-6",
+      "status": "journal_research_2024-09-17"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "effective_hifi_coverage_x",
+      "unit": "x",
+      "operator": ">=",
+      "target": 50,
+      "aspirational": null,
+      "hard_gate": true,
+      "formula": "effective_target_nuclear_hifi_bases / estimated_haploid_nuclear_genome_size_bp",
+      "uncertainty": "Use D/Gmax for a conservative pass; if G or effective D is unavailable return pending. Diploid 50x total is approximately 25x per haplotype, not 50x each."
+    },
+    {
+      "id": "contig_n50_bp",
+      "unit": "bp",
+      "operator": ">=",
+      "target": 10000000,
+      "aspirational": 20000000,
+      "hard_gate": false,
+      "applicability": "Chromosome-size-dependent; document a biological exception for small chromosomes. Also report NG50 and independently supported G."
+    },
+    {
+      "id": "contig_ng50_bp",
+      "unit": "bp",
+      "operator": ">=",
+      "target": 10000000,
+      "aspirational": 20000000,
+      "hard_gate": false,
+      "applicability": "Same biological scope as N50. G and its source must be recorded; two-haplotype combined span is not a single-haplotype denominator."
+    },
+    {
+      "id": "consensus_qv",
+      "unit": "Phred",
+      "operator": ">=",
+      "target": 50,
+      "aspirational": 60,
+      "hard_gate": false,
+      "applicability": "Record method, k, evaluation individual and independent-data flag; a high non-independent estimate is not independent confirmation."
+    },
+    {
+      "id": "representation_aware_kmer_completeness_pct",
+      "unit": "percent",
+      "operator": ">=",
+      "target": 98,
+      "aspirational": 99,
+      "hard_gate": false,
+      "applicability": "Declare reliable k-mer set and representable denominator. Evaluate each hap plus complete diploid union separately; do not demand all diploid heterozygous k-mers in a single hap."
+    },
+    {
+      "id": "busco_genome_complete_pct",
+      "unit": "percent",
+      "operator": ">=",
+      "target": 98,
+      "aspirational": 99,
+      "hard_gate": false,
+      "applicability": "Report S/D/F/M, lineage, version, mode and ploidy; genuine divergence/duplication requires documented interpretation, not automatic purging."
+    },
+    {
+      "id": "busco_genome_single_copy_pct",
+      "unit": "percent",
+      "operator": ">=",
+      "target": 95,
+      "aspirational": null,
+      "hard_gate": false,
+      "applicability": "Only where biological single-copy expectations apply; never substitute for complete BUSCO or false-duplication estimation."
+    },
+    {
+      "id": "chromosomal_assignment_pct",
+      "unit": "percent",
+      "operator": ">=",
+      "target": 98,
+      "aspirational": 99,
+      "hard_gate": false,
+      "applicability": "Chromosome-level product only; denominator is all retained target nuclear sequence, including unplaced sequence; report unlocalised fraction separately."
+    },
+    {
+      "id": "false_duplication_pct",
+      "unit": "percent",
+      "operator": "<=",
+      "target": 1,
+      "aspirational": 0.1,
+      "hard_gate": false,
+      "applicability": "Record estimation unit/denominator and supporting k-mer/depth/self-alignment evidence; not equivalent to BUSCO D."
+    },
+    {
+      "id": "gaps_per_gb",
+      "unit": "gaps/Gb",
+      "operator": "<=",
+      "target": 100,
+      "aspirational": 10,
+      "hard_gate": false,
+      "applicability": "Also report absolute gap count, N bases/fraction, and definition of gap; project engineering target, not a universal biological guarantee."
+    },
+    {
+      "id": "transcript_mapping_pct",
+      "unit": "percent",
+      "operator": ">=",
+      "target": 98,
+      "aspirational": null,
+      "hard_gate": false,
+      "applicability": "Requires appropriate, documented same-species transcript evidence; missing input is pending, not pass."
+    }
+  ],
+  "required_evidence": [
+    "specimen_and_library_identity",
+    "assembly_product_and_ploidy",
+    "final_fasta_sha256",
+    "genome_size_estimate_and_uncertainty",
+    "contamination_and_organelle_review",
+    "repeat_and_coverage_anomalies",
+    "stage_snapshots_and_edit_log",
+    "multi_resolution_contact_maps_when_scaffolded",
+    "known_structural_conflict_resolution",
+    "karyotype_comparison_or_explicit_unknown",
+    "phasing_scope_and_evidence",
+    "versions_parameters_databases_and_logs",
+    "raw_data_and_assembly_submission_plan"
+  ],
+  "assessment_fields": [
+    "metric_id",
+    "external_baseline",
+    "project_target",
+    "observed",
+    "status",
+    "evidence",
+    "evidence_independent",
+    "applicability",
+    "limitation",
+    "assembly_sha256"
+  ],
+  "statuses": [
+    "pass",
+    "below_target",
+    "pending",
+    "not_applicable",
+    "exception_documented"
+  ],
+  "aggregation": "No weighted total or single high_quality boolean. Report data sufficiency, external baseline, project targets, structure review, phasing scope and reproducibility separately. Missing evidence never passes.",
+  "t2t_claim": "Separate advanced product: per-chromosome gap absence, applicable telomeres, repeat/copy-number and structural support plus appropriate QV; Q60 or terminal telomeres alone are insufficient."
+}

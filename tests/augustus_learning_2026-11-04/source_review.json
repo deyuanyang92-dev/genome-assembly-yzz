@@ -1,0 +1,84 @@
+{
+  "reviewed_at": "2026-11-04T20:55:23.384298+08:00",
+  "source_url": "https://github.com/Gaius-Augustus/Augustus",
+  "tag": "v3.5.0",
+  "commit": "99e04771a7dc2feac4a62a60e88fd2f790c7bb3a",
+  "archive_scope": "selected official files; not full upstream source; est.psl archived as input; binaries separate",
+  "file_hashes": {
+    "README.md": "f7036d7d50b9f34629cb70191b5c84748375bddd2b5087173249a049f6945b21",
+    "Makefile": "4008b23ab543cd2405c8fc5fc0c329ad22c3da62052db4ccea6eaac89ab01941",
+    "common.mk": "3d08ef1c31005d991f1240231b5816b9c9bf93fce128a97f6fd8afc8da371384",
+    "docs/ABOUT.md": "599eadb8a54f60deb108ef1aa990ccafa2155b1111db969524f2db892d007c76",
+    "docs/INSTALL.md": "8c9472c28b726e1e992b4fc5f04100828a91c6cad60c8d171ca34991a5a20d57",
+    "docs/RUNNING-AUGUSTUS.md": "f289223eaf833f4934b31f9a491d0ef61be0618fb7ee4f3e2e7f19bf5a863ee5",
+    "docs/REFERENCES.md": "e28c8754167fa37b7fa93b7b5880cb2a5dd2f04de1f55afac20a7ce5716abdfa",
+    "docs/tutorial/training.html": "74b7d0c721722618ae703b804ee3ab4b5024c5e1b05541037deffa5a0e202eb8",
+    "docs/tutorial/prediction.html": "e3bbfa7afb0e8472984ab8421029a66ca66beb4c838c84d0f4421e0bef20275b",
+    "src/LICENSE.TXT": "e710730660976e919ba77574b7283fe04ceceabed08f6d26a41c96f8c6cd8e3b",
+    "src/augustus.cc": "ca92581a9a2af0ccceb85df21fb26001e7b41f8c8c4be8f901a2d2934d309e6d",
+    "src/properties.cc": "2b455930463e79287968a04c5194c6e212763679eb3656e327fdd13babe91b8e",
+    "src/hints.cc": "c1473c63ce7abfc097cb65a99b0cd95e49b355228a63b57dc41f39526156fc63",
+    "src/extrinsicinfo.cc": "e27ac175c2efb9d088369a6515620e39c9ba6395519504be4f34829738ad99e6",
+    "src/intronmodel.cc": "42a2246c79c734c4ce3a4840f894eeadbfb856e0d5b8d600e1d44a3cad88d412",
+    "src/exontrain.cc": "b085f688ed970821cb9014243be5676bb9d16239f682fc2ce8553b419deb079e",
+    "src/genbank.cc": "c27ebfc55793eb2ad3d4dac02939e46c78f465a0598ac8dc9c6d0bab578cb0f8",
+    "src/gene.cc": "0d2b964626ea61c9273bdd70138af0181b7c8fb5174b026bf8b0e3fe6497dc61",
+    "src/Makefile": "541b24651ff0a962ba5199433f5218f14dc68ec575dfe1b46dd88633e9d18d70",
+    "scripts/new_species.pl": "3b97c802b556c1eae454f1e92ce08e1cb5feb2e77d172df51474caa2b443f982",
+    "scripts/randomSplit.pl": "d53f042a93b2d353d3285ffce9d0bbfb6b4fc79e194744001675e1e6d77c55ae",
+    "scripts/optimize_augustus.pl": "bcb1e17fd099b95c7bb92bf107d10d5f341f99cb1fc9c42edc950e3e70291b62",
+    "scripts/blat2hints.pl": "5a9535c051a71dc3bc917872feda959aec25720363cfdebc1d119a8167c5e969",
+    "auxprogs/bam2hints/bam2hints.cc": "9013cfca1ce847e1272672bb12dde9a73887dccdea25b5ac7da83c5d457178f1",
+    "auxprogs/bam2hints/Makefile": "b1549ad31d59d6a4ccf7fa0a5b34496e69625843cf291949ba3869a9d641bfe3",
+    "tests/short/examples/test_examples.py": "6964dab56c6e5f3c85a0fdb143bac611730403036dd0bb88e0584c51d09fb76b",
+    "tests/short/auxprogs/bam2hints/test_bam2hints.py": "74f3b83fe90da292c21a07dbb8a1e932c56b37035ac5fe8e01e52b697770b076",
+    "docs/tutorial/data/est.psl": "246d532449fda5014c0cb15c2b176879394e8d77c3933f1c9a58518115130c3c",
+    "config/parameters/aug_cmdln_parameters.json": "954fb2c3711c665eccb1ffb3693a75ababaadc7ec13db914039d49975030358c"
+  },
+  "reading_scope": {
+    "README.md": "full",
+    "docs/INSTALL.md": "relevant build switches and dependency sections",
+    "docs/RUNNING-AUGUSTUS.md": "basic interface; sampling/posteriors; hints; retraining; PPX overview only",
+    "docs/tutorial/training.html": "training/test design; new_species; etraining; optimization; stop-codon conventions",
+    "docs/tutorial/prediction.html": "ab initio; EST/RNA hints; extrinsic config; evidence-assisted prediction",
+    "src/augustus.cc": "FASTA/GenBank routing and cutRelevantPiece",
+    "src/properties.cc": "config and command line precedence; UTR initialization",
+    "src/intronmodel.cc": "length distribution and hinted long intron emission, selected functions",
+    "src/hints.cc": "attribute parsing source/src, grp, pri, mult",
+    "src/extrinsicinfo.cc": "selected evidence grouping/bonus/conformance paths; not complete audit",
+    "src/gene.cc": "selected output/stop-codon handling",
+    "src/exontrain.cc": "terminal stop validation",
+    "src/genbank.cc": "stop-codon extension interpretation",
+    "scripts/optimize_augustus.pl": "CLI defaults, fold split, evalsnsp, gettarget, save parameters",
+    "scripts/randomSplit.pl": "full; seed4",
+    "auxprogs/bam2hints/bam2hints.cc": "defaults, hint types, BAM handling selected sections"
+  },
+  "papers": [
+    {
+      "doi": "10.1093/bioinformatics/btg1080",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14534192/",
+      "scope": "abstract and metadata"
+    },
+    {
+      "doi": "10.1186/1471-2105-7-62",
+      "url": "https://link.springer.com/article/10.1186/1471-2105-7-62",
+      "scope": "abstract and methods: GHMM, compatibility, bonus/malus, dependence"
+    },
+    {
+      "doi": "10.1093/nar/gkl200",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1538822/",
+      "scope": "abstract and sampling/posterior/alternative-transcript methods"
+    },
+    {
+      "doi": "10.1093/bioinformatics/btn013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18218656/",
+      "scope": "metadata/abstract; publisher full text access failed"
+    }
+  ],
+  "limitations": [
+    "selected static source review, not whole-code audit",
+    "no target-polychaete validation",
+    "no GUI session",
+    "not full default optimization or full annotation workflow"
+  ]
+}

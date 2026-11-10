@@ -1,0 +1,103 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: yangdeyuan
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Creating conda environment workflow/envs/fastp.yaml...
+Downloading and installing remote packages.
+Environment for /mnt/p/Travisia/13_全基因组自主学习_2026-11-01/work/colora/workflow/rules/../envs/fastp.yaml created (location: ../../../../../../tmp/yzz-learning-colora-envs/abdc22fdf7b00070914fee38e585a6b4_)
+Creating conda environment workflow/envs/hifiasm.yaml...
+Downloading and installing remote packages.
+Environment for /mnt/p/Travisia/13_全基因组自主学习_2026-11-01/work/colora/workflow/rules/../envs/hifiasm.yaml created (location: ../../../../../../tmp/yzz-learning-colora-envs/416a262879f478ec6e1b380c12b22639_)
+Creating conda environment workflow/envs/basic.yaml...
+Downloading and installing remote packages.
+Environment for /mnt/p/Travisia/13_全基因组自主学习_2026-11-01/work/colora/workflow/rules/../envs/basic.yaml created (location: ../../../../../../tmp/yzz-learning-colora-envs/68b7b6173292ddefc8446ba419e4be4e_)
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=48000
+Job stats:
+job               count
+--------------  -------
+fastp                 1
+hifi_prep             1
+hifiasm_phased        1
+total                 3
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:09:23 2026]
+localrule hifi_prep:
+    input: test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz
+    output: results/reads/hifi/hifi.fastq.gz
+    log: logs/hifi_prep.log
+    jobid: 1
+    reason: Missing output files: results/reads/hifi/hifi.fastq.gz
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        echo "Starting hifi_prep.smk rule..." >> logs/hifi_prep.log
+        {
+            if [ 1 -gt 1 ]; then
+                cat test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz > results/reads/hifi/hifi.fastq.gz
+            else
+                cp test_data/raw_hifi/hifi_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz results/reads/hifi/hifi.fastq.gz
+        fi
+        } >> logs/hifi_prep.log 2>&1
+        echo "Finished hifi_prep.smk rule." >> logs/hifi_prep.log
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/68b7b6173292ddefc8446ba419e4be4e_
+[Sun Nov  1 17:09:25 2026]
+Finished job 1.
+1 of 3 steps (33%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:09:25 2026]
+localrule fastp:
+    input: test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_1.fastq.gz, test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_2.fastq.gz
+    output: results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz, results/fastp/hic_report_fastp.HiC.json, results/fastp/hic_report_fastp.HiC.html
+    log: logs/fastp.log
+    jobid: 2
+    reason: Missing output files: results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=8000, mem_mib=7630
+
+
+        fastp -p -i test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_1.fastq.gz -I test_data/raw_hic/sorted_hic_test_YBP2_SRR27548905_PRJNA1013711_2.fastq.gz -o results/fastp/hic_trim_1.fastq.gz -O results/fastp/hic_trim_2.fastq.gz --detect_adapter_for_pe --json results/fastp/hic_report_fastp.HiC.json --html results/fastp/hic_report_fastp.HiC.html --thread 4 --cut_front True --cut_front_window_size 5 >> logs/fastp.log 2>&1
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/abdc22fdf7b00070914fee38e585a6b4_
+[Sun Nov  1 17:09:43 2026]
+Finished job 2.
+2 of 3 steps (67%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Sun Nov  1 17:09:43 2026]
+localrule hifiasm_phased:
+    input: results/reads/hifi/hifi.fastq.gz, results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz
+    output: results/hifiasm/asm.hap1.gfa, results/hifiasm/asm.hap2.gfa, results/hifiasm/asm.hap1.fa, results/hifiasm/asm.hap2.fa, results/assemblies/asm_hap1.fa, results/assemblies/asm_hap2.fa
+    log: logs/hifiasm.log
+    jobid: 0
+    reason: Missing output files: results/assemblies/asm_hap2.fa, results/assemblies/asm_hap1.fa; Input files updated by another job: results/fastp/hic_trim_1.fastq.gz, results/fastp/hic_trim_2.fastq.gz, results/reads/hifi/hifi.fastq.gz
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=32000, mem_mib=30518
+
+
+        hifiasm results/reads/hifi/hifi.fastq.gz -t 4 -o results/hifiasm/asm --h1 results/fastp/hic_trim_1.fastq.gz --h2 results/fastp/hic_trim_2.fastq.gz -f 0 --ul test_data/raw_ont/ont_test_SPSC01_SRR27947616_PRJNA1075684.fastq.gz >> logs/hifiasm.log 2>&1
+        mv results/hifiasm/asm.hic.hap1.p_ctg.gfa results/hifiasm/asm.hap1.gfa
+        mv results/hifiasm/asm.hic.hap2.p_ctg.gfa results/hifiasm/asm.hap2.gfa
+        awk -f scripts/gfa_to_fasta.awk < results/hifiasm/asm.hap1.gfa > results/hifiasm/asm.hap1.fa
+        awk -f scripts/gfa_to_fasta.awk < results/hifiasm/asm.hap2.gfa > results/hifiasm/asm.hap2.fa
+
+        # all the assemblies produced by the workflow will be symlinked to results/assemblies
+
+        ln -srn results/hifiasm/asm.hap1.fa results/assemblies/asm_hap1.fa
+        ln -srn results/hifiasm/asm.hap2.fa results/assemblies/asm_hap2.fa       
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/416a262879f478ec6e1b380c12b22639_
+[Sun Nov  1 17:25:06 2026]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2026-11-01T170711.562856.snakemake.log

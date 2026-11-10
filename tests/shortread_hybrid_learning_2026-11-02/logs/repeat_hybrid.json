@@ -1,0 +1,29 @@
+{
+  "label": "repeat_hybrid",
+  "argv": [
+    "/root/miniconda3/envs/mitoz3.6/bin/python",
+    "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+    "--only-assembler",
+    "-1",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+    "-2",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+    "-k",
+    "21,33,55",
+    "-t",
+    "2",
+    "-m",
+    "4",
+    "--nanopore",
+    "/tmp/yzz-shortread-hybrid-20261102/inputs/long2300.fa",
+    "-o",
+    "/tmp/yzz-shortread-hybrid-20261102/repeat_hybrid"
+  ],
+  "cwd": "/tmp/yzz-shortread-hybrid-20261102",
+  "started_at": "2026-11-02T09:33:21.573409+00:00",
+  "expected_success": true,
+  "returncode": 0,
+  "finished_at": "2026-11-02T09:33:23.425600+00:00",
+  "log": "logs/repeat_hybrid.log",
+  "log_sha256": "e6b8a03645d07c58757fd6898fd5732ab4283d3978f0675464947b08e7663119"
+}

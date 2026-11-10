@@ -1,0 +1,58 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: yangdeyuan
+Building DAG of jobs...
+Your conda installation is not configured to use strict channel priorities. This is however important for having robust and correct environments (for details, see https://conda-forge.org/docs/user/tipsandtricks.html). Please consider to configure strict priorities by executing 'conda config --set channel_priority strict'.
+Using shell: /usr/bin/bash
+Provided cores: 4
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=48000
+Job stats:
+job         count
+--------  -------
+bandage         1
+gfastats        1
+total           2
+
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Nov  2 01:46:37 2026]
+localrule gfastats:
+    input: results/oatk/oatk.asm.mito.ctg.fasta
+    output: results/gfastats/mito.stats
+    log: logs/gfastats.log
+    jobid: 3
+    reason: Missing output files: results/gfastats/mito.stats
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        (gfastats results/oatk/oatk.asm.mito.ctg.fasta > results/gfastats/mito.stats) 2>> logs/gfastats.log
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/bd4444a88a02b304d8352d79afe30f80_
+[Mon Nov  2 01:46:38 2026]
+Finished job 3.
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+
+[Mon Nov  2 01:46:38 2026]
+localrule bandage:
+    input: results/oatk/oatk.asm.mito.gfa
+    output: results/bandage/mito.jpg
+    log: logs/bandage.log
+    jobid: 0
+    reason: Missing output files: results/bandage/mito.jpg
+    threads: 4
+    resources: tmpdir=/tmp, mem_mb=1000, mem_mib=954
+
+
+        Bandage image results/oatk/oatk.asm.mito.gfa results/bandage/mito.jpg
+        echo "Bandage mitochondrion graph done" >> logs/bandage.log
+        
+Activating conda environment: ../../../../../../tmp/yzz-learning-colora-envs/7dca2de187d19d50c18c3bee11dfa491_
+[Mon Nov  2 01:46:41 2026]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2026-11-02T014634.611400.snakemake.log

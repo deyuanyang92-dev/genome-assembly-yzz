@@ -1,0 +1,534 @@
+{
+  "schema_version": 1,
+  "version": "2026-11-02.3",
+  "status": "reviewed_knowledge_and_design_not_executable_diagnoser",
+  "unknown_version_policy": "version_scope_unverified_do_not_auto_apply_fix",
+  "rule_matching_policy": "symptom_is_not_root_cause_collect_required_evidence",
+  "rules": [
+    {
+      "id": "DBG001",
+      "tool": "hifiasm",
+      "version_scope": "0.25.0-r726; ONT upgrade release-specific",
+      "symptom": "existing bin reuse after data/mode/version change",
+      "evidence_grade": "source_and_release",
+      "trigger_description": "manifest mismatch",
+      "required_checks": "input hashes; mode; arguments; binary/container digest",
+      "suggested_action": "new run namespace; preserve prior cache",
+      "avoid": "do not delete cache or trust prefix alone",
+      "regression_fixture_required": "cache policy negative test",
+      "source_urls": [
+        "https://github.com/chhylp123/hifiasm/releases"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG002",
+      "tool": "hifiasm",
+      "version_scope": "issue798:0.24.0; current version requires verification",
+      "symptom": "segmentation fault around Hi-C input",
+      "evidence_grade": "maintainer_hypothesis_and_confounded_user_workaround",
+      "trigger_description": "SIGSEGV or exit139; no root cause assigned",
+      "required_checks": "scheduler OOM and cgroup limits; stderr; compression magic/integrity; FASTQ pairing",
+      "suggested_action": "propose next check from collected evidence",
+      "avoid": "do not equate SIGSEGV with OOM or auto-trim reads",
+      "regression_fixture_required": "malformed input vs OOM vs real code fault",
+      "source_urls": [
+        "https://github.com/chhylp123/hifiasm/issues/798"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG003",
+      "tool": "hifiasm",
+      "version_scope": "issue756 version unspecified",
+      "symptom": "memory exceeds allocation during correction",
+      "evidence_grade": "unanswered_user_report",
+      "trigger_description": "large input and resource failure",
+      "required_checks": "effective coverage; G range; batches; MaxRSS and scheduler state",
+      "suggested_action": "separate resource/downsampling experiment if warranted",
+      "avoid": "do not merge independent bins as equivalent full-data correction",
+      "regression_fixture_required": "resource failure classified separately from algorithm defect",
+      "source_urls": [
+        "https://github.com/chhylp123/hifiasm/issues/756"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG004",
+      "tool": "hifiasm",
+      "version_scope": "0.25.0-r726 and historical742 discussion",
+      "symptom": "ONT input mode mismatch",
+      "evidence_grade": "release_source_and_visible_reply",
+      "trigger_description": "data metadata not matching selected mode",
+      "required_checks": "chemistry; basecaller; correction history; FASTQ quality",
+      "suggested_action": "choose explicit mode in new branch",
+      "avoid": "do not conflate --ont and --ul",
+      "regression_fixture_required": "mode/input compatibility preflight",
+      "source_urls": [
+        "https://github.com/chhylp123/hifiasm/issues/742"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG005",
+      "tool": "Verkko",
+      "version_scope": "2.3.2 requires Snakemake>=7,<8",
+      "symptom": "unrecognized --reason",
+      "evidence_grade": "issue_and_current_release_and_source",
+      "trigger_description": "unsupported engine version",
+      "required_checks": "actual snakemake --version; environment lock; launcher",
+      "suggested_action": "compatible pinned environment",
+      "avoid": "do not remove one flag and assume compatibility",
+      "regression_fixture_required": "reject Snakemake8 for pinned adapter",
+      "source_urls": [
+        "https://github.com/marbl/verkko/issues/224"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG006",
+      "tool": "Verkko",
+      "version_scope": "issue308 v2.2.1 example; selected2.3.2 launcher mtime",
+      "symptom": "--paths continuation schedules prior stages",
+      "evidence_grade": "maintainer_report_and_source",
+      "trigger_description": "unexpected DAG after timestamp/input change",
+      "required_checks": "content hashes and mtimes; planned DAG; --assembly provenance",
+      "suggested_action": "dry-run in separate directory and review intended stages",
+      "avoid": "no automatic touch or destructive erase",
+      "regression_fixture_required": "changed timestamp with same hash vs changed contents",
+      "source_urls": [
+        "https://github.com/marbl/verkko/issues/308"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG007",
+      "tool": "Verkko",
+      "version_scope": "issue308 v2.2.1 example; general filesystem diagnosis",
+      "symptom": "Errno122 Disk quota exceeded",
+      "evidence_grade": "maintainer_and_user_confirmed",
+      "trigger_description": "quota failure",
+      "required_checks": "workdir/TMPDIR/actual user cache and log paths; space; inode; quota",
+      "suggested_action": "report exact limiting filesystem",
+      "avoid": "no blind cleanup or indefinite retry",
+      "regression_fixture_required": "quota exhausted with free space still available",
+      "source_urls": [
+        "https://github.com/marbl/verkko/issues/308"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG008",
+      "tool": "YaHS",
+      "version_scope": "local1.2.2@6c46061",
+      "symptom": "BAM sort alters link and MAPQ handling",
+      "evidence_grade": "readme_and_selected_source",
+      "trigger_description": "header SO not queryname or records disagree",
+      "required_checks": "BAM @HD plus actual record ordering; expected dictionary",
+      "suggested_action": "create separate name-sorted input under project policy",
+      "avoid": "do not claim YaHS rejects all coordinate BAM",
+      "regression_fixture_required": "header/records mismatch; queryname and coordinate variants",
+      "source_urls": [
+        "https://github.com/c-zhou/yahs/blob/main/README.md"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG009",
+      "tool": "YaHS",
+      "version_scope": "issue119 image tag1.2; no verified fix",
+      "symptom": "unknown --telo-motif",
+      "evidence_grade": "unanswered_user_report",
+      "trigger_description": "capability absent from actual binary help",
+      "required_checks": "PATH; actual version; help; container digest",
+      "suggested_action": "choose tested binary with required feature",
+      "avoid": "do not infer features solely from image tag",
+      "regression_fixture_required": "same version label with different capability probes",
+      "source_urls": [
+        "https://github.com/c-zhou/yahs/issues/119"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG010",
+      "tool": "YaHS",
+      "version_scope": "juicer post1.2.1 affected;1.2.2 fixes; <=1.2 unaffected by this bug",
+      "symptom": "manual curation recovery affected by known release bug",
+      "evidence_grade": "official_release_fix",
+      "trigger_description": "actual juicer post build identified as1.2.1",
+      "required_checks": "component version; release notes; raw FASTA/liftover/review identity",
+      "suggested_action": "rebuild result in separate folder with fixed release and validate",
+      "avoid": "do not assert all scaffolding wrong",
+      "regression_fixture_required": "known version block and fixed version output contract",
+      "source_urls": [
+        "https://github.com/c-zhou/yahs/releases"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG011",
+      "tool": "YaHS/Merqury",
+      "version_scope": "issue120 version unresolved; only one user workaround",
+      "symptom": "QV drops after scaffolding",
+      "evidence_grade": "maintainer_reply_and_user_report_not_root_cause",
+      "trigger_description": "before/after QV disparity",
+      "required_checks": "same k/database; successful exits; nonN content; AGP consistency; line wrapping sensitivity",
+      "suggested_action": "reformat copy only and compare sequence-normalized hashes before reevaluation",
+      "avoid": "do not auto-polish or claim general multiline FASTA bug",
+      "regression_fixture_required": "wrapped/unwrapped identical sequence with same estimator",
+      "source_urls": [
+        "https://github.com/c-zhou/yahs/issues/120"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG012",
+      "tool": "HapHiC",
+      "version_scope": "local1.0.7@74f1cb2",
+      "symptom": "coordinate-sorted BAM input",
+      "evidence_grade": "official_readme",
+      "trigger_description": "BAM violates name-order requirement",
+      "required_checks": "header and actual name ordering; input identity",
+      "suggested_action": "name-sort into new output with explicit resource budget",
+      "avoid": "do not reuse YaHS permissiveness",
+      "regression_fixture_required": "reject coordinate BAM while keep original unchanged",
+      "source_urls": [
+        "https://github.com/zengxiaofei/HapHiC"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG013",
+      "tool": "HapHiC",
+      "version_scope": "local1.0.7@74f1cb2",
+      "symptom": "corrected/raw FASTA or corrected_ctgs mismatch",
+      "evidence_grade": "readme_and_build_source",
+      "trigger_description": "input combination inconsistent",
+      "required_checks": "original/corrected hashes; corrected list; AGP coordinate dictionary",
+      "suggested_action": "supply exact matched stage outputs",
+      "avoid": "do not replace raw assembly with corrected file silently",
+      "regression_fixture_required": "invalid corrected_ctgs combination fails preflight",
+      "source_urls": [
+        "https://github.com/zengxiaofei/HapHiC/blob/main/scripts/HapHiC_build.py"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG014",
+      "tool": "HapHiC",
+      "version_scope": "issue174 version unspecified; current README FAQ",
+      "symptom": "poor anchoring or chimeric large group after filter relaxation",
+      "evidence_grade": "unanswered_user_report_plus_FAQ",
+      "trigger_description": "cluster count/support conflict; high anchoring alone insufficient",
+      "required_checks": "ploidy; nchrs basis; unique pairs; map; per-join support",
+      "suggested_action": "small parameter comparison and quick_view review",
+      "avoid": "do not auto-MAPQ0 or force cluster count",
+      "regression_fixture_required": "higher anchoring but contradicted joins must not pass",
+      "source_urls": [
+        "https://github.com/zengxiaofei/HapHiC/issues/174"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG015",
+      "tool": "HapHiC",
+      "version_scope": "historical87 and later local1.0.7 README; commit-specific naming",
+      "symptom": "refsort expected to fix internal scaffold structure",
+      "evidence_grade": "maintainer_reply_and_current_docs",
+      "trigger_description": "wrong expectation or ID propagation loss",
+      "required_checks": "refsort log; source commit; naming map; AGP",
+      "suggested_action": "preserve mapping; review internal conflicts separately",
+      "avoid": "do not interpret reference order as independent proof",
+      "regression_fixture_required": "whole-scaffold order vs internal order; naming changes",
+      "source_urls": [
+        "https://github.com/zengxiaofei/HapHiC/issues/87"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG016",
+      "tool": "purge_dups",
+      "version_scope": "post1.2.6 localf14dae1; issue166 version unspecified",
+      "symptom": "large sequence loss or nearly no purging",
+      "evidence_grade": "official_FAQ_plus_unanswered_report",
+      "trigger_description": "size/copy changes; BUSCO stable not sufficient",
+      "required_checks": "coverage histogram; ploidy/product; ID colons; kmer retained/lost; removed sequence",
+      "suggested_action": "new cutoff branch with evidence and reversible outputs",
+      "avoid": "no universal cutoffs; no BUSCO-only safe verdict",
+      "regression_fixture_required": "repeat loss with stable BUSCO flagged for review",
+      "source_urls": [
+        "https://github.com/dfguan/purge_dups/issues/166"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG017",
+      "tool": "purge_dups",
+      "version_scope": "localf14dae1",
+      "symptom": "get_seqs internal deletion when -e absent",
+      "evidence_grade": "readme_and_help_source",
+      "trigger_description": "explicit extraction policy absent",
+      "required_checks": "argv; BED; original/retained/removed identities",
+      "suggested_action": "explicit extraction flags and preserve removed sequences",
+      "avoid": "end-only is not biological safety guarantee",
+      "regression_fixture_required": "reuse prior extraction tests; add stage provenance case",
+      "source_urls": [
+        "https://github.com/dfguan/purge_dups"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG018",
+      "tool": "sanger-tol/genomeassembly",
+      "version_scope": "1.0.1@131f0ea",
+      "symptom": "engine succeeds but required QC/final outputs missing",
+      "evidence_grade": "source_static_review",
+      "trigger_description": "ignored QC failure or optional required artifact absent",
+      "required_checks": "task exit/log; output parse; AGP/FASTA consistency; required QC reports",
+      "suggested_action": "mark failed or pending and rerun only justified stage",
+      "avoid": "do not pass project from Nextflow exit alone",
+      "regression_fixture_required": "ignored QV and optional absent FASTA block acceptance",
+      "source_urls": [
+        "https://github.com/sanger-tol/genomeassembly/blob/main/conf/modules.config"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG019",
+      "tool": "Juicer",
+      "version_scope": "1.6 CPU pinned f866383d66f780d98de2c1267703b4d3473f6250",
+      "symptom": "Hi-C输入或参考资源不一致",
+      "evidence_grade": "selected_source_and_manual",
+      "trigger_description": "Hi-C输入或参考资源不一致",
+      "required_checks": "FASTA、BWA索引、chrom.sizes、酶切位点文件的身份/命名/长度；文库实际酶或Omni-C模式",
+      "suggested_action": "重建与目标组装匹配的资源并使用新运行目录",
+      "avoid": "不得套用其他组装的索引或将无酶文库猜成特定酶",
+      "regression_fixture_required": "reference identity negative fixture",
+      "source_urls": [
+        "https://github.com/aidenlab/juicer/blob/f866383d66f780d98de2c1267703b4d3473f6250/CPU/juicer.sh"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG020",
+      "tool": "Juicer",
+      "version_scope": "1.6 CPU pinned source",
+      "symptom": "early结束后没有hic或恢复阶段读取旧aligned",
+      "evidence_grade": "selected_source",
+      "trigger_description": "early结束后没有hic或恢复阶段读取旧aligned",
+      "required_checks": "完整命令、-S阶段、现有aligned内容和旧输入身份、退出状态",
+      "suggested_action": "按选定阶段的真实目标检查；需要hic时执行相应后续阶段",
+      "avoid": "不得把early成功等同全流程完成；不直接覆盖旧目录",
+      "regression_fixture_required": "stage/output contract fixture",
+      "source_urls": [
+        "https://github.com/aidenlab/juicer/blob/f866383d66f780d98de2c1267703b4d3473f6250/CPU/juicer.sh"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG021",
+      "tool": "JuicerTools",
+      "version_scope": "issue350 report; binary version must be collected",
+      "symptom": "pre先报列数或格式错误，后报MAPQ通用提示",
+      "evidence_grade": "user_report_not_reproduced",
+      "trigger_description": "pre先报列数或格式错误，后报MAPQ通用提示",
+      "required_checks": "首个异常、JAR版本、输入解压后列结构和排序、与命令匹配的格式",
+      "suggested_action": "先检查输入格式和解压路径，再判断过滤参数",
+      "avoid": "不得只见MAPQ提示就改阈值；不得把用户报告当确认根因",
+      "regression_fixture_required": "compressed/invalid-column input fixture",
+      "source_urls": [
+        "https://github.com/aidenlab/juicer/issues/350"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG022",
+      "tool": "BUSCO",
+      "version_scope": "6.1.0 run_BUSCO.py main",
+      "symptom": "同一命令要求plot/download与analysis，未生成预期分析",
+      "evidence_grade": "selected_source",
+      "trigger_description": "同一命令要求plot/download与analysis，未生成预期分析",
+      "required_checks": "实际argv、日志及主入口action顺序",
+      "suggested_action": "将绘图、数据库下载、分析分成独立命令；校验各自输出",
+      "avoid": "不得把退出0视为完成全部请求或强制覆盖已有分析",
+      "regression_fixture_required": "mock action precedence fixture",
+      "source_urls": [
+        "https://gitlab.com/ezlab/busco/-/blob/6.1.0/src/busco/run_BUSCO.py"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG023",
+      "tool": "BUSCO",
+      "version_scope": "6.0.0 runtime vs 6.1.0 review; odb12.2 requires >=6.1",
+      "symptom": "数据库版本不兼容或跨run分数不宜比较",
+      "evidence_grade": "official_manual",
+      "trigger_description": "数据库版本不兼容或跨run分数不宜比较",
+      "required_checks": "软件、lineage、创建日期、校验和、后端、模式、日志；离线缓存是否完整",
+      "suggested_action": "锁定兼容版本，匹配配置重评比较组；404时核对官方可用数据集",
+      "avoid": "不得静默更新lineage或直接比较不匹配数据库百分数",
+      "regression_fixture_required": "version/database compatibility fixture",
+      "source_urls": [
+        "https://busco.ezlab.org/busco_userguide"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG024",
+      "tool": "BUSCO",
+      "version_scope": "6.1.0 hmmer.py; odb12.2 branch",
+      "symptom": "命中分类或marker长度筛选令人疑惑",
+      "evidence_grade": "selected_source_and_unresolved_user_report",
+      "trigger_description": "命中分类或marker长度筛选令人疑惑",
+      "required_checks": "单marker tlen/HMM命中长度、阈值库、版本和最小复现；确认分支",
+      "suggested_action": "保留完整表与命中证据；用固定输入核查长度规则后再归因",
+      "avoid": "不得把issue855或注释与代码差异直接当已确认bug；不自动patch",
+      "regression_fixture_required": "marker-level classification fixture",
+      "source_urls": [
+        "https://gitlab.com/ezlab/busco/-/issues/855"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG025",
+      "tool": "Flye",
+      "version_scope": "2.9.6 pinned 886b8c17412cdf3a2868a28237bca6c5ad1da156",
+      "symptom": "误将asm-coverage当所有阶段总数据下采样或参数组合失败",
+      "evidence_grade": "selected_source_and_manual",
+      "trigger_description": "误将asm-coverage当所有阶段总数据下采样或参数组合失败",
+      "required_checks": "--genome-size、--meta、--asm-coverage、原始与各阶段数据范围",
+      "suggested_action": "按2.9.6手册解释初始disjointig阶段覆盖限制；只在适用组合使用",
+      "avoid": "不得把初始阶段降量当全流程抛弃数据或照搬HiFi50X规则到ONT",
+      "regression_fixture_required": "CLI constraints and stage-data fixture",
+      "source_urls": [
+        "https://github.com/mikolmogorov/Flye/blob/2.9.6/docs/USAGE.md"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG026",
+      "tool": "Flye",
+      "version_scope": "2.9.6 CLI and FAQ",
+      "symptom": "混用输入模式或把keep-haplotypes输出视为完整分相",
+      "evidence_grade": "selected_source_and_manual",
+      "trigger_description": "混用输入模式或把keep-haplotypes输出视为完整分相",
+      "required_checks": "输入测序类型/错误模型、互斥参数、倍性、输出角色和相位独立证据",
+      "suggested_action": "单次选兼容输入模式；混合数据交给明确支持的接口；独立评估相位",
+      "avoid": "不得将raw/HQ/HiFi无差别拼接；保留变异不等于完整相位",
+      "regression_fixture_required": "input-mode and output-role fixture",
+      "source_urls": [
+        "https://github.com/mikolmogorov/Flye/blob/2.9.6/flye/main.py"
+      ],
+      "locally_reproduced": false,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG027",
+      "tool": "SPAdes",
+      "version_scope": "reproduced 4.0.0 h6dccd9a_3; 4.3.0 selected validator reviewed, exit-code mapping not tested",
+      "symptom": "--isolate with --careful",
+      "evidence_grade": "local_negative_cli_and_selected_source",
+      "trigger_description": "--isolate with --careful",
+      "required_checks": "exact binary/build; argv; log; old outputs; input hashes",
+      "suggested_action": "Explain mutually exclusive modes and request a justified mode choice; do not silently switch biological mode",
+      "avoid": "do not generalize exit255 to all versions; do not overwrite outputs or silently change modes",
+      "regression_fixture_required": "tests/shortread_hybrid_learning_2026-11-02/logs/invalid_isolate_careful.json",
+      "source_urls": [
+        "https://ablab.github.io/spades/running.html",
+        "https://raw.githubusercontent.com/ablab/spades/v4.3.0/src/projects/spades/pipeline/spades_pipeline/options_parser.py"
+      ],
+      "locally_reproduced": true,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG028",
+      "tool": "SPAdes",
+      "version_scope": "reproduced 4.0.0 h6dccd9a_3; 4.3.0 selected validator reviewed, exit-code mapping not tested",
+      "symptom": "--continue with extra thread argument",
+      "evidence_grade": "local_negative_cli_and_selected_source",
+      "trigger_description": "--continue with extra thread argument",
+      "required_checks": "exact binary/build; argv; log; old outputs; input hashes",
+      "suggested_action": "Use unchanged continuation or inspect version-specific restart-from constraints; preserve prior outputs",
+      "avoid": "do not generalize exit255 to all versions; do not overwrite outputs or silently change modes",
+      "regression_fixture_required": "tests/shortread_hybrid_learning_2026-11-02/logs/invalid_continue_extra.json",
+      "source_urls": [
+        "https://ablab.github.io/spades/running.html",
+        "https://raw.githubusercontent.com/ablab/spades/v4.3.0/src/projects/spades/pipeline/spades_pipeline/options_parser.py"
+      ],
+      "locally_reproduced": true,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    },
+    {
+      "id": "DBG029",
+      "tool": "SPAdes",
+      "version_scope": "reproduced 4.0.0 h6dccd9a_3; 4.3.0 selected validator reviewed, exit-code mapping not tested",
+      "symptom": "non-ASCII output path",
+      "evidence_grade": "local_negative_cli_and_selected_source",
+      "trigger_description": "non-ASCII output path",
+      "required_checks": "exact binary/build; argv; log; old outputs; input hashes",
+      "suggested_action": "Stage inputs and execution in an ASCII path, preserve provenance and verify copied results",
+      "avoid": "do not generalize exit255 to all versions; do not overwrite outputs or silently change modes",
+      "regression_fixture_required": "tests/shortread_hybrid_learning_2026-11-02/logs/invalid_nonascii_output.json",
+      "source_urls": [
+        "https://ablab.github.io/spades/running.html",
+        "https://raw.githubusercontent.com/ablab/spades/v4.3.0/src/projects/spades/pipeline/spades_pipeline/options_parser.py"
+      ],
+      "locally_reproduced": true,
+      "auto_fix_enabled": false,
+      "implementation_status": "design_not_implemented"
+    }
+  ]
+}

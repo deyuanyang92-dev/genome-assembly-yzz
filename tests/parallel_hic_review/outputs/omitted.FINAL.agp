@@ -1,0 +1,4 @@
+scaffold_1	1	12	1	W	A	9	20	-
+scaffold_1	13	112	2	U	100	scaffold	yes	proximity_ligation
+scaffold_1	113	128	3	W	B	1	16	+
+scaffold_2	1	12	1	W	C	1	12	-

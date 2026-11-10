@@ -1,0 +1,150 @@
+{
+  "reviewed_at": "2026-11-02T09:42:27.613712+00:00",
+  "remote_sources": [
+    {
+      "url": "https://github.com/ablab/spades/releases/tag/v4.3.0",
+      "version": "4.3.0 a7f6e55b69f6b8eb87dfd7b014e22fc324a8a01b",
+      "reading_scope": "release changes",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://ablab.github.io/spades/running.html",
+      "version": "live documentation; release identity separate",
+      "reading_scope": "selected relevant sections; quickstart version can be stale",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://ablab.github.io/spades/hybrid.html",
+      "version": "live documentation; release identity separate",
+      "reading_scope": "selected relevant sections; quickstart version can be stale",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://ablab.github.io/spades/output.html",
+      "version": "live documentation; release identity separate",
+      "reading_scope": "selected relevant sections; quickstart version can be stale",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://ablab.github.io/spades/getting-started.html",
+      "version": "live documentation; release identity separate",
+      "reading_scope": "selected relevant sections; quickstart version can be stale",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ablab/spades/v4.3.0/src/projects/spades/pipeline/spades_pipeline/options_parser.py",
+      "version": "4.3.0",
+      "reading_scope": "selected mode, restart, continue, path and incompatible-argument validation",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://github.com/ablab/spades/discussions/1074",
+      "version": "discussion; not a universal performance result",
+      "reading_scope": "visible maintainer explanation of isolate mode and subsequent user comments",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://github.com/ablab/spades/issues/600",
+      "version": "3.14.1 report",
+      "reading_scope": "user-reported careful/isolate comparison; not a confirmed universal bug",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://github.com/alekseyzimin/masurca",
+      "version": "live README; inconsistencies retained",
+      "reading_scope": "README input/configuration, preprocessing, resource and installation sections",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://github.com/alekseyzimin/masurca/releases/tag/v4.1.4",
+      "version": "4.1.4 short commit 43e485a; full commit unresolved",
+      "reading_scope": "release notes and packaging instructions",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://academic.oup.com/bioinformatics/article/29/21/2669/195975",
+      "version": "2013 paper; selected text, not whole-paper audit",
+      "reading_scope": "abstract and selected methods/evaluation; super-reads and overlap-layout",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5411773/",
+      "version": "2017 mega-reads paper",
+      "reading_scope": "indexed methods/results excerpts; direct page challenge prevented complete body access",
+      "access": "search_index_excerpt_only"
+    },
+    {
+      "url": "https://github.com/BirolLab/abyss",
+      "version": "release previously observed 2.3.10; current README",
+      "reading_scope": "README Bloom, k/K, libraries, resources and execution sections",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://github.com/BirolLab/abyss/blob/master/bin/abyss-pe",
+      "version": "master; commit unresolved; not proven 2.3.10 code",
+      "reading_scope": "selected make target routing and graph builder branches",
+      "access": "web_page_or_selected_source_read"
+    },
+    {
+      "url": "https://genome.cshlp.org/content/27/5/768",
+      "version": "2017 ABySS2 paper",
+      "reading_scope": "indexed selected methods/results and linked resources",
+      "access": "search_index_excerpt_only"
+    },
+    {
+      "url": "https://github.com/BirolLab/abyss-2.0-giab",
+      "version": "companion analysis; not cloned or executed",
+      "reading_scope": "README and repository structure; referenced Makefiles not retrieved",
+      "access": "web_page_or_selected_source_read"
+    }
+  ],
+  "local_source_snapshots": [
+    {
+      "path": "tests/shortread_hybrid_learning_2026-11-02/source_snapshots/spades-4.0.0-h6dccd9a_3.json",
+      "original_path": "/root/miniconda3/envs/mitoz3.6/conda-meta/spades-4.0.0-h6dccd9a_3.json",
+      "sha256": "77262b980429d18e830b48192d7e8ca7fc2812a975198af7043aade9d105fb51",
+      "scope": "selected source/module or package metadata; not complete source audit"
+    },
+    {
+      "path": "tests/shortread_hybrid_learning_2026-11-02/source_snapshots/spades.py",
+      "original_path": "/root/miniconda3/envs/mitoz3.6/bin/spades.py",
+      "sha256": "24170adc31cb4ae25166f85d01365f31bf377aa34ca16a04d0ca534c38864542",
+      "scope": "selected source/module or package metadata; not complete source audit"
+    },
+    {
+      "path": "tests/shortread_hybrid_learning_2026-11-02/source_snapshots/options_parser.py",
+      "original_path": "/root/miniconda3/envs/mitoz3.6/share/spades/spades_pipeline/options_parser.py",
+      "sha256": "2d05cb54b0f411d28515697fca859abd125ee40f4e8435e9bc65b1b95834b5ec",
+      "scope": "selected source/module or package metadata; not complete source audit"
+    },
+    {
+      "path": "tests/shortread_hybrid_learning_2026-11-02/source_snapshots/options_storage.py",
+      "original_path": "/root/miniconda3/envs/mitoz3.6/share/spades/spades_pipeline/options_storage.py",
+      "sha256": "c639c1b7f9e489c5aa7582b2b00d487c96c6d858c8a7e3eeb907a75cb9e3d323",
+      "scope": "selected source/module or package metadata; not complete source audit"
+    },
+    {
+      "path": "tests/shortread_hybrid_learning_2026-11-02/source_snapshots/support.py",
+      "original_path": "/root/miniconda3/envs/mitoz3.6/share/spades/spades_pipeline/support.py",
+      "sha256": "c7bf2b9f5de1dd3f491b9fef806ef7f3ceb4e54e48d932650e839d193a9904f2",
+      "scope": "selected source/module or package metadata; not complete source audit"
+    },
+    {
+      "path": "tests/shortread_hybrid_learning_2026-11-02/source_snapshots/N50.py",
+      "original_path": "/tmp/yzz-learning-colora-envs/0eff1dd08048feedc658ebba6bc8c0c4_/lib/python3.11/site-packages/quast_libs/N50.py",
+      "sha256": "2f3f23cbff16ac9b86a32681297e78a6c07c98f9fe259b0765281b2250de521e",
+      "scope": "selected source/module or package metadata; not complete source audit"
+    }
+  ],
+  "network_limitations": [
+    "shell proxy unreachable curl exit7",
+    "direct DNS failed curl exit6",
+    "4.3 runtime archive not downloaded; web reading remained available"
+  ],
+  "runtime": "existing SPAdes4.0.0 conda h6dccd9a_3",
+  "new_upstream_clones": 0,
+  "official_toy_assemblies": 1,
+  "synthetic_assemblies": 4,
+  "negative_cli_cases": 3,
+  "new_production_assemblies": 0
+}

@@ -1,0 +1,16 @@
+{
+  "timestamp_utc": "2026-11-03T03:33:02.062116+00:00",
+  "upstream": "https://github.com/malonge/RagTag.git",
+  "ragtag_commit": "e993fb2787346345662c240967a3ec80bb2aac64",
+  "minimap2_commit": "3c28777e7e2dcc90f825de1b9f17a89cca7d4452",
+  "python_environment": "/tmp/yzz-learning-colora-envs/bed4089c7b03833ad636547f76d08913_",
+  "execution_note": "Reused Python/pysam environment; scaffold chain only. Temporary source scripts made executable; no content edits.",
+  "sha256": {
+    "tests/ragtag_scaffold_2026-11-03/ragtag-v2.1.0-e993fb2.tar.gz": "ba5ee2c0f167da39b8e629fec07addef77d691fae94facb4817b0bdeb10825fe",
+    "/tmp/yzz-learning-minimap2/minimap2": "d6e10ffaa0a1ec5592e2a85f6339efd99baf86d7d5cbfce416da420256808ebb",
+    "/tmp/yzz-ragtag-20261103/ragtag_scaffold.py": "769052f0d24dd5d332c1134437bbecba470c230b420224095dee520ea38818c1",
+    "/tmp/yzz-ragtag-20261103/ragtag_agp2fa.py": "eb36e0decc069058819a6728ce5a078ab8a59546edc295b2e91cd94e09efb96d",
+    "/tmp/yzz-ragtag-20261103/ragtag_stats.py": "e95a1399e90a7d439bd73285f9d11ede4b99c0e79e34eed7bb0e71d6bba96b4c"
+  },
+  "environment_explicit": "See retained conda-meta/pysam entry and runtime versions; full environment export unavailable"
+}

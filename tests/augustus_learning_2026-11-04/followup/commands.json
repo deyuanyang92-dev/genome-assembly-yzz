@@ -1,0 +1,112 @@
+[
+  {
+    "name": "utr_explicit",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=human",
+      "--UTR=on",
+      "--print_utr=on",
+      "--gff3=on",
+      "--sample=0",
+      "--softmasking=0",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/example.fa"
+    ],
+    "ended_at": "2026-11-04T20:49:05.571726+08:00",
+    "elapsed_seconds": 0.551,
+    "exit_code": 0
+  },
+  {
+    "name": "new_species",
+    "command": [
+      "perl",
+      "/tmp/yzz-augustus-3.5.0/scripts/new_species.pl",
+      "--species=yzz_fly_included"
+    ],
+    "ended_at": "2026-11-04T20:49:05.645218+08:00",
+    "elapsed_seconds": 0.07,
+    "exit_code": 0
+  },
+  {
+    "name": "etraining_included",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/etraining",
+      "--species=yzz_fly_included",
+      "--stopCodonExcludedFromCDS=false",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/genes.gb.train"
+    ],
+    "ended_at": "2026-11-04T20:49:14.773071+08:00",
+    "elapsed_seconds": 9.124,
+    "exit_code": 0
+  },
+  {
+    "name": "trained_holdout_included",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=yzz_fly_included",
+      "--stopCodonExcludedFromCDS=false",
+      "--UTR=off",
+      "--sample=0",
+      "--softmasking=0",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/genes.gb.test"
+    ],
+    "ended_at": "2026-11-04T20:49:21.791081+08:00",
+    "elapsed_seconds": 7.015,
+    "exit_code": 0
+  },
+  {
+    "name": "shipped_fly_holdout_included",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=fly",
+      "--stopCodonExcludedFromCDS=false",
+      "--UTR=off",
+      "--sample=0",
+      "--softmasking=0",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/inputs/genes.gb.test"
+    ],
+    "ended_at": "2026-11-04T20:49:30.706364+08:00",
+    "elapsed_seconds": 11.331,
+    "exit_code": 0
+  },
+  {
+    "name": "bam2hints",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/bam2hints",
+      "--in=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/followup/test.s.sorted.bam",
+      "--out=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/followup/actual.intron.gff"
+    ],
+    "ended_at": "2026-11-04T20:49:30.897986+08:00",
+    "elapsed_seconds": 0.019,
+    "exit_code": 0
+  },
+  {
+    "name": "rna_local_prediction",
+    "command": [
+      "/tmp/yzz-augustus-3.5.0/bin/augustus",
+      "--species=fly",
+      "--gff3=on",
+      "--UTR=off",
+      "--sample=0",
+      "--softmasking=0",
+      "--hintsfile=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/followup/rna_window.hints.gff",
+      "--extrinsicCfgFile=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/execution/config/extrinsic/extrinsic.M.RM.E.W.cfg",
+      "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/followup/rna_window.fa"
+    ],
+    "ended_at": "2026-11-04T20:49:32.146160+08:00",
+    "elapsed_seconds": 1.132,
+    "exit_code": 0
+  },
+  {
+    "name": "blat2hints",
+    "command": [
+      "perl",
+      "/tmp/yzz-augustus-3.5.0/scripts/blat2hints.pl",
+      "--nomult",
+      "--in=/tmp/yzz-augustus-3.5.0/docs/tutorial/data/est.psl",
+      "--out=/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/augustus_learning_2026-11-04/followup/est.hints.gff"
+    ],
+    "ended_at": "2026-11-04T20:49:32.694634+08:00",
+    "elapsed_seconds": 0.545,
+    "exit_code": 0
+  }
+]

@@ -1,0 +1,92 @@
+{
+  "timestamp": "2026-11-02T10:00:18.914065+00:00",
+  "runtime_version": "2.31-r1302",
+  "binary_sha256": "b6c81294dc0b68b2f54f8e2f6f3ad6be71a40bccc47a6e244ecebc73bae9501d",
+  "input_hashes": {
+    "genome.fa": "332f8a36796698fce262f9058259cec6ebca3f8f142a50c9c24eee77c1ad48cb",
+    "rna.fa": "c82eabf0a4b555c6fed519fcab7f01f5b1a378019fa4035f335934ad6325409d"
+  },
+  "truth": {
+    "exon_bp": [
+      800,
+      800
+    ],
+    "intron_bp": 2000,
+    "transcript_bp": 1600
+  },
+  "records": [
+    {
+      "label": "splice_hq",
+      "argv": [
+        "/tmp/yzz-learning-colora-envs/0eff1dd08048feedc658ebba6bc8c0c4_/bin/minimap2",
+        "-ax",
+        "splice:hq",
+        "-uf",
+        "--secondary=no",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_annotation_review/genome.fa",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_annotation_review/rna.fa"
+      ],
+      "returncode": 0,
+      "sam_sha256": "ed9580301cf144e2beaed5ff604d815f1a8e8c784f2a6012997ec8c83cd4e0ac",
+      "stderr_sha256": "16e5bb36c467d6f4c3510cbdc658d92517e16deaae03999cf06178db52db6b58",
+      "alignments": [
+        {
+          "flag": 0,
+          "position_1based": 1,
+          "cigar": "800M2000N800M",
+          "introns": [
+            2000
+          ],
+          "tags": [
+            "NM:i:0",
+            "ms:i:1600",
+            "AS:i:1573",
+            "nn:i:0",
+            "ts:A:+",
+            "tp:A:P",
+            "cm:i:546",
+            "s1:i:1586",
+            "s2:i:0",
+            "de:f:0",
+            "rl:i:0"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "genomic_hifi",
+      "argv": [
+        "/tmp/yzz-learning-colora-envs/0eff1dd08048feedc658ebba6bc8c0c4_/bin/minimap2",
+        "-ax",
+        "map-hifi",
+        "--secondary=no",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_annotation_review/genome.fa",
+        "/mnt/p/yzz-\u5168\u57fa\u56e0\u7ec4\u5de5\u4f5c\u6d41\u7a0b/genome-assembly-yzz/tests/parallel_annotation_review/rna.fa"
+      ],
+      "returncode": 0,
+      "sam_sha256": "b263cfbd76383b454d437ed6e6a37e8e48452760b93a3c2b0585bbd5c9a90fe6",
+      "stderr_sha256": "28cc3f738c2228a83bb593d2568a97253c83bc7e0553f146edfcafbf58f7fb7c",
+      "alignments": [
+        {
+          "flag": 0,
+          "position_1based": 1,
+          "cigar": "800M2000D800M",
+          "introns": [],
+          "tags": [
+            "NM:i:2000",
+            "ms:i:1572",
+            "AS:i:-426",
+            "nn:i:0",
+            "tp:A:P",
+            "cm:i:158",
+            "s1:i:1261",
+            "s2:i:0",
+            "de:f:0.0006",
+            "rl:i:0"
+          ]
+        }
+      ]
+    }
+  ],
+  "limitation": "artificial error-free single transcript; no StringTie or RAGNAROK execution; mapping preset is not inferred from platform alone"
+}

@@ -1,0 +1,27 @@
+{
+  "assemblies": {
+    "hap1": {
+      "sequences": 4,
+      "total_bp": 1251523,
+      "longest_bp": 699300,
+      "N50": 699300,
+      "L50": 1,
+      "N_bp": 0,
+      "fasta_sha256": "f050310c99fff836ea9a3f8466e9359f458e76d9248afd7ad874ee57573b5643",
+      "gfa_sha256": "079555aa39005f943280d42943b91d225dc915fadfc32011d7cf9c5e8bc6a3bb",
+      "gfa_fasta_consistent": true
+    },
+    "hap2": {
+      "sequences": 4,
+      "total_bp": 1251570,
+      "longest_bp": 699348,
+      "N50": 699348,
+      "L50": 1,
+      "N_bp": 0,
+      "fasta_sha256": "2f98654e1c258a6ff7fadf48c91ba0901a21ad7299ef32d6f2f95fb26db6657f",
+      "gfa_sha256": "c402570d97d1cffd60cd697792d14e886a9bed559c36181cbf6d94ece62f2f52",
+      "gfa_fasta_consistent": true
+    }
+  },
+  "scope": "Sequence consistency and contiguity only. No complete-genome, structural correctness, or phasing accuracy claim."
+}

@@ -1,0 +1,37 @@
+{
+  "recorded": "2026-11-01",
+  "bioskills_commit": "d91ed3d563019e649dc854c56ccd62551359488a",
+  "scope": "Static source comparisons, Bash syntax and fixed parameter-expansion experiment only; no biological pipeline run.",
+  "catalog_counts": {
+    "skills": 561,
+    "categories": 63
+  },
+  "example_shell_syntax": [
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/hifi-assembly/examples/hifi_assembly_workflow.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/genome-assembly/scaffolding/examples/yahs_scaffolding.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "pipelines/GPTomics_bioSkills/workflows/genome-assembly-pipeline/examples/bacterial_assembly.sh",
+      "exit_code": 0,
+      "stderr": ""
+    }
+  ],
+  "observed_template_issues": {
+    "hic_example_uses_bp_prefix": true,
+    "pinned_hifiasm_manual_has_hic_hap1": true,
+    "omnic_empty_enzyme_with_colon_default": "GATC",
+    "omnic_empty_enzyme_with_unset_only_default": "",
+    "scaffolding_example_has_colon_default": true,
+    "scaffolding_example_indexes_bam_given_to_yahs": true,
+    "yahs_readme_says_non_name_sort_suppresses_mapq": true,
+    "bacterial_example_allows_screen_failure": true
+  },
+  "expected_observations_confirmed": true
+}

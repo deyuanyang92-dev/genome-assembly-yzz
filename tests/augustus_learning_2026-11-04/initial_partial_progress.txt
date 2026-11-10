@@ -1,0 +1,202 @@
+version 0 0.036
+abinitio 0 0.284
+hints 0 0.341
+utr 0 0.286
+range 0 0.223
+crop 0 0.228
+crop_rc 0 0.225
+invalid_species 1 0.021
+invalid_interval 1 0.122
+genbank_evaluation 0 0.233
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_62625-71749   9125 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_71750-78040   6291 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_102189-104118   1930 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_104119-110059   5941 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:302: BiopythonParserWarning: Non-standard feature line wrapping (didn't break on comma)?
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_110060-113850   3791 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_113851-115836   1986 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_121449-127782   6334 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_127783-138530   10748 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_144235-149736   5502 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_149737-155409   5673 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_156096-157742   1647 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_157743-160722   2980 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_179460-202642   23183 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_202643-206114   3472 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_247663-259080   11418 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_259081-270314   11234 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_277497-281843   4347 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_281844-283516   1673 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_283517-286517   3001 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_286518-290744   4227 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_293313-299484   6172 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_313418-319810   6393 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_321677-324318   2642 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_324319-327982   3664 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_327983-337132   9150 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_350918-362686   11769 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_399384-408641   9258 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_414425-417798   3374 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_417799-418448   650 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_418449-419837   1389 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_419838-420749   912 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_420750-426366   5617 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_444021-455654   11634 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_455655-469023   13369 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_469024-476394   7371 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_520418-540862   20445 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_540863-542744   1882 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_542745-544867   2123 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_544868-551953   7086 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_554699-562271   7573 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_562272-567367   5096 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_567368-572928   5561 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_572929-574388   1460 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_574389-580236   5848 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_597871-608339   10469 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_805646-811534   5889 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_814698-817741   3044 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_819707-822701   2995 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_822702-829734   7033 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_847936-859383   11448 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_863739-873569   9831 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1562: BiopythonParserWarning: Malformed LOCUS line found - is this correct?
+:'LOCUS       chr2L_873570-883173   9604 bp  DNA\n'
+  warnings.warn(
+/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py:1393: BiopythonParserWarning: Truncated LOCUS line found - is this correct?
+:'LOCUS       chr2L_1011663-1013123   1461 bp  DNA\n'
+  warnings.warn(
+Traceback (most recent call last):
+  File "/root/miniconda3/lib/python3.13/site-packages/Bio/File.py", line 72, in as_handle
+    with open(handleish, mode, **kwargs) as fp:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not TextIOWrapper
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/run_learning.py", line 168, in <module>
+    main()
+    ~~~~^^
+  File "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/run_learning.py", line 98, in main
+    train = list(SeqIO.parse(inputs / 'genes.gb.train', 'genbank'))
+  File "/root/miniconda3/lib/python3.13/site-packages/Bio/SeqIO/InsdcIO.py", line 109, in __next__
+    return next(self.records)
+  File "/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py", line 512, in parse_records
+    record = self.parse(handle, do_features)
+  File "/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py", line 495, in parse
+    if self.feed(handle, consumer, do_features):
+       ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py", line 461, in feed
+    self._feed_first_line(consumer, self.line)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/root/miniconda3/lib/python3.13/site-packages/Bio/GenBank/Scanner.py", line 1407, in _feed_first_line
+    raise ValueError(
+    ...<2 lines>...
+    )
+ValueError: LOCUS line does not have valid strand type (Single stranded, ...):
+LOCUS       chr2L_1011663-1013123   1461 bp  DNA
+                              

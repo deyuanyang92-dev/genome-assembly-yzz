@@ -1,0 +1,29 @@
+version 0 0.023
+abinitio 0 0.286
+hints 0 0.395
+utr 0 0.283
+range 0 0.229
+crop 0 0.221
+crop_rc 0 0.229
+invalid_species 1 0.022
+invalid_interval 1 0.126
+genbank_evaluation 0 0.225
+new_species 0 0.232
+etraining 0 9.561
+trained_holdout 0 6.823
+shipped_fly_holdout 0 11.195
+/root/miniconda3/lib/python3.13/site-packages/Bio/Seq.py:2877: BiopythonWarning: Partial codon, len(sequence) not a multiple of three. Explicitly trim the sequence or add trailing N before translation. This may become an error in future.
+  warnings.warn(
+{
+  "structure_and_phase_valid": true,
+  "range_equals_lifted_crop": true,
+  "rc_coordinate_structure_equivalent": true,
+  "hints_change_structure": true,
+  "train_test_locus_names_disjoint": true,
+  "crop": {
+    "original_id": "HS04636",
+    "start_1based": 501,
+    "end_1based": 8953,
+    "length": 8453
+  }
+}

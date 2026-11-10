@@ -1,0 +1,6 @@
+
+
+== Error ==  you cannot specify --mismatch-correction or --careful in isolate mode!
+
+In case you have troubles running SPAdes, you can report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.

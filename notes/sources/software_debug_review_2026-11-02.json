@@ -1,0 +1,263 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-11-02T06:19:03Z",
+  "completion_scope": "targeted six-project review, not exhaustive issues/source audit",
+  "network_limitations": [
+    "Terminal urllib GitHub API failed with PermissionError; official web pages used",
+    "GitHub web content may be cached; release metadata is not guaranteed live API HEAD"
+  ],
+  "failed_or_unread_urls": [
+    "https://github.com/c-zhou/yahs/issues/122",
+    "https://github.com/marbl/verkko/issues/367",
+    "https://github.com/sanger-tol/genomeassembly/pull/159"
+  ],
+  "repositories": [
+    {
+      "tool": "hifiasm",
+      "upstream_release_observed": "0.25.0-r726",
+      "release_source": "https://github.com/chhylp123/hifiasm/releases",
+      "local_version": "0.25.0-r726",
+      "local_commit": "ec9a8b222d149d25b7355e83765698640d59b189",
+      "relationship": "release_matches_local",
+      "source_url": "https://github.com/chhylp123/hifiasm",
+      "reading_scope": "README and selected CLI/cache functions; issue visible text, not attachments or all comments",
+      "review_date": "2026-11-02",
+      "new_biological_runs": 0,
+      "issues": [
+        {
+          "number": 742,
+          "url": "https://github.com/chhylp123/hifiasm/issues/742",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        },
+        {
+          "number": 756,
+          "url": "https://github.com/chhylp123/hifiasm/issues/756",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        },
+        {
+          "number": 798,
+          "url": "https://github.com/chhylp123/hifiasm/issues/798",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        }
+      ],
+      "files": [
+        {
+          "path": "pipelines/lh3_hifiasm/README.md",
+          "sha256": "82bf387dbaa0ef19c32a6bca48e5c83b42324c76529fe0bee6d7d1056b05238e"
+        },
+        {
+          "path": "pipelines/lh3_hifiasm/CommandLines.cpp",
+          "sha256": "0d3d5c62642fe68209ed8e69dcd58f16d31c28c95cee15d5869f057914a9881d"
+        },
+        {
+          "path": "pipelines/lh3_hifiasm/CommandLines.h",
+          "sha256": "b15d5b47b188db665da612b018c75caeebf803eb39f6394310f7cacb09877acc"
+        },
+        {
+          "path": "pipelines/lh3_hifiasm/Assembly.cpp",
+          "sha256": "d6079be53b4c828a2f930e4c49730eda7a8bd889de2195035bbdff8a4c7cdc9c"
+        },
+        {
+          "path": "pipelines/lh3_hifiasm/Overlaps.cpp",
+          "sha256": "5898db892a904132c231a81c26dbd2c91db3a12ee29f916c42dde1a894a2bebf"
+        }
+      ]
+    },
+    {
+      "tool": "Verkko",
+      "upstream_release_observed": "2.3.2",
+      "release_source": "https://github.com/marbl/verkko/releases/tag/v2.3.2",
+      "local_version": "2.3.2",
+      "local_commit": "39e9fb22816da30b22426ad1914034bc3a2d0cfa",
+      "relationship": "release_matches_local",
+      "source_url": "https://github.com/marbl/verkko",
+      "reading_scope": "selected README, config/launcher functions and visible issue discussion",
+      "review_date": "2026-11-02",
+      "new_biological_runs": 0,
+      "issues": [
+        {
+          "number": 224,
+          "url": "https://github.com/marbl/verkko/issues/224",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        },
+        {
+          "number": 308,
+          "url": "https://github.com/marbl/verkko/issues/308",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        }
+      ],
+      "files": [
+        {
+          "path": "pipelines/marbl_verkko/README.md",
+          "sha256": "d3b74b880e8c5cd90c650b3376f84fa7c22e5601d4828b66184e12eea98ca2b6"
+        },
+        {
+          "path": "pipelines/marbl_verkko/src/verkko.sh",
+          "sha256": "ac224ffc5917a8e7626a0b78f852d81ef74d41d64bef008303466540a1f87b8a"
+        }
+      ]
+    },
+    {
+      "tool": "YaHS",
+      "upstream_release_observed": "1.2.2",
+      "release_source": "https://github.com/c-zhou/yahs/releases",
+      "local_version": "1.2.2",
+      "local_commit": "6c46061ea1665073068cccbed81c6707e3bd07bf",
+      "relationship": "local_post_release_not_tag",
+      "source_url": "https://github.com/c-zhou/yahs",
+      "reading_scope": "README notes, sort header/parser and selected caller; QV workaround user-reported only",
+      "review_date": "2026-11-02",
+      "new_biological_runs": 0,
+      "issues": [
+        {
+          "number": 119,
+          "url": "https://github.com/c-zhou/yahs/issues/119",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        },
+        {
+          "number": 120,
+          "url": "https://github.com/c-zhou/yahs/issues/120",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        }
+      ],
+      "files": [
+        {
+          "path": "pipelines/c-zhou_yahs/README.md",
+          "sha256": "cdf94704720fc3d05ffe123e3f2c9ac98841d523d9b1e481b2e71f0142a6d8de"
+        },
+        {
+          "path": "pipelines/c-zhou_yahs/version.h",
+          "sha256": "0da4fa5d55dd2028b2b439bfa95d56b09b4606efb1d495ef0805418f1e510748"
+        },
+        {
+          "path": "pipelines/c-zhou_yahs/bamlite.c",
+          "sha256": "410b6fec257af3495ea6290b049dde5d404f8956f302c1fce50787cad8c4b5d5"
+        },
+        {
+          "path": "pipelines/c-zhou_yahs/link.c",
+          "sha256": "3512fac8e7b7c363b8e66801820ae0df84a30e5e9e2b5d97f101ea32e5adf861"
+        },
+        {
+          "path": "pipelines/c-zhou_yahs/yahs.c",
+          "sha256": "4801ea0d39309c871ae3bab99ae3b26b5f292b001b76f358633d6900992450af"
+        }
+      ]
+    },
+    {
+      "tool": "HapHiC",
+      "upstream_release_observed": "1.0.7",
+      "release_source": "https://github.com/zengxiaofei/HapHiC/releases/tag/v1.0.7",
+      "local_version": "1.0.7 update 2025.10.30",
+      "local_commit": "74f1cb27d7753ce061ee673c0d62fdd44187060e",
+      "relationship": "local_post_release_not_tag",
+      "source_url": "https://github.com/zengxiaofei/HapHiC",
+      "reading_scope": "README selected FAQ, entrypoint and build validation; no full graph algorithm audit",
+      "review_date": "2026-11-02",
+      "new_biological_runs": 0,
+      "issues": [
+        {
+          "number": 87,
+          "url": "https://github.com/zengxiaofei/HapHiC/issues/87",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        },
+        {
+          "number": 174,
+          "url": "https://github.com/zengxiaofei/HapHiC/issues/174",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        }
+      ],
+      "files": [
+        {
+          "path": "pipelines/zengxiaofei_HapHiC/README.md",
+          "sha256": "0c62a3ffad2cfe501f2af74085b4126e1252396f5265ce579e78773e7fed3136"
+        },
+        {
+          "path": "pipelines/zengxiaofei_HapHiC/haphic",
+          "sha256": "623b0d1579174b344c082e950b479a4cd76653999a955e0debbe02e0206e473a"
+        },
+        {
+          "path": "pipelines/zengxiaofei_HapHiC/scripts/_version.py",
+          "sha256": "44c7a45f5338b1f4c26da4ae1261ed4d68bcd8bb6906fcf29c6a608e819c01d1"
+        },
+        {
+          "path": "pipelines/zengxiaofei_HapHiC/scripts/HapHiC_build.py",
+          "sha256": "00f47f7538564b81738035ce066232cd81cbaaf959ea6abcc174859360cd16b4"
+        }
+      ]
+    },
+    {
+      "tool": "purge_dups",
+      "upstream_release_observed": "1.2.6",
+      "release_source": "https://github.com/dfguan/purge_dups/releases/tag/v1.2.6",
+      "local_version": "post-1.2.6 commit; version string not relied upon",
+      "local_commit": "f14dae13b7f41559bafd058f7278e8f5ac2813da",
+      "relationship": "local_post_release_not_tag",
+      "source_url": "https://github.com/dfguan/purge_dups",
+      "reading_scope": "README limitations/FAQ, cutoff reading and extraction help; prior extraction checks are separate",
+      "review_date": "2026-11-02",
+      "new_biological_runs": 0,
+      "issues": [
+        {
+          "number": 166,
+          "url": "https://github.com/dfguan/purge_dups/issues/166",
+          "read_scope": "visible_body_and_visible_discussion_not_attachments_or_hidden_pagination",
+          "locally_reproduced": false
+        }
+      ],
+      "files": [
+        {
+          "path": "pipelines/dfguan_purge_dups/README.md",
+          "sha256": "d08336d370a6e7612d7b67f139dbbca6ae22d3d5023ad49f630034b89be3f420"
+        },
+        {
+          "path": "pipelines/dfguan_purge_dups/src/purge_dups.c",
+          "sha256": "ce8714518fbb47322498a064bbb1e2fea72177df23bb63847922b0f8ebf3aab1"
+        },
+        {
+          "path": "pipelines/dfguan_purge_dups/src/get_seqs.c",
+          "sha256": "992a3e4ab2fb2647345e1ebdc1cb680fdb1f617d899d55883223244b566bc6a5"
+        }
+      ]
+    },
+    {
+      "tool": "sanger-tol/genomeassembly",
+      "upstream_release_observed": "1.0.1 via changelog",
+      "release_source": "https://github.com/sanger-tol/genomeassembly/blob/main/CHANGELOG.md",
+      "local_version": "1.0.1",
+      "local_commit": "131f0ea272bb2fce9869d57f684f20f645467e34",
+      "relationship": "changelog_checked_release_endpoint_unavailable",
+      "source_url": "https://github.com/sanger-tol/genomeassembly",
+      "reading_scope": "selected output/errorStrategy/manifest plus prior note20; PR159 not fetched",
+      "review_date": "2026-11-02",
+      "new_biological_runs": 0,
+      "issues": [],
+      "files": [
+        {
+          "path": "pipelines/sanger-tol_genomeassembly/nextflow.config",
+          "sha256": "1b5d2aa9ecdf6dc85e154f05335f9b7ada38fb1b2dc1fa16a27dac4d5d1d90e2"
+        },
+        {
+          "path": "pipelines/sanger-tol_genomeassembly/conf/modules.config",
+          "sha256": "56dcdc1474129c3daf71c27f10a4d1226b263099560d7bf6e2b2f7cfac29015c"
+        },
+        {
+          "path": "pipelines/sanger-tol_genomeassembly/modules/nf-core/yahs/main.nf",
+          "sha256": "7b0570643bca712faa8e8af4c54bb9d44db1f762ba96f05557a66a09b5abd1a8"
+        },
+        {
+          "path": "pipelines/sanger-tol_genomeassembly/CHANGELOG.md",
+          "sha256": "2baacda7bff98fa33ed601f74617560c157b0ff8cd1b257aee7f84d9fba74a19"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-01",
+  "local_sources": [
+    {
+      "path": "pipelines/marbl_merqury/README.md",
+      "sha256": "0bbf1004c551d33a2dd35b9665e003b5692443e29ea6f92c43e7f7f54fc7da4e"
+    }
+  ],
+  "web_sources": [
+    "https://www.earthbiogenome.org/report-on-assembly-standards",
+    "https://github.com/marbl/merqury",
+    "https://github.com/tolkit/telomeric-identifier",
+    "https://busco.ezlab.org/busco_userguide.html"
+  ],
+  "scope": "selected official standards/manual passages and synthesis; no full software audit",
+  "new_clones": 0,
+  "biological_runs": 0,
+  "implemented_assessor": false
+}

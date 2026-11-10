@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "biological_runs": 0,
+  "new_repositories_cloned": 0,
+  "source_review": [
+    {
+      "url": "https://www.earthbiogenome.org/report-on-assembly-recommendations",
+      "scope": "scaffolding and curation sections"
+    },
+    {
+      "url": "https://github.com/sanger-tol/curation-resources",
+      "scope": "README suggested workflow, metadata tags and export"
+    },
+    {
+      "url": "https://pipelines.tol.sanger.ac.uk/treeval",
+      "scope": "overview and stage list; usage/output retrieval unsuccessful; page/source version mismatch 1.4.7/1.4.8"
+    },
+    {
+      "url": "https://pipelines.tol.sanger.ac.uk/curationpretext/usage",
+      "scope": "input formats, test preparation and invocation; examples require syntax/version verification"
+    },
+    {
+      "url": "https://pipelines.tol.sanger.ac.uk/curationpretext/output",
+      "scope": "map and accessory outputs; source link 1.6.1"
+    },
+    {
+      "url": "https://github.com/sanger-tol/agp-tpf-utils",
+      "scope": "README conversion purpose, limited format scope"
+    },
+    {
+      "url": "https://github.com/c-zhou/yahs",
+      "scope": "BAM sorting/filtering, AGP and JBAT workflow; additional local fixed sources in source_manifest"
+    },
+    {
+      "url": "https://aidenlab.org/assembly/manual_180322.pdf",
+      "scope": "overview only; not all illustrated chapters"
+    }
+  ],
+  "not_completed": [
+    "Sanger Interpreting_HiC_Maps_guide.pdf illustrated content",
+    "PretextView-Tutorial.pdf illustrated content",
+    "videos on JavaScript curation website",
+    "fixed SHA retrieval and full code/schema reading of new Sanger resources",
+    "training-data interactive curation, export, remapping and evaluation"
+  ],
+  "access_observations": [
+    "terminal proxy 172.24.64.1:7892 unreachable; direct DNS failed; no new clones",
+    "README training-manual links return 404 due malformed paths",
+    "correct PDF blob page obtained but raw PDF not parsed",
+    "curation.tol.sanger.ac.uk requires JavaScript"
+  ],
+  "future_development": "QS012 is design only, not an implemented pipeline"
+}

@@ -1,0 +1,4 @@
+tool	review_date	reviewed_version	runtime_version	source_identity	relationship	source_url	scope	new_official_biological_toy_runs
+SPAdes	2026-11-02	4.3.0	4.0.0 h6dccd9a_3	release a7f6e55b69f6b8eb87dfd7b014e22fc324a8a01b; runtime selected files SHA in source ledger	review_runtime_differ	https://github.com/ablab/spades/releases/tag/v4.3.0	4.3 docs/selected CLI; 4.0 official toy1 synthetic4 negative3	1
+MaSuRCA	2026-11-02	4.1.4; short commit 43e485a	not_installed_this_review	unresolved	additional_selected_reading_only	https://github.com/alekseyzimin/masurca/releases/tag/v4.1.4	README configuration discrepancies; 2013 selected methods; 2017 indexed excerpt only	0
+ABySS	2026-11-02	2.3.10 previously observed	not_installed_this_review	master driver commit unresolved	additional_selected_reading_only	https://github.com/BirolLab/abyss	README and selected master driver; paper indexed excerpt; companion README only	0

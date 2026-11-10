@@ -1,0 +1,20 @@
+{
+  "verified_at": "2026-11-05T13:19:43.699561+08:00",
+  "scope": "source identity, archive consistency, reading metadata and knowledge links only; no biological validation",
+  "checks": {
+    "source_and_derived_hashes_match": 13,
+    "article_identity_matches_doi_pmid_pmcid_and_title": true,
+    "failed_html_correctly_identified_as_non_article": true,
+    "extracted_original_members_match_zip": 4,
+    "supplement_pdf_header_and_known_size_match": true,
+    "new_local_markdown_links_resolve": true,
+    "knowledge_catalog_metadata_check_passed": true,
+    "catalog_note_and_topic_counts": {
+      "notes": 65,
+      "topics": 33
+    },
+    "no_biological_execution_claim": true
+  },
+  "passed": true,
+  "review_ledger_sha256": "484fc850c459230d7980e307690a9f8f2597221213beb6dd185450f8739c8759"
+}

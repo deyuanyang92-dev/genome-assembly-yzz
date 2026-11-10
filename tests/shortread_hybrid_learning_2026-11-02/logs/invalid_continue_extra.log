@@ -1,0 +1,7 @@
+
+
+== Error ==  you cannot specify any option except -o with --continue option! Please use '--restart-from last' if you need to change some of the options from the initial run and continue from the last available checkpoint.
+Extra options: ['-t', '3']
+
+In case you have troubles running SPAdes, you can report an issue on our GitHub repository github.com/ablab/spades
+Please provide us with params.txt and spades.log files from the output directory.

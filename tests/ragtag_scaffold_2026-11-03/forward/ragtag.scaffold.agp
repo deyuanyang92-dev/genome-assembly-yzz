@@ -1,0 +1,8 @@
+## agp-version 2.1
+# AGP created by RagTag v2.1.0
+chr1_RagTag	1	20000	1	W	ctg_A	1	20000	+
+chr1_RagTag	20001	20100	2	U	100	scaffold	yes	align_genus
+chr1_RagTag	20101	40100	3	W	ctg_B_rc	1	20000	-
+chr1_RagTag	40101	40200	4	U	100	scaffold	yes	align_genus
+chr1_RagTag	40201	60200	5	W	ctg_C	1	20000	+
+novel_RagTag	1	20000	1	W	novel	1	20000	+

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/README.md",
+    "sha256": "8ee684c77d483a24c255dcb2516b46ce3fc5024ebdec9710eaa071fff8518423",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/CONTEXT.md",
+    "sha256": "33fbb47f52fdf1c2945e56213c30399a33081314c4c937aa5b4d2f9ae2c11275",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/00_学习进度清单.md",
+    "sha256": "592fee930236f770d4f90c5c86334f208b7f2355d69f914243a64a1bd2092091",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/16_Colora流程与复现入口.md",
+    "sha256": "ced95eeca476f63f647e5e16f165c913e129568a10790633fa25029e2d454c38",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/26_追加学习与适用边界.md",
+    "sha256": "de797201f9cd9f7ca41d1e62765e37fdb87cc3f8b052124f75b1e4da35c5a6e5",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/39_组装完整性判断与缺口定位.md",
+    "sha256": "b25853b9e9b9b75268b5368f55909696f516417eafc8fe67af5b7cf5d026884b",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/40_基因组注释软件与文献调研.md",
+    "sha256": "686b758bb8d300d0a953b69c5b63a0c3c3a1d192950f748f0f8a67aa89bfa74d",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/43_现成自动注释流程核查与开发复用.md",
+    "sha256": "1926237d1fb5321c29b93feb90ea216ca8ae6b137ac7f89447c6eb4358f9ec99",
+    "scope": "read in current turn; no new biological validation implied"
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/pipelines/marbl_merqury/README.md",
+    "sha256": "0bbf1004c551d33a2dd35b9665e003b5692443e29ea6f92c43e7f7f54fc7da4e",
+    "scope": "Official README/source read; execution only as separately documented. Paper claims are not local benchmarks."
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/pipelines/c-zhou_yahs/README.md",
+    "sha256": "cdf94704720fc3d05ffe123e3f2c9ac98841d523d9b1e481b2e71f0142a6d8de",
+    "scope": "Official README/source read; execution only as separately documented. Paper claims are not local benchmarks."
+  },
+  {
+    "path": "/tmp/yzz-learning-miniprot/README.md",
+    "sha256": "606e360c8d0bdfa8d4e193a7d1f3710a21d4d0a29f8f95906dde35a6084c831f",
+    "scope": "Official README/source read; execution only as separately documented. Paper claims are not local benchmarks."
+  },
+  {
+    "path": "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/notes/44_公开环节动物基因组核心基因与机器学习可行性.md",
+    "sha256": "f81321d8f6028b36adf24b787baeba3b2daba7d29a15d4701f7cbf916eb21ac6",
+    "scope": "Read local prior research, distinguished asset inventory, orthology, absence diagnosis, training labels and leakage. Not a new cross-species analysis."
+  }
+]

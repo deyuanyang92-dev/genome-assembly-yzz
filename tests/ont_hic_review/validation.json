@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-01",
+  "source_file_hashes_verified": 14,
+  "resource_repository_shas_verified": 5,
+  "total_recorded_upstream_repositories": 26,
+  "local_links_verified": 105,
+  "bash_example_blocks_syntax_checked": 4,
+  "hifiasm_version": "0.25.0-r726",
+  "hifiasm_help_flags_confirmed": [
+    "--ont",
+    "--ul",
+    "--h1",
+    "--h2",
+    "--dual-scaf",
+    "--rl-cut",
+    "--sc-cut"
+  ],
+  "json_and_whitespace_checks": "passed",
+  "new_qc_tools_installed": false,
+  "ONT_assembly_runs": 0,
+  "HiFi_ONT_HiC_joint_runs": 0,
+  "cross_individual_biological_comparisons": 0,
+  "limitations": "Static source/interface/document checks only. Template TSV and policy describe future evaluation; no automatic assessor implemented."
+}

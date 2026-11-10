@@ -1,0 +1,13 @@
+utr_explicit 0
+new_species 0
+etraining_included 0
+trained_holdout_included 0
+shipped_fly_holdout_included 0
+bam2hints 0
+rna_local_prediction 0
+blat2hints 0
+Traceback (most recent call last):
+  File "/mnt/p/yzz-全基因组工作流程/genome-assembly-yzz/tests/augustus_learning_2026-11-04/run_followup.py", line 101, in <module>
+    assert any('UTR' in x for x in feature_counts)
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,52 @@
+{
+  "inputs/repeat8000/pe_R2.fq.gz": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R2.fq.gz",
+    "sha256": "4c4ee872a9f3b31a06cc53bfe7a1810bbc0c0ee963dab2fbea0269b18ac24997",
+    "bytes": 25747
+  },
+  "inputs/repeat8000/pe_R1.fq.gz": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/inputs/pe_R1.fq.gz",
+    "sha256": "d8a899e4c1939f75ae03215a431c914145e3c5b99539f624df2abc18bc512d52",
+    "bytes": 28578
+  },
+  "inputs/repeat8000/long2300.fa": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/inputs/long2300.fa",
+    "sha256": "9a33087f25d8e4f7b64933c38e47cfb936e31b7b219dab671fcbc82d707e6f3f",
+    "bytes": 533460
+  },
+  "inputs/anchor18000/pe_R2.fq.gz": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R2.fq.gz",
+    "sha256": "af83512479c3ed10574376297a5a58e8f361a16d5fd3ce78b1502fb656509b3c",
+    "bytes": 42003
+  },
+  "inputs/anchor18000/long5000.fa": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/long5000.fa",
+    "sha256": "1cf0bb3ace4ce78b664a7cb577efe67421894aebeeeb9dae386901f4071d770e",
+    "bytes": 1312459
+  },
+  "inputs/anchor18000/pe_R1.fq.gz": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/pe_R1.fq.gz",
+    "sha256": "7d5ea8ce3d45a919743cea549d010c6b28191c9a3c7b2b517120321ef4c2676b",
+    "bytes": 46501
+  },
+  "inputs/anchor18000/truth.fa": {
+    "source": "/tmp/yzz-shortread-hybrid-20261102/anchor3000_inputs/truth.fa",
+    "sha256": "1669da60a759004fda17de1828163c7f5e31a2808d7f1208439be3ae0fc83ccb",
+    "bytes": 18026
+  },
+  "inputs/official/reference_1K.fa.gz": {
+    "source": "/root/miniconda3/envs/mitoz3.6/share/spades/test_dataset/reference_1K.fa.gz",
+    "sha256": "ac1281b83eaf861263c25af5104b387efd1c0be5597764948ee335d41d0c84f1",
+    "bytes": 534
+  },
+  "inputs/official/ecoli_1K_1.fq.gz": {
+    "source": "/root/miniconda3/envs/mitoz3.6/share/spades/test_dataset/ecoli_1K_1.fq.gz",
+    "sha256": "4d2a35634b2acdbde5f706572a2997ab1402dbef2b3189f70274a85f5f06b024",
+    "bytes": 117659
+  },
+  "inputs/official/ecoli_1K_2.fq.gz": {
+    "source": "/root/miniconda3/envs/mitoz3.6/share/spades/test_dataset/ecoli_1K_2.fq.gz",
+    "sha256": "8958739949fca73ea47cd4a1117b8f81a8b87d117ce8d8c6ab24aea9a091bd2a",
+    "bytes": 122042
+  }
+}

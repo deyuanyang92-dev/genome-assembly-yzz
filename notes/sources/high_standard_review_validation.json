@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-01",
+  "scope": "Document navigation, JSON syntax, policy target direction and recorded source hashes; not biological QC and not pipeline execution",
+  "policy_metrics": 11,
+  "body_read_records": 25,
+  "vgp_top_level_interfaces": 14,
+  "local_links_checked": 93,
+  "missing_local_links": [],
+  "policy_is_pipeline_implementation": false,
+  "actual_user_assembly_assessed": false,
+  "full_workflow_end_to_end_runs": 0
+}

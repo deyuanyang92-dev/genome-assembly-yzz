@@ -1,0 +1,7 @@
+@HD	VN:1.6	SO:queryname
+@SQ	SN:chr1	LN:100
+read_u	4	*	0	0	*	*	0	0	ACGTA	IIIII	rq:f:0.999	np:i:8
+read_reverse	16	chr1	1	60	5M	*	0	0	GACTT	EDCBA
+read_reverse	2048	chr1	30	60	5M	*	0	0	GACTT	EDCBA
+read_hardclip	0	chr1	10	60	2H5M	*	0	0	ACGTA	FFFFF
+read_missingqual	4	*	0	0	*	*	0	0	ACGTA	*

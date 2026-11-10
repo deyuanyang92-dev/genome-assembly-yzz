@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-01",
+  "repository_commits_verified": 24,
+  "classification_counts": {
+    "agent_skill_library": 1,
+    "complete_workflow": 5,
+    "benchmark": 1,
+    "complete_workflow_collection": 1,
+    "hic_subworkflow": 2,
+    "individual_tool": 12,
+    "assembly_core_workflow": 1,
+    "paper_analysis_scripts": 1
+  },
+  "new_source_file_hashes_verified": 18,
+  "local_links_verified": 100,
+  "fetch_script_syntax": "passed",
+  "git_diff_check": "passed",
+  "mock_wrapper_cases": 2,
+  "biological_survey_runs": 0,
+  "full_workflow_end_to_end_runs": 0,
+  "note": "C backend/Histex/Tabex compilation is not a validated survey workflow; missing dependencies remain."
+}

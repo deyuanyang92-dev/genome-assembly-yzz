@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "url": "https://mp.weixin.qq.com/s/QGKqelwis4CpgCpC5Ldekg?scene=1",
+  "title": "使用Hi-C Skills进行拟南芥染色体构建",
+  "video_id": "wxv_4677590747829714948",
+  "duration_seconds": 771,
+  "width": 1920,
+  "height": 1080,
+  "acquired": [
+    "article HTML",
+    "cover image",
+    "Windows Chrome rendered DOM"
+  ],
+  "not_acquired": [
+    "media",
+    "transcript"
+  ],
+  "player_message": "请在微信客户端打开",
+  "files_sha256": {
+    "cover.jpg": "98877cdc4d8bfe1d5a114b370d8802b4021942152004814df2a8310a1fc1ecb4",
+    "video-browser-dom.html": "58607926d4cd41c9d3f9b5edca256a6da090ec1647c2465615b84f5b081d8520",
+    "video-browser-error.log": "8005a304c62ba80925880fd954ee2bcb45b0f8f99db44e4cc3ecf8fea797c184",
+    "weixin-article-attempt.html": "4f46cb94692d7e9081ea4c6009db8991906632cda865732cd870da274b4fdb0d",
+    "weixin-article-original.html": "d23117d78be4946c5222db09d5630676a861bd4873c357d349021a3a59fdca4c"
+  }
+}

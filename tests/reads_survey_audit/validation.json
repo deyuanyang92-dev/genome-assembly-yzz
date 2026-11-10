@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-01",
+  "kind": "mocked_wrapper_behavior_only",
+  "biological_runs": 0,
+  "cases_passed": 2,
+  "cases": [
+    {
+      "no_cleanup": false,
+      "final_summary_retained": false,
+      "upstream_default_ploidy": 1,
+      "upstream_default_counter_cap": 255
+    },
+    {
+      "no_cleanup": true,
+      "final_summary_retained": true,
+      "upstream_default_ploidy": 1,
+      "upstream_default_counter_cap": 255
+    }
+  ],
+  "finding": "Default cleanup deletes GenomeScope final output placed in --tmp; --no-cleanup retains it."
+}

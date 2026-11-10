@@ -1,0 +1,4 @@
+tool	date	source_identity	read_scope	runtime_scope	evidence
+YaHS juicer	2026-11-02	1.2.2 commit6c46061ea1665073068cccbed81c6707e3bd07bf	post/pre coordinate conversion selected sources	4 artificial post conversions; no mapping/GUI	execution_manifest.json
+agp-tpf-utils	2026-11-02	main pyproject1.4.1 commit unresolved	entry/remap/statistics selected modules	not installed or executed	../../notes/sources/parallel_hic_2026-11-02.json
+3D-DNA	2026-11-02	201008 cb63403c329dd45d0fdc4851746b5a8587528132	post-review finalize/seal and fasta slicing	not executed	../../notes/sources/parallel_hic_2026-11-02.json
